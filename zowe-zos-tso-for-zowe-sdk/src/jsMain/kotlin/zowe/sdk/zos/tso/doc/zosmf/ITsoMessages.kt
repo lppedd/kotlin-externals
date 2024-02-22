@@ -7,16 +7,15 @@ external interface ITsoMessages {
   /**
    * tso message type of TSO/E messages
    */
-  // "TSO MESSAGE"?: ITsoMessage;
-  // TODO(Edoardo): how to do this?
+  var `TSO MESSAGE`: ITsoMessage?
 
   /**
    * tso prompt message type of TSO/E messages
    */
-  // "TSO PROMPT"?: ITsoPromptMessage;
+  var `TSO PROMPT`: ITsoPromptMessage?
 
   /**
    * tso response message type of TSO/E messages
    */
-  // "TSO RESPONSE"?: ITsoResponseMessage;
+  var `TSO RESPONSE`: ITsoResponseMessage?
 }

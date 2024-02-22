@@ -17,21 +17,20 @@ external interface IJobStepData {
   /**
    * Job relevant step
    */
-  // "step-number": number;
-  // TODO(Edoardo): how to do this? In TS it is possible to have dashes
+  var `step-number`: Int
 
   /**
    * Job relevant proc
    */
-  // "proc-step-name": string;
+  var `proc-step-name`: String
 
   /**
    * Step for which job dd exists
    */
-  // "step-name": string;
+  var `step-name`: String
 
   /**
    * Program EXEC=
    */
-  // "program-name": string;
+  var `program-name`: String
 }

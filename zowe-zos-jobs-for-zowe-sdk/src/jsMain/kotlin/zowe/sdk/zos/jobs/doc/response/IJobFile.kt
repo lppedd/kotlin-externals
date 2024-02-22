@@ -25,17 +25,17 @@ external interface IJobFile {
   /**
    * Total bytes in the spool file
    */
-  // "byte-count": number;
+  var `byte-count`: Int
 
   /**
    * Total records (roughly equivalent to lines) in the spool file
    */
-  // "record-count": number;
+  var `record-count`: Int
 
   /**
    * unique identifier of job (substitute of job name and job id)
    */
-  // "job-correlator": string;
+  var `job-correlator`: Int
 
   /**
    * Job class for which job ran
@@ -57,8 +57,7 @@ external interface IJobFile {
   /**
    * Direct access to job record content
    */
-  // "records-url": string;
-  // TODO(Edoardo): how to do this? In TS it is possible to have dashes
+  var `records-url`: String
 
   /**
    * Job DD lrecl (logical record length - how many bytes each record is)

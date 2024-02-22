@@ -7,26 +7,25 @@ external interface IZosmfIssueResponse {
   /**
    * Follow-up response URL.
    */
-  /* "cmd-response-url"?: string; */
-  // TODO(Edoardo): how to do this?
+  var `cmd-response-url`: String?
 
   /**
    * Command response text.
    */
-  /* "cmd-response": string; */
+  var `cmd-response`: String
 
   /**
    * The follow-up response URI.
    */
-  /* "cmd-response-uri"?: string; */
+  var `cmd-response-uri`: String?
 
   /**
    * The command response key used for follow-up requests.
    */
-  /* "cmd-response-key"?: string; */
+  var `cmd-response-key`: String?
 
   /**
    * True if the solicited keyword requested is present.
    */
-  /* "sol-key-detected"?: boolean; */
+  var `sol-key-detected`: Boolean?
 }

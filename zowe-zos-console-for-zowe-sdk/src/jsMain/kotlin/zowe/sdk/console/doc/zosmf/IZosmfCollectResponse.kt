@@ -7,11 +7,10 @@ external interface IZosmfCollectResponse {
   /**
    * Command response text.
    */
-  /* "cmd-response": string; */
-  // TODO(Edoardo): how to do this?
+  var `cmd-response`: String
 
   /**
    * True if the solicited keyword requested is present.
    */
-  /* "sol-key-detected"?: boolean; */
+  var `sol-key-detected`: Boolean?
 }

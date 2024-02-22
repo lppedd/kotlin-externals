@@ -47,6 +47,7 @@ class ExternalsModulePlugin : Plugin<Project> {
     kmp.compilerOptions {
       apiVersion.set(KotlinVersion.KOTLIN_1_9)
       languageVersion.set(KotlinVersion.KOTLIN_1_9)
+      freeCompilerArgs.add("-XXLanguage:+JsAllowInvalidCharsIdentifiersEscaping")
     }
 
     kmp.js {

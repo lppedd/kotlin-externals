@@ -52,7 +52,7 @@ external interface IJob {
   /**
    * detailed job step data
    */
-  // "step-data"?: IJobStepData[];
+  var `step-data`: Array<IJobStepData>?
 
   /**
    * url for direct reference of job info
@@ -62,14 +62,14 @@ external interface IJob {
   /**
    * spool files url for direct reference
    */
-  // "files-url": string;
+  var `files-url`: String
 
   /**
    * unique identifier of job (substitute of job name and job id)
    *
    * If this value is null, the job was submitted to JES3.
    */
-  // "job-correlator": string;
+  var `job-correlator`: String
 
   /**
    * job phase
@@ -79,11 +79,10 @@ external interface IJob {
   /**
    * job phase name
    */
-  // "phase-name": string;
+  var `phase-name`: String
 
   /**
    * explaination of error
    */
-  // "reason-not-running"?: string;
-  // TODO(Edoardo): how to do this? In TS it is possible to have dashes
+  var `reason-not-running`: String
 }

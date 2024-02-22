@@ -12,8 +12,7 @@ external interface IZosmfIssueParms {
   /**
    * The solicited keyword to look for
    */
-  /* "sol-key"?: string; */
-  // TODO(Edoardo): how to do this?
+  var `sol-key`: String?
 
   /**
    * The system in the sysplex to route the command.

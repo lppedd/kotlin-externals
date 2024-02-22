@@ -25,6 +25,5 @@ external interface IJobFileSimple {
   /**
    * Total records contained within the job dd
    */
-  // "record-count": number;
-  // TODO(Edoardo): how to do this? In TS it is possible to have dashes
+  var `record-count`: Int
 }
