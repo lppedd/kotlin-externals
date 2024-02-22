@@ -149,7 +149,7 @@ external object Gui {
 
   fun setStatusBarMessage(
     text: String,
-    hideAfterTimeout: Double,
+    hideAfterTimeout: Int,
   ): vscode.Disposable
 
   fun setStatusBarMessage(text: String): vscode.Disposable
@@ -324,8 +324,8 @@ external object Gui {
    */
   fun reportProgress(
     progress: Any?,
-    valueLength: Double,
-    index: Double,
+    valueLength: Int,
+    index: Int,
     action: String,
   )
 

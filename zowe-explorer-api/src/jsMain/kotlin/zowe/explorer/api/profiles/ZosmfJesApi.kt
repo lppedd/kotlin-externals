@@ -19,6 +19,7 @@ external class ZosmfJesApi : ZosmfApiCommon, ZoweExplorerApi.IJes {
 
   override fun getJobsByParameters(params: IGetJobsParms): Promise<Array<IJob>>
 
+  @Deprecated("Use getJobsByParameters")
   override fun getJobsByOwnerAndPrefix(
     owner: String,
     prefix: String,
@@ -38,7 +39,7 @@ external class ZosmfJesApi : ZosmfApiCommon, ZoweExplorerApi.IJes {
   override fun getSpoolContentById(
     jobname: String,
     jobid: String,
-    spoolId: Double,
+    spoolId: Int,
   ): Promise<String>
 
   override fun getJclForJob(job: IJob): Promise<String>

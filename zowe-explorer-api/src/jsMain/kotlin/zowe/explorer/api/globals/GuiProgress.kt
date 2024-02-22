@@ -2,5 +2,5 @@ package zowe.explorer.api.globals
 
 external interface GuiProgress {
   var message: String?
-  var increment: Double?
+  var increment: Int?
 }

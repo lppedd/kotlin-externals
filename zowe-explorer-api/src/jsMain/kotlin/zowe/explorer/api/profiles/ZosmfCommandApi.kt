@@ -14,6 +14,7 @@ import zowe.sdk.zos.tso.doc.input.IStartTsoParms
 external class ZosmfCommandApi : ZosmfApiCommon, ZoweExplorerApi.ICommand {
   constructor(profile: IProfileLoaded = definedExternally)
 
+  @Deprecated("Use issueTsoCommandWithParms")
   override fun issueTsoCommand(
     command: String,
     acctNum: String,

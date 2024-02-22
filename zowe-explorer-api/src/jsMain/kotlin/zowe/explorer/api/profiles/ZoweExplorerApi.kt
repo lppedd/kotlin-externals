@@ -53,19 +53,16 @@ external object ZoweExplorerApi {
     /**
      * Create a session for the specific profile type.
      *
-     * @param {IProfileLoaded} profile
-     *      optional profile reference,
-     *      will use the profile the API was retrieved with by default
-     * @return {Session} a Zowe CLI Session
+     * @param profile optional profile reference, will use the profile the API was retrieved with by default
+     * @return a Zowe CLI Session
      */
     fun getSession(profile: IProfileLoaded = definedExternally): Session
 
     /**
      * Create a session for the specific profile type.
      *
-     * @param {IProfileLoaded} profile
-     *      will use the profile the API was retrieved with by default
-     * @return {IZosmfInfoResponse} z/OSMF Check Status response
+     * @param profile will use the profile the API was retrieved with by default
+     * @return z/OSMF Check Status response
      */
     fun getStatus(
       profile: IProfileLoaded,
@@ -77,46 +74,42 @@ external object ZoweExplorerApi {
      * of a specific profile using a specific API implementation that was created with a
      * referece profile.
      *
-     * @param {zowe.imperative.ICommandArguments} cmdArgs a Zowe CLI ICommandArguments instance
-     * @return {Session} a Zowe CLI Session
+     * @param cmdArgs a Zowe CLI ICommandArguments instance
+     * @return a Zowe CLI Session
      */
     fun getSessionFromCommandArgument(cmdArgs: ICommandArguments): Session
 
     /**
      * Perform login to obtain a token from the authentication service
      *
-     * @param {Session} session a Zowe CLI Session
-     * @return {string} the token value
+     * @param session a Zowe CLI Session
+     * @return the token value
      */
     fun login(session: Session): Promise<String>
 
     /**
      * Perform logout from the authentication service
      *
-     * @param {Session} session a Zowe CLI Session
+     * @param session a Zowe CLI Session
      */
     fun logout(session: Session): Any?
 
     /**
      * Return the type name of the token supported by this api.
      *
-     * @return {string} the token type name as defined by a CLI plugin that implements the profile.
+     * @return the token type name as defined by a CLI plugin that implements the profile.
      */
     fun getTokenTypeName(): String
   }
 
   /**
    * API for providing a USS API handler to the extension.
-   * @export
    */
-
   interface IUss : ICommon {
     /**
      * Return the directory elements for a given USS path.
      *
-     * @param {string} ussFilePath
-     * @return {IZosFilesResponse}
-     *     A response structure that contains a boolean success property
+     * @param ussFilePath A response structure that contains a boolean success property
      *     as well as the list of results in apiResponse.items with
      *     minimal properties name, mode.
      */
@@ -125,25 +118,23 @@ external object ZoweExplorerApi {
     /**
      * Check th USS chtag to see if a file requires conversion.
      *
-     * @param {string} ussFilePath
-     * @return {Promise<boolean>}
+     * @param ussFilePath
      */
     fun isFileTagBinOrAscii(ussFilePath: String): Promise<Boolean>
 
     /**
      * Copy operation for USS files or directories.
      *
-     * @param {string} outputPath the output/destination path for the file/directory
-     * @param {object} options Other options for the API endpoint
-     * @return {Promise<Buffer>}
+     * @param outputPath the output/destination path for the file/directory
+     * @param options Other options for the API endpoint
      */
     fun copy(outputPath: String, options: Any /* Omit<object, "request"> */ = definedExternally): Promise<Buffer>
 
     /**
      * Retrieve the contents of a USS file.
      *
-     * @param {string} ussFilePath
-     * @param {zowe.IDownloadOptions} options
+     * @param ussFilePath
+     * @param options
      */
     fun getContents(
       ussFilePath: String,
@@ -153,17 +144,14 @@ external object ZoweExplorerApi {
     /**
      * Uploads the file at the given path. Use for Save.
      *
-     * @deprecated
-     * @param {string} inputFilePath
-     * @param {string} ussFilePath
-     * @param {boolean} [binary]
-     *      Indicates if a conversion should be attempted or treated as binary.
-     * @param {string} [localEncoding]
-     *      Optional encoding that can be used by an implementation to overwrite defaults
-     * @param {string} [etag]
-     * @param {boolean} [returnEtag]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param inputFilePath
+     * @param ussFilePath
+     * @param binary Indicates if a conversion should be attempted or treated as binary.
+     * @param localEncoding Optional encoding that can be used by an implementation to overwrite defaults
+     * @param etag
+     * @param returnEtag
      */
+    @Deprecated("")
     fun putContents(
       inputFilePath: String,
       ussFilePath: String,
@@ -176,10 +164,9 @@ external object ZoweExplorerApi {
     /**
      * Uploads the file at the given path. Use for Save.
      *
-     * @param {string} inputFilePath
-     * @param {string} ussFilePath
-     * @param {zowe.IUploadOptions} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param inputFilePath
+     * @param ussFilePath
+     * @param options
      */
     fun putContent(
       inputFilePath: String,
@@ -201,10 +188,9 @@ external object ZoweExplorerApi {
     /**
      * Uploads directory at the given path.
      *
-     * @param {string} inputDirectoryPath
-     * @param {string} ussDirectoryPath
-     * @param {IUploadOptions} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param inputDirectoryPath
+     * @param ussDirectoryPath
+     * @param options
      */
     fun uploadDirectory(
       inputDirectoryPath: String,
@@ -215,12 +201,9 @@ external object ZoweExplorerApi {
     /**
      * Create a new directory or file in the specified path.
      *
-     * @param {string} ussPath
-     * @param {string} type
-     *      Either "file" or "directory".
-     * @param {string} [mode]
-     *      An optional Unix string representation of the permissions.
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param ussPath
+     * @param type Either "file" or "directory".
+     * @param mode An optional Unix string representation of the permissions.
      */
     fun create(
       ussPath: String,
@@ -231,9 +214,8 @@ external object ZoweExplorerApi {
     /**
      * Deletes the USS directory or file at the given path.
      *
-     * @param {string} ussPath
-     * @param {boolean} [recursive]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param ussPath
+     * @param recursive
      */
     fun delete(
       ussPath: String,
@@ -243,9 +225,8 @@ external object ZoweExplorerApi {
     /**
      * Rename a file or directory.
      *
-     * @param {string} currentUssPath
-     * @param {string} newUssPath
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param currentUssPath
+     * @param newUssPath
      */
     fun rename(
       currentUssPath: String,
@@ -255,24 +236,20 @@ external object ZoweExplorerApi {
     /**
      * Get the tag of a USS file
      *
-     * @param {string} currentUssPath
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param currentUssPath
      */
     fun getTag(ussPath: String): Promise<String>
   }
 
   /**
    * API for providing am MVS API handler to the extension.
-   * @export
    */
-
   interface IMvs : ICommon {
     /**
      * Get a list of data sets that match the filter pattern.
      *
-     * @param {string} filter
-     * @param {IListOptions} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param filter
+     * @param options
      */
     fun dataSet(
       filter: String,
@@ -282,9 +259,8 @@ external object ZoweExplorerApi {
     /**
      * Get a list of members for a partitioned data set.
      *
-     * @param {string} dataSetName
-     * @param {IListOptions} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param dataSetName
+     * @param options
      */
     fun allMembers(
       dataSetName: String,
@@ -294,9 +270,8 @@ external object ZoweExplorerApi {
     /**
      * Get the contents of a data set or member specified by name.
      *
-     * @param {string} dataSetName
-     * @param {zowe.IDownloadOptions} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param dataSetName
+     * @param options
      */
     fun getContents(
       dataSetName: String,
@@ -306,10 +281,9 @@ external object ZoweExplorerApi {
     /**
      * Upload the content of a file to a data set or member.
      *
-     * @param {string} inputFilePath
-     * @param {string} dataSetName
-     * @param {zowe.IUploadOptions} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param inputFilePath
+     * @param dataSetName
+     * @param options
      */
     fun putContents(
       inputFilePath: String,
@@ -320,10 +294,9 @@ external object ZoweExplorerApi {
     /**
      * Create a new data set with the specified options.
      *
-     * @param {zowe.CreateDataSetTypeEnum} dataSetType
-     * @param {string} dataSetName
-     * @param {Partial<zowe.ICreateDataSetOptions>} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param dataSetType
+     * @param dataSetName
+     * @param options
      */
     fun createDataSet(
       dataSetType: CreateDataSetTypeEnum,
@@ -334,9 +307,8 @@ external object ZoweExplorerApi {
     /**
      * Creates an empty data set member with given name.
      *
-     * @param {string} dataSetName
-     * @param {zowe.IUploadOptions} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param dataSetName
+     * @param options
      */
     fun createDataSetMember(
       dataSetName: String,
@@ -346,10 +318,9 @@ external object ZoweExplorerApi {
     /**
      * Allocates a copy of a data set with the specified options.
      *
-     * @param {zowe.CreateDataSetTypeEnum} dataSetType
-     * @param {string} dataSetName
-     * @param {Partial<zowe.ICreateDataSetOptions>} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param dataSetType
+     * @param dataSetName
+     * @param options
      */
     fun allocateLikeDataSet(
       dataSetName: String,
@@ -359,23 +330,21 @@ external object ZoweExplorerApi {
     /**
      * Copies a data set member.
      *
-     * @param {zowe.IDataSet} { dataSetName: fromDataSetName, memberName: fromMemberName }
-     * @param {zowe.IDataSet} { dataSetName: toDataSetName, memberName: toMemberName }
+     * @param { dataSetName: fromDataSetName, memberName: fromMemberName }
+     * @param { dataSetName: toDataSetName, memberName: toMemberName }
      * @param {{replace?: boolean}} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
      */
     fun copyDataSetMember(
-      param0: IDataSet,
-      param1: IDataSet,
+      param0: IDataSet, // TODO(Edoardo): check if it's right
+      param1: IDataSet, // TODO(Edoardo): check if it's right
       options: IMvsCopyDataSetMemberOptions = definedExternally,
     ): Promise<IZosFilesResponse<Any?>>
 
     /**
      * Renames a data set.
      *
-     * @param {string} currentDataSetName
-     * @param {string} newDataSetName
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param currentDataSetName
+     * @param newDataSetName
      */
     fun renameDataSet(
       currentDataSetName: String,
@@ -385,10 +354,9 @@ external object ZoweExplorerApi {
     /**
      * Renames a data set member.
      *
-     * @param {string} dataSetName
-     * @param {string} currentMemberName
-     * @param {string} newMemberName
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param dataSetName
+     * @param currentMemberName
+     * @param newMemberName
      */
     fun renameDataSetMember(
       dataSetName: String,
@@ -399,25 +367,22 @@ external object ZoweExplorerApi {
     /**
      * Migrates a data set.
      *
-     * @param {string} dataSetName
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param dataSetName
      */
     fun hMigrateDataSet(dataSetName: String): Promise<IZosFilesResponse<Any?>>
 
     /**
      * Recalls a data set.
      *
-     * @param {string} dataSetName
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param dataSetName
      */
     fun hRecallDataSet(dataSetName: String): Promise<IZosFilesResponse<Any?>>
 
     /**
      * Deletes a data set or data set member.
      *
-     * @param {string} dataSetName
-     * @param {zowe.IDeleteDatasetOptions} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param dataSetName
+     * @param options
      */
     fun deleteDataSet(
       dataSetName: String,
@@ -427,9 +392,8 @@ external object ZoweExplorerApi {
     /**
      * Get a list of data sets that match the filter pattern.
      *
-     * @param {string} filter
-     * @param {zowe.IDsmListOptions} [options]
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param filter
+     * @param options
      */
     fun dataSetsMatchingPattern(
       filter: Array<String>,
@@ -439,11 +403,10 @@ external object ZoweExplorerApi {
     /**
      * Copies a dataSet.
      *
-     * @param {string} fromDataSetName
-     * @param {string} toDataSetName
-     * @param {string?} enq possible values : {SHR, SHRW, EXCLU}
-     * @param {boolean?} replace
-     * @return {Promise<IZosFilesResponse<Any?>>}
+     * @param fromDataSetName
+     * @param toDataSetName
+     * @param enq possible values : {SHR, SHRW, EXCLU}
+     * @param replace
      */
     fun copyDataSet(
       fromDataSetName: String,
@@ -455,26 +418,24 @@ external object ZoweExplorerApi {
 
   /**
    * API for providing am JES API handler to the extension.
-   * @export
    */
-
   interface IJes : ICommon {
     /**
      * Returns a list of jobs for any parameters.
      *
-     * @param {string} owner
-     * @return {Promise<zowe.IJob[]>} an array if IJob
+     * @param owner
+     * @return an array if IJob
      */
     fun getJobsByParameters(params: IGetJobsParms): Promise<Array<IJob>>
 
     /**
      * Returns a list of jobs for a specific user and prefix.
      *
-     * @deprecated Use getJobsByParameters
-     * @param {string} owner
-     * @param {string} prefix
-     * @return {Promise<zowe.IJob[]>} an array if IJob
+     * @param owner
+     * @param prefix
+     * @return an array if IJob
      */
+    @Deprecated("Use getJobsByParameters")
     fun getJobsByOwnerAndPrefix(
       owner: String,
       prefix: String,
@@ -483,17 +444,15 @@ external object ZoweExplorerApi {
     /**
      * Returns meta-data for one specific job identified by id.
      *
-     * @param {string} jobid
-     * @return {Promise<zowe.IJob>}
+     * @param jobid
      */
     fun getJob(jobid: String): Promise<IJob>
 
     /**
      * Returns spool file meta-data for a job.
      *
-     * @param {string} jobname
-     * @param {string} jobid
-     * @return {Promise<zowe.IJobFile[]>}
+     * @param jobname
+     * @param jobid
      */
     fun getSpoolFiles(
       jobname: String,
@@ -504,8 +463,7 @@ external object ZoweExplorerApi {
      * Retrieves content for all spool files as specified in the parms
      * to be store in a file.
      *
-     * @param {zowe.IDownloadAllSpoolContentParms} parms
-     * @return {Promise<void>}
+     * @param parms
      */
     fun downloadSpoolContent(parms: IDownloadAllSpoolContentParms): Promise<Unit>
 
@@ -513,40 +471,37 @@ external object ZoweExplorerApi {
      * Retrieves a single spool file content as specified in the parms
      * to be store in a file.
      *
-     * @param {zowe.IDownloadSpoolContentParms} parms
-     * @return {Promise<void>}
+     * @param parms
      */
     fun downloadSingleSpool(parms: IDownloadSpoolContentParms): Promise<Unit>
 
     /**
      * Returns spool file content as a string.
      *
-     * @param {string} jobname
-     * @param {string} jobid
-     * @param {number} spoolId
-     * @return {Promise<string>}
+     * @param jobname
+     * @param jobid
+     * @param spoolId
      */
     fun getSpoolContentById(
       jobname: String,
       jobid: String,
-      spoolId: Double,
+      spoolId: Int,
     ): Promise<String>
 
     /**
      * Returns the JCL of a job as a string.
      *
-     * @param {zowe.IJob} job
-     * @return {Promise<string>}
+     * @param job
      */
     fun getJclForJob(job: IJob): Promise<String>
 
     /**
      * Submits a job with the JCL provided returning job meta-data.
      *
-     * @param {string} jcl string of JCL that you want to be submit
-     * @param {string} [internalReaderRecfm] record format of the jcl you want to submit. "F" (fixed) or "V" (variable)
-     * @param {string} [internalReaderLrecl] logical record length of the jcl you want to submit
-     * @return {Promise<zowe.IJob>} IJob document with details about the submitted job
+     * @param jcl string of JCL that you want to be submit
+     * @param internalReaderRecfm record format of the jcl you want to submit. "F" (fixed) or "V" (variable)
+     * @param internalReaderLrecl logical record length of the jcl you want to submit
+     * @return IJob document with details about the submitted job
      */
     fun submitJcl(
       jcl: String,
@@ -557,28 +512,23 @@ external object ZoweExplorerApi {
     /**
      * Submits a job that is stored in the data set name provided returning job meta-data.
      *
-     * @param {string} jobDataSet
-     * @return {Promise<zowe.IJob>}
-     * @memberof IJes
+     * @param jobDataSet
      */
     fun submitJob(jobDataSet: String): Promise<IJob>
 
     /**
      * Cancels the job provided.
      *
-     * @param {zowe.IJob} job The job object to cancel
-     * @return {Promise<boolean>} Whether the job was successfully cancelled
-     * @memberof IJes
+     * @param job The job object to cancel
+     * @return Whether the job was successfully cancelled
      */
     fun cancelJob(job: IJob): Promise<Boolean>
 
     /**
      * Cancels and purges a job identified by name and id.
      *
-     * @param {string} jobname
-     * @param {string} jobid
-     * @return {Promise<void>}
-     * @memberof IJes
+     * @param jobname
+     * @param jobid
      */
     fun deleteJob(
       jobname: String,
@@ -589,10 +539,8 @@ external object ZoweExplorerApi {
      * Cancels and purges a job identified by name and id.
      * This version returns information about the status of the job
      *
-     * @param {string} jobname
-     * @param {string} jobid
-     * @return {Promise<undefined | zowe.IJobFeedback>}
-     * @memberof IJes
+     * @param jobname
+     * @param jobid
      */
     fun deleteJobWithInfo(
       jobname: String,
@@ -602,19 +550,15 @@ external object ZoweExplorerApi {
 
   /**
    * API for providing a Command API handler to the extension.
-   * @export
    */
-
   interface ICommand : ICommon {
     /**
      * Issues a TSO Command and returns a TsoSend API response.
      *
-     * @deprecated Use issueTsoCommandWithParms
-     * @param {string} command
-     * @param {string} acctNum
-     * @return {zowe.IIssueResponse>}
-     * @memberof ICommand
+     * @param command
+     * @param acctNum
      */
+    @Deprecated("Use issueTsoCommandWithParms")
     fun issueTsoCommand(
       command: String,
       acctNum: String = definedExternally,
@@ -623,10 +567,8 @@ external object ZoweExplorerApi {
     /**
      * Issues a TSO Command and returns a TsoSend API response.
      *
-     * @param {string} command
-     * @param {zowe.IStartTsoParms} parms
-     * @return {zowe.IIssueResponse>}
-     * @memberof ICommand
+     * @param command
+     * @param parms
      */
     fun issueTsoCommandWithParms(
       command: String,
@@ -636,9 +578,7 @@ external object ZoweExplorerApi {
     /**
      * Issues a MVS Command and returns a Console Command API response.
      *
-     * @param {string} command
-     * @return {zowe.IConsoleResponse>}
-     * @memberof ICommand
+     * @param command
      */
     fun issueMvsCommand(command: String): Promise<IConsoleResponse>
   }
@@ -658,7 +598,6 @@ external object ZoweExplorerApi {
      * to the profile in this cache remember that it shared with Zowe Explorer and
      * all other Zowe Explorer extensions
      * @version 1.18 or newer of Zowe Explorer
-     * @return {ProfilesCache}
      */
     fun getProfilesCache(): ProfilesCache
 
@@ -687,36 +626,35 @@ external object ZoweExplorerApi {
    * more interfaces above, for example MyZoweExplorerAppUssApi, and register it with
    * the object returned by this extensions activate() method as shown below.
    *
-   * @example
-   * // see if Zowe Explorer is installed and retrieve the API Registry\
-   * const explorerApi = extensions.getExtension('zowe.vscode-extension-for-zowe');\
-   * if (explorerApi && explorerApi.exports) {\
-   *   // Cast the returned object to the IApiRegisterClient interface\
-   *   const importedApi: ZoweExplorerApi.IApiRegisterClient = explorerApi.exports;\
-   *   // create an instance of my API and register it with Zowe Explorer\
-   *   importedApi.registerUssApi(new MyZoweExplorerAppUssApi());\
-   *   window.showInformationMessage(\
-   *     'Zowe Explorer was augmented for MyApp support. Please, refresh your explorer views.');\
-   *   } else {\
-   *   window.showInformationMessage(\
-   *     'Zowe VS Extension was not found: either not installe or older version.');\
+   * Example:
+   * ```
+   * // see if Zowe Explorer is installed and retrieve the API Registry
+   * const explorerApi = extensions.getExtension('zowe.vscode-extension-for-zowe');
+   * if (explorerApi && explorerApi.exports) {
+   *   // Cast the returned object to the IApiRegisterClient interface
+   *   const importedApi: ZoweExplorerApi.IApiRegisterClient = explorerApi.exports;
+   *   // create an instance of my API and register it with Zowe Explorer
+   *   importedApi.registerUssApi(new MyZoweExplorerAppUssApi());
+   *   window.showInformationMessage(
+   *     'Zowe Explorer was augmented for MyApp support. Please, refresh your explorer views.');
+   *   } else {
+   *   window.showInformationMessage(
+   *     'Zowe VS Extension was not found: either not installe or older version.');
    * }
-   *
-   * @export
+   * ```
    */
-
   interface IApiRegisterClient {
     /**
      * Register a new implementation of the USS Api.
      * See example in Interface docs.
      *
-     * @param {IUss} ussApi
+     * @param ussApi
      */
     fun registerUssApi(ussApi: IUss)
 
     /**
      * Lookup of an API for USS for a given profile.
-     * @param {IProfileLoaded} profile
+     * @param profile
      * @return the registered API instance for the given profile
      */
     fun getUssApi(profile: IProfileLoaded): IUss
@@ -725,13 +663,13 @@ external object ZoweExplorerApi {
      * Register a new implementation of the MVS Api.
      * See example in Interface docs.
      *
-     * @param {IMvs} mvsApi
+     * @param mvsApi
      */
     fun registerMvsApi(mvsApi: IMvs)
 
     /**
      * Lookup of an API for MVS for a given profile.
-     * @param {string} profile
+     * @param profile
      * @return the registered API instance
      */
     fun getMvsApi(profile: IProfileLoaded): IMvs
@@ -740,13 +678,13 @@ external object ZoweExplorerApi {
      * Register a new implementation of the JES Api.
      * See example in Interface docs.
      *
-     * @param {IJes} jesApi
+     * @param jesApi
      */
     fun registerJesApi(jesApi: IJes)
 
     /**
      * Lookup of an API for JES for a given profile.
-     * @param {string} profile
+     * @param profile
      * @return the registered API instance
      */
     fun getJesApi(profile: IProfileLoaded): IJes
@@ -755,13 +693,13 @@ external object ZoweExplorerApi {
      * Register a new implementation of the Command Api.
      * See example in Interface docs.
      *
-     * @param {ICommand} commandApi
+     * @param commandApi
      */
     fun registerCommandApi(CommandApi: ICommand)
 
     /**
      * Lookup of an API for Issuing a Command for a given profile.
-     * @param {string} profile
+     * @param profile
      * @return the registered API instance
      */
     fun getCommandApi(profile: IProfileLoaded): ICommand
@@ -775,7 +713,6 @@ external object ZoweExplorerApi {
     /**
      * Get an array of all the registered APIs identified by the CLI profile type names,
      * such as ["zosmf", "zftp"].
-     * @return {string[]}
      */
     fun registeredApiTypes(): Array<String>
 
@@ -786,7 +723,7 @@ external object ZoweExplorerApi {
 
     /**
      * Lookup of any registered API (Uss, Mvs, Jes, or Command).
-     * @param {string} profile
+     * @param profile
      * @return the registered API instance
      */
     fun getCommonApi(profile: IProfileLoaded): ICommon

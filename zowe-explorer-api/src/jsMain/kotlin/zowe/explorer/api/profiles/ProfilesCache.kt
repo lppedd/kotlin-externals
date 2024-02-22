@@ -45,10 +45,8 @@ external class ProfilesCache {
   /**
    * Loads the named profile from allProfiles
    *
-   * @param {string} name Name of Profile
-   * @param {string} type Type of Profile, optional
-   *
-   * @return {IProfileLoaded}
+   * @param name Name of Profile
+   * @param type Type of Profile, optional
    */
   fun loadNamedProfile(
     name: String,
@@ -58,28 +56,22 @@ external class ProfilesCache {
   /**
    * Updates profile in allProfiles array and if default updates defaultProfileByType
    *
-   * @param {string} profileLoaded
-   *
-   * @return {void}
+   * @param profileLoaded
    */
   fun updateProfilesArrays(profileLoaded: IProfileLoaded)
 
   /**
    * This returns default profile by type from defaultProfileByType
    *
-   * @param {string} type Name of Profile, defaults to "zosmf" if nothing passed.
-   *
-   * @return {IProfileLoaded}
+   * @param type Name of Profile, defaults to "zosmf" if nothing passed.
    */
   fun getDefaultProfile(type: String = definedExternally): IProfileLoaded
 
   /**
    * Gets default Profile attributes from imperative
    *
-   * @param {ProfileInfo} mProfileInfo
-   * @param {string} profileType Type of Profile
-   *
-   * @return {IProfAttrs}
+   * @param mProfileInfo
+   * @param profileType Type of Profile
    */
   fun getDefaultConfigProfile(
     mProfileInfo: ProfileInfo,
@@ -89,9 +81,7 @@ external class ProfilesCache {
   /**
    * Gets array of profiles by type
    *
-   * @param {string} type Type of Profile, defaults to "zosmf" if nothing passed.
-   *
-   * @return {IProfileLoaded[]}
+   * @param type Type of Profile, defaults to "zosmf" if nothing passed.
    */
   fun getProfiles(type: String = definedExternally): Array<IProfileLoaded>
 
@@ -99,9 +89,7 @@ external class ProfilesCache {
    * Used for extenders to register with Zowe Explorer that do not need their
    * profile type in the existing MVS, USS, and JES
    *
-   * @param {string} profileTypeName Type of Profile
-   *
-   * @return {void}
+   * @param profileTypeName Type of Profile
    */
   fun registerCustomProfilesType(profileTypeName: String)
 
@@ -111,36 +99,35 @@ external class ProfilesCache {
 
   /**
    * V1 Profile specific
+   *
    * gets schema from /.zowe/profiles/profileType directory
    * used by Zowe Explorer for creation & update of v1 profiles
+   *
    * TO DO: put in request for public readonly api for this on Imperative.
+   *
    * @param profileType
    */
   fun getSchema(profileType: String): Record<String, Any?>
 
   /**
    * get array of profile types
-   * @return string[]
    */
   fun getAllTypes(): Array<String>
 
   /**
    * get array of Profile names by type
-   * @param type  profile type
-   * @return string[]
+   * @param type profile type
    */
   fun getNamesForType(type: String): Promise<Array<String>>
 
   /**
    * get array of IProfileLoaded by type
    * @param type profile type
-   * @return IProfileLoaded[]
    */
   fun fetchAllProfilesByType(type: String): Promise<Array<IProfileLoaded>>
 
   /**
    * get array of IProfileLoaded for all profiles
-   * @return IProfileLoaded[]
    */
   fun fetchAllProfiles(): Promise<Array<IProfileLoaded>>
 
@@ -148,7 +135,6 @@ external class ProfilesCache {
    * Direct load and return of particular IProfileLoaded
    * @param type profile type
    * @param name profile name
-   * @return IProfileLoaded
    */
   fun directLoad(
     type: String,
@@ -167,9 +153,10 @@ external class ProfilesCache {
 
   /**
    * V1 Profile specific
+   *
    * Used by Zowe Explorer to handle v1 profiles
+   *
    * @param type string, profile type
-   * @return zowe.imperative.CliProfileManager
    */
   fun getCliProfileManager(type: String): CliProfileManager?
 
@@ -179,16 +166,13 @@ external class ProfilesCache {
 
   /**
    * This returns true or false depending on if credentials are stored securely.
-   *
-   * @return {boolean}
    */
   fun isCredentialsSecured(): Promise<Boolean>
 
   /**
    * This returns true or false depending on if SCS plugin is installed. Use isCredentialsSecured().
-   * @deprecated
-   * @return {boolean}
    */
+  @Deprecated("")
   fun isSecureCredentialPluginActive(): Boolean
 
   fun getProfileLoaded(
