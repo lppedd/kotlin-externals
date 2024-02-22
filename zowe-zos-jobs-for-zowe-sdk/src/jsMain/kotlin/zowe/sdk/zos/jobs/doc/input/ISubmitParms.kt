@@ -1,10 +1,6 @@
-@file:JsModule("@zowe/zos-jobs-for-zowe-sdk")
-
 package zowe.sdk.zos.jobs.doc.input
 
 import zowe.imperative.operations.doc.ITaskWithStatus
-
-// unhandled import: ITaskWithStatus from "@zowe/imperative"
 
 /**
  * Interface for submit job API

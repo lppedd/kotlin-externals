@@ -55,7 +55,7 @@ external class JobsConstants {
     /**
      * Maximum number of jobs to obtain
      */
-    val DEFAULT_MAX_JOBS: Double
+    val DEFAULT_MAX_JOBS: Int
 
     /**
      * Maximum number of jobs to obtain

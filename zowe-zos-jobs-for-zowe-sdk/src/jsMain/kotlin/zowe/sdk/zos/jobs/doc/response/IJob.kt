@@ -74,7 +74,7 @@ external interface IJob {
   /**
    * job phase
    */
-  var phase: Double
+  var phase: Int
 
   /**
    * job phase name

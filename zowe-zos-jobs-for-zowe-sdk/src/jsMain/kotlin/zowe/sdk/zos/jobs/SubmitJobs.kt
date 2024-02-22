@@ -11,19 +11,14 @@ import kotlin.ts.Union
 
 /**
  * Class to handle submitting of z/OS batch jobs via z/OSMF
- * @export
- * @class SubmitJobs
  */
-
 external class SubmitJobs {
   companion object {
     /**
      * Submit a job that resides in a z/OS data set.
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {string} jobDataSet - job data set to be translated into parms object
-     * @return {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param jobDataSet job data set to be translated into parms object
+     * @return  Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJob(
       session: AbstractSession,
@@ -32,11 +27,9 @@ external class SubmitJobs {
 
     /**
      * Submit a job that resides in a USS File.
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {string} jobUSSFile - job USS File to be translated into parms object
-     * @return {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param jobUSSFile job USS File to be translated into parms object
+     * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitUSSJob(
       session: AbstractSession,
@@ -45,11 +38,9 @@ external class SubmitJobs {
 
     /**
      * Submit a job that resides in a z/OS data set or USS file.
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {ISubmitJobParms} parms - parm object (see for details)
-     * @return {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param parms parm object (see for details)
+     * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJobCommon(
       session: AbstractSession,
@@ -63,13 +54,11 @@ external class SubmitJobs {
 
     /**
      * Submit a string of JCL to run
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {string} jcl - string of JCL that you want to be submit
-     * @param {string} internalReaderRecfm - record format of the jcl you want to submit. "F" (fixed) or "V" (variable)
-     * @param {string} internalReaderLrecl - logical record length of the jcl you want to submit
-     * @return {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param jcl string of JCL that you want to be submit
+     * @param internalReaderRecfm record format of the jcl you want to submit. "F" (fixed) or "V" (variable)
+     * @param internalReaderLrecl logical record length of the jcl you want to submit
+     * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJcl(
       session: AbstractSession,
@@ -86,11 +75,9 @@ external class SubmitJobs {
 
     /**
      * Submit a JCL string to run
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {ISubmitJclParms} parms - parm object (see for details)
-     * @return {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param parms parm object (see for details)
+     * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJclCommon(
       session: AbstractSession,
@@ -99,13 +86,11 @@ external class SubmitJobs {
 
     /**
      * Submit a JCL string  to run
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {string} jcl - string of JCL that you want to be submit
-     * @param {string} internalReaderRecfm - record format of the jcl you want to submit. "F" (fixed) or "V" (variable).
-     * @param {string} internalReaderLrecl - logical record length of the jcl you want to submit
-     * @return {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param jcl string of JCL that you want to be submit
+     * @param internalReaderRecfm record format of the jcl you want to submit. "F" (fixed) or "V" (variable).
+     * @param internalReaderLrecl logical record length of the jcl you want to submit
+     * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJclNotify(
       session: AbstractSession,
@@ -116,11 +101,9 @@ external class SubmitJobs {
 
     /**
      * Submit a job from a string of JCL and be notified whenever it reaches the default status on a default polling interval.
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {ISubmitJclNotifyParm} parms - parm object (see for details)
-     * @return {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param parms parm object (see for details)
+     * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJclNotifyCommon(
       session: AbstractSession,
@@ -129,11 +112,9 @@ external class SubmitJobs {
 
     /**
      * Submit a job and be notified whenever it reaches the default status on a default polling interval.
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {string} jobDataSet - job data set to be translated into parms object with assumed defaults
-     * @return {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param jobDataSet job data set to be translated into parms object with assumed defaults
+     * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJobNotify(
       session: AbstractSession,
@@ -142,11 +123,9 @@ external class SubmitJobs {
 
     /**
      * Submit a job and be notified whenever it reaches the default status on a default polling interval.
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {string} jobUSSFile - job USS file to be translated into parms object with assumed defaults
-     * @return {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param jobUSSFile job USS file to be translated into parms object with assumed defaults
+     * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitUSSJobNotify(
       session: AbstractSession,
@@ -158,11 +137,9 @@ external class SubmitJobs {
      * If not status is specified, MonitorJobs.DEFAULT_STATUS is assumed.
      * The polling interval can also be optionally controlled via parms.watchDelay.
      * If not specified, the default polling is MonitorJobs.DEFAULT_WATCH_DELAY.
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {ISubmitJobNotifyParm} parms - parm object (see for details)
-     * @return {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param parms parm object (see for details)
+     * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJobNotifyCommon(
       session: AbstractSession,
@@ -176,13 +153,10 @@ external class SubmitJobs {
 
     /**
      * Common method to handle job submit options
-     * @public
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {ISubmitParms } parms - Submit options
-     * @param {IJob} responseJobInfo - job document for a previously submitted job
-     * @return {Promise<IJob | ISpoolFile[]>} - Promise that resolves to an IJob or ISpoolFile[]
-     * @memberof SubmitJobs
+     * @param session z/OSMF connection info
+     * @param parms Submit options
+     * @param responseJobInfo job document for a previously submitted job
+     * @return Promise that resolves to an IJob or ISpoolFile[]
      */
     fun checkSubmitOptions(
       session: AbstractSession,

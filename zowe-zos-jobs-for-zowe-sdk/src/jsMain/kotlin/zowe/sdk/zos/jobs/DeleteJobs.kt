@@ -15,6 +15,7 @@ external class DeleteJobs {
   companion object {
     /**
      * Cancel and purge a job
+     *
      * @param session z/OSMF connection info
      * @param jobname job name to be translated into parms object
      * @param jobid job id to be translated into parms object
@@ -44,7 +45,9 @@ external class DeleteJobs {
 
     /**
      * Cancel and purge a job
+     *
      * Full version of the API with a parameter object
+     *
      * @param session z/OSMF connection info
      * @param parms parm object (see IDeleteJobParms interface for details)
      * @return promise of undefined, or IJobFeedback object returned by API if modifyVersion is 2.0

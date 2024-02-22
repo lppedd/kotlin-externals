@@ -37,11 +37,9 @@ external class MonitorJobs {
      *
      * See JSDoc for "waitForStatusCommon" for full details on polling and other logic.
      *
-     * @static
-     * @param {AbstractSession} session - a Rest client session for z/OSMF
-     * @param {IJob} job - the z/OS job to wait for (see z/OSMF Jobs APIs for details)
-     * @return {Promise<IJob>} - the promise to be fulfilled with IJob object (or rejected with an ImperativeError)
-     * @memberof MonitorJobs
+     * @param session a Rest client session for z/OSMF
+     * @param job the z/OS job to wait for (see z/OSMF Jobs APIs for details)
+     * @return the promise to be fulfilled with IJob object (or rejected with an ImperativeError)
      */
     fun waitForJobOutputStatus(
       session: AbstractSession,
@@ -55,12 +53,10 @@ external class MonitorJobs {
      *
      * See JSDoc for "waitForStatusCommon" for full details on polling and other logic.
      *
-     * @static
-     * @param {AbstractSession} session - a Rest client session for z/OSMF
-     * @param {string} jobname - the z/OS jobname of the job to wait for output status (see z/OSMF Jobs APIs for details)
-     * @param {string} jobid - the z/OS jobid of the job to wait for output status (see z/OSMF Jobs APIS for details)
-     * @return {Promise<IJob>} - the promise to be fulfilled with IJob object (or rejected with an ImperativeError)
-     * @memberof MonitorJobs
+     * @param session a Rest client session for z/OSMF
+     * @param jobname the z/OS jobname of the job to wait for output status (see z/OSMF Jobs APIs for details)
+     * @param jobid the z/OS jobid of the job to wait for output status (see z/OSMF Jobs APIS for details)
+     * @return the promise to be fulfilled with IJob object (or rejected with an ImperativeError)
      */
     fun waitForOutputStatus(
       session: AbstractSession,
@@ -76,11 +72,9 @@ external class MonitorJobs {
      * than the current status of the job, then the method returns immediately (since the job will never enter the
      * requested status) with the current status of the job.
      *
-     * @static
-     * @param {AbstractSession} session - a Rest client session for z/OSMF
-     * @param {IMonitorJobWaitForParms} parms - monitor jobs parameters (see interface for details)
-     * @return {Promise<IJob>} - the promise to be fulfilled with IJob object (or rejected with an ImperativeError)
-     * @memberof MonitorJobs
+     * @param session a Rest client session for z/OSMF
+     * @param parms monitor jobs parameters (see interface for details)
+     * @return the promise to be fulfilled with IJob object (or rejected with an ImperativeError)
      */
     fun waitForStatusCommon(
       session: AbstractSession,

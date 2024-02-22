@@ -15,12 +15,10 @@ external class CancelJobs {
   companion object {
     /**
      * Cancel and purge a job
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {string} jobname - job name to be translated into parms object
-     * @param {string} jobid - job id to be translated into parms object
-     * @return {Promise<undefined|IJobFeedback>} - promise of undefined, or IJobFeedback object returned by API if modifyVersion is 2.0
-     * @memberof CancelJobs
+     * @param session z/OSMF connection info
+     * @param jobname job name to be translated into parms object
+     * @param jobid job id to be translated into parms object
+     * @return promise of undefined, or IJobFeedback object returned by API if modifyVersion is 2.0
      */
     fun cancelJob(
       session: AbstractSession,
@@ -31,13 +29,13 @@ external class CancelJobs {
 
     /**
      * Cancel and purge a job
+     *
      * Alternative version of the cancel API accepting an IJob object returned from other APIs such as GetJobs and SubmitJobs
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {IJob} job - the job that you want to cancel
-     * @param {string} version - version of cancel request
-     * @return {Promise<undefined|IJobFeedback>} - promise of undefined, or IJobFeedback object returned by API if modifyVersion is 2.0
-     * @memberof CancelJobs
+     *
+     * @param session z/OSMF connection info
+     * @param job the job that you want to cancel
+     * @param version version of cancel request
+     * @return promise of undefined, or IJobFeedback object returned by API if modifyVersion is 2.0
      */
     fun cancelJobForJob(
       session: AbstractSession,
@@ -47,12 +45,12 @@ external class CancelJobs {
 
     /**
      * Cancel and purge a job
+     *
      * Full version of the API with a parameter object
-     * @static
-     * @param {AbstractSession} session - z/OSMF connection info
-     * @param {ICancelJobParms} parms - parm object (see ICancelJobParms interface for details)
-     * @return {Promise<undefined|IJobFeedback>} - promise of undefined, or IJobFeedback object returned by API if modifyVersion is 2.0
-     * @memberof CancelJobs
+     *
+     * @param session z/OSMF connection info
+     * @param parms parm object (see ICancelJobParms interface for details)
+     * @return promise of undefined, or IJobFeedback object returned by API if modifyVersion is 2.0
      */
     fun cancelJobCommon(
       session: AbstractSession,

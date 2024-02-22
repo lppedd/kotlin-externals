@@ -45,7 +45,7 @@ external interface IMonitorJobWaitForParms {
    *
    * Default: [MonitorJobs.DEFAULT_ATTEMPTS].
    */
-  var attempts: Double?
+  var attempts: Int?
 
   @seskar.js.JsNative
   operator fun get(key: String): Any?
