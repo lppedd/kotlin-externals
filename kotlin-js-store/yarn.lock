@@ -484,6 +484,30 @@
   optionalDependencies:
     "@zowe/secrets-for-zowe-sdk" "7.18.6"
 
+"@zowe/cli@7.23.3":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@zowe/cli/-/cli-7.23.3.tgz#4099c86e34437c6c9778a68155ef6556732b1e90"
+  integrity sha512-MRBlwAXAdimod5b3R4NaPF82thlptPDA8BRdmZDtWUAnE0sYkWepHxQcL5OjY8Gty6HrQj7t8q5ZWaawArcICg==
+  dependencies:
+    "@zowe/core-for-zowe-sdk" "7.23.3"
+    "@zowe/imperative" "5.22.3"
+    "@zowe/provisioning-for-zowe-sdk" "7.23.3"
+    "@zowe/zos-console-for-zowe-sdk" "7.23.3"
+    "@zowe/zos-files-for-zowe-sdk" "7.23.3"
+    "@zowe/zos-jobs-for-zowe-sdk" "7.23.3"
+    "@zowe/zos-logs-for-zowe-sdk" "7.23.3"
+    "@zowe/zos-tso-for-zowe-sdk" "7.23.3"
+    "@zowe/zos-uss-for-zowe-sdk" "7.23.3"
+    "@zowe/zos-workflows-for-zowe-sdk" "7.23.3"
+    "@zowe/zosmf-for-zowe-sdk" "7.23.3"
+    find-process "1.4.7"
+    get-stream "6.0.1"
+    lodash "4.17.21"
+    minimatch "5.0.1"
+    tar "6.1.14"
+  optionalDependencies:
+    "@zowe/secrets-for-zowe-sdk" "7.18.6"
+
 "@zowe/core-for-zowe-sdk@7.23.2":
   version "7.23.2"
   resolved "https://registry.yarnpkg.com/@zowe/core-for-zowe-sdk/-/core-for-zowe-sdk-7.23.2.tgz#2585bdc696e4a07ee148f12398010db7e678e73a"
@@ -591,6 +615,13 @@
   dependencies:
     js-yaml "4.1.0"
 
+"@zowe/provisioning-for-zowe-sdk@7.23.3":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@zowe/provisioning-for-zowe-sdk/-/provisioning-for-zowe-sdk-7.23.3.tgz#3c01fcf7223640f92cabd4ae4add79f239954179"
+  integrity sha512-UHW+ryUUSp17FQpazCFVShxlBPUJ8qPR2uonqp8cuB9AZyYA5RdGwTzgJvAznfVYXdvSgk4WS2TPOLaCNIVOvg==
+  dependencies:
+    js-yaml "4.1.0"
+
 "@zowe/secrets-for-zowe-sdk@7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@zowe/secrets-for-zowe-sdk/-/secrets-for-zowe-sdk-7.18.6.tgz#6b854b344babb291c26d19d82633099a46e08452"
@@ -601,10 +632,23 @@
   resolved "https://registry.yarnpkg.com/@zowe/zos-console-for-zowe-sdk/-/zos-console-for-zowe-sdk-7.23.2.tgz#10ac3dd64fb843b4450fc0d798bc839f76517c06"
   integrity sha512-cOQNPGHxmjKs/7eaxgzouizZexReTOPkEGUaKePfpvKdiVeDOc9E62zLccVmMAppvhWaHCDx3nFaRzjPzOlGkg==
 
+"@zowe/zos-console-for-zowe-sdk@7.23.3":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@zowe/zos-console-for-zowe-sdk/-/zos-console-for-zowe-sdk-7.23.3.tgz#388220e82ad07c5c5cf757f019ee4bb3caf9ddef"
+  integrity sha512-KZrxTbKtRdDdWSOrFGvHKeEsDGrPFt74EVwRtn29xAzdJeeDsGHcLz+oXRQOdGDMn2PKXG8g+jBOT+zONqnBPQ==
+
 "@zowe/zos-files-for-zowe-sdk@7.23.2":
   version "7.23.2"
   resolved "https://registry.yarnpkg.com/@zowe/zos-files-for-zowe-sdk/-/zos-files-for-zowe-sdk-7.23.2.tgz#a25a40cf9d4975feca45c647b8cdb79f57e21e32"
   integrity sha512-+veO0Y/8jB+binTuzo6LCo+CINKegx9qP8pDocEaW3N+6k5iRiQtQrQ2py6R2a/Gn44mNISsJMB2dDUOkwf4iA==
+  dependencies:
+    get-stream "6.0.1"
+    minimatch "5.0.1"
+
+"@zowe/zos-files-for-zowe-sdk@7.23.3":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@zowe/zos-files-for-zowe-sdk/-/zos-files-for-zowe-sdk-7.23.3.tgz#052e047edf6da9add9a76d78b9398891351866ec"
+  integrity sha512-dhuWez++WemAkAdrH0h5woH6vPMNYw6LcHzX5o+p4zLPpo3gjEzalYHkgH+MUP8eUX4M1yetLd6g82yk9hMuJQ==
   dependencies:
     get-stream "6.0.1"
     minimatch "5.0.1"
@@ -616,10 +660,22 @@
   dependencies:
     "@zowe/zos-files-for-zowe-sdk" "7.23.2"
 
+"@zowe/zos-jobs-for-zowe-sdk@7.23.3":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@zowe/zos-jobs-for-zowe-sdk/-/zos-jobs-for-zowe-sdk-7.23.3.tgz#7fd3c38787ee5ef4abfa61e520d63a24deb02c0f"
+  integrity sha512-Ipk0kCKbCiY6Le93aO8+H0koTvSyI2ICllbs9yWC198tdbetO3oH9GJ8GXp5LKPInQQwGk1zCbnYK/YH6ZzwJg==
+  dependencies:
+    "@zowe/zos-files-for-zowe-sdk" "7.23.3"
+
 "@zowe/zos-logs-for-zowe-sdk@7.23.2":
   version "7.23.2"
   resolved "https://registry.yarnpkg.com/@zowe/zos-logs-for-zowe-sdk/-/zos-logs-for-zowe-sdk-7.23.2.tgz#50a3f65c087154a3bf6014d9b542085b8379bf6b"
   integrity sha512-OR/PD8++UCNnAZu+LESeoBqr3pH4ThnzzNw+i7DjNyZ4EmFipxqfUH8MNWeYl5AYthfUsExEbp5dNmzxaArq7A==
+
+"@zowe/zos-logs-for-zowe-sdk@7.23.3":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@zowe/zos-logs-for-zowe-sdk/-/zos-logs-for-zowe-sdk-7.23.3.tgz#22c02af97b1f3ddd2b03b4feb882d366f76e7881"
+  integrity sha512-e8COZ+3vmeDMLoO+/4umIwv5tmJ2Vd6EJ6Evivx9C2C9WlxVbyIu7YGjY6qf4o7yWxVJ53oVrsCXfsgDXFf7lA==
 
 "@zowe/zos-tso-for-zowe-sdk@7.23.2":
   version "7.23.2"
@@ -628,10 +684,24 @@
   dependencies:
     "@zowe/zosmf-for-zowe-sdk" "7.23.2"
 
+"@zowe/zos-tso-for-zowe-sdk@7.23.3":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@zowe/zos-tso-for-zowe-sdk/-/zos-tso-for-zowe-sdk-7.23.3.tgz#f142d420c3ba637d8b586cdd81033ee9b58fde78"
+  integrity sha512-k23Kh4rK78MO3RBY5Zv/uCWyQL3id8+Rp1Y+oiLDlOxgg5RSYIO44PyUYQiahxaw4Qlv9uGYSxz1WBkh3zHXzg==
+  dependencies:
+    "@zowe/zosmf-for-zowe-sdk" "7.23.3"
+
 "@zowe/zos-uss-for-zowe-sdk@7.23.2":
   version "7.23.2"
   resolved "https://registry.yarnpkg.com/@zowe/zos-uss-for-zowe-sdk/-/zos-uss-for-zowe-sdk-7.23.2.tgz#5f1435487760a9b1e150ca5023c0acb5f201ebf4"
   integrity sha512-9apRtX8vPo895/Mk+MI+pWmCkCO9YqVk0hiW/FOGRLFZkZ/jsmE+iUht7YCQi6/Nkcfw7HJlKOsSC4yr4JEiXA==
+  dependencies:
+    ssh2 "1.15.0"
+
+"@zowe/zos-uss-for-zowe-sdk@7.23.3":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@zowe/zos-uss-for-zowe-sdk/-/zos-uss-for-zowe-sdk-7.23.3.tgz#5e3e746c30365063f33200be6d56fc857504e96b"
+  integrity sha512-fhMSqgpdOu8mlZgrIgIrR/JKaNWLhxDgLAyRRDk/KGwbQGdsnfSPvzXEB6BonN94oTeIsL5gJ/iw2Sc+Q7kZow==
   dependencies:
     ssh2 "1.15.0"
 
@@ -642,10 +712,22 @@
   dependencies:
     "@zowe/zos-files-for-zowe-sdk" "7.23.2"
 
+"@zowe/zos-workflows-for-zowe-sdk@7.23.3":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@zowe/zos-workflows-for-zowe-sdk/-/zos-workflows-for-zowe-sdk-7.23.3.tgz#08d1af8d51eb8d28e2192c9ea027628d6bc7b3b8"
+  integrity sha512-VoigwgLIPJJixEoA7asoUKIRnf2e1DhWeqtTKRfyktP5LO5Gk+UcuWqHifAE/0aDlauIpSx6oGaXNlKGr4Za1w==
+  dependencies:
+    "@zowe/zos-files-for-zowe-sdk" "7.23.3"
+
 "@zowe/zosmf-for-zowe-sdk@7.23.2":
   version "7.23.2"
   resolved "https://registry.yarnpkg.com/@zowe/zosmf-for-zowe-sdk/-/zosmf-for-zowe-sdk-7.23.2.tgz#93035e56dc063d6f8e2beab007fc4571fd497006"
   integrity sha512-KDzemMnHl4Ii6jatLLP3q4bOkUsy1j7xTScZisr1ag+odD3vx2RhE80wSF7uxuUFZAboXapKFqtWul+J2bBCjQ==
+
+"@zowe/zosmf-for-zowe-sdk@7.23.3":
+  version "7.23.3"
+  resolved "https://registry.yarnpkg.com/@zowe/zosmf-for-zowe-sdk/-/zosmf-for-zowe-sdk-7.23.3.tgz#e7e97fe224fa5b59291116ebf2857dfc9aa17d5e"
+  integrity sha512-EQzfq25iLEbJOuvD/dr/ox+x3k8oOzg2iTGMvrWJcT3JIeAFrpYRpTIoiRE5xDIsEZ7BohKKupEvEa3+Iilb9w==
 
 "@zowe/zowe-explorer-api@2.14.1":
   version "2.14.1"
