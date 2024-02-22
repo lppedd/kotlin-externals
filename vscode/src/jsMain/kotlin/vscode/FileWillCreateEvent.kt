@@ -1,11 +1,13 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
  * An event that is fired when files are going to be created.
  *
  * To make modifications to the workspace before the files are created,
- * call the {@linkcode FileWillCreateEvent.waitUntil waitUntil}-function with a
- * thenable that resolves to a [WorkspaceEdit workspace edit].
+ * call the [FileWillCreateEvent.waitUntil]-function with a
+ * thenable that resolves to a [WorkspaceEdit].
  */
 external interface FileWillCreateEvent {
   /**
@@ -16,7 +18,7 @@ external interface FileWillCreateEvent {
   /**
    * The files that are going to be created.
    */
-  val files: Array<out Uri>
+  val files: ReadonlyArray<Uri>
 
   /**
    * Allows to pause the event until the provided thenable resolves.

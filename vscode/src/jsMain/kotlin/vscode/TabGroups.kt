@@ -9,7 +9,7 @@ external interface TabGroups {
   /**
    * All the groups within the group container.
    */
-  val all: Array<out TabGroup>
+  val all: ReadonlyArray<TabGroup>
 
   /**
    * The currently active group.

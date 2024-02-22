@@ -1,7 +1,9 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
- * An event describing a transactional [TextDocument document] change.
+ * An event describing a transactional [TextDocument] change.
  */
 external interface TextDocumentChangeEvent {
   /**
@@ -12,7 +14,7 @@ external interface TextDocumentChangeEvent {
   /**
    * An array of content changes.
    */
-  val contentChanges: Array<out TextDocumentContentChangeEvent>
+  val contentChanges: ReadonlyArray<TextDocumentContentChangeEvent>
 
   /**
    * The reason why the document was changed.

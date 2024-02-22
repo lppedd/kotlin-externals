@@ -1,11 +1,13 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
  * An event that is fired when files are going to be deleted.
  *
  * To make modifications to the workspace before the files are deleted,
- * call the [FileWillCreateEvent.waitUntil `waitUntil`]-function with a
- * thenable that resolves to a [WorkspaceEdit workspace edit].
+ * call the [FileWillCreateEvent.waitUntil]-function with a
+ * thenable that resolves to a [WorkspaceEdit].
  */
 external interface FileWillDeleteEvent {
   /**
@@ -16,7 +18,7 @@ external interface FileWillDeleteEvent {
   /**
    * The files that are going to be deleted.
    */
-  val files: Array<out Uri>
+  val files: ReadonlyArray<Uri>
 
   /**
    * Allows to pause the event until the provided thenable resolves.

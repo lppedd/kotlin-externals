@@ -1,16 +1,18 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
- * Represents an event describing the change in a [NotebookEditor.selections notebook editor's selections].
+ * Represents an event describing the change in a notebook editor's selections ([NotebookEditor.selections]).
  */
 external interface NotebookEditorSelectionChangeEvent {
   /**
-   * The [NotebookEditor notebook editor] for which the selections have changed.
+   * The [NotebookEditor] for which the selections have changed.
    */
   val notebookEditor: NotebookEditor
 
   /**
-   * The new value for the [NotebookEditor.selections notebook editor's selections].
+   * The new value for the notebook editor's selections ([NotebookEditor.selections]).
    */
-  val selections: Array<out NotebookRange>
+  val selections: ReadonlyArray<NotebookRange>
 }

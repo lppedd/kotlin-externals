@@ -1,5 +1,7 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
  * A NotebookCellExecution is how [NotebookController notebook controller] modify a notebook cell as
  * it is executing.
@@ -72,7 +74,7 @@ external interface NotebookCellExecution {
   ): Thenable<Unit>
 
   fun replaceOutput(
-    out: Array<out NotebookCellOutput>,
+    out: ReadonlyArray<NotebookCellOutput>,
     cell: NotebookCell = definedExternally,
   ): Thenable<Unit>
 
@@ -90,7 +92,7 @@ external interface NotebookCellExecution {
   ): Thenable<Unit>
 
   fun appendOutput(
-    out: Array<out NotebookCellOutput>,
+    out: ReadonlyArray<NotebookCellOutput>,
     cell: NotebookCell = definedExternally,
   ): Thenable<Unit>
 
@@ -107,7 +109,7 @@ external interface NotebookCellExecution {
   ): Thenable<Unit>
 
   fun replaceOutputItems(
-    items: Array<out NotebookCellOutputItem>,
+    items: ReadonlyArray<NotebookCellOutputItem>,
     output: NotebookCellOutput,
   ): Thenable<Unit>
 
@@ -124,7 +126,7 @@ external interface NotebookCellExecution {
   ): Thenable<Unit>
 
   fun appendOutputItems(
-    items: Array<out NotebookCellOutputItem>,
+    items: ReadonlyArray<NotebookCellOutputItem>,
     output: NotebookCellOutput,
   ): Thenable<Unit>
 }

@@ -1,5 +1,7 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
  * A memento represents a storage utility. It can store and retrieve
  * values.
@@ -10,7 +12,7 @@ external interface Memento {
    *
    * @return The stored keys.
    */
-  fun keys(): Array<out String>
+  fun keys(): ReadonlyArray<String>
 
   /**
    * Return a value.
@@ -25,7 +27,7 @@ external interface Memento {
    *
    * @param key A string.
    * @param defaultValue A value that should be returned when there is no
-   * value (`undefined`) with the given key.
+   *   value (`undefined`) with the given key.
    * @return The stored value or the defaultValue.
    */
   fun <T> get(

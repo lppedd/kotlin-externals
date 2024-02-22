@@ -1,5 +1,7 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
  * An item shown in the "test explorer" view.
  *
@@ -35,9 +37,9 @@ external interface TestItem {
 
   /**
    * Tags associated with this test item. May be used in combination with
-   * [TestRunProfile.tag tags], or simply as an organizational feature.
+   * [TestRunProfile.tag]s, or simply as an organizational feature.
    */
-  var tags: Array<out TestTag>
+  var tags: ReadonlyArray<TestTag>
 
   /**
    * Indicates whether this test item may have children discovered by resolving.

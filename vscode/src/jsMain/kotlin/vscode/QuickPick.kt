@@ -1,14 +1,16 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
  * A concrete [QuickInput] to let the user pick an item from a
  * list of items of type T. The items can be filtered through a filter text field and
- * there is an option [QuickPick.canSelectMany canSelectMany] to allow for
+ * there is an option [QuickPick.canSelectMany] to allow for
  * selecting multiple items.
  *
- * Note that in many cases the more convenient [window.showQuickPick]
- * is easier to use. [window.createQuickPick] should be used
- * when [window.showQuickPick] does not offer the required flexibility.
+ * Note that in many cases the more convenient [vscode.window.showQuickPick]
+ * is easier to use. [vscode.window.createQuickPick] should be used
+ * when [vscode.window.showQuickPick] does not offer the required flexibility.
  */
 external interface QuickPick<T : QuickPickItem> : QuickInput {
   /**
@@ -34,7 +36,7 @@ external interface QuickPick<T : QuickPickItem> : QuickInput {
   /**
    * Buttons for actions in the UI.
    */
-  var buttons: Array<out QuickInputButton>
+  var buttons: ReadonlyArray<QuickInputButton>
 
   /**
    * An event signaling when a button in the title bar was triggered.
@@ -51,7 +53,7 @@ external interface QuickPick<T : QuickPickItem> : QuickInput {
   /**
    * Items to pick from. This can be read and updated by the extension.
    */
-  var items: Array<out T>
+  var items: ReadonlyArray<T>
 
   /**
    * If multiple items can be selected at the same time. Defaults to false.
@@ -76,20 +78,20 @@ external interface QuickPick<T : QuickPickItem> : QuickInput {
   /**
    * Active items. This can be read and updated by the extension.
    */
-  var activeItems: Array<out T>
+  var activeItems: ReadonlyArray<T>
 
   /**
    * An event signaling when the active items have changed.
    */
-  val onDidChangeActive: Event<Array<out T>>
+  val onDidChangeActive: Event<ReadonlyArray<T>>
 
   /**
    * Selected items. This can be read and updated by the extension.
    */
-  var selectedItems: Array<out T>
+  var selectedItems: ReadonlyArray<T>
 
   /**
    * An event signaling when the selected items have changed.
    */
-  val onDidChangeSelection: Event<Array<out T>>
+  val onDidChangeSelection: Event<ReadonlyArray<T>>
 }

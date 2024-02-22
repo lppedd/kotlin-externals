@@ -1,13 +1,15 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
- * Represents a notebook editor that is attached to a [NotebookDocument notebook].
+ * Represents a notebook editor that is attached to a [NotebookDocument].
  * Additional properties of the NotebookEditor are available in the proposed
  * API, which will be finalized later.
  */
 external interface NotebookEditor {
   /**
-   * The [NotebookDocument notebook document] associated with this notebook editor.
+   * The [NotebookDocument] associated with this notebook editor.
    */
   val notebook: NotebookDocument
 
@@ -21,12 +23,12 @@ external interface NotebookEditor {
    *
    * The primary selection (or focused range) is `selections[0]`. When the document has no cells, the primary selection is empty `{ start: 0, end: 0 }`;
    */
-  var selections: Array<out NotebookRange>
+  var selections: ReadonlyArray<NotebookRange>
 
   /**
    * The current visible ranges in the editor (vertically).
    */
-  val visibleRanges: Array<out NotebookRange>
+  val visibleRanges: ReadonlyArray<NotebookRange>
 
   /**
    * The column in which this editor shows.

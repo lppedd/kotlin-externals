@@ -1,16 +1,18 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
- * Represents an event describing the change in a [TextEditor.visibleRanges text editor's visible ranges].
+ * Represents an event describing the change in a text editor's visible ranges ([TextEditor.visibleRanges]).
  */
 external interface TextEditorVisibleRangesChangeEvent {
   /**
-   * The [TextEditor text editor] for which the visible ranges have changed.
+   * The [TextEditor] for which the visible ranges have changed.
    */
   val textEditor: TextEditor
 
   /**
-   * The new value for the [TextEditor.visibleRanges text editor's visible ranges].
+   * The new value for the text editor's visible ranges ([TextEditor.visibleRanges]).
    */
-  val visibleRanges: Array<out Range>
+  val visibleRanges: ReadonlyArray<Range>
 }
