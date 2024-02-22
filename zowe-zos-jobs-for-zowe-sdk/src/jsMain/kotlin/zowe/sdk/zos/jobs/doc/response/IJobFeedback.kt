@@ -17,7 +17,7 @@ external interface IJobFeedback {
   /**
    * Original job id
    */
-  // "original-jobid": string;
+  var `original-jobid`: String
 
   /**
    * Job owner
@@ -37,7 +37,7 @@ external interface IJobFeedback {
   /**
    * unique identifier of job (substitute of job name and job id)
    */
-  // "job-correlator": string;
+  var `job-correlator`: String
 
   /**
    * status of the job
@@ -47,37 +47,10 @@ external interface IJobFeedback {
   /**
    * Internal code
    */
-  // "internal-code": string;
+  var `internal-code`: String
 
   /**
    * Message
    */
   var message: String
 }
-
-/**
- * Original job id
- */
-var <T : IJobFeedback> T.originalJobid: String
-  get() = asDynamic()["original-jobid"] as String
-  set(value) {
-    asDynamic()["original-jobid"] = value
-  }
-
-/**
- * unique identifier of job (substitute of job name and job id)
- */
-var <T : IJobFeedback> T.jobCorrelator: String
-  get() = asDynamic()["job-correlator"] as String
-  set(value) {
-    asDynamic()["job-correlator"] = value
-  }
-
-/**
- * Internal code
- */
-var <T : IJobFeedback> T.internalCode: String
-  get() = asDynamic()["internal-code"] as String
-  set(value) {
-    asDynamic()["internal-code"] = value
-  }

@@ -1,5 +1,6 @@
 package zowe.sdk.zos.files.methods.copy.doc
 
+import zowe.sdk.zos.files.doc.IDataSet
 import zowe.sdk.zos.files.doc.IZosFilesOptions
 import kotlin.js.plain.JsPlainObject
 
@@ -11,7 +12,8 @@ external interface ICopyDatasetOptions : IZosFilesOptions {
   /**
    * The dataset to copy from.
    */
-  // "from-dataset": IDataSet;
+  var `from-dataset`: IDataSet
+
   /**
    * Enq option
    * Allow values are: SHR, SHRW, EXCLU.

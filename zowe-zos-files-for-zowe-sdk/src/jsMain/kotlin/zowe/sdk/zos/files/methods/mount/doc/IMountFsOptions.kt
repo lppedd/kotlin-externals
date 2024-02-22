@@ -11,7 +11,8 @@ external interface IMountFsOptions : IZosFilesOptions {
   /**
    * The file system type to mount
    */
-  // "fs-type"?: string;
+  var `fs-type`: String?
+
   /**
    * The mode for mounting the file system
    */

@@ -7,7 +7,7 @@ external interface IJobComplete {
   /**
    * unique identifier of job (substitute of job name and job id)
    */
-  // "job-correlator": string;
+  var `job-correlator`: String
 
   /**
    * job id for a job
@@ -37,51 +37,15 @@ external interface IJobComplete {
   /**
    * Completion type
    */
-  // "completion-type": number;
+  var `completion-type`: Int
 
   /**
    * Completion code
    */
-  // "completion-code": number;
+  var `completion-code`: Int
 
   /**
    * Abend code
    */
-  // "abend-code": string;
+  var `abend-code`: String
 }
-
-/**
- * unique identifier of job (substitute of job name and job id)
- */
-var <T : IJobComplete> T.jobCorrelator: String
-  get() = asDynamic()["job-correlator"] as String
-  set(value) {
-    asDynamic()["job-correlator"] = value
-  }
-
-/**
- * Completion type
- */
-var <T : IJobComplete> T.completionType: String
-  get() = asDynamic()["completion-type"] as String
-  set(value) {
-    asDynamic()["completion-type"] = value
-  }
-
-/**
- * Completion code
- */
-var <T : IJobComplete> T.completionCode: String
-  get() = asDynamic()["completion-code"] as String
-  set(value) {
-    asDynamic()["completion-code"] = value
-  }
-
-/**
- * Abend code
- */
-var <T : IJobComplete> T.abendCode: String
-  get() = asDynamic()["abend-code"] as String
-  set(value) {
-    asDynamic()["abend-code"] = value
-  }
