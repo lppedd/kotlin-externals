@@ -13,7 +13,6 @@ external class SemanticTokensEdits {
    * @param edits An array of semantic token edits
    * @param resultId Result identifier.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(edits: Array<SemanticTokensEdit>, resultId: String = definedExternally)
 
   /**

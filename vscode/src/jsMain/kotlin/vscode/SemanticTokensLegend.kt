@@ -13,7 +13,6 @@ external class SemanticTokensLegend {
    * @param tokenTypes An array of token types.
    * @param tokenModifiers An array of token modifiers.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(tokenTypes: Array<String>, tokenModifiers: Array<String> = definedExternally)
 
   /**

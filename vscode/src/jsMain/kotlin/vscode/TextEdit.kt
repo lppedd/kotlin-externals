@@ -13,7 +13,6 @@ external class TextEdit {
    * @param range A range.
    * @param newText A string.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(range: Range, newText: String)
 
   /**

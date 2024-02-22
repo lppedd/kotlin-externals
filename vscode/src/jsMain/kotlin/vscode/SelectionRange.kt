@@ -13,7 +13,6 @@ external class SelectionRange {
    * @param range The range of the selection range.
    * @param parent The parent of the selection range.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(range: Range, parent: SelectionRange = definedExternally)
 
   /**

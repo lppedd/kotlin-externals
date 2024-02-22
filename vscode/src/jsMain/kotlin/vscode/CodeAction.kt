@@ -17,7 +17,6 @@ external class CodeAction {
    * @param title The title of the code action.
    * @param kind The kind of the code action.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(title: String, kind: CodeActionKind = definedExternally)
 
   /**

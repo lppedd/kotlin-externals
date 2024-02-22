@@ -12,7 +12,6 @@ external class CallHierarchyItem {
   /**
    * Creates a new call hierarchy item.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(kind: SymbolKind, name: String, detail: String, uri: Uri, range: Range, selectionRange: Range)
 
   /**

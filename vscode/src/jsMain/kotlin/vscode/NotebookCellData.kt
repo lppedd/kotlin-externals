@@ -16,7 +16,6 @@ external class NotebookCellData {
    * @param value The source value.
    * @param languageId The language identifier of the source value.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(kind: NotebookCellKind, value: String, languageId: String)
 
   /**

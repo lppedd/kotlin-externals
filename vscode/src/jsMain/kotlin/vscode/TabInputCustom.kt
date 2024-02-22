@@ -11,7 +11,6 @@ external class TabInputCustom {
    * @param uri The uri of the tab.
    * @param viewType The viewtype of the custom editor.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(uri: Uri, viewType: String)
 
   /**

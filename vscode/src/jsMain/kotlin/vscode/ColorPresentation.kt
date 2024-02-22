@@ -16,7 +16,6 @@ external class ColorPresentation {
    *
    * @param label The label of this color presentation.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(label: String)
 
   /**

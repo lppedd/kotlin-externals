@@ -14,7 +14,6 @@ external class InlineValueEvaluatableExpression {
    * @param range The range in the underlying document from which the evaluatable expression is extracted.
    * @param expression If specified overrides the extracted expression.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(range: Range, expression: String = definedExternally)
 
   /**

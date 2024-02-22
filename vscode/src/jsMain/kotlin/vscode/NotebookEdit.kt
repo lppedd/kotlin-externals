@@ -14,7 +14,6 @@ external class NotebookEdit {
    * @param range A notebook range.
    * @param newCells An array of new cell data.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(range: NotebookRange, newCells: Array<NotebookCellData>)
 
   /**

@@ -20,7 +20,6 @@ external class SnippetString {
    *
    * @param value A snippet string.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(value: String = definedExternally)
 
   /**

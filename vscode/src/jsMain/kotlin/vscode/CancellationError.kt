@@ -15,6 +15,5 @@ external class CancellationError : JsError {
   /**
    * Creates a new cancellation error.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor()
 }

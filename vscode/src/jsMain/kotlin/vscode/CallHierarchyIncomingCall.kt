@@ -12,7 +12,6 @@ external class CallHierarchyIncomingCall {
    * @param item The item making the call.
    * @param fromRanges The ranges at which the calls appear.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(item: CallHierarchyItem, fromRanges: Array<Range>)
 
   /**

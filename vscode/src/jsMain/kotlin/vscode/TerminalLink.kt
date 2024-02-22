@@ -16,7 +16,6 @@ external class TerminalLink {
    * how to trigger the link, such as `{0} (ctrl + click)`. The specific instructions vary
    * depending on OS, user settings, and localization.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(startIndex: Double, length: Double, tooltip: String = definedExternally)
 
   /**

@@ -18,7 +18,6 @@ external class SnippetTextEdit {
    * @param range A range.
    * @param snippet A snippet string.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(range: Range, snippet: SnippetString)
 
   /**

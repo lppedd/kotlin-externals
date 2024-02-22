@@ -13,7 +13,6 @@ external class DebugAdapterExecutable {
    * @param args Optional arguments to be passed to the command or executable.
    * @param options Optional options to be used when starting the command or executable.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(
     command: String,
     args: Array<String> = definedExternally,

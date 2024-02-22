@@ -16,7 +16,6 @@ external class SemanticTokensEdit {
    * @param deleteCount Number of elements to remove.
    * @param data Elements to insert
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(start: Int, deleteCount: Int, data: Uint32Array = definedExternally)
 
   /**

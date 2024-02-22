@@ -17,7 +17,6 @@ external class MarkdownString {
    * @param value Optional, initial value.
    * @param supportThemeIcons Optional, Specifies whether [ThemeIcon]s are supported within the [MarkdownString].
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(value: String = definedExternally, supportThemeIcons: Boolean = definedExternally)
 
   /**

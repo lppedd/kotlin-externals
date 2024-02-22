@@ -16,7 +16,6 @@ external class CompletionList<
    * @param items The completion items.
    * @param isIncomplete The list is not complete.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(items: Array<T> = definedExternally, isIncomplete: Boolean = definedExternally)
 
   /**

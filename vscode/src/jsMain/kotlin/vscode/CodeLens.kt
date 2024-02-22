@@ -19,7 +19,6 @@ external class CodeLens {
    * @param range The range to which this code lens applies.
    * @param command The command associated to this code lens.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(range: Range, command: Command = definedExternally)
 
   /**

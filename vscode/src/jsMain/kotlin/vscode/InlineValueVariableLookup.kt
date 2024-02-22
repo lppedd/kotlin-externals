@@ -15,7 +15,6 @@ external class InlineValueVariableLookup {
    * @param variableName The name of the variable to look up.
    * @param caseSensitiveLookup How to perform the lookup. If missing lookup is case sensitive.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(
     range: Range,
     variableName: String = definedExternally,

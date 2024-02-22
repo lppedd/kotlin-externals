@@ -9,7 +9,6 @@ external class SourceBreakpoint : Breakpoint {
   /**
    * Create a new breakpoint for a source location.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(
     location: Location,
     enabled: Boolean = definedExternally,

@@ -14,7 +14,6 @@ external class Color {
    * @param blue The blue component.
    * @param alpha The alpha component.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(red: Double, green: Double, blue: Double, alpha: Double)
 
   /**

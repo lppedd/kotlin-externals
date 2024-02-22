@@ -9,6 +9,5 @@ external class DebugAdapterInlineImplementation {
   /**
    * Create a descriptor for an inline implementation of a debug adapter.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(implementation: DebugAdapter)
 }

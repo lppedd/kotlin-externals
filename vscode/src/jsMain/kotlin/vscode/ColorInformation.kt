@@ -12,7 +12,6 @@ external class ColorInformation {
    * @param range The range the color appears in. Must not be empty.
    * @param color The value of the color.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(range: Range, color: Color)
 
   /**

@@ -14,7 +14,6 @@ open external class Breakpoint {
    * @param hitCondition Expression that controls how many hits of the breakpoint are ignored
    * @param logMessage Log message to display when breakpoint is hit
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(
     enabled: Boolean = definedExternally,
     condition: String = definedExternally,

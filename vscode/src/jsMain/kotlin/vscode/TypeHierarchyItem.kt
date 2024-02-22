@@ -18,7 +18,6 @@ external class TypeHierarchyItem {
    * @param range The whole range of the item.
    * @param selectionRange The selection range of the item.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(kind: SymbolKind, name: String, detail: String, uri: Uri, range: Range, selectionRange: Range)
 
   /**

@@ -14,7 +14,6 @@ external class SemanticTokensBuilder {
    *
    * @param legend A semantic tokens legent.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(legend: SemanticTokensLegend = definedExternally)
 
   /**

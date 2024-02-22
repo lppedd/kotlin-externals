@@ -16,7 +16,6 @@ external class SemanticTokens {
    * @param data Token data.
    * @param resultId Result identifier.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(data: Uint32Array, resultId: String = definedExternally)
 
   /**

@@ -14,7 +14,6 @@ external class NotebookRange {
    * @param start start index
    * @param end end index.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(start: Int, end: Int)
 
   /**

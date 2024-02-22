@@ -9,7 +9,6 @@ external class DebugAdapterServer {
   /**
    * Create a description for a debug adapter running as a socket based server.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(port: Int, host: String = definedExternally)
 
   /**

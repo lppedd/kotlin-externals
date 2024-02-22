@@ -16,7 +16,6 @@ external class NotebookCellOutput {
    * @param items Notebook output items.
    * @param metadata Optional metadata.
    */
-  @Suppress("ConvertSecondaryConstructorToPrimary")
   constructor(items: Array<NotebookCellOutputItem>, metadata: Record<String, Any> = definedExternally)
 
   /**
