@@ -1,5 +1,6 @@
 package vscode
 
+import js.errors.JsError
 import js.objects.Record
 
 /**
@@ -68,7 +69,7 @@ external interface TelemetryLogger {
    * @param data Additional data to log alongside the stack trace
    */
   fun logError(
-    error: Error,
+    error: JsError,
     data: Record<String, Union<Any, TelemetryTrustedValue<Any?>>?> = definedExternally,
   )
 

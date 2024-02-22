@@ -1,12 +1,13 @@
 package vscode
 
+import js.errors.JsError
+
 /**
  * A channel for containing log output.
  *
  * To get an instance of a `LogOutputChannel` use
- * [window.createOutputChannel createOutputChannel].
+ * [vscode.window.createOutputChannel].
  */
-
 external interface LogOutputChannel : OutputChannel {
   /**
    * The current log level of the channel. Defaults to [env.logLevel editor log level].
@@ -28,7 +29,7 @@ external interface LogOutputChannel : OutputChannel {
   fun trace(
     message: String,
     vararg args: Any?,
-  ): Unit
+  )
 
   /**
    * Outputs the given debug message to the channel.
@@ -40,7 +41,7 @@ external interface LogOutputChannel : OutputChannel {
   fun debug(
     message: String,
     vararg args: Any?,
-  ): Unit
+  )
 
   /**
    * Outputs the given information message to the channel.
@@ -52,7 +53,7 @@ external interface LogOutputChannel : OutputChannel {
   fun info(
     message: String,
     vararg args: Any?,
-  ): Unit
+  )
 
   /**
    * Outputs the given warning message to the channel.
@@ -64,7 +65,7 @@ external interface LogOutputChannel : OutputChannel {
   fun warn(
     message: String,
     vararg args: Any?,
-  ): Unit
+  )
 
   /**
    * Outputs the given error or error message to the channel.
@@ -76,10 +77,10 @@ external interface LogOutputChannel : OutputChannel {
   fun error(
     error: String,
     vararg args: Any?,
-  ): Unit
+  )
 
   fun error(
-    error: Error,
+    error: JsError,
     vararg args: Any?,
-  ): Unit
+  )
 }

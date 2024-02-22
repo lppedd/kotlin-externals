@@ -1,5 +1,6 @@
 package zowe.imperative.cmd.yargs.doc
 
+import js.errors.JsError
 import zowe.imperative.cmd.doc.response.response.ICommandResponse
 
 /**
@@ -17,5 +18,5 @@ external interface IYargsResponse {
   var message: String
   var actionPerformed: ImperativeYargsCommandAction
   var commandResponses: Array<ICommandResponse>?
-  var causeErrors: Error?
+  var causeErrors: JsError?
 }

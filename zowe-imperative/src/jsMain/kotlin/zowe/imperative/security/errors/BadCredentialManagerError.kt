@@ -2,6 +2,7 @@
 
 package zowe.imperative.security.errors
 
+import js.errors.JsError
 import zowe.imperative.error.ImperativeError
 import zowe.imperative.security.CredentialManagerFactory
 import zowe.imperative.security.InvalidCredentialManager
@@ -16,5 +17,5 @@ external class BadCredentialManagerError : ImperativeError {
    *
    * @param causeError The error that caused the load failure.
    */
-  constructor(causeError: Error)
+  constructor(causeError: JsError)
 }

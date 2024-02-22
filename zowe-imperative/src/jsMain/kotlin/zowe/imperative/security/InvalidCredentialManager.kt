@@ -2,6 +2,7 @@
 
 package zowe.imperative.security
 
+import js.errors.JsError
 import js.promise.Promise
 import zowe.imperative.security.abstract.AbstractCredentialManager
 import zowe.imperative.security.abstract.SecureCredential
@@ -19,7 +20,7 @@ external class InvalidCredentialManager : AbstractCredentialManager {
    * @param service A service that needs to be passed to the superclass
    * @param causeError The load failure that has occurred
    */
-  constructor(service: String, causeError: Error)
+  constructor(service: String, causeError: JsError)
 
   override val service: String
 
@@ -29,9 +30,6 @@ external class InvalidCredentialManager : AbstractCredentialManager {
     account: String,
     optional: Boolean,
   ): Promise<SecureCredential>
-
-  // Note(Edoardo): artificial overload
-  fun loadCredentials(account: String): Promise<SecureCredential>
 
   override fun saveCredentials(
     account: String,

@@ -82,18 +82,6 @@ external class DefaultCredentialManager : AbstractCredentialManager {
   ): Promise<SecureCredential>
 
   /**
-   * Calls the keytar getPassword service with [DefaultCredentialManager.service] and the
-   * account passed to the function by Imperative.
-   *
-   * @param account The account for which to get credentials
-   * @return A promise containing the credentials stored in keytar.
-   * @throws ImperativeError if keytar is not defined.
-   * @throws ImperativeError when keytar.getPassword returns null or undefined.
-   */
-  // Note(Edoardo): artificial overload
-  fun loadCredentials(account: String): Promise<SecureCredential>
-
-  /**
    * Calls the keytar setPassword service with [DefaultCredentialManager.service] and the
    * account and credentials passed to the function by Imperative.
    *
