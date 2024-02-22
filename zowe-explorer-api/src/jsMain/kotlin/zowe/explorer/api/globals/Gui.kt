@@ -329,7 +329,6 @@ external object Gui {
     action: String,
   )
 
-  @Suppress("ClassName")
   object utils {
     /**
      * Determines whether a node has been double-clicked within a tree view.
