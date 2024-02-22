@@ -79,7 +79,7 @@ external class SshSession {
     /**
      * Given command line arguments, create an SSH session configuration object.
      * @param args The arguments specified by the user
-     * @returns A session configuration to be used for an SSH session.
+     * @return A session configuration to be used for an SSH session.
      */
     fun createSshSessCfgFromArgs(args: ICommandArguments): ISshSession
   }
