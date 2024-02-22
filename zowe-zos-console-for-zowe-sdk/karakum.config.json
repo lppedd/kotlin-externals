@@ -1,0 +1,14 @@
+{
+  "input": [
+    "<nodeModules>/@zowe/zos-console-for-zowe-sdk/lib/**/*.d.ts"
+  ],
+  "ignoreInput": [
+    "<nodeModules>/@zowe/zos-console-for-zowe-sdk/lib/**/index.d.ts"
+  ],
+  "output": "src/jsMain/kotlin/zowe/sdk/console",
+  "libraryName": "@zowe/zos-console-for-zowe-sdk",
+  "granularity": "top-level",
+  "moduleNameMapper": {
+    ".*": "@zowe/zos-console-for-zowe-sdk"
+  }
+}

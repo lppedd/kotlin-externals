@@ -1,0 +1,14 @@
+{
+  "input": [
+    "<nodeModules>/@zowe/zosmf-for-zowe-sdk/lib/**/*.d.ts"
+  ],
+  "ignoreInput": [
+    "<nodeModules>/@zowe/zosmf-for-zowe-sdk/lib/**/index.d.ts"
+  ],
+  "output": "src/jsMain/kotlin/zowe/sdk/zosmf",
+  "libraryName": "@zowe/zosmf-for-zowe-sdk",
+  "granularity": "top-level",
+  "moduleNameMapper": {
+    ".*": "@zowe/zosmf-for-zowe-sdk"
+  }
+}

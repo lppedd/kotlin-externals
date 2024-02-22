@@ -1,0 +1,14 @@
+{
+  "input": [
+    "<nodeModules>/@zowe/zos-jobs-for-zowe-sdk/lib/**/*.d.ts"
+  ],
+  "ignoreInput": [
+    "<nodeModules>/@zowe/zos-jobs-for-zowe-sdk/lib/**/index.d.ts"
+  ],
+  "output": "src/jsMain/kotlin/zowe/sdk/zos/jobs",
+  "libraryName": "@zowe/zos-jobs-for-zowe-sdk",
+  "granularity": "top-level",
+  "moduleNameMapper": {
+    ".*": "@zowe/zos-jobs-for-zowe-sdk"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@zowe/zosmf-for-zowe-sdk",
+  "version": "7.23.2",
+  "description": "Zowe SDK to interact with the z/OS Management Facility",
+  "author": "Zowe",
+  "license": "EPL-2.0",
+  "homepage": "https://github.com/zowe/zowe-cli/tree/master/packages/zosmf#readme",
+  "bugs": {
+    "url": "https://github.com/zowe/zowe-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zowe/zowe-cli.git"
+  },
+  "keywords": [
+    "zosmf",
+    "mainframe",
+    "CLI",
+    "zos",
+    "z/OSMF",
+    "mvs",
+    "os390",
+    "z/OS",
+    "zowe"
+  ],
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc --pretty",
+    "watch": "tsc --pretty --watch",
+    "clean": "rimraf lib",
+    "lint": "eslint \"src/**/*.ts\" \"**/__tests__/**/*.ts\"",
+    "lint:packages": "eslint \"src/**/*.ts\" --ignore-pattern \"**/__tests__/**/*.ts\"",
+    "lint:tests": "eslint \"**/__tests__/**/*.ts\"",
+    "circularDependencyCheck": "madge -c lib",
+    "typedoc": "typedoc --options ./typedoc.json ./src/",
+    "typedocSpecifySrc": "typedoc --options ./typedoc.json"
+  },
+  "devDependencies": {
+    "@zowe/cli-test-utils": "7.23.2",
+    "@zowe/core-for-zowe-sdk": "7.23.2",
+    "@zowe/imperative": "5.22.2"
+  },
+  "peerDependencies": {
+    "@zowe/core-for-zowe-sdk": "^7.0.0",
+    "@zowe/imperative": "^5.0.0"
+  }
+}

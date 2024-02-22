@@ -1,0 +1,21 @@
+[versions]
+kotlin = "1.9.22"
+wrappers-kotlin-js = "1.0.0-pre.698"
+wrappers-kotlin-node = "20.11.5-pre.698"
+ktlint = "0.8.1"
+seskar = "2.40.0"
+karakum = "1.0.0-alpha.38"
+
+[libraries]
+kotlin-wrappers-js = { group = "org.jetbrains.kotlin-wrappers", name = "kotlin-js", version.ref = "wrappers-kotlin-js" }
+kotlin-wrappers-node = { group = "org.jetbrains.kotlin-wrappers", name = "kotlin-node", version.ref = "wrappers-kotlin-node" }
+
+# Gradle
+kotlin-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ktlint-plugin = { group = "io.github.usefulness", name = "ktlint-gradle-plugin", version.ref = "ktlint" }
+seskar-plugin = { group = "io.github.turansky.seskar", name = "seskar-gradle-plugin", version.ref = "seskar" }
+karakum-plugin = { group = "io.github.sgrishchenko", name = "karakum-gradle-plugin", version.ref = "karakum" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }

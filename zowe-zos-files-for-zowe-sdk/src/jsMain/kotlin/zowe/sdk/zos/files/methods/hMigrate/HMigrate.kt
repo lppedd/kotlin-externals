@@ -1,0 +1,36 @@
+@file:JsModule("@zowe/zos-files-for-zowe-sdk")
+
+package zowe.sdk.zos.files.methods.hMigrate
+
+import js.promise.Promise
+import zowe.imperative.error.ImperativeError
+import zowe.imperative.rest.session.AbstractSession
+import zowe.sdk.core.rest.ZosmfRestClient
+import zowe.sdk.zos.files.doc.IZosFilesResponse
+import zowe.sdk.zos.files.methods.hMigrate.doc.IMigrateOptions
+
+/**
+ * This class holds helper functions that are used to migrate data sets through the
+ * z/OSMF APIs.
+ */
+external class HMigrate {
+  companion object {
+    /**
+     * See https://www.ibm.com/support/knowledgecenter/SSLTBW_2.4.0/com.ibm.zos.v2r4.izua700/IZUHPINFO_API_PutDataSetMemberUtilities.htm
+     *
+     * @param session z/OSMF connection info
+     * @param dataSetName The name of the data set to recall
+     * @param wait If true then the function waits for completion of the request. If false (default) the request is queued.
+     *
+     * @return {Promise<IZosFilesResponse>} A response indicating the status of the migrating
+     *
+     * @throws ImperativeError Data set name must be specified as a non-empty string
+     * @throws Error When the [ZosmfRestClient] throws an error
+     */
+    fun dataSet(
+      session: AbstractSession,
+      dataSetName: String,
+      options: IMigrateOptions = definedExternally, // Note(Edoardo): should be Partial<IMigrateOptions>
+    ): Promise<IZosFilesResponse<Any?>>
+  }
+}

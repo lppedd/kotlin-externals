@@ -1,0 +1,15 @@
+{
+  "input": [
+    "<nodeModules>/@zowe/cli/lib/**/*.d.ts"
+  ],
+  "ignoreInput": [
+    "<nodeModules>/@zowe/cli/lib/**/index.d.ts",
+    "<nodeModules>/@zowe/cli/lib/**/main.d.ts"
+  ],
+  "output": "src/jsMain/kotlin/zowe/cli",
+  "libraryName": "@zowe/cli",
+  "granularity": "top-level",
+  "moduleNameMapper": {
+    ".*": "@zowe/cli"
+  }
+}
