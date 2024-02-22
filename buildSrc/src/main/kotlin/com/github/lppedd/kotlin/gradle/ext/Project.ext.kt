@@ -5,10 +5,18 @@ import org.gradle.kotlin.dsl.getByType
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
 val Project.npmName: String
-  get() = stringProperty("$name.name")
+  get() {
+    val str = stringProperty(name)
+    val (npmName, _) = str.split(':')
+    return npmName
+  }
 
 val Project.npmVersion: String
-  get() = stringProperty("$name.version")
+  get() {
+    val str = stringProperty(name)
+    val (_, npmVersion) = str.split(':')
+    return npmVersion
+  }
 
 /**
  * Returns the Kotlin Multiplatform project extension.
