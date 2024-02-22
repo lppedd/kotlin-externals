@@ -23,6 +23,7 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/vscode" />
+            <option value="$PROJECT_DIR$/vscode-test-electron" />
             <option value="$PROJECT_DIR$/zowe-cli" />
             <option value="$PROJECT_DIR$/zowe-core-for-zowe-sdk" />
             <option value="$PROJECT_DIR$/zowe-explorer-api" />

@@ -1,0 +1,14 @@
+{
+  "input": [
+    "<nodeModules>/@vscode/test-electron/out/**/*.d.ts"
+  ],
+  "ignoreInput": [
+    "<nodeModules>/@vscode/test-electron/out/**/index.d.ts"
+  ],
+  "output": "src/jsMain/kotlin/vscode/test/electron",
+  "libraryName": "@vscode/test-electron",
+  "granularity": "top-level",
+  "moduleNameMapper": {
+    ".*": "@vscode/test-electron"
+  }
+}

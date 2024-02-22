@@ -10,7 +10,10 @@ dependencyResolutionManagement {
 rootProject.name = "kotlin-externals"
 
 include("common")
+
 include("vscode")
+include("vscode-test-electron")
+
 include("zowe-core-for-zowe-sdk")
 include("zowe-zosmf-for-zowe-sdk")
 include("zowe-zos-jobs-for-zowe-sdk")
