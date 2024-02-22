@@ -1,0 +1,22 @@
+{
+  "input": [
+    "<nodeModules>/@types/mocha/index.d.ts"
+  ],
+  "output": "src/jsMain/kotlin",
+  "libraryName": "@types/mocha",
+  "granularity": "top-level",
+  "moduleNameMapper": {
+    ".*": "mocha"
+  },
+  "namespaceStrategy": {
+    "Mocha": "package",
+    "Mocha/utils": "package",
+    "Mocha/interfaces": "package",
+    "Mocha/reporters": "package",
+    "Mocha/reporters/Base": "package",
+    "Mocha/reporters/Base/cursor": "package",
+    "Mocha/reporters/XUnit": "package",
+    "Mocha/reporters/Progress": "package",
+    "NodeJS": "package"
+  }
+}

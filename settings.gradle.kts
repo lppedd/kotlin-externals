@@ -11,6 +11,8 @@ rootProject.name = "kotlin-externals"
 
 include("common")
 
+include("mocha")
+
 include("vscode")
 include("vscode-test-electron")
 include("vscode-extension-tester")
