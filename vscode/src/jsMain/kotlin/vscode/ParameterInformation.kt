@@ -15,16 +15,16 @@ external class ParameterInformation {
    * @param label A label string or inclusive start and exclusive end offsets within its containing signature label.
    * @param documentation A doc string.
    */
-  constructor (label: String, documentation: String = definedExternally)
+  constructor(label: String, documentation: String = definedExternally)
 
-  constructor (label: String, documentation: MarkdownString = definedExternally)
+  constructor(label: String, documentation: MarkdownString = definedExternally)
 
-  constructor (
+  constructor(
     label: JsTuple2<Int, Int>, // [ number, number ]
     documentation: String = definedExternally,
   )
 
-  constructor (
+  constructor(
     label: JsTuple2<Int, Int>, // [ number, number ]
     documentation: MarkdownString = definedExternally,
   )

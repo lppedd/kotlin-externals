@@ -15,7 +15,7 @@ external class FoldingRange {
    * @param end The end line of the folded range.
    * @param kind The kind of the folding range.
    */
-  constructor (start: Double, end: Double, kind: FoldingRangeKind = definedExternally)
+  constructor(start: Double, end: Double, kind: FoldingRangeKind = definedExternally)
 
   /**
    * The zero-based start line of the range to fold. The folded area starts after the line's last character.

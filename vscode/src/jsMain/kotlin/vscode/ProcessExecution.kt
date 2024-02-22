@@ -14,7 +14,7 @@ external class ProcessExecution {
    * @param process The process to start.
    * @param options Optional options for the started process.
    */
-  constructor (process: String, options: ProcessExecutionOptions = definedExternally)
+  constructor(process: String, options: ProcessExecutionOptions = definedExternally)
 
   /**
    * Creates a process execution.
@@ -23,7 +23,7 @@ external class ProcessExecution {
    * @param args Arguments to be passed to the process.
    * @param options Optional options for the started process.
    */
-  constructor (process: String, args: Array<String>, options: ProcessExecutionOptions = definedExternally)
+  constructor(process: String, args: Array<String>, options: ProcessExecutionOptions = definedExternally)
 
   /**
    * The process to be executed.

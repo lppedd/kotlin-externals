@@ -13,7 +13,7 @@ external class TabInputTextDiff {
    * @param original The uri of the original text resource.
    * @param modified The uri of the modified text resource.
    */
-  constructor (original: Uri, modified: Uri)
+  constructor(original: Uri, modified: Uri)
 
   /**
    * The uri of the original text resource.

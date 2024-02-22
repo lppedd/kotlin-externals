@@ -10,7 +10,7 @@ external class FunctionBreakpoint : Breakpoint {
   /**
    * Create a new function breakpoint.
    */
-  constructor (
+  constructor(
     functionName: String,
     enabled: Boolean = definedExternally,
     condition: String = definedExternally,

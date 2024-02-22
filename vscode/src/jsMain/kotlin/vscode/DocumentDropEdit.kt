@@ -10,9 +10,9 @@ external class DocumentDropEdit {
   /**
    * @param insertText The text or snippet to insert at the drop location.
    */
-  constructor (insertText: String)
+  constructor(insertText: String)
 
-  constructor (insertText: SnippetString)
+  constructor(insertText: SnippetString)
 
   /**
    * The text or snippet to insert at the drop location.

@@ -15,7 +15,7 @@ external class Diagnostic {
    * @param message The human-readable message.
    * @param severity The severity, default is [DiagnosticSeverity.Error error].
    */
-  constructor (range: Range, message: String, severity: DiagnosticSeverity = definedExternally)
+  constructor(range: Range, message: String, severity: DiagnosticSeverity = definedExternally)
 
   /**
    * The range to which this diagnostic applies.

@@ -17,7 +17,7 @@ external class NotebookData {
    *
    * @param cells An array of cell data.
    */
-  constructor (cells: Array<NotebookCellData>)
+  constructor(cells: Array<NotebookCellData>)
 
   /**
    * The cell data of this notebook data.

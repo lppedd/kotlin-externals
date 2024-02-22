@@ -17,7 +17,7 @@ external class EvaluatableExpression {
    * @param range The range in the underlying document from which the evaluatable expression is extracted.
    * @param expression If specified overrides the extracted expression.
    */
-  constructor (range: Range, expression: String = definedExternally)
+  constructor(range: Range, expression: String = definedExternally)
 
     /*
      * The range is used to extract the evaluatable expression from the underlying document and to highlight it.

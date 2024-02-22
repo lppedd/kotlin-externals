@@ -20,7 +20,7 @@ external class TestRunRequest {
    * @param profile The run profile used for this request.
    * @param continuous Whether to run tests continuously as source changes.
    */
-  constructor (
+  constructor(
     include: Array<out TestItem> = definedExternally,
     exclude: Array<out TestItem> = definedExternally,
     profile: TestRunProfile = definedExternally,

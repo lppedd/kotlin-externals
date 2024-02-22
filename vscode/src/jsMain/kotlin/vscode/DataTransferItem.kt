@@ -10,7 +10,7 @@ external class DataTransferItem {
   /**
    * @param value Custom data stored on this item. Can be retrieved using {@linkcode DataTransferItem.value}.
    */
-  constructor (value: Any?)
+  constructor(value: Any?)
 
   /**
    * Get a string representation of this item.

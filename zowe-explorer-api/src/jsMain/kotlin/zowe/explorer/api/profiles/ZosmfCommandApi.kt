@@ -12,7 +12,7 @@ import zowe.sdk.zos.tso.doc.input.IStartTsoParms
  * An implementation of the Zowe Explorer Command API interface for zOSMF.
  */
 external class ZosmfCommandApi : ZosmfApiCommon, ZoweExplorerApi.ICommand {
-  constructor (profile: IProfileLoaded = definedExternally)
+  constructor(profile: IProfileLoaded = definedExternally)
 
   override fun issueTsoCommand(
     command: String,

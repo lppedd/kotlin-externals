@@ -15,7 +15,7 @@ external class DiagnosticRelatedInformation {
    * @param location The location.
    * @param message The message.
    */
-  constructor (location: Location, message: String)
+  constructor(location: Location, message: String)
 
 /**
    * The location of this related diagnostic information.

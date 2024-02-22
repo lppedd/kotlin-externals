@@ -18,7 +18,7 @@ external class Task {
    *   or '$eslint'. Problem matchers can be contributed by an extension using
    *   the `problemMatchers` extension point.
    */
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: WorkspaceFolder,
     name: String,
@@ -27,7 +27,7 @@ external class Task {
     problemMatchers: String = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: WorkspaceFolder,
     name: String,
@@ -36,7 +36,7 @@ external class Task {
     problemMatchers: Array<String> = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: WorkspaceFolder,
     name: String,
@@ -45,7 +45,7 @@ external class Task {
     problemMatchers: String = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: WorkspaceFolder,
     name: String,
@@ -54,7 +54,7 @@ external class Task {
     problemMatchers: Array<String> = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: WorkspaceFolder,
     name: String,
@@ -63,7 +63,7 @@ external class Task {
     problemMatchers: String = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: WorkspaceFolder,
     name: String,
@@ -72,7 +72,7 @@ external class Task {
     problemMatchers: Array<String> = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: TaskScope,
     name: String,
@@ -81,7 +81,7 @@ external class Task {
     problemMatchers: String = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: TaskScope,
     name: String,
@@ -90,7 +90,7 @@ external class Task {
     problemMatchers: Array<String> = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: TaskScope,
     name: String,
@@ -99,7 +99,7 @@ external class Task {
     problemMatchers: String = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: TaskScope,
     name: String,
@@ -108,7 +108,7 @@ external class Task {
     problemMatchers: Array<String> = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: TaskScope,
     name: String,
@@ -117,7 +117,7 @@ external class Task {
     problemMatchers: String = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     scope: TaskScope,
     name: String,
@@ -139,7 +139,7 @@ external class Task {
    *   or '$eslint'. Problem matchers can be contributed by an extension using
    *   the `problemMatchers` extension point.
    */
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     name: String,
     source: String,
@@ -147,7 +147,7 @@ external class Task {
     problemMatchers: String = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     name: String,
     source: String,
@@ -155,7 +155,7 @@ external class Task {
     problemMatchers: Array<String> = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     name: String,
     source: String,
@@ -163,7 +163,7 @@ external class Task {
     problemMatchers: String = definedExternally,
   )
 
-  constructor (
+  constructor(
     taskDefinition: TaskDefinition,
     name: String,
     source: String,

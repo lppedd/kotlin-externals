@@ -16,9 +16,9 @@ external class InlineCompletionItem {
    * @param range The range to replace. If not set, the word at the requested position will be used.
    * @param command An optional [Command] that is executed *after* inserting this completion.
    */
-  constructor (insertText: String, range: Range = definedExternally, command: Command = definedExternally)
+  constructor(insertText: String, range: Range = definedExternally, command: Command = definedExternally)
 
-  constructor (insertText: SnippetString, range: Range = definedExternally, command: Command = definedExternally)
+  constructor(insertText: SnippetString, range: Range = definedExternally, command: Command = definedExternally)
 
   /**
    * The text to replace the range with. Must be set.

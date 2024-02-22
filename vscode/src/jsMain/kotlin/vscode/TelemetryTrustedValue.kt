@@ -12,7 +12,7 @@ external class TelemetryTrustedValue<T /* default is Any? */> {
    *
    * @param value A value to trust
    */
-  constructor (value: T)
+  constructor(value: T)
 
   /**
    * The value that is trusted to not contain PII.

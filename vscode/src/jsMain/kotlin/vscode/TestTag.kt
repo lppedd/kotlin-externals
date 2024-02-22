@@ -13,7 +13,7 @@ external class TestTag {
    * Creates a new TestTag instance.
    * @param id ID of the test tag.
    */
-  constructor (id: String)
+  constructor(id: String)
 
   /**
    * ID of the test tag. `TestTag` instances with the same ID are considered

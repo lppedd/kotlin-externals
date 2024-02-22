@@ -11,7 +11,7 @@ external class InlineCompletionList {
   /**
    * Creates a new list of inline completion items.
    */
-  constructor (items: Array<InlineCompletionItem>)
+  constructor(items: Array<InlineCompletionItem>)
 
   /**
    * The inline completion items.

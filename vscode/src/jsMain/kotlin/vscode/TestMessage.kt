@@ -12,9 +12,9 @@ external class TestMessage {
    * Creates a new TestMessage instance.
    * @param message The message to show to the user.
    */
-  constructor (message: String)
+  constructor(message: String)
 
-  constructor (message: MarkdownString)
+  constructor(message: MarkdownString)
 
   /**
    * Human-readable message text to display.

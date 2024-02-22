@@ -13,7 +13,7 @@ external class Location {
    * @param uri The resource identifier.
    * @param rangeOrPosition The range or position. Positions will be converted to an empty range.
    */
-  constructor (uri: Uri, rangeOrPosition: Range)
+  constructor(uri: Uri, rangeOrPosition: Range)
 
   /**
    * Creates a new location object.
@@ -21,7 +21,7 @@ external class Location {
    * @param uri The resource identifier.
    * @param rangeOrPosition The range or position. Positions will be converted to an empty range.
    */
-  constructor (uri: Uri, rangeOrPosition: Position)
+  constructor(uri: Uri, rangeOrPosition: Position)
 
   /**
    * The resource identifier of this location.

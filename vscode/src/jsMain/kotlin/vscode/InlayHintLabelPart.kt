@@ -12,7 +12,7 @@ external class InlayHintLabelPart {
    *
    * @param value The value of the part.
    */
-  constructor (value: String)
+  constructor(value: String)
 
   /**
    * The value of this label part.

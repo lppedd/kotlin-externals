@@ -20,7 +20,7 @@ external class ZoweTreeNode : vscode.TreeItem {
    * @param session
    * @param etag
    */
-  constructor (
+  constructor(
     label: String,
     collapsibleState: vscode.TreeItemCollapsibleState,
     mParent: IZoweTreeNode,
@@ -28,7 +28,7 @@ external class ZoweTreeNode : vscode.TreeItem {
     profile: IProfileLoaded,
   )
 
-  constructor (
+  constructor(
     label: vscode.TreeItemLabel,
     collapsibleState: vscode.TreeItemCollapsibleState,
     mParent: IZoweTreeNode,

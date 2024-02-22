@@ -11,9 +11,9 @@ external class TerminalProfile {
    * Creates a new terminal profile.
    * @param options The options that the terminal will launch with.
    */
-  constructor (options: TerminalOptions)
+  constructor(options: TerminalOptions)
 
-  constructor (options: ExtensionTerminalOptions)
+  constructor(options: ExtensionTerminalOptions)
 
   /**
    * The options that the terminal will launch with.

@@ -18,7 +18,7 @@ external class DocumentSymbol {
    * @param range The full range of the symbol.
    * @param selectionRange The range that should be reveal.
    */
-  constructor (name: String, detail: String, kind: SymbolKind, range: Range, selectionRange: Range)
+  constructor(name: String, detail: String, kind: SymbolKind, range: Range, selectionRange: Range)
 
   /**
    * The name of this symbol.

@@ -6,7 +6,7 @@ package zowe.sdk.zos.files.utils
  * Attributes for a set of files relating to how they will be uploaded to USS
  */
 external class ZosFilesAttributes {
-  constructor (attributesFileContents: String, basePath: String = definedExternally)
+  constructor(attributesFileContents: String, basePath: String = definedExternally)
 
   fun fileShouldBeUploaded(path: String): Boolean
 

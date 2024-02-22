@@ -10,5 +10,5 @@ external class TabInputTerminal {
   /**
    * Constructs a terminal tab input.
    */
-  constructor ()
+  constructor()
 }

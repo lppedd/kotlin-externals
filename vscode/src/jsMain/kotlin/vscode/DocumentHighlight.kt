@@ -15,7 +15,7 @@ external class DocumentHighlight {
    * @param range The range the highlight applies to.
    * @param kind The highlight kind, default is [DocumentHighlightKind.Text text].
    */
-  constructor (range: Range, kind: DocumentHighlightKind = definedExternally)
+  constructor(range: Range, kind: DocumentHighlightKind = definedExternally)
 
   /**
    * The range this highlight applies to.

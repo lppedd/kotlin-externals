@@ -14,9 +14,9 @@ external class InlayHint {
    * @param label The label of the hint.
    * @param kind The [InlayHintKind kind] of the hint.
    */
-  constructor (position: Position, label: String, kind: InlayHintKind = definedExternally)
+  constructor(position: Position, label: String, kind: InlayHintKind = definedExternally)
 
-  constructor (position: Position, label: Array<InlayHintLabelPart>, kind: InlayHintKind = definedExternally)
+  constructor(position: Position, label: Array<InlayHintLabelPart>, kind: InlayHintKind = definedExternally)
 
   /**
    * The position of this hint.

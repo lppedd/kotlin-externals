@@ -14,7 +14,7 @@ external class FileDecoration {
    * @param tooltip The tooltip of the decoration.
    * @param color The color of the decoration.
    */
-  constructor (
+  constructor(
     badge: String = definedExternally,
     tooltip: String = definedExternally,
     color: ThemeColor = definedExternally,
