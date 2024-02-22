@@ -23,7 +23,7 @@ external class HMigrate {
      * @param dataSetName The name of the data set to recall
      * @param wait If true then the function waits for completion of the request. If false (default) the request is queued.
      *
-     * @return {Promise<IZosFilesResponse>} A response indicating the status of the migrating
+     * @return A response indicating the status of the migrating
      *
      * @throws ImperativeError Data set name must be specified as a non-empty string
      * @throws Error When the [ZosmfRestClient] throws an error

@@ -2,8 +2,11 @@
 
 package zowe.sdk.zos.files.methods.download
 
+import js.errors.JsError
 import js.promise.Promise
+import zowe.imperative.error.ImperativeError
 import zowe.imperative.rest.session.AbstractSession
+import zowe.sdk.core.rest.ZosmfRestClient
 import zowe.sdk.zos.files.doc.IZosFilesResponse
 import zowe.sdk.zos.files.methods.download.doc.IDownloadOptions
 import zowe.sdk.zos.files.methods.download.doc.IDownloadSingleOptions
@@ -18,16 +21,7 @@ external class Download {
     /**
      * Retrieve data sets and/or members contents and save them in your local workspace
      *
-     * @param session z/OS MF connection info
-     * @param dataSetName contains the data set name
-     * @param [options={}] - contains the options to be sent
-     *
-     * @return {Promise<IZosFilesResponse>} A response indicating the outcome of the API
-     *
-     * @throws {ImperativeError} data set name must be set
-     * @throws {Error} When the {@link ZosmfRestClient} throws an error
-     *
-     * @example
+     * Example:
      * ```typescript
      *
      * // Download "USER.DATA.SET.PS" to "user/data/set/ps.txt"
@@ -40,7 +34,16 @@ external class Download {
      * await Download.dataSet(session, "USER.DATA.SET", {file: "./path/to/file.txt"});
      * ```
      *
-     * @see https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.3.0/com.ibm.zos.v2r3.izua700/IZUHPINFO_API_GetReadDataSet.htm
+     * See https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.3.0/com.ibm.zos.v2r3.izua700/IZUHPINFO_API_GetReadDataSet.htm
+     *
+     * @param session z/OS MF connection info
+     * @param dataSetName contains the data set name
+     * @param options contains the options to be sent. Default: {}
+     *
+     * @return A response indicating the outcome of the API
+     *
+     * @throws ImperativeError data set name must be set
+     * @throws JsError When the [ZosmfRestClient] throws an error
      */
     fun dataSet(
       session: AbstractSession,
@@ -51,16 +54,7 @@ external class Download {
     /**
      * Retrieve all members from a PDS and save them in your local workspace
      *
-     * @param session z/OS MF connection info
-     * @param dataSetName contains the data set name
-     * @param [options={}] - contains the options to be sent
-     *
-     * @return {Promise<IZosFilesResponse>} A response indicating the outcome of the API
-     *
-     * @throws {ImperativeError} data set name must be set
-     * @throws {Error} When the {@link ZosmfRestClient} throws an error
-     *
-     * @example
+     * Example:
      * ```typescript
      *
      * // Download all members of "USER.DATA.SET.PDS" to "user/data/set/pds/"
@@ -70,7 +64,16 @@ external class Download {
      * await Download.allMembers(session, "USER.DATA.SET.PDS", {directory: "./path/to/dir/"});
      * ```
      *
-     * @see https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.3.0/com.ibm.zos.v2r3.izua700/IZUHPINFO_API_GetReadDataSet.htm
+     * See https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.3.0/com.ibm.zos.v2r3.izua700/IZUHPINFO_API_GetReadDataSet.htm
+     *
+     * @param session z/OS MF connection info
+     * @param dataSetName contains the data set name
+     * @param options contains the options to be sent. Default: {}
+     *
+     * @return A response indicating the outcome of the API
+     *
+     * @throws ImperativeError data set name must be set
+     * @throws JsError When the [ZosmfRestClient] throws an error
      */
     fun allMembers(
       session: AbstractSession,
@@ -81,16 +84,7 @@ external class Download {
     /**
      * Download a list of data sets to local files
      *
-     * @param session z/OS MF connection info
-     * @param dataSetObjs contains data set objects returned by z/OSMF List API
-     * @param [options={}]    - contains the options to be sent
-     *
-     * @return {Promise<IZosFilesResponse>} A response indicating the outcome of the API
-     *
-     * @throws {ImperativeError} data set name must be set
-     * @throws {Error} When the {@link ZosmfRestClient} throws an error
-     *
-     * @example
+     * Example:
      * ```typescript
      *
      * // Download a list of "PS" and "PO" datasets to the directory "./path/to/dir/"
@@ -100,7 +94,16 @@ external class Download {
      * ], {directory: "./path/to/dir/"});
      * ```
      *
-     * @see https://www.ibm.com/support/knowledgecenter/SSLTBW_2.2.0/com.ibm.zos.v2r2.izua700/IZUHPINFO_API_GetReadDataSet.htm
+     * See https://www.ibm.com/support/knowledgecenter/SSLTBW_2.2.0/com.ibm.zos.v2r2.izua700/IZUHPINFO_API_GetReadDataSet.htm
+     *
+     * @param session z/OS MF connection info
+     * @param dataSetObjs contains data set objects returned by z/OSMF List API
+     * @param options contains the options to be sent. Default: {}
+     *
+     * @return A response indicating the outcome of the API
+     *
+     * @throws ImperativeError data set name must be set
+     * @throws JsError When the [ZosmfRestClient] throws an error
      */
     fun allDataSets(
       session: AbstractSession,
@@ -113,12 +116,12 @@ external class Download {
      *
      * @param session z/OS MF connection info
      * @param ussFileName contains the USS file name
-     * @param [options={}] - contains the options to be sent
+     * @param options contains the options to be sent. Default: {}
      *
-     * @return {Promise<IZosFilesResponse>} A response indicating the outcome of the API
+     * @return A response indicating the outcome of the API
      *
-     * @throws {ImperativeError} USS file name must be set
-     * @throws {Error} When the {@link ZosmfRestClient} throws an error
+     * @throws ImperativeError USS file name must be set
+     * @throws JsError When the [ZosmfRestClient] throws an error
      */
     fun ussFile(
       session: AbstractSession,
@@ -131,13 +134,13 @@ external class Download {
      *
      * @param session z/OS MF connection info
      * @param ussDirName contains the USS file name
-     * @param [fileOptions={}] - contains the file options to be sent
-     * @param [listOptions={}] - contains the uss list options to be sent
+     * @param fileOptions contains the file options to be sent. Default: {}
+     * @param listOptions contains the uss list options to be sent. Default: {}
      *
-     * @return {Promise<IZosFilesResponse>} A response indicating the outcome of the API
+     * @return A response indicating the outcome of the API
      *
-     * @throws {ImperativeError} USS file name must be set
-     * @throws {Error} When the {@link ZosmfRestClient} throws an error
+     * @throws ImperativeError USS file name must be set
+     * @throws JsError When the [ZosmfRestClient] throws an error
      */
     fun ussDir(
       session: AbstractSession,
