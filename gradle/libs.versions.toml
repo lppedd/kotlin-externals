@@ -2,7 +2,7 @@
 kotlin = "1.9.22"
 wrappers-kotlin-js = "1.0.0-pre.698"
 wrappers-kotlin-node = "20.11.5-pre.698"
-ktlint = "0.8.1"
+ktlint = "0.8.2"
 seskar = "2.40.0"
 karakum = "1.0.0-alpha.38"
 
