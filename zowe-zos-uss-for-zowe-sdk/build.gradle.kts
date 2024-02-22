@@ -13,7 +13,7 @@ declarations {
   packageName = npmName
   basePath = "lib"
   includePattern = setOf("**/*.d.ts")
-  excludePattern = setOf("**/index.d.ts", "**/main.d.ts")
+  excludePattern = setOf("**/index.d.ts")
 }
 
 kotlin {
@@ -21,16 +21,9 @@ kotlin {
     jsMain {
       dependencies {
         implementation(libs.kotlin.wrappers.js)
-        implementation(libs.kotlin.wrappers.node)
         implementation(npm(npmName, npmVersion))
 
-        api(projects.zoweZosFilesForZoweSdk)
-        api(projects.zoweZosJobsForZoweSdk)
-        api(projects.zoweZosTsoForZoweSdk)
-        api(projects.zoweZosUssForZoweSdk)
-        api(projects.zoweZosmfForZoweSdk)
-        api(projects.zoweZosConsoleForZoweSdk)
-        api(projects.zoweImperative)
+        implementation(projects.zoweImperative)
       }
     }
   }

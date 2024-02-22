@@ -32,6 +32,7 @@
             <option value="$PROJECT_DIR$/zowe-zos-files-for-zowe-sdk" />
             <option value="$PROJECT_DIR$/zowe-zos-jobs-for-zowe-sdk" />
             <option value="$PROJECT_DIR$/zowe-zos-tso-for-zowe-sdk" />
+            <option value="$PROJECT_DIR$/zowe-zos-uss-for-zowe-sdk" />
             <option value="$PROJECT_DIR$/zowe-zosmf-for-zowe-sdk" />
           </set>
         </option>

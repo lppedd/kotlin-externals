@@ -1,0 +1,14 @@
+{
+  "input": [
+    "<nodeModules>/@zowe/zos-uss-for-zowe-sdk/lib/**/*.d.ts"
+  ],
+  "ignoreInput": [
+    "<nodeModules>/@zowe/zos-uss-for-zowe-sdk/lib/**/index.d.ts"
+  ],
+  "output": "src/jsMain/kotlin/zowe/sdk/uss",
+  "libraryName": "@zowe/zos-uss-for-zowe-sdk",
+  "granularity": "top-level",
+  "moduleNameMapper": {
+    ".*": "@zowe/zos-uss-for-zowe-sdk"
+  }
+}
