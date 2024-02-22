@@ -24,7 +24,7 @@ external class CollectCommand {
     fun collectCommon(
       session: AbstractSession,
       consoleName: String,
-      commandResponseKey: String
+      commandResponseKey: String,
     ): Promise<IZosmfCollectResponse>
 
     /**
@@ -33,7 +33,10 @@ external class CollectCommand {
      * @param commandResponseKey command response key from the Issue Command request
      * @return command response on resolve, see [IZosmfCollectResponse]
      */
-    fun collectDefConsoleCommon(session: AbstractSession, commandResponseKey: String): Promise<IZosmfCollectResponse>
+    fun collectDefConsoleCommon(
+      session: AbstractSession,
+      commandResponseKey: String,
+    ): Promise<IZosmfCollectResponse>
 
     /**
      * Collect any messages related to the synchronous command response key provided and collect them into IConsoleResponse
@@ -49,7 +52,7 @@ external class CollectCommand {
     fun collect(
       session: AbstractSession,
       parms: ICollectParms,
-      response: IConsoleResponse = definedExternally
+      response: IConsoleResponse = definedExternally,
     ): Promise<IConsoleResponse>
 
     /**
@@ -58,6 +61,9 @@ external class CollectCommand {
      * @param commandResponseKey command response key from the Issue Command request
      * @return resource path
      */
-    fun getResource(consoleName: String, commandResponseKey: String): String
+    fun getResource(
+      consoleName: String,
+      commandResponseKey: String,
+    ): String
   }
 }

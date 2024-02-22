@@ -63,7 +63,7 @@ external class ZosmfMvsApi : ZosmfApiCommon, ZoweExplorerApi.IMvs {
   override fun copyDataSetMember(
     param0: IDataSet,
     param1: IDataSet,
-    options: IMvsCopyDataSetMemberOptions
+    options: IMvsCopyDataSetMemberOptions,
   ): Promise<IZosFilesResponse<Any?>>
 
   fun copyDataSetMember(

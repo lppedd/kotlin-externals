@@ -18,21 +18,31 @@ external class ConsoleValidator {
      * @param consoleName name of the EMCS console that is used to issue the command
      * @param commandParms synchronous console issue parameters, see [IZosmfIssueParms]
      */
-    fun validateCommonParms(session: AbstractSession, consoleName: String, commandParms: IZosmfIssueParms)
+    fun validateCommonParms(
+      session: AbstractSession,
+      consoleName: String,
+      commandParms: IZosmfIssueParms,
+    )
 
     /**
      * Validate supplied parameters
      * @param session representing connection to this api
      * @param parms console issue parameters, see [IIssueParms]
      */
-    fun validateIssueParms(session: AbstractSession, parms: IIssueParms)
+    fun validateIssueParms(
+      session: AbstractSession,
+      parms: IIssueParms,
+    )
 
     /**
      * Validate supplied parameters
      * @param session representing connection to this api
      * @param theCommand command to issue
      */
-    fun validateIssueSimpleParms(session: AbstractSession, theCommand: String)
+    fun validateIssueSimpleParms(
+      session: AbstractSession,
+      theCommand: String,
+    )
 
     /**
      * Validate supplied parameters
@@ -52,13 +62,20 @@ external class ConsoleValidator {
      * @param consoleName name of the EMCS console that is used to issue the command
      * @param commandResponseKey command response key from the Issue Command request
      */
-    fun validateCollectCommonParms(session: AbstractSession, consoleName: String, commandResponseKey: String)
+    fun validateCollectCommonParms(
+      session: AbstractSession,
+      consoleName: String,
+      commandResponseKey: String,
+    )
 
     /**
      * Validate supplied parameters
      * @param session representing connection to this api
      * @param parms console collect parameters, see [ICollectParms]
      */
-    fun validateCollectParms(session: AbstractSession, parms: ICollectParms)
+    fun validateCollectParms(
+      session: AbstractSession,
+      parms: ICollectParms,
+    )
   }
 }

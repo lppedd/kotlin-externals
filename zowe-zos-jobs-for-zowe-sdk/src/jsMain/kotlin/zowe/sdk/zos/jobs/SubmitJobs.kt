@@ -18,7 +18,7 @@ external class SubmitJobs {
      * Submit a job that resides in a z/OS data set.
      * @param session z/OSMF connection info
      * @param jobDataSet job data set to be translated into parms object
-     * @return  Promise that resolves to an IJob document with details about the submitted job
+     * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJob(
       session: AbstractSession,

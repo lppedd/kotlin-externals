@@ -27,7 +27,7 @@ external class ConsoleResponseService {
     fun populate(
       zosmfResponse: IZosmfIssueResponse,
       response: IConsoleResponse,
-      processResponses: Boolean = definedExternally
+      processResponses: Boolean = definedExternally,
     ): IConsoleResponse
 
     /**
@@ -39,7 +39,10 @@ external class ConsoleResponseService {
      * @param response console response to be populated, see [IConsoleResponse]
      * @return populated console response, see [IConsoleResponse]
      */
-    fun populateError(error: ImperativeError, response: IConsoleResponse): IConsoleResponse
+    fun populateError(
+      error: ImperativeError,
+      response: IConsoleResponse,
+    ): IConsoleResponse
 
     /**
      * Provides empty console response

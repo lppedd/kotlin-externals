@@ -27,7 +27,7 @@ external class IssueCommand {
     fun issueCommon(
       session: AbstractSession,
       consoleName: String,
-      commandParms: IZosmfIssueParms
+      commandParms: IZosmfIssueParms,
     ): Promise<IZosmfIssueResponse>
 
     /**
@@ -38,7 +38,10 @@ external class IssueCommand {
      * @return command response on resolve, see [IZosmfIssueResponse]
      * @memberof IssueCommand
      */
-    fun issueDefConsoleCommon(session: AbstractSession, commandParms: IZosmfIssueParms): Promise<IZosmfIssueResponse>
+    fun issueDefConsoleCommon(
+      session: AbstractSession,
+      commandParms: IZosmfIssueParms,
+    ): Promise<IZosmfIssueResponse>
 
     /**
      * Issue an MVS console command command synchronously - meaning solicited (direct command responses) are gathered
@@ -50,7 +53,10 @@ external class IssueCommand {
      * @return command response on resolve, see [IConsoleResponse]
      * @memberof IssueCommand
      */
-    fun issue(session: AbstractSession, parms: IIssueParms): Promise<IConsoleResponse>
+    fun issue(
+      session: AbstractSession,
+      parms: IIssueParms,
+    ): Promise<IConsoleResponse>
 
     /**
      * Simple issue console command method. Does not accept parameters, so all defaults on the z/OSMF API are taken.
@@ -60,7 +66,10 @@ external class IssueCommand {
      * @return command response on resolve, see [IConsoleResponse]
      * @memberof IssueCommand
      */
-    fun issueSimple(session: AbstractSession, theCommand: String): Promise<IConsoleResponse>
+    fun issueSimple(
+      session: AbstractSession,
+      theCommand: String,
+    ): Promise<IConsoleResponse>
 
     /**
      * Issue an MVS console command command synchronously - meaning solicited (direct command responses) are gathered
@@ -79,7 +88,7 @@ external class IssueCommand {
     fun issueAndCollect(
       session: AbstractSession,
       issueParms: IIssueParms,
-      collectParms: ICollectParms
+      collectParms: ICollectParms,
     ): Promise<IConsoleResponse>
 
     /**
