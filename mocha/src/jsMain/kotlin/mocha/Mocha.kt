@@ -1,5 +1,3 @@
-@file:JsModule("mocha")
-
 package mocha
 
 import mocha.mocha.*
@@ -11,6 +9,7 @@ import kotlin.js.RegExp
  *
  * See https://mochajs.org/api/mocha
  */
+@JsModule("mocha")
 open external class Mocha {
   constructor(options: MochaOptions<Any?> = definedExternally)
 
