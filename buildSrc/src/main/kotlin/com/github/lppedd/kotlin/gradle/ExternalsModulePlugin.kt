@@ -8,14 +8,13 @@ import io.github.usefulness.KtlintGradlePlugin
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.apply
-import org.gradle.kotlin.dsl.configure
-import org.gradle.kotlin.dsl.create
-import org.gradle.kotlin.dsl.register
+import org.gradle.kotlin.dsl.*
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.plugin.KotlinMultiplatformPluginWrapper
+import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsSubTargetDsl
 import org.jetbrains.kotlin.gradle.targets.js.yarn.yarn
+import org.jetbrains.kotlin.gradle.tasks.Kotlin2JsCompile
 import seskar.gradle.plugin.SeskarGradleSubplugin
 
 /**
@@ -52,7 +51,7 @@ class ExternalsModulePlugin : Plugin<Project> {
     }
 
     kmp.js {
-      nodejs {
+      val config: KotlinJsSubTargetDsl.() -> Unit = {
         testTask {
           useMocha {
             timeout = "30s"
@@ -60,15 +59,18 @@ class ExternalsModulePlugin : Plugin<Project> {
         }
       }
 
-      browser {
-        testTask {
-          useMocha {
-            timeout = "30s"
-          }
-        }
-      }
-
+      nodejs(config)
+      browser(config)
       useCommonJs()
+    }
+
+    // Compile to ES classes for better debuggability.
+    // This is the only way it works for prod/dev/test compilations.
+    // See discussion in https://youtrack.jetbrains.com/issue/KT-56818
+    project.tasks.withType<Kotlin2JsCompile>().configureEach {
+      kotlinOptions {
+        useEsClasses = true
+      }
     }
 
     // Apply the Seskar plugin after the Kotlin plugin
