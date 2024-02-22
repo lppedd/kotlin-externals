@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * A status bar item is a status bar contribution that can
  * show text and icons and run a command on click.

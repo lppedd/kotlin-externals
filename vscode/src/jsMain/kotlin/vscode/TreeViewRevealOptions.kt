@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 external interface TreeViewRevealOptions {
   /**
    * If true, then the element will be selected.

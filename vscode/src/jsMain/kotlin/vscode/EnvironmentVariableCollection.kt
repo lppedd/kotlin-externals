@@ -2,6 +2,7 @@ package vscode
 
 import js.array.JsTuple2
 import js.iterable.JsIterable
+import kotlin.ts.Union
 
 /**
  * A collection of mutations that an extension can apply to a process environment.

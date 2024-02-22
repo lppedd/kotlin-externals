@@ -1,6 +1,7 @@
 package vscode
 
 import js.array.JsTuple2
+import kotlin.ts.Union
 
 /**
  * Options to configure the behavior of the input box UI.

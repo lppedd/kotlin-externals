@@ -1,8 +1,8 @@
 package vscode.l10n
 
 import js.objects.Record
-import vscode.Union
-import vscode.Union3
+import kotlin.ts.Union
+import kotlin.ts.Union3
 
 external interface Options {
   /**

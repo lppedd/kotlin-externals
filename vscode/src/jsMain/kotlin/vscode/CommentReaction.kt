@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * Reactions of a [Comment]
  */

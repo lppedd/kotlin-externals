@@ -6,7 +6,7 @@ import js.array.ReadonlyArray
 import vscode.DocumentFilter
 import vscode.DocumentFormattingEditProvider
 import vscode.IDisposable
-import vscode.Union
+import kotlin.ts.Union
 
 /**
  * Register a formatting provider for a document.

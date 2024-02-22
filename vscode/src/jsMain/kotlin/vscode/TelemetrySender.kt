@@ -2,6 +2,7 @@ package vscode
 
 import js.errors.JsError
 import js.objects.Record
+import kotlin.ts.Union
 
 /**
  * The telemetry sender is the contract between a telemetry logger and some telemetry service.

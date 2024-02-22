@@ -3,9 +3,10 @@
 package zowe.explorer.api.tree
 
 import vscode.Command
-import vscode.Union
+import vscode.TreeItemLabel
 import zowe.imperative.profiles.doc.response.IProfileLoaded
 import zowe.imperative.rest.session.Session
+import kotlin.ts.Union
 
 /**
  * Common implementation of functions and methods associated with the IZoweTreeNode
@@ -76,7 +77,7 @@ external class ZoweTreeNode : vscode.TreeItem {
    * This is the default was that the label should be accessed as it
    * automatically trims the value
    */
-  fun getLabel(): Union<String, vscode.TreeItemLabel>
+  fun getLabel(): Union<String, TreeItemLabel>
 
   /**
    * Sets the imperative.IProfileLoaded profile for this node to the one chosen in parameters.

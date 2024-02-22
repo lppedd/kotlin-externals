@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * The completion item provider interface defines the contract between extensions and
  * [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense).

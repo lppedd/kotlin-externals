@@ -3,7 +3,7 @@
 package vscode.l10n
 
 import js.objects.Record
-import vscode.Union3
+import kotlin.ts.Union3
 
 /**
  * Marks a string for localization. If a localized bundle is available for the language specified by

@@ -1,6 +1,8 @@
 package vscode
 
 import js.array.ReadonlyArray
+import kotlin.ts.Union
+import kotlin.ts.Union3
 
 /**
  * A language selector is the combination of one or many language identifiers

@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * Provider for readonly custom editors that use a custom document model.
  *

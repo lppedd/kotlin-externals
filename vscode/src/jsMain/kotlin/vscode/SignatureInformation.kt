@@ -2,6 +2,8 @@
 
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * Represents the signature of something callable. A signature
  * can have a label, like a function-name, a doc-comment, and

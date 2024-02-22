@@ -2,6 +2,8 @@
 
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * Represents a task execution that happens inside a shell.
  */

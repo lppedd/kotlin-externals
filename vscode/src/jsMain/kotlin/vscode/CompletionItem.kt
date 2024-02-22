@@ -3,6 +3,7 @@
 package vscode
 
 import js.array.ReadonlyArray
+import kotlin.ts.Union
 
 /**
  * A completion item represents a text snippet that is proposed to complete text that is being typed.

@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union3
+
 /**
  * Inline value information can be provided by different means:
  * - directly as a text value (class InlineValueText).

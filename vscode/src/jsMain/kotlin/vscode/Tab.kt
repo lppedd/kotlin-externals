@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union8
+
 /**
  * Represents a tab within a group of tabs ([TabGroup]).
  * Tabs are merely the graphical representation within the editor area.

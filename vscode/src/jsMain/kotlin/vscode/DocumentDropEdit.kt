@@ -2,6 +2,8 @@
 
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * An edit operation applied on drop ([DocumentDropEditProvider].)
  */

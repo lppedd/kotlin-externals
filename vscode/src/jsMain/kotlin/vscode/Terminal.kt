@@ -1,6 +1,7 @@
 package vscode
 
 import kotlin.ts.Readonly
+import kotlin.ts.Union
 
 /**
  * An individual terminal instance within the integrated terminal.

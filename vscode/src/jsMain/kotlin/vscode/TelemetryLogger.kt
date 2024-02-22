@@ -2,6 +2,7 @@ package vscode
 
 import js.errors.JsError
 import js.objects.Record
+import kotlin.ts.Union
 
 /**
  * A telemetry logger which can be used by extensions to log usage and error telementry.

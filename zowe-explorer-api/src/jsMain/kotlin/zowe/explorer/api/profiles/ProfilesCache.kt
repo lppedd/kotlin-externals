@@ -5,8 +5,6 @@ package zowe.explorer.api.profiles
 import js.objects.Record
 import js.promise.Promise
 import node.Module
-import vscode.JsInt
-import vscode.JsString
 import zowe.imperative.cmd.doc.profiles.definition.ICommandProfileTypeConfiguration
 import zowe.imperative.cmd.profiles.CliProfileManager
 import zowe.imperative.config.ProfileInfo

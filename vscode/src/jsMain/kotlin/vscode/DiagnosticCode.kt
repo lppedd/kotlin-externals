@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 external interface DiagnosticCode {
   /**
    * A code or identifier for this diagnostic.

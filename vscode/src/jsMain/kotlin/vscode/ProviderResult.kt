@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * A provider result represents the values a provider, like the [HoverProvider],
  * may return. For once this is the actual result type `T`, like `Hover`, or a thenable that resolves

@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * The definition of a symbol represented as one or many [Location]s.
  * For most programming languages there is only one location at which a symbol is

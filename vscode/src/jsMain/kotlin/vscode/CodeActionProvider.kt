@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * Provides contextual actions for code. Code actions typically either fix problems or beautify/refactor code.
  *

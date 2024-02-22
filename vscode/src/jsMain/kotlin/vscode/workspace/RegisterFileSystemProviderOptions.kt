@@ -1,8 +1,8 @@
 package vscode.workspace
 
 import vscode.MarkdownString
-import vscode.Union
 import vscode.Uri
+import kotlin.ts.Union
 
 external interface RegisterFileSystemProviderOptions {
   /**

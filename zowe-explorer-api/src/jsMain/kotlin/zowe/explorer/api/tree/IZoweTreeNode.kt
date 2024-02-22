@@ -2,9 +2,11 @@ package zowe.explorer.api.tree
 
 import js.objects.Record
 import js.promise.Promise
-import vscode.Union
+import vscode.MarkdownString
+import vscode.TreeItemLabel
 import zowe.imperative.profiles.doc.response.IProfileLoaded
 import zowe.imperative.rest.session.Session
+import kotlin.ts.Union
 
 /**
  * The base interface for Zowe tree nodes that are implemented by vscode.TreeItem.
@@ -25,7 +27,7 @@ external interface IZoweTreeNode {
   /**
    *  A human-readable string describing this item.
    */
-  var label: Union<String, vscode.TreeItemLabel> // string | vscode.TreeItemLabel
+  var label: Union<String, TreeItemLabel> // string | vscode.TreeItemLabel
 
   /**
    * A description for this tree item.
@@ -41,7 +43,7 @@ external interface IZoweTreeNode {
   /**
    * The tooltip text when you hover over this item.
    */
-  var tooltip: Union<String, vscode.MarkdownString>? // string | vscode.MarkdownString | undefined
+  var tooltip: Union<String, MarkdownString>? // string | vscode.MarkdownString | undefined
 
   /**
    * Describes the full path of a file
@@ -84,7 +86,7 @@ external interface IZoweTreeNode {
   /**
    * Retrieves the node label
    */
-  fun getLabel(): Union<String, vscode.TreeItemLabel>
+  fun getLabel(): Union<String, TreeItemLabel>
 
   /**
    * Retrieves the nodes parent node

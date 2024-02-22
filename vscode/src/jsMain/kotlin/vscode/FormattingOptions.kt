@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union3
+
 /**
  * Value-object describing what options formatting should use.
  */

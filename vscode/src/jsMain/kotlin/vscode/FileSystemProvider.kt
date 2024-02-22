@@ -2,6 +2,7 @@ package vscode
 
 import js.array.JsTuple2
 import js.typedarrays.Uint8Array
+import kotlin.ts.Union
 
 /**
  * The filesystem provider defines what the editor needs to read, write, discover,

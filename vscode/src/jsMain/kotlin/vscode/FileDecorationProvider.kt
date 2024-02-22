@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * The decoration provider interfaces defines the contract between extensions and
  * file decorations.

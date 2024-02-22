@@ -1,6 +1,6 @@
 package zowe.explorer.api.tree
 
-import vscode.Union
+import kotlin.ts.Union
 
 external interface NodeSort {
   var method: Union<DatasetSortOpts, JobSortOpts>

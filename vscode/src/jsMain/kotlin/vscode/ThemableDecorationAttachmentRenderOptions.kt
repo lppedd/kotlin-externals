@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * Represents theme specific rendering styles for [ThemableDecorationRenderOptions.before] and
  * [ThemableDecorationRenderOptions.after] the content of text decorations.

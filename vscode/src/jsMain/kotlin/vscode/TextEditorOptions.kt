@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * Represents a [TextEditor]'s [TextEditor.options].
  */

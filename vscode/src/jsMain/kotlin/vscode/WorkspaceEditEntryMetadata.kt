@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union3
+
 /**
  * Additional data for entries of a workspace edit. Supports to label entries and marks entries
  * as needing confirmation by the user. The editor groups edits with equal labels into tree nodes,

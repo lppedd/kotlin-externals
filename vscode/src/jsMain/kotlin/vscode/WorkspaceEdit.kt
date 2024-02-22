@@ -4,6 +4,7 @@ package vscode
 
 import js.array.JsTuple2
 import js.array.ReadonlyArray
+import kotlin.ts.Union
 
 /**
  * A workspace edit is a collection of textual and files changes for

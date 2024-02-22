@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * A file glob pattern to match file paths against. This can either be a glob pattern string
  * (like `**&#47;*.{ts,js}` or `*.{ts,js}`) or a [RelativePattern].

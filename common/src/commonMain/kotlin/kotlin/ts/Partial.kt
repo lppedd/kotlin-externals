@@ -1,7 +1,7 @@
 package kotlin.ts
 
 /**
- * Indicates that a type should be wrapper in a TypeScript `Partial<T>`,
+ * Indicates that a type should be wrapped in a TypeScript `Partial<T>`,
  * so that all of its properties are optional.
  */
 @Target(AnnotationTarget.TYPE)
