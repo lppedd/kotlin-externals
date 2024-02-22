@@ -22,8 +22,11 @@ external interface LanguageConfiguration {
    * The language's word definition.
    * If the language supports Unicode identifiers (e.g. JavaScript), it is preferable
    * to provide a word definition that uses exclusion of known separators.
+   *
    * e.g.: A regex that matches anything except known separators (and dot is allowed to occur in a floating point number):
-   *   /(-?\d*\.\d\w*)|([^\`\~\!\@\#\%\^\&\*\(\)\-\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\?\s]+)/g
+   * ```
+   * /(-?\d*\.\d\w*)|([^\`\~\!\@\#\%\^\&\*\(\)\-\=\+\[\{\]\}\\\|\;\:\'\"\,\.\<\>\/\?\s]+)/g
+   * ```
    */
   var wordPattern: RegExp?
 
@@ -46,11 +49,11 @@ external interface LanguageConfiguration {
    * **Deprecated** Do not use.
    */
   @Deprecated("Will be replaced by a better API soon")
-  var __electricCharacterSupport: (LanguageConfiguration__electricCharacterSupport)?
+  var __electricCharacterSupport: ElectricCharacterSupport?
 
   /**
    * **Deprecated** Do not use.
    */
   @Deprecated("Use the autoClosingPairs property in the language configuration file instead")
-  var __characterPairSupport: (LanguageConfiguration__characterPairSupport)?
+  var __characterPairSupport: CharacterPairSupport?
 }

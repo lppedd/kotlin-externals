@@ -6,7 +6,6 @@ package vscode
  * A grouping for tasks. The editor by default supports the
  * 'Clean', 'Build', 'RebuildAll' and 'Test' group.
  */
-
 external class TaskGroup {
   /**
    * Whether the task that is part of this group is the default for the group.

@@ -2,10 +2,10 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentFormattingEditProvider
 import vscode.DocumentRangeFormattingEditProvider
 import vscode.DocumentSelector
+import vscode.IDisposable
 
 /**
  * Register a formatting provider for a document range.
@@ -20,9 +20,9 @@ import vscode.DocumentSelector
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A document range formatting edit provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDocumentRangeFormattingEditProvider(
   selector: DocumentSelector,
   provider: DocumentRangeFormattingEditProvider,
-): Disposable
+): IDisposable

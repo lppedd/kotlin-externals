@@ -145,14 +145,14 @@ external object Gui {
   fun setStatusBarMessage(
     text: String,
     hideAfterTimeout: Thenable<Any?>,
-  ): vscode.Disposable
+  ): vscode.IDisposable
 
   fun setStatusBarMessage(
     text: String,
     hideAfterTimeout: Int,
-  ): vscode.Disposable
+  ): vscode.IDisposable
 
-  fun setStatusBarMessage(text: String): vscode.Disposable
+  fun setStatusBarMessage(text: String): vscode.IDisposable
 
   /**
    * Builds the specified QuickPick result based on user interaction.

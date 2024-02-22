@@ -6,9 +6,8 @@ package vscode
  *
  * Providers are asked for completions either explicitly by a user gesture or implicitly when typing.
  */
-
 external interface InlineCompletionItemProvider {
-/**
+  /**
    * Provides inline completion items for the given position and document.
    * If inline completions are enabled, this method will be called whenever the user stopped typing.
    * It will also be called when the user explicitly triggers inline completions or explicitly asks for the next or previous inline completion.

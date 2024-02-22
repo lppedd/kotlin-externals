@@ -3,7 +3,6 @@ package vscode
 /**
  * Provides information about the context in which an inline completion was requested.
  */
-
 external interface InlineCompletionContext {
   /**
    * Describes how the inline completion was triggered.

@@ -2,7 +2,7 @@
 
 package vscode.window
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.Uri
 import vscode.UriHandler
 
@@ -26,6 +26,6 @@ import vscode.UriHandler
  * the current extension is about to be handled.
  *
  * @param handler The uri handler to register for this extension.
- * @return A [Disposable] that unregisters the handler.
+ * @return A [IDisposable] that unregisters the handler.
  */
-external fun registerUriHandler(handler: UriHandler): Disposable
+external fun registerUriHandler(handler: UriHandler): IDisposable

@@ -5,7 +5,6 @@ package vscode
  *
  * This interface is not intended to be implemented.
  */
-
 external interface TaskStartEvent {
   /**
    * The task item representing the task that got started.

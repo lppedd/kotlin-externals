@@ -4,10 +4,10 @@ external interface NotebookCellExecutionSummaryTiming {
   /**
    * Execution start time.
    */
-  val startTime: Double
+  val startTime: Int
 
   /**
    * Execution end time.
    */
-  val endTime: Double
+  val endTime: Int
 }

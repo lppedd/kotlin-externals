@@ -6,7 +6,6 @@ package vscode
  * The tab represents two text based resources
  * being rendered as a diff.
  */
-
 external class TabInputTextDiff {
   /**
    * Constructs a new text diff tab input with the given URIs.

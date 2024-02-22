@@ -3,7 +3,6 @@ package vscode
 /**
  * Describes the currently selected completion item.
  */
-
 external interface SelectedCompletionInfo {
   /**
    * The range that will be replaced if this completion item is accepted.

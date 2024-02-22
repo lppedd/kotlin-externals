@@ -5,11 +5,17 @@ package vscode
  * the [TextDocument.languageId], the [Uri.scheme] of
  * its resource, or a glob-pattern that is applied to the [TextDocument.fileName].
  *
- * @example <caption>A language filter that applies to typescript files on disk</caption>
- * { language: 'typescript', scheme: 'file' }
+ * Example:
  *
- * @example <caption>A language filter that applies to all package.json paths</caption>
+ * **A language filter that applies to typescript files on disk**
+ * ```
+ * { language: 'typescript', scheme: 'file' }
+ * ```
+ *
+ * **A language filter that applies to all package.json paths**
+ * ```
  * { language: 'json', pattern: '**​/package.json' }
+ * ```
  */
 external interface DocumentFilter {
   /**
@@ -24,8 +30,12 @@ external interface DocumentFilter {
    * *Note* that setting the `notebookType`-property changes how `scheme` and `pattern` are interpreted. When set
    * they are evaluated against the [NotebookDocument.uri], not the document uri.
    *
-   * @example <caption>Match python document inside jupyter notebook that aren't stored yet (`untitled`)</caption>
+   * Example:
+   *
+   * **Match python document inside jupyter notebook that aren't stored yet (`untitled`)**
+   * ```
    * { language: 'python', notebookType: 'jupyter-notebook', scheme: 'untitled' }
+   * ```
    */
   val notebookType: String?
 

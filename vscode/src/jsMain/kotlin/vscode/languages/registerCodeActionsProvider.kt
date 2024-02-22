@@ -14,10 +14,10 @@ import vscode.*
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A code action provider.
  * @param metadata Metadata about the kind of code actions the provider provides.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerCodeActionsProvider(
   selector: DocumentSelector,
   provider: CodeActionProvider<CodeAction>,
   metadata: CodeActionProviderMetadata = definedExternally,
-): Disposable
+): IDisposable

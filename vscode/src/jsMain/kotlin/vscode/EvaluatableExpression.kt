@@ -9,7 +9,6 @@ package vscode
  * An optional expression can be used to override the extracted expression.
  * In this case the range is still used to highlight the range in the document.
  */
-
 external class EvaluatableExpression {
   /**
    * Creates a new evaluatable expression object.
@@ -19,13 +18,13 @@ external class EvaluatableExpression {
    */
   constructor(range: Range, expression: String = definedExternally)
 
-    /*
-     * The range is used to extract the evaluatable expression from the underlying document and to highlight it.
-     */
+  /**
+   * The range is used to extract the evaluatable expression from the underlying document and to highlight it.
+   */
   val range: Range
 
-    /*
-     * If specified the expression overrides the extracted expression.
-     */
+  /**
+   * If specified the expression overrides the extracted expression.
+   */
   val expression: String?
 }

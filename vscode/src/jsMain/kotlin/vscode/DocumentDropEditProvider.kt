@@ -7,7 +7,6 @@ package vscode
  * and dropping files, users can hold down `shift` to drop the file into the editor instead of opening it.
  * Requires `editor.dropIntoEditor.enabled` to be on.
  */
-
 external interface DocumentDropEditProvider {
   /**
    * Provide edits which inserts the content being dragged and dropped into the document.
@@ -18,7 +17,7 @@ external interface DocumentDropEditProvider {
    * @param token A cancellation token.
    *
    * @return A [DocumentDropEdit] or a thenable that resolves to such. The lack of a result can be
-   * signaled by returning `undefined` or `null`.
+   *   signaled by returning `undefined` or `null`.
    */
   fun provideDocumentDropEdits(
     document: TextDocument,

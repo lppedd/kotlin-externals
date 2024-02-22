@@ -4,7 +4,6 @@ package vscode
  * The implementation provider interface defines the contract between extensions and
  * the go to implementation feature.
  */
-
 external interface ImplementationProvider {
   /**
    * Provide the implementations of the symbol at the given position and document.

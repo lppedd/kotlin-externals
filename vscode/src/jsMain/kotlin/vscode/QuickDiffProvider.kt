@@ -5,7 +5,6 @@ package vscode
  * modified resource. The editor will use this information to render ad'hoc diffs
  * within the text.
  */
-
 external interface QuickDiffProvider {
   /**
    * Provide a [Uri] to the original resource of any given resource uri.

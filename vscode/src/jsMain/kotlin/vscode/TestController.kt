@@ -6,7 +6,6 @@ package vscode
  * [TestController.createRunProfile run profiles] to allow
  * for tests to be executed.
  */
-
 external interface TestController {
   /**
    * The id of the controller passed in [tests.createTestController].
@@ -146,13 +145,13 @@ external interface TestController {
    *
    * @param item Item to mark as outdated. If undefined, all the controller's items are marked outdated.
    */
-  fun invalidateTestResults(items: TestItem = definedExternally): Unit
+  fun invalidateTestResults(items: TestItem = definedExternally)
 
-  fun invalidateTestResults(items: Array<out TestItem> = definedExternally): Unit
+  fun invalidateTestResults(items: Array<out TestItem> = definedExternally)
 
   /**
    * Unregisters the test controller, disposing of its associated tests
    * and unpersisted results.
    */
-  fun dispose(): Unit
+  fun dispose()
 }

@@ -5,7 +5,6 @@ package vscode
  *
  * This interface is not intended to be implemented.
  */
-
 external interface TaskEndEvent {
   /**
    * The task item representing the task that finished.

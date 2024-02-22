@@ -5,7 +5,6 @@ package vscode
 /**
  * The tab represents a webview.
  */
-
 external class TabInputWebview {
   /**
    * Constructs a webview tab input with the given view type.

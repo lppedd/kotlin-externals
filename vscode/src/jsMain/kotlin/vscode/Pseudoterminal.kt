@@ -3,7 +3,6 @@ package vscode
 /**
  * Defines the interface of a terminal pty, enabling extensions to control a terminal.
  */
-
 external interface Pseudoterminal {
   /**
    * An event that when fired will write data to the terminal. Unlike
@@ -120,12 +119,12 @@ external interface Pseudoterminal {
    * @param initialDimensions The dimensions of the terminal, this will be undefined if the
    * terminal panel has not been opened before this is called.
    */
-  fun open(initialDimensions: TerminalDimensions?): Unit
+  fun open(initialDimensions: TerminalDimensions?)
 
   /**
    * Implement to handle when the terminal is closed by an act of the user.
    */
-  fun close(): Unit
+  fun close()
 
   /**
    * Implement to handle incoming keystrokes in the terminal or when an extension calls
@@ -147,7 +146,7 @@ external interface Pseudoterminal {
    * vscode.window.createTerminal({ name: 'Local echo', pty });
    * ```
    */
-  fun handleInput(data: String): Unit
+  fun handleInput(data: String)
 
   /**
    * Implement to handle when the number of rows and columns that fit into the terminal panel
@@ -162,5 +161,5 @@ external interface Pseudoterminal {
    *
    * @param dimensions The new dimensions.
    */
-  fun setDimensions(dimensions: TerminalDimensions): Unit
+  fun setDimensions(dimensions: TerminalDimensions)
 }

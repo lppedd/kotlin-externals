@@ -13,7 +13,6 @@ package vscode
  * is expected to create and finalize a [NotebookCellExecution notebook cell execution]. However, controllers are also free
  * to create executions by themselves.
  */
-
 external interface NotebookController {
   /**
    * The identifier of this notebook controller.
@@ -89,7 +88,7 @@ external interface NotebookController {
     cells: Array<NotebookCell>,
     notebook: NotebookDocument,
     controller: NotebookController,
-  ) -> Any // void | Thenable<void>
+  ) -> Union<Unit, Thenable<Unit>> // void | Thenable<void>
 
   /**
    * Optional interrupt handler.
@@ -103,7 +102,7 @@ external interface NotebookController {
    * _Note_ that supporting [NotebookCellExecution.token cancellation tokens] is preferred and that interrupt handlers should
    * only be used when tokens cannot be supported.
    */
-  var interruptHandler: ((notebook: NotebookDocument) -> Any /* void | Thenable<void> */)?
+  var interruptHandler: ((notebook: NotebookDocument) -> Union<Unit, Thenable<Unit>> /* void | Thenable<void> */)?
 
   /**
    * An event that fires whenever a controller has been selected or un-selected for a notebook document.
@@ -115,7 +114,7 @@ external interface NotebookController {
    * _Note_ that controller selection is persisted (by the controllers [NotebookController.id id]) and restored as soon as a
    * controller is re-created or as a notebook is [workspace.onDidOpenNotebookDocument opened].
    */
-  val onDidChangeSelectedNotebooks: Event<Temp11>
+  val onDidChangeSelectedNotebooks: Event<NotebookSelection>
 
   /**
    * A controller can set affinities for specific notebook documents. This allows a controller
@@ -127,10 +126,10 @@ external interface NotebookController {
   fun updateNotebookAffinity(
     notebook: NotebookDocument,
     affinity: NotebookControllerAffinity,
-  ): Unit
+  )
 
   /**
    * Dispose and free associated resources.
    */
-  fun dispose(): Unit
+  fun dispose()
 }

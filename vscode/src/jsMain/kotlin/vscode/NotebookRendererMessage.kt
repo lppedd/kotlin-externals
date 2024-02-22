@@ -1,8 +1,8 @@
 package vscode
 
-external interface Temp8 {
+external interface NotebookRendererMessage {
   /**
-   * The [NotebookEditor editor] that sent the message.
+   * The [NotebookEditor] that sent the message.
    */
   val editor: NotebookEditor
 

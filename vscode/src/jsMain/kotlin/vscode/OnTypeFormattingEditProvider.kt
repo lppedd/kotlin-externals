@@ -4,9 +4,8 @@ package vscode
  * The document formatting provider interface defines the contract between extensions and
  * the formatting-feature.
  */
-
 external interface OnTypeFormattingEditProvider {
-/**
+  /**
    * Provide formatting edits after a character has been typed.
    *
    * The given position and character should hint to the provider

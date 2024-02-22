@@ -2,10 +2,10 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentSelector
 import vscode.DocumentSymbolProvider
 import vscode.DocumentSymbolProviderMetadata
+import vscode.IDisposable
 
 /**
  * Register a document symbol provider.
@@ -17,10 +17,10 @@ import vscode.DocumentSymbolProviderMetadata
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A document symbol provider.
  * @param metaData metadata about the provider
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDocumentSymbolProvider(
   selector: DocumentSelector,
   provider: DocumentSymbolProvider,
   metaData: DocumentSymbolProviderMetadata = definedExternally,
-): Disposable
+): IDisposable

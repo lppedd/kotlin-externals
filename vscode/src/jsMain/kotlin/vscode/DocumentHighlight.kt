@@ -7,13 +7,12 @@ package vscode
  * special attention. Usually a document highlight is visualized by changing
  * the background color of its range.
  */
-
 external class DocumentHighlight {
   /**
    * Creates a new document highlight object.
    *
    * @param range The range the highlight applies to.
-   * @param kind The highlight kind, default is [DocumentHighlightKind.Text text].
+   * @param kind The highlight kind, default is [DocumentHighlightKind.Text].
    */
   constructor(range: Range, kind: DocumentHighlightKind = definedExternally)
 
@@ -23,7 +22,7 @@ external class DocumentHighlight {
   var range: Range
 
   /**
-   * The highlight kind, default is [DocumentHighlightKind.Text text].
+   * The highlight kind, default is [DocumentHighlightKind.Text].
    */
   var kind: DocumentHighlightKind?
 }

@@ -54,4 +54,4 @@ import vscode.TextDocument
 external fun match(
   selector: DocumentSelector,
   document: TextDocument,
-): Double
+): Int

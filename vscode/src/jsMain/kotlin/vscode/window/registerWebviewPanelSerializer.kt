@@ -2,7 +2,7 @@
 
 package vscode.window
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.WebviewPanelSerializer
 
 /**
@@ -15,9 +15,9 @@ import vscode.WebviewPanelSerializer
  *
  * @param viewType Type of the webview panel that can be serialized.
  * @param serializer Webview serializer.
- * @return A [Disposable] that unregisters the serializer.
+ * @return A [IDisposable] that unregisters the serializer.
  */
 external fun registerWebviewPanelSerializer(
   viewType: String,
   serializer: WebviewPanelSerializer<Any?>,
-): Disposable
+): IDisposable

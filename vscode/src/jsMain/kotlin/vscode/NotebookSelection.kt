@@ -1,6 +1,6 @@
 package vscode
 
-external interface Temp11 {
+external interface NotebookSelection {
   /**
    * The notebook for which the controller has been selected or un-selected.
    */

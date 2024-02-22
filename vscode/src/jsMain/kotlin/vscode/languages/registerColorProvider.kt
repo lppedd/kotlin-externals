@@ -2,9 +2,9 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentColorProvider
 import vscode.DocumentSelector
+import vscode.IDisposable
 
 /**
  * Register a color provider.
@@ -15,9 +15,9 @@ import vscode.DocumentSelector
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A color provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerColorProvider(
   selector: DocumentSelector,
   provider: DocumentColorProvider,
-): Disposable
+): IDisposable

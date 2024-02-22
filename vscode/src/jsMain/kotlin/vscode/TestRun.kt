@@ -1,10 +1,11 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
  * A TestRun represents an in-progress or completed test run and
  * provides methods to report the state of individual tests in the run.
  */
-
 external interface TestRun {
   /**
    * The human-readable name of the run. This can be used to
@@ -28,19 +29,19 @@ external interface TestRun {
    * Indicates a test is queued for later execution.
    * @param test Test item to update.
    */
-  fun enqueued(test: TestItem): Unit
+  fun enqueued(test: TestItem)
 
   /**
    * Indicates a test has started running.
    * @param test Test item to update.
    */
-  fun started(test: TestItem): Unit
+  fun started(test: TestItem)
 
   /**
    * Indicates a test has been skipped.
    * @param test Test item to update.
    */
-  fun skipped(test: TestItem): Unit
+  fun skipped(test: TestItem)
 
   /**
    * Indicates a test has failed. You should pass one or more
@@ -52,14 +53,14 @@ external interface TestRun {
   fun failed(
     test: TestItem,
     message: TestMessage,
-    duration: Double = definedExternally,
-  ): Unit
+    duration: Int = definedExternally,
+  )
 
   fun failed(
     test: TestItem,
-    message: Array<out TestMessage>,
-    duration: Double = definedExternally,
-  ): Unit
+    message: ReadonlyArray<TestMessage>,
+    duration: Int = definedExternally,
+  )
 
   /**
    * Indicates a test has errored. You should pass one or more
@@ -73,14 +74,14 @@ external interface TestRun {
   fun errored(
     test: TestItem,
     message: TestMessage,
-    duration: Double = definedExternally,
-  ): Unit
+    duration: Int = definedExternally,
+  )
 
   fun errored(
     test: TestItem,
-    message: Array<out TestMessage>,
-    duration: Double = definedExternally,
-  ): Unit
+    message: ReadonlyArray<TestMessage>,
+    duration: Int = definedExternally,
+  )
 
   /**
    * Indicates a test has passed.
@@ -89,8 +90,8 @@ external interface TestRun {
    */
   fun passed(
     test: TestItem,
-    duration: Double = definedExternally,
-  ): Unit
+    duration: Int = definedExternally,
+  )
 
   /**
    * Appends raw output from the test runner. On the user's request, the
@@ -107,11 +108,11 @@ external interface TestRun {
     output: String,
     location: Location = definedExternally,
     test: TestItem = definedExternally,
-  ): Unit
+  )
 
   /**
    * Signals the end of the test run. Any tests included in the run whose
    * states have not been updated will have their state reset.
    */
-  fun end(): Unit
+  fun end()
 }

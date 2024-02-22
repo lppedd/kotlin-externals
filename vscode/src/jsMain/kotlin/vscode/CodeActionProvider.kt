@@ -13,10 +13,7 @@ package vscode
  * - [CodeActionKind.QuickFix]s are shown in the problems view.
  * - Change applied on save by the `editor.codeActionsOnSave` setting.
  */
-external interface CodeActionProvider<
-  @Suppress("FINAL_UPPER_BOUND")
-  T : CodeAction, // default is CodeAction
-> {
+external interface CodeActionProvider<T : CodeAction /* default is CodeAction */> {
   /**
    * Get code actions for a given range in a document.
    *
@@ -43,7 +40,7 @@ external interface CodeActionProvider<
     range: Range,
     context: CodeActionContext,
     token: CancellationToken,
-  ): ProviderResult<Array<(Any /* Command | T */)>>
+  ): ProviderResult<Array<Union<Command, T>>>
 
   /**
    * Get code actions for a given range in a document.
@@ -71,7 +68,7 @@ external interface CodeActionProvider<
     range: Selection,
     context: CodeActionContext,
     token: CancellationToken,
-  ): ProviderResult<Array<(Any /* Command | T */)>>
+  ): ProviderResult<Array<Union<Command, T>>>
 
   /**
    * Given a code action fill in its [CodeAction.edit]-property. Changes to

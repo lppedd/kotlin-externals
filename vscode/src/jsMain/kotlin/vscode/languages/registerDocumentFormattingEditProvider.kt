@@ -3,9 +3,9 @@
 package vscode.languages
 
 import js.array.ReadonlyArray
-import vscode.Disposable
 import vscode.DocumentFilter
 import vscode.DocumentFormattingEditProvider
+import vscode.IDisposable
 import vscode.Union
 
 /**
@@ -17,12 +17,12 @@ import vscode.Union
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A document formatting edit provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDocumentFormattingEditProvider(
   selector: DocumentFilter,
   provider: DocumentFormattingEditProvider,
-): Disposable
+): IDisposable
 
 /**
  * Register a formatting provider for a document.
@@ -33,12 +33,12 @@ external fun registerDocumentFormattingEditProvider(
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A document formatting edit provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDocumentFormattingEditProvider(
   selector: String,
   provider: DocumentFormattingEditProvider,
-): Disposable
+): IDisposable
 
 /**
  * Register a formatting provider for a document.
@@ -49,9 +49,9 @@ external fun registerDocumentFormattingEditProvider(
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A document formatting edit provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDocumentFormattingEditProvider(
   selector: ReadonlyArray<Union<DocumentFilter, String>>,
   provider: DocumentFormattingEditProvider,
-): Disposable
+): IDisposable

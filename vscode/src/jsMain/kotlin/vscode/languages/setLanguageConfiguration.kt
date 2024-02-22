@@ -2,7 +2,7 @@
 
 package vscode.languages
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.LanguageConfiguration
 
 /**
@@ -10,9 +10,9 @@ import vscode.LanguageConfiguration
  *
  * @param language A language identifier like `typescript`.
  * @param configuration Language configuration.
- * @return A [Disposable] that unsets this configuration.
+ * @return A [IDisposable] that unsets this configuration.
  */
 external fun setLanguageConfiguration(
   language: String,
   configuration: LanguageConfiguration,
-): Disposable
+): IDisposable

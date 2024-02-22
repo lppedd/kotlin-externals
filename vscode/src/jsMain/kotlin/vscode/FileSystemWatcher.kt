@@ -2,13 +2,12 @@ package vscode
 
 /**
  * A file system watcher notifies about changes to files and folders
- * on disk or from other [FileSystemProvider FileSystemProviders].
+ * on disk or from other [FileSystemProvider]s.
  *
  * To get an instance of a `FileSystemWatcher` use
- * [workspace.createFileSystemWatcher createFileSystemWatcher].
+ * [vscode.workspace.createFileSystemWatcher].
  */
-
-external interface FileSystemWatcher : Disposable {
+external interface FileSystemWatcher : IDisposable {
   /**
    * true if this file system watcher has been created such that
    * it ignores creation file system events.

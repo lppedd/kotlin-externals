@@ -22,7 +22,7 @@ external interface StatusBarItem {
    * The priority of this item. Higher value means the item should
    * be shown more to the left.
    */
-  val priority: Double?
+  val priority: Int?
 
   /**
    * The name of the entry, like 'Python Language Indicator', 'Git Status' etc.

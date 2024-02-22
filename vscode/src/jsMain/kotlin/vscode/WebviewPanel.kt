@@ -17,8 +17,8 @@ external interface WebviewPanel {
   /**
    * Icon for the panel shown in UI.
    */
-  // TODO(Edoardo): split into 2 interfaces
-  var iconPath: (Any /* Uri | { readonly light: Uri; readonly dark: Uri; } */)?
+  // TODO: should be ReadonlyThemeUris
+  var iconPath: Union<Uri, ThemeUris>?
 
   /**
    * [Webview] belonging to the panel.
@@ -73,7 +73,7 @@ external interface WebviewPanel {
   fun reveal(
     viewColumn: ViewColumn = definedExternally,
     preserveFocus: Boolean = definedExternally,
-  ): Unit
+  )
 
   /**
    * Dispose of the webview panel.

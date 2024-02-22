@@ -33,7 +33,7 @@ package vscode
  *
  * @param T Type of the webview's state.
  */
-external interface WebviewPanelSerializer<T /* default is Any? */> {
+external interface WebviewPanelSerializer<T : Any? /* default is Any? */> {
   /**
    * Restore a webview panel from its serialized `state`.
    *

@@ -22,7 +22,7 @@ external fun registerCustomEditorProvider(
   viewType: String,
   provider: CustomTextEditorProvider,
   options: RegisterCustomEditorProviderOptions = definedExternally,
-): Disposable
+): IDisposable
 
 /**
  * Register a provider for custom editors for the `viewType` contributed by the `customEditors` extension point.
@@ -42,7 +42,7 @@ external fun registerCustomEditorProvider(
   viewType: String,
   provider: CustomReadonlyEditorProvider<CustomDocument>,
   options: RegisterCustomEditorProviderOptions = definedExternally,
-): Disposable
+): IDisposable
 
 /**
  * Register a provider for custom editors for the `viewType` contributed by the `customEditors` extension point.
@@ -62,4 +62,4 @@ external fun registerCustomEditorProvider(
   viewType: String,
   provider: CustomEditorProvider<CustomDocument>,
   options: RegisterCustomEditorProviderOptions = definedExternally,
-): Disposable
+): IDisposable

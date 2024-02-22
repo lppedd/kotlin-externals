@@ -4,7 +4,6 @@ package vscode
  * Represents a storage utility for secrets, information that is
  * sensitive.
  */
-
 external interface SecretStorage {
   /**
    * Retrieve a secret that was stored with key. Returns undefined if there

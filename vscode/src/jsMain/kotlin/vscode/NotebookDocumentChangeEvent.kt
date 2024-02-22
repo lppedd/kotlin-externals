@@ -1,27 +1,29 @@
 package vscode
 
-/**
- * An event describing a transactional [NotebookDocument notebook] change.
- */
+import js.array.ReadonlyArray
+import js.objects.Record
 
-external interface NotebookDocumentChangeEvent {
 /**
+ * An event describing a transactional [NotebookDocument] change.
+ */
+external interface NotebookDocumentChangeEvent {
+  /**
    * The affected notebook.
    */
   val notebook: NotebookDocument
 
-/**
+  /**
    * The new metadata of the notebook or `undefined` when it did not change.
    */
-  val metadata: (Temp10)?
+  val metadata: Record<String, Any>?
 
-/**
-   * An array of content changes describing added or removed [NotebookCell cells].
+  /**
+   * An array of content changes describing added or removed cells ([NotebookCell]).
    */
-  val contentChanges: Array<out NotebookDocumentContentChange>
+  val contentChanges: ReadonlyArray<NotebookDocumentContentChange>
 
-/**
-   * An array of [NotebookDocumentCellChange cell changes].
+  /**
+   * An array of cell changes ([NotebookDocumentCellChange]).
    */
-  val cellChanges: Array<out NotebookDocumentCellChange>
+  val cellChanges: ReadonlyArray<NotebookDocumentCellChange>
 }

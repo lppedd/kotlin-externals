@@ -1,12 +1,11 @@
 package vscode
 
 /**
- * A custom Debug Adapter Protocol event received from a [DebugSession debug session].
+ * A custom Debug Adapter Protocol event received from a [DebugSession].
  */
-
 external interface DebugSessionCustomEvent {
   /**
-   * The [DebugSession debug session] for which the custom event was received.
+   * The [DebugSession] for which the custom event was received.
    */
   val session: DebugSession
 

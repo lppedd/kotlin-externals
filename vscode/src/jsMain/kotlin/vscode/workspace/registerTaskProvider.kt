@@ -2,7 +2,7 @@
 
 package vscode.workspace
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.Task
 import vscode.TaskProvider
 
@@ -11,10 +11,10 @@ import vscode.TaskProvider
  *
  * @param type The task kind type this provider is registered for.
  * @param provider A task provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 @Deprecated("Use the corresponding function on the tasks namespace instead")
 external fun registerTaskProvider(
   type: String,
   provider: TaskProvider<Task>,
-): Disposable
+): IDisposable

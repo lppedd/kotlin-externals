@@ -10,7 +10,6 @@ package vscode
  *
  * @see [NotebookSerializer]
  */
-
 external class NotebookData {
   /**
    * Create new notebook data.

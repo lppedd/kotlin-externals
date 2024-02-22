@@ -4,7 +4,6 @@ package vscode
  * The folding range provider interface defines the contract between extensions and
  * [Folding](https://code.visualstudio.com/docs/editor/codebasics#_folding) in the editor.
  */
-
 external interface FoldingRangeProvider {
   /**
    * An optional event to signal that the folding ranges from this provider have changed.

@@ -2,7 +2,7 @@
 
 package vscode.window
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.TreeDataProvider
 import vscode.TreeView
 
@@ -14,9 +14,9 @@ import vscode.TreeView
  *
  * @param viewId Id of the view contributed using the extension point `views`.
  * @param treeDataProvider A [TreeDataProvider] that provides tree data for the view
- * @return A [Disposable] that unregisters the [TreeDataProvider].
+ * @return A [IDisposable] that unregisters the [TreeDataProvider].
  */
 external fun <T> registerTreeDataProvider(
   viewId: String,
   treeDataProvider: TreeDataProvider<T>,
-): Disposable
+): IDisposable

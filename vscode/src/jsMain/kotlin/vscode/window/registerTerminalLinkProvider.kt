@@ -2,7 +2,7 @@
 
 package vscode.window
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.TerminalLink
 import vscode.TerminalLinkProvider
 
@@ -11,4 +11,4 @@ import vscode.TerminalLinkProvider
  * @param provider The provider that provides the terminal links.
  * @return Disposable that unregisters the provider.
  */
-external fun registerTerminalLinkProvider(provider: TerminalLinkProvider<TerminalLink>): Disposable
+external fun registerTerminalLinkProvider(provider: TerminalLinkProvider<TerminalLink>): IDisposable

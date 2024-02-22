@@ -13,10 +13,7 @@ package vscode
  * Providers are asked for completions either explicitly by a user gesture or -depending on the configuration-
  * implicitly when typing words or trigger characters.
  */
-external interface CompletionItemProvider<
-  @Suppress("FINAL_UPPER_BOUND")
-  T : CompletionItem, // default is CompletionItem
-> {
+external interface CompletionItemProvider<T : CompletionItem /* default is CompletionItem */> {
   /**
    * Provide completion items for the given position and document.
    *

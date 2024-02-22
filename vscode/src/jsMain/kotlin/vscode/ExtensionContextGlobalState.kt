@@ -1,7 +1,9 @@
 package vscode
 
+import js.array.ReadonlyArray
+
 external interface ExtensionContextGlobalState : Memento {
-/**
+  /**
    * Set the keys whose values should be synchronized across devices when synchronizing user-data
    * like configuration, extensions, and mementos.
    *
@@ -14,5 +16,5 @@ external interface ExtensionContextGlobalState : Memento {
    *
    * @param keys The set of keys whose values are synced.
    */
-  fun setKeysForSync(keys: Array<out String>): Unit
+  fun setKeysForSync(keys: ReadonlyArray<String>)
 }

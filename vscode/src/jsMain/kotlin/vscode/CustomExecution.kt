@@ -5,7 +5,6 @@ package vscode
 /**
  * Class used to execute an extension callback as a task.
  */
-
 external class CustomExecution {
   /**
    * Constructs a CustomExecution task object. The callback will be executed when the task is run, at which point the

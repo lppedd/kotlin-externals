@@ -5,7 +5,6 @@ package vscode
 /**
  * A file decoration represents metadata that can be rendered with a file.
  */
-
 external class FileDecoration {
   /**
    * Creates a new decoration.

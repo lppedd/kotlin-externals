@@ -3,7 +3,6 @@ package vscode
 /**
  * The event filesystem providers must use to signal a file change.
  */
-
 external interface FileChangeEvent {
   /**
    * The type of change.

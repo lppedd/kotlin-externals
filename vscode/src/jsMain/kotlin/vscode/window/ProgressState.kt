@@ -9,5 +9,5 @@ external interface ProgressState {
   /**
    * An increment for discrete progress. Increments will be summed up until 100% is reached
    */
-  var increment: Double?
+  var increment: Int?
 }

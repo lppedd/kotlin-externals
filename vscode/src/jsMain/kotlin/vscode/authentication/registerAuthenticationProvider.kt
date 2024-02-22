@@ -4,7 +4,7 @@ package vscode.authentication
 
 import vscode.AuthenticationProvider
 import vscode.AuthenticationProviderOptions
-import vscode.Disposable
+import vscode.IDisposable
 
 /**
  * Register an authentication provider.
@@ -16,11 +16,11 @@ import vscode.Disposable
  * @param label The human-readable name of the provider.
  * @param provider The authentication provider provider.
  * @param options Additional options for the provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerAuthenticationProvider(
   id: String,
   label: String,
   provider: AuthenticationProvider,
   options: AuthenticationProviderOptions = definedExternally,
-): Disposable
+): IDisposable

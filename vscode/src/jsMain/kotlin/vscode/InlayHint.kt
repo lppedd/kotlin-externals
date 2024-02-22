@@ -5,7 +5,6 @@ package vscode
 /**
  * Inlay hint information.
  */
-
 external class InlayHint {
   /**
    * Creates a new inlay hint.

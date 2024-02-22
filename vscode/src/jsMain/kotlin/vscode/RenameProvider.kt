@@ -4,7 +4,6 @@ package vscode
  * The rename provider interface defines the contract between extensions and
  * the [rename](https://code.visualstudio.com/docs/editor/editingevolved#_rename-symbol)-feature.
  */
-
 external interface RenameProvider {
   /**
    * Provide an edit that describes changes that have to be made to one
@@ -42,9 +41,10 @@ external interface RenameProvider {
     position: Position,
     token: CancellationToken,
   ): ProviderResult<
-    Any, /* Range | {
-    range: Range;
-    placeholder: string;
-} */
+    Any,
+    /* Range | {
+       range: Range;
+       placeholder: string;
+   } */
   >
 }

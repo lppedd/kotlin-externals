@@ -2,9 +2,9 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentSelector
 import vscode.EvaluatableExpressionProvider
+import vscode.IDisposable
 
 /**
  * Register a provider that locates evaluatable expressions in text documents.
@@ -14,9 +14,9 @@ import vscode.EvaluatableExpressionProvider
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider An evaluatable expression provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerEvaluatableExpressionProvider(
   selector: DocumentSelector,
   provider: EvaluatableExpressionProvider,
-): Disposable
+): IDisposable

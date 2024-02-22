@@ -14,25 +14,25 @@ external class Color {
    * @param blue The blue component.
    * @param alpha The alpha component.
    */
-  constructor(red: Double, green: Double, blue: Double, alpha: Double)
+  constructor(red: Int, green: Int, blue: Int, alpha: Int)
 
   /**
    * The red component of this color in the range [0-1].
    */
-  val red: Double
+  val red: Int
 
   /**
    * The green component of this color in the range [0-1].
    */
-  val green: Double
+  val green: Int
 
   /**
    * The blue component of this color in the range [0-1].
    */
-  val blue: Double
+  val blue: Int
 
   /**
    * The alpha component of this color in the range [0-1].
    */
-  val alpha: Double
+  val alpha: Int
 }

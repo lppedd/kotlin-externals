@@ -2,10 +2,10 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentLink
 import vscode.DocumentLinkProvider
 import vscode.DocumentSelector
+import vscode.IDisposable
 
 /**
  * Register a document link provider.
@@ -16,9 +16,9 @@ import vscode.DocumentSelector
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A document link provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDocumentLinkProvider(
   selector: DocumentSelector,
   provider: DocumentLinkProvider<DocumentLink>,
-): Disposable
+): IDisposable

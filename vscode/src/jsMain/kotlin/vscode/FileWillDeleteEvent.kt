@@ -7,7 +7,6 @@ package vscode
  * call the [FileWillCreateEvent.waitUntil `waitUntil`]-function with a
  * thenable that resolves to a [WorkspaceEdit workspace edit].
  */
-
 external interface FileWillDeleteEvent {
   /**
    * A cancellation token.
@@ -26,5 +25,5 @@ external interface FileWillDeleteEvent {
    *
    * @param thenable A thenable that delays saving.
    */
-  fun waitUntil(thenable: Thenable<Any?>): Unit
+  fun waitUntil(thenable: Thenable<Any?>)
 }

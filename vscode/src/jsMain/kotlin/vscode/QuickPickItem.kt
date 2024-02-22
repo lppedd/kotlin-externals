@@ -4,7 +4,6 @@ package vscode
  * Represents an item that can be selected from
  * a list of items.
  */
-
 external interface QuickPickItem {
   /**
    * A human-readable string which is rendered prominent. Supports rendering of [ThemeIcon theme icons] via

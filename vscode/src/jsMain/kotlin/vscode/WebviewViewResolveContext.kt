@@ -5,7 +5,7 @@ package vscode
  *
  * @param T Type of the webview's state.
  */
-external interface WebviewViewResolveContext<T /* default is Any? */> {
+external interface WebviewViewResolveContext<T : Any? /* default is Any? */> {
   /**
    * Persisted state from the webview content.
    *

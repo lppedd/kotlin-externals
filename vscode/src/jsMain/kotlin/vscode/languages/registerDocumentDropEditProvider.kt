@@ -2,9 +2,9 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentDropEditProvider
 import vscode.DocumentSelector
+import vscode.IDisposable
 
 /**
  * Registers a new [DocumentDropEditProvider].
@@ -12,9 +12,9 @@ import vscode.DocumentSelector
  * @param selector A selector that defines the documents this provider applies to.
  * @param provider A drop provider.
  *
- * @return A [Disposable] that unregisters this provider when disposed of.
+ * @return A [IDisposable] that unregisters this provider when disposed of.
  */
 external fun registerDocumentDropEditProvider(
   selector: DocumentSelector,
   provider: DocumentDropEditProvider,
-): Disposable
+): IDisposable

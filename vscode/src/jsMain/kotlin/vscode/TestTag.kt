@@ -7,7 +7,6 @@ package vscode
  * [TestRunProfile TestRunProfiles]. A profile with a tag can only
  * execute tests that include that tag in their [TestItem.tags] array.
  */
-
 external class TestTag {
   /**
    * Creates a new TestTag instance.

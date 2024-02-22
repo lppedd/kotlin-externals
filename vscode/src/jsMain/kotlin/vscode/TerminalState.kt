@@ -3,7 +3,6 @@ package vscode
 /**
  * Represents the state of a [Terminal].
  */
-
 external interface TerminalState {
   /**
    * Whether the [Terminal] has been interacted with. Interaction means that the

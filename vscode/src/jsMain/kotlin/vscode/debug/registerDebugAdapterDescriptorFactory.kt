@@ -3,7 +3,7 @@
 package vscode.debug
 
 import vscode.DebugAdapterDescriptorFactory
-import vscode.Disposable
+import vscode.IDisposable
 
 /**
  * Register a [DebugAdapterDescriptorFactory] for a specific debug type.
@@ -12,9 +12,9 @@ import vscode.Disposable
  *
  * @param debugType The debug type for which the factory is registered.
  * @param factory The [DebugAdapterDescriptorFactory debug adapter descriptor factory] to register.
- * @return A [Disposable] that unregisters this factory when being disposed.
+ * @return A [IDisposable] that unregisters this factory when being disposed.
  */
 external fun registerDebugAdapterDescriptorFactory(
   debugType: String,
   factory: DebugAdapterDescriptorFactory,
-): Disposable
+): IDisposable

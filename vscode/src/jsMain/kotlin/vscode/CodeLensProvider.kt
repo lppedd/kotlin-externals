@@ -4,10 +4,7 @@ package vscode
  * A code lens provider adds [Command]s to source text. The commands will be shown
  * as dedicated horizontal lines in between the source text.
  */
-external interface CodeLensProvider<
-  @Suppress("FINAL_UPPER_BOUND")
-  T : CodeLens, // default is CodeLens
-> {
+external interface CodeLensProvider<T : CodeLens /* default is CodeLens */> {
   /**
    * An optional event to signal that the code lenses from this provider have changed.
    */

@@ -2,8 +2,8 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentSelector
+import vscode.IDisposable
 import vscode.SignatureHelpProvider
 import vscode.SignatureHelpProviderMetadata
 
@@ -17,13 +17,13 @@ import vscode.SignatureHelpProviderMetadata
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A signature help provider.
  * @param triggerCharacters Trigger signature help when the user types one of the characters, like `,` or `(`.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerSignatureHelpProvider(
   selector: DocumentSelector,
   provider: SignatureHelpProvider,
   vararg triggerCharacters: String,
-): Disposable
+): IDisposable
 
 /**
  * @see [vscode.languages.registerSignatureHelpProvider]
@@ -31,10 +31,10 @@ external fun registerSignatureHelpProvider(
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A signature help provider.
  * @param metadata Information about the provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerSignatureHelpProvider(
   selector: DocumentSelector,
   provider: SignatureHelpProvider,
   metadata: SignatureHelpProviderMetadata,
-): Disposable
+): IDisposable

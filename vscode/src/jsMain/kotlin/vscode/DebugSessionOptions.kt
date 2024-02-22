@@ -1,9 +1,8 @@
 package vscode
 
 /**
- * Options for [debug.startDebugging starting a debug session].
+ * Options for starting a debug session ([vscode.debug.startDebugging]).
  */
-
 external interface DebugSessionOptions {
   /**
    * When specified the newly created debug session is registered as a "child" session of this

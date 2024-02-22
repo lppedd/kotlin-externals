@@ -19,9 +19,8 @@ package vscode
  * [QuickInput.dispose] it to allow for freeing up
  * any resources associated with it.
  *
- * See [QuickPick} and {@link InputBox] for concrete UIs.
+ * See [QuickPick] and [InputBox] for concrete UIs.
  */
-
 external interface QuickInput {
   /**
    * An optional title.
@@ -31,12 +30,12 @@ external interface QuickInput {
   /**
    * An optional current step count.
    */
-  var step: Double?
+  var step: Int?
 
   /**
    * An optional total step count.
    */
-  var totalSteps: Double?
+  var totalSteps: Int?
 
   /**
    * If the UI should allow for user input. Defaults to true.
@@ -64,13 +63,13 @@ external interface QuickInput {
    * Makes the input UI visible in its current configuration. Any other input
    * UI will first fire an [QuickInput.onDidHide] event.
    */
-  fun show(): Unit
+  fun show()
 
   /**
    * Hides this input UI. This will also fire an [QuickInput.onDidHide]
    * event.
    */
-  fun hide(): Unit
+  fun hide()
 
   /**
    * An event signaling when this input UI is hidden.
@@ -88,5 +87,5 @@ external interface QuickInput {
    * functional and no additional methods or properties on it should be
    * accessed. Instead a new input UI should be created.
    */
-  fun dispose(): Unit
+  fun dispose()
 }

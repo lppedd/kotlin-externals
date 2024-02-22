@@ -5,7 +5,6 @@ package vscode
  * Additional properties of the NotebookEditor are available in the proposed
  * API, which will be finalized later.
  */
-
 external interface NotebookEditor {
   /**
    * The [NotebookDocument notebook document] associated with this notebook editor.
@@ -43,5 +42,5 @@ external interface NotebookEditor {
   fun revealRange(
     range: NotebookRange,
     revealType: NotebookEditorRevealType = definedExternally,
-  ): Unit
+  )
 }

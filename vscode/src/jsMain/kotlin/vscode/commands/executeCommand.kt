@@ -18,4 +18,4 @@ import vscode.*
  * @return A thenable that resolves to the returned value of the given command. Returns `undefined` when
  *   the command handler function doesn't return anything.
  */
-external fun <T /* default is Any? */> executeCommand(command: String, vararg rest: Any?): Thenable<T>
+external fun <T : Any? /* default is Any? */> executeCommand(command: String, vararg rest: Any?): Thenable<T>

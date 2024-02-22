@@ -7,7 +7,6 @@ package vscode
  * @see [window.showWarningMessage showWarningMessage]
  * @see [window.showErrorMessage showErrorMessage]
  */
-
 external interface MessageOptions {
   /**
    * Indicates that this message should be modal.

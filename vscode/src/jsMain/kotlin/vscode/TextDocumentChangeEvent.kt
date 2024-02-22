@@ -3,7 +3,6 @@ package vscode
 /**
  * An event describing a transactional [TextDocument document] change.
  */
-
 external interface TextDocumentChangeEvent {
   /**
    * The affected document.

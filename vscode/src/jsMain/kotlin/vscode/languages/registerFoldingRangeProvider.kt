@@ -2,9 +2,9 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentSelector
 import vscode.FoldingRangeProvider
+import vscode.IDisposable
 
 /**
  * Register a folding range provider.
@@ -19,9 +19,9 @@ import vscode.FoldingRangeProvider
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A folding range provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerFoldingRangeProvider(
   selector: DocumentSelector,
   provider: FoldingRangeProvider,
-): Disposable
+): IDisposable

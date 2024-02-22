@@ -5,7 +5,6 @@ package vscode
 /**
  * The tab represents a single text based resource.
  */
-
 external class TabInputText {
   /**
    * Constructs a text tab input with the given URI.

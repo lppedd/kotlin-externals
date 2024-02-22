@@ -4,7 +4,6 @@ package vscode
  * The hover provider interface defines the contract between extensions and
  * the [hover](https://code.visualstudio.com/docs/editor/intellisense)-feature.
  */
-
 external interface HoverProvider {
   /**
    * Provide a hover for the given position and document. Multiple hovers at the same

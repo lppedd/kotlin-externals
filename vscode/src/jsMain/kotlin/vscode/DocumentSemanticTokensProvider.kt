@@ -4,14 +4,13 @@ package vscode
  * The document semantic tokens provider interface defines the contract between extensions and
  * semantic tokens.
  */
-
 external interface DocumentSemanticTokensProvider {
-/**
+  /**
    * An optional event to signal that the semantic tokens from this provider have changed.
    */
   var onDidChangeSemanticTokens: Event<Unit>?
 
-/**
+  /**
    * Tokens in a file are represented as an array of integers. The position of each token is expressed relative to
    * the token before it, because most tokens remain stable relative to each other when edits are made in a file.
    *
@@ -66,8 +65,10 @@ external interface DocumentSemanticTokensProvider {
    *    [  2,5,3,0,3,  0,5,4,1,0,  3,2,7,2,0 ]
    * ```
    *
-   * @see [SemanticTokensBuilder] for a helper to encode tokens as integers.
+   * See [SemanticTokensBuilder] for a helper to encode tokens as integers.
+   *
    * *NOTE*: When doing edits, it is possible that multiple edits occur until the editor decides to invoke the semantic tokens provider.
+   *
    * *NOTE*: If the provider cannot temporarily compute semantic tokens, it can indicate this by throwing an error with the message 'Busy'.
    */
   fun provideDocumentSemanticTokens(
@@ -75,7 +76,7 @@ external interface DocumentSemanticTokensProvider {
     token: CancellationToken,
   ): ProviderResult<SemanticTokens>
 
-/**
+  /**
    * Instead of always returning all the tokens in a file, it is possible for a `DocumentSemanticTokensProvider` to implement
    * this method (`provideDocumentSemanticTokensEdits`) and then return incremental updates to the previously provided semantic tokens.
    *
@@ -102,11 +103,12 @@ external interface DocumentSemanticTokensProvider {
    * ```
    *
    * *NOTE*: If the provider cannot compute `SemanticTokensEdits`, it can "give up" and return all the tokens in the document again.
+   *
    * *NOTE*: All edits in `SemanticTokensEdits` contain indices in the old integers array, so they all refer to the previous result state.
    */
   fun provideDocumentSemanticTokensEdits(
     document: TextDocument,
     previousResultId: String,
     token: CancellationToken,
-  ): ProviderResult<Any /* SemanticTokens | SemanticTokensEdits */>
+  ): ProviderResult<Union<SemanticTokens, SemanticTokensEdits> /* SemanticTokens | SemanticTokensEdits */>
 }

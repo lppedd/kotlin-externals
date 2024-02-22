@@ -6,7 +6,6 @@ package vscode
  * The execution of a task happens as an external process
  * without shell interaction.
  */
-
 external class ProcessExecution {
   /**
    * Creates a process execution.

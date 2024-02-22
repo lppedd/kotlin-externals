@@ -1,12 +1,9 @@
 package vscode
 
 /**
- * An instantiatable version of [Disposable].
- *
- * This does not exist in the VS Code typings!
+ * See [IDisposable].
  */
-@JsName("Disposable")
-external class NewDisposable : Disposable {
+external class Disposable : IDisposable {
   /**
    * Creates a new disposable that calls the provided function
    * on dispose.
@@ -29,6 +26,6 @@ external class NewDisposable : Disposable {
      * @return Returns a new disposable which, upon dispose, will
      *   dispose all provided disposables.
      */
-    fun from(vararg disposableLikes: Temp0): Disposable
+    fun from(vararg disposableLikes: IDisposable): IDisposable
   }
 }

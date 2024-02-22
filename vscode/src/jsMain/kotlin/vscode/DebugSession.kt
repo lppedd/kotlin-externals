@@ -3,7 +3,6 @@ package vscode
 /**
  * A debug session.
  */
-
 external interface DebugSession {
   /**
    * The unique ID of this debug session.
@@ -11,7 +10,7 @@ external interface DebugSession {
   val id: String
 
   /**
-   * The debug session's type from the [DebugConfiguration debug configuration].
+   * The debug session's type from the [DebugConfiguration].
    */
   val type: String
 
@@ -22,7 +21,7 @@ external interface DebugSession {
   val parentSession: DebugSession?
 
   /**
-   * The debug session's name is initially taken from the [DebugConfiguration debug configuration].
+   * The debug session's name is initially taken from the [DebugConfiguration].
    * Any changes will be properly reflected in the UI.
    */
   var name: String
@@ -33,7 +32,7 @@ external interface DebugSession {
   val workspaceFolder: WorkspaceFolder?
 
   /**
-   * The "resolved" [DebugConfiguration debug configuration] of this session.
+   * The "resolved" [DebugConfiguration] of this session.
    * "Resolved" means that
    * - all variables have been substituted and
    * - platform specific attribute sections have been "flattened" for the matching platform and removed for non-matching platforms.

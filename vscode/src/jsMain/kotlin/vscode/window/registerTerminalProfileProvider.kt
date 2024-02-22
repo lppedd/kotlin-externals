@@ -2,7 +2,7 @@
 
 package vscode.window
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.TerminalProfileProvider
 
 /**
@@ -10,9 +10,9 @@ import vscode.TerminalProfileProvider
  *
  * @param id The ID of the contributed terminal profile.
  * @param provider The terminal profile provider.
- * @return A [Disposable] that unregisters the provider.
+ * @return A [IDisposable] that unregisters the provider.
  */
 external fun registerTerminalProfileProvider(
   id: String,
   provider: TerminalProfileProvider,
-): Disposable
+): IDisposable

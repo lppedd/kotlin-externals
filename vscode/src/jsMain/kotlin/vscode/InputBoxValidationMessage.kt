@@ -3,7 +3,6 @@ package vscode
 /**
  * Object to configure the behavior of the validation message.
  */
-
 external interface InputBoxValidationMessage {
   /**
    * The validation message to display.

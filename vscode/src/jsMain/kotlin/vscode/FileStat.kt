@@ -3,7 +3,6 @@ package vscode
 /**
  * The `FileStat`-type represents metadata about a file
  */
-
 external interface FileStat {
   /**
    * The type of the file, e.g. is a regular file, a directory, or symbolic link
@@ -16,7 +15,7 @@ external interface FileStat {
   /**
    * The creation timestamp in milliseconds elapsed since January 1, 1970 00:00:00 UTC.
    */
-  var ctime: Double
+  var ctime: Int
 
   /**
    * The modification timestamp in milliseconds elapsed since January 1, 1970 00:00:00 UTC.
@@ -25,7 +24,7 @@ external interface FileStat {
    * from the previous value. Otherwise there may be optimizations in place that will not show
    * the updated file contents in an editor for example.
    */
-  var mtime: Double
+  var mtime: Int
 
   /**
    * The size in bytes.
@@ -34,7 +33,7 @@ external interface FileStat {
    * may be optimizations in place that will not show the updated file contents in an editor for
    * example.
    */
-  var size: Double
+  var size: Int
 
   /**
    * The permissions of the file, e.g. whether the file is readonly.

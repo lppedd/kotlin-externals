@@ -2,8 +2,8 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentSelector
+import vscode.IDisposable
 import vscode.InlineValuesProvider
 
 /**
@@ -17,9 +17,9 @@ import vscode.InlineValuesProvider
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider An inline values provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerInlineValuesProvider(
   selector: DocumentSelector,
   provider: InlineValuesProvider,
-): Disposable
+): IDisposable

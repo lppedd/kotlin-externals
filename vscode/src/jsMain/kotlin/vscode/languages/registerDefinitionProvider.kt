@@ -3,8 +3,8 @@
 package vscode.languages
 
 import vscode.DefinitionProvider
-import vscode.Disposable
 import vscode.DocumentSelector
+import vscode.IDisposable
 
 /**
  * Register a definition provider.
@@ -15,9 +15,9 @@ import vscode.DocumentSelector
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A definition provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDefinitionProvider(
   selector: DocumentSelector,
   provider: DefinitionProvider,
-): Disposable
+): IDisposable

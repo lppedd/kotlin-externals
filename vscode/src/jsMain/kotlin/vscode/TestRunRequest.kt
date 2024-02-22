@@ -12,7 +12,6 @@ package vscode
  * [TestRunProfile.runHandler], however you can also create test
  * requests and runs outside of the `runHandler`.
  */
-
 external class TestRunRequest {
   /**
    * @param include Array of specific tests to run, or undefined to run all tests

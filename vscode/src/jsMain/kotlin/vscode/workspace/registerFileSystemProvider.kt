@@ -2,8 +2,8 @@
 
 package vscode.workspace
 
-import vscode.Disposable
 import vscode.FileSystemProvider
+import vscode.IDisposable
 import vscode.Uri
 
 /**
@@ -15,10 +15,10 @@ import vscode.Uri
  * @param scheme The [Uri.scheme] the provider registers for.
  * @param provider The filesystem provider.
  * @param options Immutable metadata about the provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerFileSystemProvider(
   scheme: String,
   provider: FileSystemProvider,
   options: RegisterFileSystemProviderOptions = definedExternally,
-): Disposable
+): IDisposable

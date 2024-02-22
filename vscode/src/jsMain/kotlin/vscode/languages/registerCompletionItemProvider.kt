@@ -21,10 +21,10 @@ import vscode.*
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A completion provider.
  * @param triggerCharacters Trigger completion when the user types one of the characters.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerCompletionItemProvider(
   selector: DocumentSelector,
   provider: CompletionItemProvider<CompletionItem>,
   vararg triggerCharacters: String,
-): Disposable
+): IDisposable

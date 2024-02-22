@@ -2,9 +2,9 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentSelector
 import vscode.DocumentSemanticTokensProvider
+import vscode.IDisposable
 import vscode.SemanticTokensLegend
 
 /**
@@ -16,10 +16,10 @@ import vscode.SemanticTokensLegend
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A document semantic tokens provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDocumentSemanticTokensProvider(
   selector: DocumentSelector,
   provider: DocumentSemanticTokensProvider,
   legend: SemanticTokensLegend,
-): Disposable
+): IDisposable

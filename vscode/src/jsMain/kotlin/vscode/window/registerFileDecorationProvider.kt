@@ -2,13 +2,13 @@
 
 package vscode.window
 
-import vscode.Disposable
 import vscode.FileDecorationProvider
+import vscode.IDisposable
 
 /**
  * Register a file decoration provider.
  *
  * @param provider A [FileDecorationProvider].
- * @return A [Disposable] that unregisters the provider.
+ * @return A [IDisposable] that unregisters the provider.
  */
-external fun registerFileDecorationProvider(provider: FileDecorationProvider): Disposable
+external fun registerFileDecorationProvider(provider: FileDecorationProvider): IDisposable

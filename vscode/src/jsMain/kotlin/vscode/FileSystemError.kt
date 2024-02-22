@@ -27,7 +27,6 @@ external class FileSystemError : JsError {
    */
   val code: String
 
-  @Suppress("FunctionName")
   companion object {
     /**
      * Create an error to signal that a file or folder wasn't found.
@@ -35,6 +34,10 @@ external class FileSystemError : JsError {
      */
     fun FileNotFound(messageOrUri: String = definedExternally): FileSystemError
 
+    /**
+     * Create an error to signal that a file or folder wasn't found.
+     * @param messageOrUri Message or uri.
+     */
     fun FileNotFound(messageOrUri: Uri = definedExternally): FileSystemError
 
     /**
@@ -44,6 +47,11 @@ external class FileSystemError : JsError {
      */
     fun FileExists(messageOrUri: String = definedExternally): FileSystemError
 
+    /**
+     * Create an error to signal that a file or folder already exists, e.g. when
+     * creating but not overwriting a file.
+     * @param messageOrUri Message or uri.
+     */
     fun FileExists(messageOrUri: Uri = definedExternally): FileSystemError
 
     /**
@@ -52,6 +60,10 @@ external class FileSystemError : JsError {
      */
     fun FileNotADirectory(messageOrUri: String = definedExternally): FileSystemError
 
+    /**
+     * Create an error to signal that a file is not a folder.
+     * @param messageOrUri Message or uri.
+     */
     fun FileNotADirectory(messageOrUri: Uri = definedExternally): FileSystemError
 
     /**
@@ -60,6 +72,10 @@ external class FileSystemError : JsError {
      */
     fun FileIsADirectory(messageOrUri: String = definedExternally): FileSystemError
 
+    /**
+     * Create an error to signal that a file is a folder.
+     * @param messageOrUri Message or uri.
+     */
     fun FileIsADirectory(messageOrUri: Uri = definedExternally): FileSystemError
 
     /**
@@ -68,6 +84,10 @@ external class FileSystemError : JsError {
      */
     fun NoPermissions(messageOrUri: String = definedExternally): FileSystemError
 
+    /**
+     * Create an error to signal that an operation lacks required permissions.
+     * @param messageOrUri Message or uri.
+     */
     fun NoPermissions(messageOrUri: Uri = definedExternally): FileSystemError
 
     /**
@@ -77,6 +97,11 @@ external class FileSystemError : JsError {
      */
     fun Unavailable(messageOrUri: String = definedExternally): FileSystemError
 
+    /**
+     * Create an error to signal that the file system is unavailable or too busy to
+     * complete a request.
+     * @param messageOrUri Message or uri.
+     */
     fun Unavailable(messageOrUri: Uri = definedExternally): FileSystemError
   }
 }

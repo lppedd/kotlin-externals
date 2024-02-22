@@ -12,7 +12,7 @@ package vscode
  * @see [CodeLensProvider.provideCodeLenses]
  * @see [CodeLensProvider.resolveCodeLens]
  */
-external class CodeLens {
+open external class CodeLens {
   /**
    * Creates a new code lens object.
    *

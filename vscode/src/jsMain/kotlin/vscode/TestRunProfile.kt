@@ -3,7 +3,6 @@ package vscode
 /**
  * A TestRunProfile describes one way to execute tests in a [TestController].
  */
-
 external interface TestRunProfile {
   /**
    * Label shown to the user in the UI.
@@ -83,5 +82,5 @@ external interface TestRunProfile {
   /**
    * Deletes the run profile.
    */
-  fun dispose(): Unit
+  fun dispose()
 }

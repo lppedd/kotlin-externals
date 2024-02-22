@@ -2,7 +2,7 @@
 
 package vscode.workspace
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.TextDocumentContentProvider
 
 /**
@@ -12,9 +12,9 @@ import vscode.TextDocumentContentProvider
  *
  * @param scheme The uri-scheme to register for.
  * @param provider A content provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerTextDocumentContentProvider(
   scheme: String,
   provider: TextDocumentContentProvider,
-): Disposable
+): IDisposable

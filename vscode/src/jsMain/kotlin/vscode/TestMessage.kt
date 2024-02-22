@@ -6,7 +6,6 @@ package vscode
  * Message associated with the test state. Can be linked to a specific
  * source range -- useful for assertion failures, for example.
  */
-
 external class TestMessage {
   /**
    * Creates a new TestMessage instance.

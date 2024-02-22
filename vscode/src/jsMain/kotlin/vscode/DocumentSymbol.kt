@@ -2,12 +2,13 @@
 
 package vscode
 
+import js.array.ReadonlyArray
+
 /**
  * Represents programming constructs like variables, classes, interfaces etc. that appear in a document. Document
  * symbols can be hierarchical and they have two ranges: one that encloses its definition and one that points to
  * its most interesting range, e.g. the range of an identifier.
  */
-
 external class DocumentSymbol {
   /**
    * Creates a new document symbol.
@@ -38,7 +39,7 @@ external class DocumentSymbol {
   /**
    * Tags for this symbol.
    */
-  var tags: (Array<out SymbolTag>)?
+  var tags: ReadonlyArray<SymbolTag>?
 
   /**
    * The range enclosing this symbol not including leading/trailing whitespace but everything else, e.g. comments and code.
@@ -47,7 +48,7 @@ external class DocumentSymbol {
 
   /**
    * The range that should be selected and reveal when this symbol is being picked, e.g. the name of a function.
-   * Must be contained by the {@linkcode DocumentSymbol.range range}.
+   * Must be contained by the [DocumentSymbol.range].
    */
   var selectionRange: Range
 

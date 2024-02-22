@@ -8,7 +8,6 @@ package vscode
  * @see [window.showWarningMessage showWarningMessage]
  * @see [window.showErrorMessage showErrorMessage]
  */
-
 external interface MessageItem {
   /**
    * A short title like 'Retry', 'Open Log' etc.

@@ -3,7 +3,6 @@ package vscode
 /**
  * Value-object describing what options a terminal should use.
  */
-
 external interface TerminalOptions {
   /**
    * A human-readable string which will be used to represent the terminal in the UI.

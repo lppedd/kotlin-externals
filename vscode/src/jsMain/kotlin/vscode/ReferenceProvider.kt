@@ -4,7 +4,6 @@ package vscode
  * The reference provider interface defines the contract between extensions and
  * the [find references](https://code.visualstudio.com/docs/editor/editingevolved#_peek)-feature.
  */
-
 external interface ReferenceProvider {
   /**
    * Provide a set of project-wide references for the given position and document.

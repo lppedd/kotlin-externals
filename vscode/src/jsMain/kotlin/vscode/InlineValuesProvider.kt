@@ -5,7 +5,6 @@ package vscode
  * In this contract the provider returns inline value information for a given document range
  * and the editor shows this information in the editor at the end of lines.
  */
-
 external interface InlineValuesProvider {
   /**
    * An optional event to signal that inline values have changed.

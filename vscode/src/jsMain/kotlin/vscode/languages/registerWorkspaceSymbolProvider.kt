@@ -2,7 +2,7 @@
 
 package vscode.languages
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.SymbolInformation
 import vscode.WorkspaceSymbolProvider
 
@@ -14,6 +14,6 @@ import vscode.WorkspaceSymbolProvider
  * a failure of the whole operation.
  *
  * @param provider A workspace symbol provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
-external fun registerWorkspaceSymbolProvider(provider: WorkspaceSymbolProvider<SymbolInformation>): Disposable
+external fun registerWorkspaceSymbolProvider(provider: WorkspaceSymbolProvider<SymbolInformation>): IDisposable

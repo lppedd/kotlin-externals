@@ -3,7 +3,6 @@ package vscode
 /**
  * Controls how the task is presented in the UI.
  */
-
 external interface TaskPresentationOptions {
   /**
    * Controls whether the task output is reveal in the user interface.

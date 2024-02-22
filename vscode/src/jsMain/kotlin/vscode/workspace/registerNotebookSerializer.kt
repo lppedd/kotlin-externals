@@ -2,7 +2,7 @@
 
 package vscode.workspace
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.NotebookDocumentContentOptions
 import vscode.NotebookSerializer
 
@@ -15,10 +15,10 @@ import vscode.NotebookSerializer
  * @param notebookType A notebook.
  * @param serializer A notebook serializer.
  * @param options Optional context options that define what parts of a notebook should be persisted
- * @return A [Disposable] that unregisters this serializer when being disposed.
+ * @return A [IDisposable] that unregisters this serializer when being disposed.
  */
 external fun registerNotebookSerializer(
   notebookType: String,
   serializer: NotebookSerializer,
   options: NotebookDocumentContentOptions = definedExternally,
-): Disposable
+): IDisposable

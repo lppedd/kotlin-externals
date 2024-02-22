@@ -6,7 +6,6 @@ package vscode
  * A `TestItem` can represent either a test suite or a test itself, since
  * they both have similar capabilities.
  */
-
 external interface TestItem {
   /**
    * Identifier for the `TestItem`. This is used to correlate

@@ -10,4 +10,4 @@ import vscode.Extension
  * @param extensionId An extension identifier.
  * @return An extension or `undefined`.
  */
-external fun <T /* default is Any? */> getExtension(extensionId: String): Extension<T>?
+external fun <T : Any? /* default is Any? */> getExtension(extensionId: String): Extension<T>?

@@ -5,7 +5,6 @@ package vscode
 /**
  * A breakpoint specified by a function name.
  */
-
 external class FunctionBreakpoint : Breakpoint {
   /**
    * Create a new function breakpoint.

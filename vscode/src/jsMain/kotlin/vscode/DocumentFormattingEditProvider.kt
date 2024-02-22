@@ -12,7 +12,7 @@ external interface DocumentFormattingEditProvider {
    * @param options Options controlling formatting.
    * @param token A cancellation token.
    * @return A set of text edits or a thenable that resolves to such. The lack of a result can be
-   *  signaled by returning `undefined`, `null`, or an empty array.
+   *   signaled by returning `undefined`, `null`, or an empty array.
    */
   fun provideDocumentFormattingEdits(
     document: TextDocument,

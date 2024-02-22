@@ -12,5 +12,5 @@ external interface ViewBadge {
   /**
    * The value to present in the badge.
    */
-  val value: Double
+  val value: Int
 }

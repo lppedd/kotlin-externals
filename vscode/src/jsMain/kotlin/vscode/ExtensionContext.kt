@@ -14,23 +14,23 @@ external interface ExtensionContext {
    *
    * *Note* that asynchronous dispose-functions aren't awaited.
    */
-  val subscriptions: Array<Temp5>
+  val subscriptions: Array<IDisposable>
 
   /**
    * A memento object that stores state in the context
-   * of the currently opened [workspace.workspaceFolders workspace].
+   * of the currently opened workspace ([vscode.workspace.workspaceFolders]).
    */
   val workspaceState: Memento
 
   /**
    * A memento object that stores state independent
-   * of the current opened [workspace.workspaceFolders workspace].
+   * of the current opened workspace ([vscode.workspace.workspaceFolders]).
    */
   val globalState: ExtensionContextGlobalState
 
   /**
    * A storage utility for secrets. Secrets are persisted across reloads and are independent of the
-   * current opened [workspace.workspaceFolders workspace].
+   * current opened workspace ([vscode.workspace.workspaceFolders]).
    */
   val secrets: SecretStorage
 
@@ -41,7 +41,7 @@ external interface ExtensionContext {
 
   /**
    * The absolute file path of the directory containing the extension. Shorthand
-   * notation for [TextDocument.uri ExtensionContext.extensionUri.fsPath] (independent of the uri scheme).
+   * notation for `TextDocument.uri ExtensionContext.extensionUri.fsPath` (independent of the uri scheme).
    */
   val extensionPath: String
 
@@ -54,8 +54,8 @@ external interface ExtensionContext {
   /**
    * Get the absolute path of a resource contained in the extension.
    *
-   * *Note* that an absolute uri can be constructed via {@linkcode Uri.joinPath} and
-   * {@linkcode ExtensionContext.extensionUri extensionUri}, e.g. `vscode.Uri.joinPath(context.extensionUri, relativePath);`
+   * *Note* that an absolute uri can be constructed via [Uri.joinPath] and
+   * [ExtensionContext.extensionUri], e.g. `vscode.Uri.joinPath(context.extensionUri, relativePath);`
    *
    * @param relativePath A relative path to a resource contained in the extension.
    * @return The absolute path of the resource.
@@ -68,11 +68,9 @@ external interface ExtensionContext {
    * up to the extension. However, the parent directory is guaranteed to be existent.
    * The value is `undefined` when no workspace nor folder has been opened.
    *
-   * Use {@linkcode ExtensionContext.workspaceState workspaceState} or
-   * {@linkcode ExtensionContext.globalState globalState} to store key value data.
+   * Use [ExtensionContext.workspaceState] or [ExtensionContext.globalState] to store key value data.
    *
-   * @see {@linkcode FileSystem workspace.fs} for how to read and write files and folders from
-   *  an uri.
+   * See FileSystem ([vscode.workspace.fs]) for how to read and write files and folders from an uri.
    */
   val storageUri: Uri?
 
@@ -81,11 +79,9 @@ external interface ExtensionContext {
    * can store private state. The directory might not exist on disk and creation is
    * up to the extension. However, the parent directory is guaranteed to be existent.
    *
-   * Use {@linkcode ExtensionContext.workspaceState workspaceState} or
-   * {@linkcode ExtensionContext.globalState globalState} to store key value data.
-   *
-   * @deprecated Use [ExtensionContext.storageUri storageUri] instead.
+   * Use [ExtensionContext.workspaceState] or [ExtensionContext.globalState] to store key value data.
    */
+  @Deprecated("Use ExtensionContext.storageUri instead")
   val storagePath: String?
 
   /**
@@ -93,10 +89,9 @@ external interface ExtensionContext {
    * The directory might not exist on disk and creation is
    * up to the extension. However, the parent directory is guaranteed to be existent.
    *
-   * Use {@linkcode ExtensionContext.globalState globalState} to store key value data.
+   * Use [ExtensionContext.globalState] to store key value data.
    *
-   * @see {@linkcode FileSystem workspace.fs} for how to read and write files and folders from
-   *  an uri.
+   * See FileSystem ([vscode.workspace.fs]) for how to read and write files and folders from an uri.
    */
   val globalStorageUri: Uri
 
@@ -105,10 +100,9 @@ external interface ExtensionContext {
    * The directory might not exist on disk and creation is
    * up to the extension. However, the parent directory is guaranteed to be existent.
    *
-   * Use {@linkcode ExtensionContext.globalState globalState} to store key value data.
-   *
-   * @deprecated Use [ExtensionContext.globalStorageUri globalStorageUri] instead.
+   * Use [ExtensionContext.globalState] to store key value data.
    */
+  @Deprecated("Use ExtensionContext.globalStorageUri instead")
   val globalStoragePath: String
 
   /**
@@ -116,8 +110,7 @@ external interface ExtensionContext {
    * The directory might not exist on disk and creation is up to the extension. However,
    * the parent directory is guaranteed to be existent.
    *
-   * @see {@linkcode FileSystem workspace.fs} for how to read and write files and folders from
-   *  an uri.
+   * See FileSystem ([vscode.workspace.fs]) for how to read and write files and folders from an uri.
    */
   val logUri: Uri
 
@@ -125,9 +118,8 @@ external interface ExtensionContext {
    * An absolute file path of a directory in which the extension can create log files.
    * The directory might not exist on disk and creation is up to the extension. However,
    * the parent directory is guaranteed to be existent.
-   *
-   * @deprecated Use [ExtensionContext.logUri logUri] instead.
    */
+  @Deprecated("Use ExtensionContext.logUri instead")
   val logPath: String
 
   /**

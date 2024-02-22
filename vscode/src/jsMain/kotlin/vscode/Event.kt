@@ -20,13 +20,13 @@ external interface Event<T> {
    *
    * @param listener The listener function will be called when the event happens.
    * @param thisArgs The `this`-argument which will be used when calling the event listener.
-   * @param disposables An array to which a [Disposable] will be added.
+   * @param disposables An array to which a [IDisposable] will be added.
    * @return A disposable which unsubscribes the event listener.
    */
   @JsNative
   operator fun invoke(
     listener: (e: T) -> Any?,
     thisArgs: Any? = definedExternally,
-    disposables: Array<Disposable> = definedExternally,
-  ): Disposable
+    disposables: Array<IDisposable> = definedExternally,
+  ): IDisposable
 }

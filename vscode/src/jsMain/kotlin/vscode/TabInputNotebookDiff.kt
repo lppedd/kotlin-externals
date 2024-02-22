@@ -5,7 +5,6 @@ package vscode
 /**
  * The tabs represents two notebooks in a diff configuration.
  */
-
 external class TabInputNotebookDiff {
   /**
    * Constructs a notebook diff tab input.

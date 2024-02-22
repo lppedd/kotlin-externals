@@ -64,7 +64,7 @@ external interface Webview {
    *   of the webview.
    *
    * @return A promise that resolves when the message is posted to a webview or when it is
-   * dropped because the message was not deliverable.
+   *   dropped because the message was not deliverable.
    *
    *   Returns `true` if the message was posted to the webview. Messages can only be posted to
    *   live webviews (i.e. either visible webviews or hidden webviews that set `retainContextWhenHidden`).

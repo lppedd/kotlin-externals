@@ -7,7 +7,6 @@ package vscode
  *
  * @see [InlineCompletionItemProvider.provideInlineCompletionItems]
  */
-
 external class InlineCompletionItem {
   /**
    * Creates a new inline completion item.

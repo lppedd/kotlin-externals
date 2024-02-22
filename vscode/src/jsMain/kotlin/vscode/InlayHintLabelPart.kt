@@ -5,7 +5,6 @@ package vscode
 /**
  * An inlay hint label part allows for interactive and composite labels of inlay hints.
  */
-
 external class InlayHintLabelPart {
   /**
    * Creates a new inlay hint label part.

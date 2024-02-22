@@ -6,7 +6,6 @@ package vscode
  *
  * This interface is not intended to be implemented.
  */
-
 external interface TaskExecution {
   /**
    * The task that got started.
@@ -16,5 +15,5 @@ external interface TaskExecution {
   /**
    * Terminates the task execution.
    */
-  fun terminate(): Unit
+  fun terminate()
 }

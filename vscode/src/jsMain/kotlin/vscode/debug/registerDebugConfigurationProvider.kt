@@ -4,7 +4,7 @@ package vscode.debug
 
 import vscode.DebugConfigurationProvider
 import vscode.DebugConfigurationProviderTriggerKind
-import vscode.Disposable
+import vscode.IDisposable
 
 /**
  * Register a [DebugConfigurationProvider] for a specific debug type.
@@ -18,10 +18,10 @@ import vscode.Disposable
  * @param debugType The debug type for which the provider is registered.
  * @param provider The [DebugConfigurationProvider] to register.
  * @param triggerKind The [DebugConfigurationProviderTriggerKind] for which the 'provideDebugConfiguration' method of the provider is registered. If `triggerKind` is missing, the value `DebugConfigurationProviderTriggerKind.Initial` is assumed.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDebugConfigurationProvider(
   debugType: String,
   provider: DebugConfigurationProvider,
   triggerKind: DebugConfigurationProviderTriggerKind = definedExternally,
-): Disposable
+): IDisposable

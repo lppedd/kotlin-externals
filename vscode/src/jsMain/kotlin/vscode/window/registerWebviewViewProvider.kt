@@ -2,7 +2,7 @@
 
 package vscode.window
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.WebviewViewProvider
 
 /**
@@ -18,4 +18,4 @@ external fun registerWebviewViewProvider(
   viewId: String,
   provider: WebviewViewProvider,
   options: RegisterWebviewViewProviderOptions = definedExternally,
-): Disposable
+): IDisposable

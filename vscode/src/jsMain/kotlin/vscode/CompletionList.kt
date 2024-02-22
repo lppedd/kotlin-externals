@@ -6,10 +6,7 @@ package vscode
  * Represents a collection of [CompletionItem]s to be presented
  * in the editor.
  */
-external class CompletionList<
-  @Suppress("FINAL_UPPER_BOUND")
-  T : CompletionItem, // default is CompletionItem
-> {
+external class CompletionList<T : CompletionItem /* default is CompletionItem */> {
   /**
    * Creates a new completion list.
    *

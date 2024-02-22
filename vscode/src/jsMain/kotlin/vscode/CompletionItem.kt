@@ -19,7 +19,7 @@ import js.array.ReadonlyArray
  * @see [CompletionItemProvider.provideCompletionItems]
  * @see [CompletionItemProvider.resolveCompletionItem]
  */
-external class CompletionItem {
+open external class CompletionItem {
   /**
    * Creates a new completion item.
    *

@@ -10,7 +10,6 @@ package vscode
  * inside a [TextDocumentContentProvider] or when providing
  * API to other extensions.
  */
-
 external class EventEmitter<T> {
   /**
    * The event listeners can subscribe to.
@@ -23,10 +22,10 @@ external class EventEmitter<T> {
    *
    * @param data The event object.
    */
-  fun fire(data: T): Unit
+  fun fire(data: T)
 
   /**
    * Dispose this object and free resources.
    */
-  fun dispose(): Unit
+  fun dispose()
 }

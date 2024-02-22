@@ -1,9 +1,8 @@
 package vscode
 
 /**
- * Represents rendering styles for a [TextEditorDecorationType text editor decoration].
+ * Represents rendering styles for a [TextEditorDecorationType].
  */
-
 external interface DecorationRenderOptions : ThemableDecorationRenderOptions {
   /**
    * Should the decoration be rendered also on the whitespace after the line text.

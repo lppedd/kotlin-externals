@@ -6,14 +6,13 @@ package vscode
  * Represents a diagnostic, such as a compiler error or warning. Diagnostic objects
  * are only valid in the scope of a file.
  */
-
 external class Diagnostic {
   /**
    * Creates a new diagnostic object.
    *
    * @param range The range to which this diagnostic applies.
    * @param message The human-readable message.
-   * @param severity The severity, default is [DiagnosticSeverity.Error error].
+   * @param severity The severity, default is [DiagnosticSeverity.Error].
    */
   constructor(range: Range, message: String, severity: DiagnosticSeverity = definedExternally)
 
@@ -28,7 +27,7 @@ external class Diagnostic {
   var message: String
 
   /**
-   * The severity, default is [DiagnosticSeverity.Error error].
+   * The severity, default is [DiagnosticSeverity.Error].
    */
   var severity: DiagnosticSeverity
 
@@ -40,14 +39,9 @@ external class Diagnostic {
 
   /**
    * A code or identifier for this diagnostic.
-   * Should be used for later processing, e.g. when providing [CodeActionContext code actions].
+   * Should be used for later processing, e.g. when providing code actions ([CodeActionContext]).
    */
-  var code: (
-    Any /* string | number | {
-    value: string | number;
-    target: Uri;
-} */
-  )?
+  var code: Union3<String, Int, DiagnosticCode>? // string | number | { value: string | number; target: Uri; }
 
   /**
    * An array of related diagnostic information, e.g. when symbol-names within

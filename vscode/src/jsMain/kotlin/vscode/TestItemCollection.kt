@@ -13,7 +13,7 @@ external interface TestItemCollection :
   /**
    * Gets the number of items in the collection.
    */
-  val size: Double
+  val size: Int
 
   /**
    * Replaces the items stored by the collection.

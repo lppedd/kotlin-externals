@@ -17,7 +17,7 @@ external interface CommentReaction {
   /**
    * The number of users who have reacted to this reaction
    */
-  val count: Double
+  val count: Int
 
   /**
    * Whether the [CommentAuthorInformation] of the comment has reacted to this reaction

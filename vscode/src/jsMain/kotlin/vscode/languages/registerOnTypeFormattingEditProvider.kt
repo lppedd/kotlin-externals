@@ -2,8 +2,8 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentSelector
+import vscode.IDisposable
 import vscode.OnTypeFormattingEditProvider
 
 /**
@@ -17,11 +17,11 @@ import vscode.OnTypeFormattingEditProvider
  * @param provider An on type formatting edit provider.
  * @param firstTriggerCharacter A character on which formatting should be triggered, like `}`.
  * @param moreTriggerCharacter More trigger characters.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerOnTypeFormattingEditProvider(
   selector: DocumentSelector,
   provider: OnTypeFormattingEditProvider,
   firstTriggerCharacter: String,
   vararg moreTriggerCharacter: String,
-): Disposable
+): IDisposable

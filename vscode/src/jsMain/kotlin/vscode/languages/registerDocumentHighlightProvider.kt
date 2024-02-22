@@ -2,9 +2,9 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentHighlightProvider
 import vscode.DocumentSelector
+import vscode.IDisposable
 
 /**
  * Register a document highlight provider.
@@ -15,9 +15,9 @@ import vscode.DocumentSelector
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A document highlight provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDocumentHighlightProvider(
   selector: DocumentSelector,
   provider: DocumentHighlightProvider,
-): Disposable
+): IDisposable

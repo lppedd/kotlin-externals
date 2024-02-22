@@ -3,7 +3,6 @@ package vscode
 /**
  * Options for a process execution
  */
-
 external interface ProcessExecutionOptions {
   /**
    * The current working directory of the executed program or shell.

@@ -3,7 +3,6 @@ package vscode
 /**
  * Button for an action in a [QuickPick} or {@link InputBox].
  */
-
 external interface QuickInputButton {
   /**
    * Icon for the button.

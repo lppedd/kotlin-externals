@@ -6,7 +6,6 @@ package vscode
  * Represents a collection of [InlineCompletionItem inline completion items] to be presented
  * in the editor.
  */
-
 external class InlineCompletionList {
   /**
    * Creates a new list of inline completion items.

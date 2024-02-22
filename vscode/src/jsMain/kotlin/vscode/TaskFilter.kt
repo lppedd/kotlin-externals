@@ -3,7 +3,6 @@ package vscode
 /**
  * A task filter denotes tasks by their version and types
  */
-
 external interface TaskFilter {
   /**
    * The task version as used in the tasks.json file.

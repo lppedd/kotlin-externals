@@ -3,7 +3,6 @@ package vscode
 /**
  * Value-object describing what options a virtual process terminal should use.
  */
-
 external interface ExtensionTerminalOptions {
   /**
    * A human-readable string which will be used to represent the terminal in the UI.
@@ -19,12 +18,7 @@ external interface ExtensionTerminalOptions {
   /**
    * The icon path or [ThemeIcon] for the terminal.
    */
-  var iconPath: (
-    Any /* Uri | {
-    light: Uri;
-    dark: Uri;
-} | ThemeIcon */
-  )?
+  var iconPath: Union3<Uri, ThemeUris, ThemeIcon>? // Uri | { light: Uri; dark: Uri; } | ThemeIcon
 
   /**
    * The icon [ThemeColor] for the terminal.
@@ -34,9 +28,9 @@ external interface ExtensionTerminalOptions {
   var color: ThemeColor?
 
   /**
-   * The [TerminalLocation} or {@link TerminalEditorLocationOptions} or {@link TerminalSplitLocationOptions] for the terminal.
+   * The [TerminalLocation] or [TerminalEditorLocationOptions] or [TerminalSplitLocationOptions] for the terminal.
    */
-  var location: (Any /* TerminalLocation | TerminalEditorLocationOptions | TerminalSplitLocationOptions */)?
+  var location: Union3<TerminalLocation, TerminalEditorLocationOptions, TerminalSplitLocationOptions>? // TerminalLocation | TerminalEditorLocationOptions | TerminalSplitLocationOptions
 
   /**
    * Opt-out of the default terminal persistence on restart and reload.

@@ -5,7 +5,6 @@ package vscode
 /**
  * A terminal profile defines how a terminal will be launched.
  */
-
 external class TerminalProfile {
   /**
    * Creates a new terminal profile.

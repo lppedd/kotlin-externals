@@ -3,9 +3,8 @@ package vscode
 /**
  * A collection of mutations that an extension can apply to a process environment. Applies to all scopes.
  */
-
 external interface GlobalEnvironmentVariableCollection : EnvironmentVariableCollection {
-/**
+  /**
    * Gets scope-specific environment variable collection for the extension. This enables alterations to
    * terminal environment variables solely within the designated scope, and is applied in addition to (and
    * after) the global collection.

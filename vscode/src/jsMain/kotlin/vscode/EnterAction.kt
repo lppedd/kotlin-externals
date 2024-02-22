@@ -3,7 +3,6 @@ package vscode
 /**
  * Describes what to do when pressing Enter.
  */
-
 external interface EnterAction {
   /**
    * Describe what to do with the indentation.
@@ -18,5 +17,5 @@ external interface EnterAction {
   /**
    * Describes the number of characters to remove from the new line's indentation.
    */
-  var removeText: Double?
+  var removeText: Int?
 }

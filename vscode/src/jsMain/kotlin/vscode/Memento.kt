@@ -4,7 +4,6 @@ package vscode
  * A memento represents a storage utility. It can store and retrieve
  * values.
  */
-
 external interface Memento {
   /**
    * Returns the stored keys.

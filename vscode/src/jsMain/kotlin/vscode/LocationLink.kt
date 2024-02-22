@@ -4,7 +4,6 @@ package vscode
  * Represents the connection of two locations. Provides additional metadata over normal [Location locations],
  * including an origin range.
  */
-
 external interface LocationLink {
   /**
    * Span of the origin of this link.

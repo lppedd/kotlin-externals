@@ -2,7 +2,7 @@
 
 package vscode.window
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.StatusBarItem
 import vscode.Thenable
 
@@ -16,8 +16,8 @@ import vscode.Thenable
  */
 external fun setStatusBarMessage(
   text: String,
-  hideAfterTimeout: Double,
-): Disposable
+  hideAfterTimeout: Int,
+): IDisposable
 
 /**
  * Set a message to the status bar. This is a short hand for the more powerful
@@ -30,7 +30,7 @@ external fun setStatusBarMessage(
 external fun setStatusBarMessage(
   text: String,
   hideWhenDone: Thenable<Any?>,
-): Disposable
+): IDisposable
 
 /**
  * Set a message to the status bar. This is a short hand for the more powerful
@@ -42,4 +42,4 @@ external fun setStatusBarMessage(
  * @param text The message to show, supports icon substitution as in status bar [StatusBarItem.text].
  * @return A disposable which hides the status bar message.
  */
-external fun setStatusBarMessage(text: String): Disposable
+external fun setStatusBarMessage(text: String): IDisposable

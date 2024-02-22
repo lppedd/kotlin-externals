@@ -2,7 +2,7 @@
 
 package vscode.commands
 
-import vscode.Disposable
+import vscode.IDisposable
 import vscode.TextEditor
 import vscode.TextEditorEdit
 
@@ -29,4 +29,4 @@ external fun registerTextEditorCommand(
     args: Array<Any>?,
   ) -> Unit, // (textEditor: TextEditor, edit: TextEditorEdit, ...args: any[]) => void
   thisArg: Any? = definedExternally,
-): Disposable
+): IDisposable

@@ -2,9 +2,9 @@
 
 package vscode.languages
 
-import vscode.Disposable
 import vscode.DocumentSelector
 import vscode.HoverProvider
+import vscode.IDisposable
 
 /**
  * Register a hover provider.
@@ -15,9 +15,9 @@ import vscode.HoverProvider
  *
  * @param selector A selector that defines the documents this provider is applicable to.
  * @param provider A hover provider.
- * @return A [Disposable] that unregisters this provider when being disposed.
+ * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerHoverProvider(
   selector: DocumentSelector,
   provider: HoverProvider,
-): Disposable
+): IDisposable

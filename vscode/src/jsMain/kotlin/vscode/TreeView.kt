@@ -5,7 +5,7 @@ import js.array.ReadonlyArray
 /**
  * Represents a Tree view
  */
-external interface TreeView<T> : Disposable {
+external interface TreeView<T> : IDisposable {
   /**
    * Event that is fired when an element is expanded
    */

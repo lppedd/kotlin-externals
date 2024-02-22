@@ -5,7 +5,6 @@ package vscode
 /**
  * Predefined buttons for [QuickPick} and {@link InputBox].
  */
-
 external class QuickInputButtons {
   companion object {
     /**

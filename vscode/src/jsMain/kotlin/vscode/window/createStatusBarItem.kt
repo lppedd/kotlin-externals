@@ -16,7 +16,7 @@ import vscode.StatusBarItem
 external fun createStatusBarItem(
   id: String,
   alignment: StatusBarAlignment = definedExternally,
-  priority: Double = definedExternally,
+  priority: Int = definedExternally,
 ): StatusBarItem
 
 /**
@@ -29,5 +29,5 @@ external fun createStatusBarItem(
  */
 external fun createStatusBarItem(
   alignment: StatusBarAlignment = definedExternally,
-  priority: Double = definedExternally,
+  priority: Int = definedExternally,
 ): StatusBarItem

@@ -2,7 +2,7 @@
 
 package vscode.commands
 
-import vscode.Disposable
+import vscode.IDisposable
 
 /**
  * Registers a command that can be invoked via a keyboard shortcut,
@@ -20,4 +20,4 @@ external fun registerCommand(
   command: String,
   callback: (args: Array<Any?>) -> Any?, // (...args: any[]) => any
   thisArg: Any? = definedExternally,
-): Disposable
+): IDisposable
