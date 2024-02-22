@@ -62,6 +62,11 @@ class ExternalsModulePlugin : Plugin<Project> {
       implementation("io.github.turansky.seskar:seskar-core:2.40.0")
     }
 
+    val jsTest = kmp.sourceSets.findByName("jsTest")
+    jsTest?.dependencies {
+      implementation(kotlin("test"))
+    }
+
     val task = project.tasks.register<TsDeclarationsCopyTask>("copyTsDeclarations")
     task.configure {
       dependsOn("cleanCopyTsDeclarations")
