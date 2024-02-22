@@ -27,6 +27,7 @@ import zowe.sdk.zos.jobs.doc.response.IJobFeedback
 import zowe.sdk.zos.jobs.doc.response.IJobFile
 import zowe.sdk.zos.tso.doc.IIssueResponse
 import zowe.sdk.zos.tso.doc.input.IStartTsoParms
+import kotlin.ts.Partial
 
 /**
  * This namespace provides interfaces for all the external APIs provided by this VS Code Extension.
@@ -194,7 +195,7 @@ external object ZoweExplorerApi {
      */
     fun updateAttributes(
       ussPath: String,
-      attributes: FileAttributes, // Note(Edoardo): should be Partial<FileAttributes>
+      attributes: @Partial FileAttributes,
     ): Promise<IZosFilesResponse<Any?>>
 
     /**
@@ -327,7 +328,7 @@ external object ZoweExplorerApi {
     fun createDataSet(
       dataSetType: CreateDataSetTypeEnum,
       dataSetName: String,
-      options: ICreateDataSetOptions = definedExternally, // Note(Edoardo): should be Partial<ICreateDataSetOptions>
+      options: @Partial ICreateDataSetOptions = definedExternally,
     ): Promise<IZosFilesResponse<Any?>>
 
     /**

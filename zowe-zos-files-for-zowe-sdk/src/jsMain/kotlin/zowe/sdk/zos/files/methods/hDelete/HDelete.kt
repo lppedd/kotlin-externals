@@ -8,6 +8,7 @@ import zowe.imperative.rest.session.AbstractSession
 import zowe.sdk.core.rest.ZosmfRestClient
 import zowe.sdk.zos.files.doc.IZosFilesResponse
 import zowe.sdk.zos.files.methods.hDelete.doc.IDeleteOptions
+import kotlin.ts.Partial
 
 /**
  * This class holds helper functions that are used to delete data sets through the
@@ -30,7 +31,7 @@ external class HDelete {
     fun dataSet(
       session: AbstractSession,
       dataSetName: String,
-      options: IDeleteOptions = definedExternally, // Note(Edoardo): should be Partial<IDeleteOptions>
+      options: @Partial IDeleteOptions = definedExternally,
     ): Promise<IZosFilesResponse<Any?>>
   }
 }

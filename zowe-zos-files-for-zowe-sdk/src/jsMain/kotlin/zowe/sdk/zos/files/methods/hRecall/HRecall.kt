@@ -8,6 +8,7 @@ import zowe.imperative.rest.session.AbstractSession
 import zowe.sdk.core.rest.ZosmfRestClient
 import zowe.sdk.zos.files.doc.IZosFilesResponse
 import zowe.sdk.zos.files.methods.hRecall.doc.IRecallOptions
+import kotlin.ts.Partial
 
 /**
  * This class holds helper functions that are used to recall data sets through the
@@ -30,7 +31,7 @@ external class HRecall {
     fun dataSet(
       session: AbstractSession,
       dataSetName: String,
-      options: IRecallOptions = definedExternally, // Note(Edoardo): should be Partial<IRecallOptions>
+      options: @Partial IRecallOptions = definedExternally,
     ): Promise<IZosFilesResponse<Any?>>
   }
 }

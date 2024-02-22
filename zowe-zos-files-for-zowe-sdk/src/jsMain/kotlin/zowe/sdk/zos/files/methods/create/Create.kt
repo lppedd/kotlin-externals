@@ -9,6 +9,7 @@ import zowe.sdk.zos.files.doc.IZosFilesResponse
 import zowe.sdk.zos.files.methods.create.doc.ICreateDataSetOptions
 import zowe.sdk.zos.files.methods.create.doc.ICreateVsamOptions
 import zowe.sdk.zos.files.methods.create.doc.ICreateZfsOptions
+import kotlin.ts.Partial
 
 /**
  * Class to handle creation of data sets
@@ -26,14 +27,14 @@ external class Create {
       session: AbstractSession,
       dataSetType: CreateDataSetTypeEnum,
       dataSetName: String,
-      options: ICreateDataSetOptions = definedExternally, // Note(Edoardo): should be Partial<ICreateDataSetOptions>
+      options: @Partial ICreateDataSetOptions = definedExternally,
     ): Promise<IZosFilesResponse<Any?>>
 
     fun dataSetLike(
       session: AbstractSession,
       dataSetName: String,
       likeDataSetName: String,
-      options: ICreateDataSetOptions = definedExternally, // Note(Edoardo): should be Partial<ICreateDataSetOptions>
+      options: @Partial ICreateDataSetOptions = definedExternally,
     ): Promise<IZosFilesResponse<Any?>>
 
     /**
@@ -83,7 +84,7 @@ external class Create {
     fun vsam(
       session: AbstractSession,
       dataSetName: String,
-      options: ICreateVsamOptions = definedExternally, // Note(Edoardo): should be Partial<ICreateVsamOptions>
+      options: @Partial ICreateVsamOptions = definedExternally,
     ): Promise<IZosFilesResponse<Any?>>
 
     /**
@@ -104,7 +105,7 @@ external class Create {
     fun zfs(
       session: AbstractSession,
       fileSystemName: String,
-      options: ICreateZfsOptions = definedExternally, // Note(Edoardo): should be Partial<ICreateZfsOptions>
+      options: @Partial ICreateZfsOptions = definedExternally,
     ): Promise<IZosFilesResponse<Any?>>
   }
 }

@@ -14,6 +14,7 @@ import zowe.sdk.zos.files.methods.download.doc.IDownloadOptions
 import zowe.sdk.zos.files.methods.list.doc.IDsmListOptions
 import zowe.sdk.zos.files.methods.list.doc.IListOptions
 import zowe.sdk.zos.files.methods.upload.doc.IUploadOptions
+import kotlin.ts.Partial
 
 /**
  * An implementation of the Zowe Explorer MVS API interface for zOSMF.
@@ -45,7 +46,7 @@ external class ZosmfMvsApi : ZosmfApiCommon, ZoweExplorerApi.IMvs {
   override fun createDataSet(
     dataSetType: CreateDataSetTypeEnum,
     dataSetName: String,
-    options: ICreateDataSetOptions, // Note(Edoardo): should be Partial<ICreateDataSetOptions>
+    options: @Partial ICreateDataSetOptions,
   ): Promise<IZosFilesResponse<Any?>>
 
   override fun createDataSetMember(

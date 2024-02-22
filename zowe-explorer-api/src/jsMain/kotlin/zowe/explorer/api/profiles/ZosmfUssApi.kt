@@ -9,6 +9,7 @@ import zowe.imperative.profiles.doc.response.IProfileLoaded
 import zowe.sdk.zos.files.doc.IZosFilesResponse
 import zowe.sdk.zos.files.methods.download.doc.IDownloadOptions
 import zowe.sdk.zos.files.methods.upload.doc.IUploadOptions
+import kotlin.ts.Partial
 
 /**
  * An implementation of the Zowe Explorer USS API interface for zOSMF.
@@ -48,7 +49,7 @@ external class ZosmfUssApi : ZosmfApiCommon, ZoweExplorerApi.IUss {
 
   override fun updateAttributes(
     ussPath: String,
-    attributes: FileAttributes, // Note(Edoardo): should be Partial<FileAttributes>
+    attributes: @Partial FileAttributes,
   ): Promise<IZosFilesResponse<Any?>>
 
   override fun uploadDirectory(

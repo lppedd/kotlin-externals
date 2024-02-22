@@ -9,6 +9,7 @@ import zowe.imperative.rest.session.AbstractSession
 import zowe.sdk.core.rest.ZosmfRestClient
 import zowe.sdk.zos.files.doc.IZosFilesResponse
 import zowe.sdk.zos.files.methods.mount.doc.IMountFsOptions
+import kotlin.ts.Partial
 
 /**
  * This class holds helper functions that are used to mount file systems through the z/OS MF APIs
@@ -34,7 +35,7 @@ external class Mount {
       session: AbstractSession,
       fileSystemName: String,
       mountPoint: String,
-      options: IMountFsOptions = definedExternally, // Note(Edoardo): should be Partial<IMountFsOptions>
+      options: @Partial IMountFsOptions = definedExternally,
     ): Promise<IZosFilesResponse<Any?>>
   }
 }

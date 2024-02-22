@@ -10,6 +10,7 @@ import zowe.sdk.zos.files.doc.IDataSet
 import zowe.sdk.zos.files.doc.IOptions
 import zowe.sdk.zos.files.doc.IZosFilesResponse
 import zowe.sdk.zos.files.methods.hDelete.doc.IDeleteOptions
+import kotlin.ts.Partial
 
 /**
  * Common IO utilities
@@ -114,7 +115,7 @@ external class ZosFilesUtils {
       dataSetName: String,
       returnMessage: String,
       hsmCommand: Any?,
-      options: IDeleteOptions = definedExternally, // Note(Edoardo): should be Partial<IDeleteOptions>
+      options: @Partial IDeleteOptions = definedExternally,
     ): Promise<IZosFilesResponse<Any?>>
 
     /**
