@@ -44,7 +44,7 @@ external class CompareBaseHelper {
   /**
    * contextLines option
    */
-  var contextLines: Double
+  var contextLines: Int
 
   /**
    * browserView option
