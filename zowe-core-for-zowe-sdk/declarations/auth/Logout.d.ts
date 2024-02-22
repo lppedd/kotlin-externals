@@ -8,8 +8,8 @@ export declare class Logout {
     /**
      * Perform APIML logout to invalidate LTPA2 or other token types.
      * @static
-     * @param session
-     * @return
+     * @param {AbstractSession} session
+     * @returns
      * @memberof Logout
      */
     static apimlLogout(session: AbstractSession): Promise<void>;

@@ -8,8 +8,8 @@ export declare class Login {
     /**
      * Perform APIML login to obtain LTPA2 or other token types.
      * @static
-     * @param session
-     * @return
+     * @param {AbstractSession} session
+     * @returns
      * @memberof Login
      */
     static apimlLogin(session: AbstractSession): Promise<string>;

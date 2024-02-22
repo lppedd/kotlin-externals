@@ -72,7 +72,7 @@ export declare class ExTester {
      * @param setupOptions Additional options for setting up the tests
      * @param runOptions Additional options for running the tests
      *
-     * @return Promise resolving to the mocha process exit code - 0 for no failures, 1 otherwise
+     * @returns Promise resolving to the mocha process exit code - 0 for no failures, 1 otherwise
      */
     setupAndRunTests(testFilesPattern: string | string[], vscodeVersion?: string, setupOptions?: Omit<SetupOptions, "vscodeVersion">, runOptions?: Omit<RunOptions, "vscodeVersion">): Promise<number>;
     /**
@@ -80,7 +80,7 @@ export declare class ExTester {
      * @param testFilesPattern glob pattern(s) for selected test files
      * @param runOptions Additional options for running the tests
      *
-     * @return Promise resolving to the mocha process exit code - 0 for no failures, 1 otherwise
+     * @returns Promise resolving to the mocha process exit code - 0 for no failures, 1 otherwise
      */
     runTests(testFilesPattern: string | string[], runOptions?: RunOptions): Promise<number>;
 }

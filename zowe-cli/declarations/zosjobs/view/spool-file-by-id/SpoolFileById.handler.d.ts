@@ -8,7 +8,7 @@ import { ZosmfBaseHandler } from "@zowe/zosmf-for-zowe-sdk";
 export default class SpoolFileByIdHandler extends ZosmfBaseHandler {
     /**
      * Command handler process - invoked by the command processor to handle the "zos-jobs view job"
-     * @param params Command handler parameters
+     * @param {IHandlerParameters} params - Command handler parameters
      * @returns {Promise<void>} - Fulfilled when the command completes successfully OR rejected with imperative error
      * @memberof SubmitDataSetHandler
      */

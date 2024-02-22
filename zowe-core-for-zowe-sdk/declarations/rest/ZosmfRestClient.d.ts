@@ -15,14 +15,14 @@ export declare class ZosmfRestClient extends RestClient {
     /**
      * Append z/OSMF specific headers to the callers headers for cases
      * where a header is common to every request.
-     * @param headers current header array
+     * @param {any[] | undefined} headers - current header array
      * @memberof ZosmfRestClient
      */
     protected appendHeaders(headers: any[] | undefined): any[];
     /**
      * Process an error encountered in the rest client
-     * @param original the original error automatically built by the abstract rest client
-     * @return the processed error with details added
+     * @param {IImperativeError} original - the original error automatically built by the abstract rest client
+     * @returns {IImperativeError} - the processed error with details added
      * @memberof ZosmfRestClient
      */
     protected processError(original: IImperativeError): IImperativeError;

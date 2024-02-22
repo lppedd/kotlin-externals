@@ -13,7 +13,7 @@ export default class ListActiveWorkflowsHandler extends ZosmfBaseHandler {
     private arguments;
     /**
      * Handler process - invoked by the command processor to handle the "zos-workflows list"
-     * @param params Command handler parameters
+     * @param {IHandlerParameters} params - Command handler parameters
      * @returns {Promise<void>} - Fulfilled when the command completes successfully OR rejected with imperative error
      * @memberof ListHandler
      */

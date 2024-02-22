@@ -15,7 +15,7 @@ export declare class Services {
      *
      * @throws {ImperativeError} When Imperative.init() has not been called
      *                           before getPluginApimlConfigs().
-     * @return The APIML service attributes needed to query APIML.
+     * @returns The APIML service attributes needed to query APIML.
      */
     static getPluginApimlConfigs(): IApimlSvcAttrsLoaded[];
     /**
@@ -29,14 +29,14 @@ export declare class Services {
      * @param configs APIML service attributes defined by CLI plug-ins
      * @throws {ImperativeError} When session object is undefined or missing
      *                           authentication info, or the REST request fails
-     * @return List of objects containing profile info for APIML services
+     * @returns List of objects containing profile info for APIML services
      * @memberof Services
      */
     static getServicesByConfig(session: AbstractSession, configs: IApimlSvcAttrsLoaded[]): Promise<IApimlProfileInfo[]>;
     /**
      * Converts apiml profile information to team config profile objects to be stored in a zowe.config.json file
      * @param profileInfoList List of apiml profiles
-     * @return List of config profile objects
+     * @returns List of config profile objects
      * @example
      *  Input: IApimlProfileInfo[] = [
      *      {

@@ -44,14 +44,14 @@ export declare class VSBrowser {
     takeScreenshot(name: string): Promise<void>;
     /**
      * Get a screenshots folder path
-     * @return string path to the screenshots folder
+     * @returns string path to the screenshots folder
      */
     getScreenshotsDir(): string;
     /**
      * Open folder(s) or file(s) in the current instance of vscode.
      *
      * @param paths path(s) of folder(s)/files(s) to open as varargs
-     * @return Promise resolving when all selected resources are opened and the workbench reloads
+     * @returns Promise resolving when all selected resources are opened and the workbench reloads
      */
     openResources(...paths: string[]): Promise<void>;
 }

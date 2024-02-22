@@ -10,7 +10,7 @@ export default class JobsHandler extends ZosmfBaseHandler {
     /**
      * Handler for the "zos-jobs list jobs" command. Produces a tabular list of jobs on spool based on
      * the input parameters.
-     * @param params see interface for details
+     * @param {IHandlerParameters} params - see interface for details
      * @returns {Promise<void>} - promise to fulfill or reject when the command is complete
      * @memberof JobsHandler
      */

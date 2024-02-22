@@ -15,7 +15,7 @@ export default class ValidateHandler implements ICommandHandler {
     /**
      * Process the command and input.
      *
-     * @param params Parameters supplied by yargs
+     * @param {IHandlerParameters} params - Parameters supplied by yargs
      *
      * @param {string[]} [params.arguments.plugin] - The name of
      *        a plugin to validate. If omitted all installed plugins
