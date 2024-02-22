@@ -1,0 +1,11 @@
+{
+  "input": [
+    "<nodeModules>/vscode-extension-tester/out/**/*.d.ts"
+  ],
+  "output": "src/jsMain/kotlin/vscode/extension/tester",
+  "libraryName": "vscode-extension-tester",
+  "granularity": "top-level",
+  "moduleNameMapper": {
+    ".*": "vscode-extension-tester"
+  }
+}

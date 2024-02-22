@@ -13,6 +13,7 @@ include("common")
 
 include("vscode")
 include("vscode-test-electron")
+include("vscode-extension-tester")
 
 include("zowe-core-for-zowe-sdk")
 include("zowe-zosmf-for-zowe-sdk")
