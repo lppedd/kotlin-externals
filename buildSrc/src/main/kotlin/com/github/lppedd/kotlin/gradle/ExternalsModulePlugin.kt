@@ -16,6 +16,7 @@ import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.plugin.KotlinMultiplatformPluginWrapper
 import org.jetbrains.kotlin.gradle.targets.js.yarn.yarn
+import seskar.gradle.plugin.SeskarGradleSubplugin
 
 /**
  * @author Edoardo Luppi
@@ -51,10 +52,28 @@ class ExternalsModulePlugin : Plugin<Project> {
     }
 
     kmp.js {
-      nodejs()
-      browser()
+      nodejs {
+        testTask {
+          useMocha {
+            timeout = "30s"
+          }
+        }
+      }
+
+      browser {
+        testTask {
+          useMocha {
+            timeout = "30s"
+          }
+        }
+      }
+
       useCommonJs()
     }
+
+    // Apply the Seskar plugin after the Kotlin plugin
+    // has created the appropriate dependency configurations
+    project.apply<SeskarGradleSubplugin>()
 
     val jsMain = kmp.sourceSets.findByName("jsMain")
     jsMain?.dependencies {
