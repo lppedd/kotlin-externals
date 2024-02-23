@@ -5,6 +5,5 @@ import vscode.AuthenticationGetSessionOptions
 import kotlin.ts.Union
 
 external interface AuthenticationGetSessionOptionsForce : AuthenticationGetSessionOptions {
-  @JsTrue
-  override var forceNewSession: Union<Boolean, AuthenticationForceNewSessionOptions>? // true | AuthenticationForceNewSessionOptions
+  override var forceNewSession: Union<`true`, AuthenticationForceNewSessionOptions>? // true | AuthenticationForceNewSessionOptions
 }

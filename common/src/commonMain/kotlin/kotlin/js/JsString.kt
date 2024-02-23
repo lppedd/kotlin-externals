@@ -1,7 +1,7 @@
 package kotlin.js
 
 /**
- * Specified the literal value of a string, e.g. `"example"`
+ * Specifies the literal value of a string, e.g. `"example"`
  *
  * That can be expressed in TypeScript, but not in Kotlin.
  */

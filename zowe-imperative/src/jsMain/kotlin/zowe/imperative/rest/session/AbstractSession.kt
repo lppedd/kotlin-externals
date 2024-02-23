@@ -80,14 +80,12 @@ abstract external class AbstractSession {
     /**
      * Default reject unauthorized
      */
-    @JsBoolean(true)
-    val DEFAULT_REJECT_UNAUTHORIZED_SETTING: Boolean
+    val DEFAULT_REJECT_UNAUTHORIZED_SETTING: `true`
 
     /**
      * Default strict ssl setting
      */
-    @JsBoolean(true)
-    val DEFAULT_STRICT_SSL: Boolean
+    val DEFAULT_STRICT_SSL: `true`
 
     /**
      * Default SSL method

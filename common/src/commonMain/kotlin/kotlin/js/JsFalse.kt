@@ -1,8 +1,8 @@
 package kotlin.js
 
 /**
- * Specifies the literal value of a boolean is `true`.
+ * Specifies the literal value of a boolean is `false`.
  */
 @Target(AnnotationTarget.TYPE, AnnotationTarget.PROPERTY)
 @Retention(AnnotationRetention.BINARY)
-annotation class JsTrue
+annotation class JsFalse

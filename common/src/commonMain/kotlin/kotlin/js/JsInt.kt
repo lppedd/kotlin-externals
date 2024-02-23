@@ -1,7 +1,7 @@
 package kotlin.js
 
 /**
- * Specified the literal value of an integer, e.g. `10`
+ * Specifies the literal value of an integer, e.g. `10`
  *
  * That can be expressed in TypeScript, but not in Kotlin.
  */
