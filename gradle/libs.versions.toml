@@ -5,16 +5,20 @@ wrappers-kotlin-node = "20.11.5-pre.698"
 ktlint = "0.8.2"
 seskar = "2.40.0"
 karakum = "1.0.0-alpha.38"
+maven-publish = "0.27.0"
+jnpm = "1.5"
 
 [libraries]
 kotlin-wrappers-js = { group = "org.jetbrains.kotlin-wrappers", name = "kotlin-js", version.ref = "wrappers-kotlin-js" }
 kotlin-wrappers-node = { group = "org.jetbrains.kotlin-wrappers", name = "kotlin-node", version.ref = "wrappers-kotlin-node" }
+jnpm = { group = "org.orienteer.jnpm", name = "jnpm", version.ref = "jnpm" }
 
 # Gradle
 kotlin-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 ktlint-plugin = { group = "io.github.usefulness", name = "ktlint-gradle-plugin", version.ref = "ktlint" }
 seskar-plugin = { group = "io.github.turansky.seskar", name = "seskar-gradle-plugin", version.ref = "seskar" }
 karakum-plugin = { group = "io.github.sgrishchenko", name = "karakum-gradle-plugin", version.ref = "karakum" }
+maven-publish-plugin = { group = "com.vanniktech", name = "gradle-maven-publish-plugin", version.ref = "maven-publish" }
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

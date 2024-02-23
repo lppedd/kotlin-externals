@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 
 plugins {
   kotlin("multiplatform")
+  id("module.publishable")
 }
 
 version = "1.0.0"

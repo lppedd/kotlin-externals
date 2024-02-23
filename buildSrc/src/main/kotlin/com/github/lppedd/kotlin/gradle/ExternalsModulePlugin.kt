@@ -1,13 +1,16 @@
 package com.github.lppedd.kotlin.gradle
 
 import com.github.lppedd.kotlin.gradle.ext.kmpExtension
-import com.github.lppedd.kotlin.gradle.tasks.TsDeclarationsCopyTask
+import com.github.lppedd.kotlin.gradle.services.NpmService
+import com.github.lppedd.kotlin.gradle.tasks.CheckNpmVersionTask
+import com.github.lppedd.kotlin.gradle.tasks.CopyTsDeclarationsTask
 import io.github.sgrishchenko.karakum.gradle.plugin.KarakumPlugin
 import io.github.usefulness.KtlintGradleExtension
 import io.github.usefulness.KtlintGradlePlugin
 import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.kotlin.dsl.*
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
@@ -88,9 +91,13 @@ class ExternalsModulePlugin : Plugin<Project> {
       implementation(kotlin("test"))
     }
 
-    val task = project.tasks.register<TsDeclarationsCopyTask>("copyTsDeclarations")
-    task.configure {
-      dependsOn("cleanCopyTsDeclarations")
+    // Register a task to check if the associated npm package is outdated
+    project.gradle.sharedServices.registerIfAbsent(NpmService.SERVICE_NAME, NpmService::class) {}
+    project.tasks.register<CheckNpmVersionTask>(CheckNpmVersionTask.TASK_NAME)
+
+    // Register a task to copy TypeScript declaration files from the npm package
+    project.tasks.register<CopyTsDeclarationsTask>(CopyTsDeclarationsTask.TASK_NAME) {
+      dependsOn("clean${name.capitalized()}")
 
       val packageName = tsDeclarations.packageName.get()
       val basePath = tsDeclarations.basePath.getOrElse("")

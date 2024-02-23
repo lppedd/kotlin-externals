@@ -1,3 +1,5 @@
+@file:Suppress("VulnerableLibrariesLocal")
+
 plugins {
   `kotlin-dsl`
 }
@@ -8,13 +10,19 @@ dependencies {
   implementation(libs.ktlint.plugin)
   implementation(libs.seskar.plugin)
   implementation(libs.karakum.plugin)
+  implementation(libs.maven.publish.plugin)
+  implementation(libs.jnpm)
 }
 
 gradlePlugin {
   plugins {
     register("externalsModule") {
-      id = "externals.module"
+      id = "module.externals"
       implementationClass = "com.github.lppedd.kotlin.gradle.ExternalsModulePlugin"
+    }
+    register("publishableModule") {
+      id = "module.publishable"
+      implementationClass = "com.github.lppedd.kotlin.gradle.PublishableModulePlugin"
     }
   }
 }

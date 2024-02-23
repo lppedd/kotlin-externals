@@ -4,7 +4,8 @@ import com.github.lppedd.kotlin.gradle.ext.npmName
 import com.github.lppedd.kotlin.gradle.ext.npmVersion
 
 plugins {
-  id("externals.module")
+  id("module.externals")
+  id("module.publishable")
 }
 
 version = "$npmVersion-R1"
