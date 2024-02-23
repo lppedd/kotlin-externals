@@ -1,3 +1,5 @@
+@file:Suppress("INVISIBLE_MEMBER", "INVISIBLE_REFERENCE")
+
 package mocha.mocha
 
 import kotlin.internal.LowPriorityInOverloadResolution
