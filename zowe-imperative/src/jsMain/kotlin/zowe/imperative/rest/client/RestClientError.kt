@@ -3,7 +3,6 @@
 package zowe.imperative.rest.client
 
 import zowe.imperative.error.ImperativeError
-import zowe.imperative.error.doc.IImperativeError
 import zowe.imperative.error.doc.IImperativeErrorParms
 import zowe.imperative.rest.client.doc.IRestClientError
 
@@ -17,8 +16,8 @@ external class RestClientError : ImperativeError {
    */
   constructor(mDetails: IRestClientError, parms: IImperativeErrorParms = definedExternally)
 
-  @JsType("IRestClientError")
-  override var mDetails: IImperativeError
+  @Suppress("VAR_TYPE_MISMATCH_ON_OVERRIDE")
+  override var mDetails: IRestClientError
 
   /**
    * Accessor for IRestClientError error details.

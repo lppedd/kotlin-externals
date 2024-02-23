@@ -2,7 +2,6 @@ package zowe.imperative.cmd.doc.profiles.definition
 
 import zowe.imperative.cmd.doc.ICommandExampleDefinition
 import zowe.imperative.profiles.doc.config.IProfileTypeConfiguration
-import zowe.imperative.profiles.doc.definition.IProfileSchema
 import kotlin.js.plain.JsPlainObject
 
 /**
@@ -57,8 +56,8 @@ external interface ICommandProfileTypeConfiguration : IProfileTypeConfiguration 
    * Dependency schema checking is generated automatically if you populate the dependencies property
    * of this document.
    */
-  @JsType("ICommandProfileSchema")
-  override var schema: IProfileSchema
+  @Suppress("VAR_TYPE_MISMATCH_ON_OVERRIDE")
+  override var schema: ICommandProfileSchema
 
   /**
    * Configuration for authentication services to associate with this profile type.

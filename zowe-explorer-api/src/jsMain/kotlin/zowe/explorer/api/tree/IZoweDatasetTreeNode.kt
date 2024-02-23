@@ -47,11 +47,9 @@ external interface IZoweDatasetTreeNode : IZoweTreeNode {
 
   /**
    * Retrieves child nodes of this IZoweDatasetTreeNode
-   *
-   * @return Promise<IZoweDatasetTreeNode[]>
    */
-  @JsType("Promise<Array<IZoweDatasetTreeNode>>")
-  override fun getChildren(): Promise<Array<IZoweTreeNode /* IZoweDatasetTreeNode */>>
+  @Suppress("RETURN_TYPE_MISMATCH_ON_OVERRIDE")
+  override fun getChildren(): Promise<Array<IZoweDatasetTreeNode>>
 
   /**
    * Retrieves the etag value for the file

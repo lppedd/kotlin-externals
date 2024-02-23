@@ -61,8 +61,8 @@ external interface IZoweUSSTreeNode : IZoweTreeNode {
   /**
    * Retrieves child nodes of this IZoweUSSTreeNode
    */
-  @JsType("Promise<Array<IZoweUSSTreeNode>>")
-  override fun getChildren(): Promise<Array<IZoweTreeNode /* IZoweUSSTreeNode */>>
+  @Suppress("RETURN_TYPE_MISMATCH_ON_OVERRIDE")
+  override fun getChildren(): Promise<Array<IZoweUSSTreeNode>>
 
   /**
    * Retrieves the etag value for the file

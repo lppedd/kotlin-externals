@@ -53,7 +53,6 @@ external interface IZoweTreeNode {
   /**
    * Children nodes of this node
    */
-  // TODO(Edoardo): fix overrides
   var children: Array<IZoweTreeNode>?
 
   /**
@@ -96,7 +95,6 @@ external interface IZoweTreeNode {
   /**
    * Retrieves the nodes children nodes
    */
-  // TODO(Edoardo): fix overrides
   fun getChildren(): Promise<Array<IZoweTreeNode>>
 
   /**

@@ -1,7 +1,6 @@
 package zowe.imperative.cmd.doc.profiles.definition
 
 import js.objects.Record
-import zowe.imperative.profiles.doc.definition.IProfileProperty
 import zowe.imperative.profiles.doc.definition.IProfileSchema
 import kotlin.js.plain.JsPlainObject
 
@@ -13,6 +12,6 @@ external interface ICommandProfileSchema : IProfileSchema {
   /**
    * Command version of the properties field on the schema
    */
-  @JsType("ICommandProfileProperty")
-  override var properties: Record<String, IProfileProperty>
+  @Suppress("VAR_TYPE_MISMATCH_ON_OVERRIDE")
+  override var properties: Record<String, ICommandProfileProperty>
 }

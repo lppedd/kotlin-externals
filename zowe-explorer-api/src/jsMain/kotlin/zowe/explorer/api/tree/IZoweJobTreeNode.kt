@@ -10,7 +10,8 @@ external interface IZoweJobTreeNode : IZoweTreeNode {
   /**
    * Use Job-specific tree node for children.
    */
-  override var children: Array<IZoweTreeNode /* IZoweJobTreeNode */>?
+  @Suppress("VAR_TYPE_MISMATCH_ON_OVERRIDE")
+  override var children: Array<IZoweJobTreeNode>?
 
   /**
    * Standard job response document
@@ -59,6 +60,6 @@ external interface IZoweJobTreeNode : IZoweTreeNode {
   /**
    * Retrieves child nodes of this IZoweJobTreeNode
    */
-  @JsType("Promise<Array<IZoweJobTreeNode>>")
-  override fun getChildren(): Promise<Array<IZoweTreeNode /* IZoweJobTreeNode */>>
+  @Suppress("RETURN_TYPE_MISMATCH_ON_OVERRIDE")
+  override fun getChildren(): Promise<Array<IZoweJobTreeNode>>
 }
