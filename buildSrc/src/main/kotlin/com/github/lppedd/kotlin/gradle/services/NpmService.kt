@@ -11,7 +11,7 @@ import org.orienteer.jnpm.JNPMSettings
 abstract class NpmService : BuildService<None> {
   companion object {
     const val SERVICE_NAME: String = "npmService"
-    const val NPM_REGISTRY: String = "http://registry.npmjs.org/"
+    const val NPM_REGISTRY: String = "https://registry.npmjs.org/"
   }
 
   init {
