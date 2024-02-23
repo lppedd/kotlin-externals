@@ -19,7 +19,7 @@ kotlin {
   sourceSets {
     jsMain {
       dependencies {
-        implementation(npm(npmName, npmVersion))
+        implementation(devNpm(npmName, npmVersion))
         api(libs.kotlin.wrappers.js)
       }
     }
