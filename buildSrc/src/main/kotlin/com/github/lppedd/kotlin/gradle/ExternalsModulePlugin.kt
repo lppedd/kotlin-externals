@@ -97,7 +97,8 @@ class ExternalsModulePlugin : Plugin<Project> {
 
     // Register a task to copy TypeScript declaration files from the npm package
     project.tasks.register<CopyTsDeclarationsTask>(CopyTsDeclarationsTask.TASK_NAME) {
-      dependsOn("clean${name.capitalized()}")
+      val npmInstallTask = project.rootProject.tasks.named("kotlinNpmInstall")
+      dependsOn(npmInstallTask, "clean${name.capitalized()}")
 
       val packageName = tsDeclarations.packageName.get()
       val basePath = tsDeclarations.basePath.getOrElse("")
