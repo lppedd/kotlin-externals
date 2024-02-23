@@ -123,6 +123,11 @@ class ExternalsModulePlugin : Plugin<Project> {
         }
       }
 
+      eachFile {
+        // Normalize line endings
+        filter { it }
+      }
+
       val destDir = project.layout.projectDirectory.dir("declarations")
       into(destDir)
 
