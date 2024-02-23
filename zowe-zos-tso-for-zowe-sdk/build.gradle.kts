@@ -21,11 +21,11 @@ kotlin {
   sourceSets {
     jsMain {
       dependencies {
-        implementation(libs.kotlin.wrappers.js)
         implementation(npm(npmName, npmVersion))
+        api(libs.kotlin.wrappers.js)
 
-        implementation(projects.zoweZosmfForZoweSdk)
-        implementation(projects.zoweImperative)
+        api(projects.zoweZosmfForZoweSdk)
+        api(projects.zoweImperative)
       }
     }
   }
