@@ -27,3 +27,8 @@ include("zowe-zos-console-for-zowe-sdk")
 include("zowe-imperative")
 include("zowe-cli")
 include("zowe-explorer-api")
+
+// Examples
+include("vscode-extension")
+
+project(":vscode-extension").projectDir = file("examples/vscode-extension")

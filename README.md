@@ -14,7 +14,7 @@ Usually:
 
 ### Updates
 
-Each project keeps the collections of `.d.ts` files used for the Kotlin sources generation process.
+Each project keeps the collection of `.d.ts` files used for the Kotlin sources generation process.
 
 When a npm library version is bumped under `gradle.properties`, the task
 
