@@ -1,4 +1,5 @@
 @file:JsModule("vscode")
+@file:JsQualifier("extensions")
 
 package vscode.extensions
 

@@ -1,4 +1,5 @@
 @file:JsModule("vscode")
+@file:JsQualifier("l10n")
 
 package vscode.l10n
 
