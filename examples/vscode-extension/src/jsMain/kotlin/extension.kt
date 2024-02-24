@@ -15,7 +15,7 @@ fun activate(context: ExtensionContext) {
     showInformationMessage("Hello World!")
   })
 
-  context.subscriptions.push(disposable)
+  context.subscriptions.add(disposable)
 }
 
 @JsExport
