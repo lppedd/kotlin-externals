@@ -1,9 +1,12 @@
+@file:Suppress("INVISIBLE_MEMBER", "INVISIBLE_REFERENCE")
+
 @file:JsModule("vscode")
 @file:JsQualifier("workspace")
 
 package vscode.workspace
 
 import vscode.*
+import kotlin.internal.LowPriorityInOverloadResolution
 
 /**
  * Get a workspace configuration object.
@@ -36,6 +39,7 @@ external fun getConfiguration(
  * @param scope A scope for which the configuration is asked for.
  * @return The full configuration or a subset.
  */
+@LowPriorityInOverloadResolution
 external fun getConfiguration(
   section: String = definedExternally,
   scope: TextDocument? = definedExternally,
@@ -54,6 +58,7 @@ external fun getConfiguration(
  * @param scope A scope for which the configuration is asked for.
  * @return The full configuration or a subset.
  */
+@LowPriorityInOverloadResolution
 external fun getConfiguration(
   section: String = definedExternally,
   scope: WorkspaceFolder? = definedExternally,
@@ -72,6 +77,7 @@ external fun getConfiguration(
  * @param scope A scope for which the configuration is asked for.
  * @return The full configuration or a subset.
  */
+@LowPriorityInOverloadResolution
 external fun getConfiguration(
   section: String = definedExternally,
   scope: Scope? = definedExternally,

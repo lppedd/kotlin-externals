@@ -54,7 +54,7 @@ external interface InputBoxOptions {
    * @return Either a human-readable string which is presented as an error message or an [InputBoxValidationMessage]
    *   which can provide a specific message severity. Return `undefined`, `null`, or the empty string when 'value' is valid.
    */
-  fun validateInput(
+  var validateInput: (
     value: String,
-  ): Union<Union<String, InputBoxValidationMessage>, Thenable<Union<String, InputBoxValidationMessage>?>>? // string | InputBoxValidationMessage | undefined | null | Thenable<string | InputBoxValidationMessage | undefined | null>
+  ) -> Union<Union<String, InputBoxValidationMessage>, Thenable<Union<String, InputBoxValidationMessage>?>>? // string | InputBoxValidationMessage | undefined | null | Thenable<string | InputBoxValidationMessage | undefined | null>
 }

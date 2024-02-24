@@ -1,4 +1,8 @@
+@file:Suppress("INVISIBLE_MEMBER", "INVISIBLE_REFERENCE")
+
 package vscode
+
+import kotlin.internal.LowPriorityInOverloadResolution
 
 /**
  * Represents the configuration. It is a merged view of
@@ -183,6 +187,7 @@ external interface WorkspaceConfiguration {
   /**
    * Readable dictionary that backs this configuration.
    */
+  @LowPriorityInOverloadResolution
   @seskar.js.JsNative
   operator fun get(key: String): Any?
 }

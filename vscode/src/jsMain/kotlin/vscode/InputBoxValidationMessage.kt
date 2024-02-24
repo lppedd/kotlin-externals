@@ -11,6 +11,7 @@ external interface InputBoxValidationMessage {
 
   /**
    * The severity of the validation message.
+   *
    * NOTE: When using `InputBoxValidationSeverity.Error`, the user will not be allowed to accept (hit ENTER) the input.
    * `Info` and `Warning` will still allow the InputBox to accept the input.
    */
