@@ -5,7 +5,6 @@ import com.github.lppedd.kotlin.gradle.ext.stringProperty
 import com.github.lppedd.kotlin.gradle.services.NpmService
 import com.github.lppedd.kotlin.gradle.tasks.CheckNpmVersionTask
 import com.github.lppedd.kotlin.gradle.tasks.CopyTsDeclarationsTask
-import io.github.sgrishchenko.karakum.gradle.plugin.KarakumPlugin
 import io.github.usefulness.KtlintGradleExtension
 import io.github.usefulness.KtlintGradlePlugin
 import org.gradle.api.GradleException
@@ -32,7 +31,7 @@ class ExternalsModulePlugin : Plugin<Project> {
     project.apply<KotlinMultiplatformPluginWrapper>()
 
     // Help us convert TypeScript declarations to Kotlin
-    project.apply<KarakumPlugin>()
+    // project.apply<KarakumPlugin>()
 
     // Enable formatting with Ktlint
     project.apply<KtlintGradlePlugin>()

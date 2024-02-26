@@ -29,6 +29,8 @@ include("zowe-cli")
 include("zowe-explorer-api")
 
 // Examples
+include("shared")
 include("vscode-extension")
 
 project(":vscode-extension").projectDir = file("examples/vscode-extension")
+project(":shared").projectDir = file("examples/shared")
