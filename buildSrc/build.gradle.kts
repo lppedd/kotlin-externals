@@ -24,5 +24,9 @@ gradlePlugin {
       id = "module.publishable"
       implementationClass = "com.github.lppedd.kotlin.gradle.PublishableModulePlugin"
     }
+    register("moduleVscode") {
+      id = "module.vscode"
+      implementationClass = "com.github.lppedd.kotlin.gradle.VSCodeModulePlugin"
+    }
   }
 }

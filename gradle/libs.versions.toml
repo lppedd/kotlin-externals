@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.9.22"
+kotlin = "2.0.0-Beta4"
 wrappers-kotlin-js = "1.0.0-pre.698"
 wrappers-kotlin-node = "20.11.5-pre.698"
 ktlint = "0.8.2"
