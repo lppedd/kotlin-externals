@@ -21,10 +21,9 @@ export declare const DEFAULT_STORAGE_FOLDER: string;
 export declare const VSCODE_VERSION_MIN = "1.84.2";
 export declare const VSCODE_VERSION_MAX = "1.86.2";
 /**
- * The latest version of NodeJS which is properly working with selenium-webdriver
- * (for more details, see https://www.npmjs.com/package/selenium-webdriver?activeTab=readme#node-support-policy)
+ * The latest version with automated tests
  */
-export declare const NODEJS_VERSION_MAX = "18.15.0";
+export declare const NODEJS_VERSION_MAX = "18";
 /**
  * ExTester
  */

@@ -65,6 +65,7 @@ export declare class CodeUtil {
      * Install extension dependencies from marketplace
      */
     installDependencies(): void;
+    private getCliInitCommand;
     private installExt;
     /**
      * Open files/folders in running vscode
@@ -108,11 +109,11 @@ export declare class CodeUtil {
      * Check if VS Code exists in local cache along with an appropriate version of chromedriver
      * without internet connection
      */
-    checkOfflineRequirements(): Promise<string>;
+    checkOfflineRequirements(): string;
     /**
      * Attempt to get chromium version from a downloaded copy of vs code
      */
-    getChromiumVersionOffline(): Promise<string>;
+    getChromiumVersionOffline(): string;
     /**
      * Get the root folder of VS Code instance
      */
