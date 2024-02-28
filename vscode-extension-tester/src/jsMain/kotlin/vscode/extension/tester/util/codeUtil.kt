@@ -96,12 +96,12 @@ external class CodeUtil {
    * Check if VS Code exists in local cache along with an appropriate version of chromedriver
    * without internet connection
    */
-  fun checkOfflineRequirements(): Promise<String>
+  fun checkOfflineRequirements(): String
 
   /**
    * Attempt to get chromium version from a downloaded copy of vs code
    */
-  fun getChromiumVersionOffline(): Promise<String>
+  fun getChromiumVersionOffline(): String
 
   /**
    * Get the root folder of VS Code instance
