@@ -1,6 +1,9 @@
+@file:Suppress("INVISIBLE_MEMBER", "INVISIBLE_REFERENCE")
 @file:JsModule("mocha")
 
 package mocha.mocha
+
+import kotlin.internal.LowPriorityInOverloadResolution
 
 /**
  * Initialize a new `Hook` with the given `title` and callback `fn`
@@ -8,8 +11,13 @@ package mocha.mocha
  * See https://mochajs.org/api/Hook.html
  */
 external class Hook : Runnable {
-  constructor(title: String, fn: Func = definedExternally)
-  constructor(title: String, fn: AsyncFunc = definedExternally)
+  constructor(title: String, fn: () -> Unit = definedExternally)
+
+  @LowPriorityInOverloadResolution
+  constructor(title: String, syncFn: Func = definedExternally)
+
+  @LowPriorityInOverloadResolution
+  constructor(title: String, asyncFn: AsyncFunc = definedExternally)
 
   @JsString("hook")
   var type: String

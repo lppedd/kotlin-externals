@@ -1,8 +1,10 @@
+@file:Suppress("INVISIBLE_MEMBER", "INVISIBLE_REFERENCE")
 @file:JsModule("mocha")
 
 package mocha.mocha
 
 import nodejs.EventEmitter
+import kotlin.internal.LowPriorityInOverloadResolution
 import kotlin.ts.Union
 
 /**
@@ -11,8 +13,13 @@ import kotlin.ts.Union
  * See https://mochajs.org/api/Runnable.html
  */
 open external class Runnable : EventEmitter {
-  constructor(title: String, fn: Func = definedExternally)
-  constructor(title: String, fn: AsyncFunc = definedExternally)
+  constructor(title: String, fn: () -> Unit = definedExternally)
+
+  @LowPriorityInOverloadResolution
+  constructor(title: String, syncFn: Func = definedExternally)
+
+  @LowPriorityInOverloadResolution
+  constructor(title: String, asyncFn: AsyncFunc = definedExternally)
 
   var id: String
   var title: String

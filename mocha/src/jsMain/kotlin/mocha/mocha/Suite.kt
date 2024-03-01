@@ -1,9 +1,11 @@
+@file:Suppress("INVISIBLE_MEMBER", "INVISIBLE_REFERENCE")
 @file:JsModule("mocha")
 
 package mocha.mocha
 
 import mocha.Mocha
 import nodejs.EventEmitter
+import kotlin.internal.LowPriorityInOverloadResolution
 
 /**
  * Initialize a new `Suite` with the given `title` and `ctx`.
@@ -44,6 +46,11 @@ external class Suite : EventEmitter {
    */
   fun timeout(ms: String) // this
 
+  /**
+   * Set timeout `ms` or short-hand such as "2s".
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#timeout
+   */
   fun timeout(ms: Int) // this
 
   /**
@@ -60,6 +67,11 @@ external class Suite : EventEmitter {
    */
   fun retries(n: String) // this
 
+  /**
+   * Set number of times to retry a failed test.
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#retries
+   */
   fun retries(n: Int) // this
 
   /**
@@ -76,6 +88,11 @@ external class Suite : EventEmitter {
    */
   fun slow(ms: String) // this
 
+  /**
+   * Set slow `ms` or short-hand such as "2s".
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#slow
+   */
   fun slow(ms: Int) // this
 
   /**
@@ -100,116 +117,188 @@ external class Suite : EventEmitter {
   fun isPending(): Boolean
 
   /**
-   * Run `fn(test[, done])` before running tests.
+   * Run `fn(test)` before running tests.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#beforeAll
    */
-  fun beforeAll(fn: Func = definedExternally) // this
-
-  /**
-   * Run `fn(test[, done])` before running tests.
-   *
-   * See https://mochajs.org/api/Mocha.Suite.html#beforeAll
-   */
-  fun beforeAll(fn: AsyncFunc = definedExternally) // this
+  fun beforeAll(fn: () -> Unit = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` before running tests.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#beforeAll
    */
-  fun beforeAll(title: String, fn: Func = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun beforeAll(syncFn: Func = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` before running tests.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#beforeAll
    */
-  fun beforeAll(title: String, fn: AsyncFunc = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun beforeAll(asyncFn: AsyncFunc = definedExternally) // this
+
+  /**
+   * Run `fn(test)` before running tests.
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#beforeAll
+   */
+  fun beforeAll(title: String, fn: () -> Unit = definedExternally) // this
+
+  /**
+   * Run `fn(test[, done])` before running tests.
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#beforeAll
+   */
+  @LowPriorityInOverloadResolution
+  fun beforeAll(title: String, syncFn: Func = definedExternally) // this
+
+  /**
+   * Run `fn(test[, done])` before running tests.
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#beforeAll
+   */
+  @LowPriorityInOverloadResolution
+  fun beforeAll(title: String, asyncFn: AsyncFunc = definedExternally) // this
+
+  /**
+   * Run `fn(test)` after running tests.
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#afterAll
+   */
+  fun afterAll(fn: () -> Unit = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` after running tests.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#afterAll
    */
-  fun afterAll(fn: Func = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun afterAll(syncFn: Func = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` after running tests.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#afterAll
    */
-  fun afterAll(fn: AsyncFunc = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun afterAll(asyncFn: AsyncFunc = definedExternally) // this
+
+  /**
+   * Run `fn(test)` after running tests.
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#afterAll
+   */
+  fun afterAll(title: String, fn: () -> Unit = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` after running tests.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#afterAll
    */
-  fun afterAll(title: String, fn: Func = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun afterAll(title: String, syncFn: Func = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` after running tests.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#afterAll
    */
-  fun afterAll(title: String, fn: AsyncFunc = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun afterAll(title: String, asyncFn: AsyncFunc = definedExternally) // this
+
+  /**
+   * Run `fn(test)` before each test case.
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#beforeEach
+   */
+  fun beforeEach(fn: () -> Unit = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` before each test case.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#beforeEach
    */
-  fun beforeEach(fn: Func = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun beforeEach(syncFn: Func = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` before each test case.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#beforeEach
    */
-  fun beforeEach(fn: AsyncFunc = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun beforeEach(asyncFn: AsyncFunc = definedExternally) // this
+
+  /**
+   * Run `fn(test)` before each test case.
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#beforeEach
+   */
+  fun beforeEach(title: String, fn: () -> Unit = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` before each test case.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#beforeEach
    */
-  fun beforeEach(title: String, fn: Func = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun beforeEach(title: String, syncFn: Func = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` before each test case.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#beforeEach
    */
-  fun beforeEach(title: String, fn: AsyncFunc = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun beforeEach(title: String, asyncFn: AsyncFunc = definedExternally) // this
+
+  /**
+   * Run `fn(test)` after each test case.
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#afterEach
+   */
+  fun afterEach(fn: () -> Unit = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` after each test case.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#afterEach
    */
-  fun afterEach(fn: Func = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun afterEach(syncFn: Func = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` after each test case.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#afterEach
    */
-  fun afterEach(fn: AsyncFunc = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun afterEach(asyncFn: AsyncFunc = definedExternally) // this
+
+  /**
+   * Run `fn(test)` after each test case.
+   *
+   * See https://mochajs.org/api/Mocha.Suite.html#afterEach
+   */
+  fun afterEach(title: String, fn: () -> Unit = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` after each test case.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#afterEach
    */
-  fun afterEach(title: String, fn: Func = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun afterEach(title: String, syncFn: Func = definedExternally) // this
 
   /**
    * Run `fn(test[, done])` after each test case.
    *
    * See https://mochajs.org/api/Mocha.Suite.html#afterEach
    */
-  fun afterEach(title: String, fn: AsyncFunc = definedExternally) // this
+  @LowPriorityInOverloadResolution
+  fun afterEach(title: String, asyncFn: AsyncFunc = definedExternally) // this
 
   /**
    * Add a test `suite`.
@@ -275,12 +364,25 @@ external class Suite : EventEmitter {
    */
   fun _createHook(
     title: String,
-    fn: Func = definedExternally,
+    fn: () -> Unit = definedExternally,
   ): Hook
 
+  /**
+   * Generic hook-creator.
+   */
+  @LowPriorityInOverloadResolution
   fun _createHook(
     title: String,
-    fn: AsyncFunc = definedExternally,
+    syncFn: Func = definedExternally,
+  ): Hook
+
+  /**
+   * Generic hook-creator.
+   */
+  @LowPriorityInOverloadResolution
+  fun _createHook(
+    title: String,
+    asyncFn: AsyncFunc = definedExternally,
   ): Hook
 
   fun on(event: String /* "afterEach" */, listener: (hook: Hook) -> Unit) // this

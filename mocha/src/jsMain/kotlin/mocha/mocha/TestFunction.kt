@@ -12,7 +12,7 @@ external interface TestFunction {
    * - _Only available when invoked via the mocha CLI._
    */
   @seskar.js.JsNative
-  operator fun invoke(fn: Func): Test
+  operator fun invoke(fn: () -> Unit): Test
 
   /**
    * Describe a specification or test-case with the given callback `fn` acting as a thunk.
@@ -22,7 +22,17 @@ external interface TestFunction {
    */
   @seskar.js.JsNative
   @LowPriorityInOverloadResolution
-  operator fun invoke(fn: AsyncFunc): Test
+  operator fun invoke(syncFn: Func): Test
+
+  /**
+   * Describe a specification or test-case with the given callback `fn` acting as a thunk.
+   * The name of the function is used as the name of the test.
+   *
+   * - _Only available when invoked via the mocha CLI._
+   */
+  @seskar.js.JsNative
+  @LowPriorityInOverloadResolution
+  operator fun invoke(asyncFn: AsyncFunc): Test
 
   /**
    * Describe a specification or test-case with the given `title` and callback `fn` acting
@@ -33,7 +43,7 @@ external interface TestFunction {
   @seskar.js.JsNative
   operator fun invoke(
     title: String,
-    fn: Func = definedExternally,
+    fn: () -> Unit = definedExternally,
   ): Test
 
   /**
@@ -46,7 +56,20 @@ external interface TestFunction {
   @LowPriorityInOverloadResolution
   operator fun invoke(
     title: String,
-    fn: AsyncFunc = definedExternally,
+    syncFn: Func = definedExternally,
+  ): Test
+
+  /**
+   * Describe a specification or test-case with the given `title` and callback `fn` acting
+   * as a thunk.
+   *
+   * - _Only available when invoked via the mocha CLI._
+   */
+  @seskar.js.JsNative
+  @LowPriorityInOverloadResolution
+  operator fun invoke(
+    title: String,
+    asyncFn: AsyncFunc = definedExternally,
   ): Test
 
   /**

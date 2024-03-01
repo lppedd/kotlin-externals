@@ -7,9 +7,6 @@ import kotlin.ts.Union
  * nested suites. Indicates this suite should not be executed.
  *
  * - _Only available when invoked via the mocha CLI._
- *
- * @return [bdd] `Suite`
- * @return [tdd] `void`
  */
 external interface PendingSuiteFunction {
   @seskar.js.JsNative
