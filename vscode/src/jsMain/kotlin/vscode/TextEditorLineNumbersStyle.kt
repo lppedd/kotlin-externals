@@ -29,5 +29,11 @@ sealed external interface TextEditorLineNumbersStyle {
      */
     @JsIntValue(2)
     val Relative: TextEditorLineNumbersStyle
+
+    /**
+     * Render the line numbers on every 10th line number.
+     */
+    @JsIntValue(3)
+    val Interval: TextEditorLineNumbersStyle
   }
 }

@@ -1,5 +1,9 @@
 package vscode
 
+import js.objects.Record
+import kotlin.ts.Union
+import kotlin.ts.Union3
+
 /**
  * Value-object describing what options a terminal should use.
  */
@@ -18,17 +22,17 @@ external interface TerminalOptions {
    * Args for the custom shell executable. A string can be used on Windows only which allows
    * specifying shell args in [command-line format](https://msdn.microsoft.com/en-au/08dfcab2-eb6e-49a4-80eb-87d4076c98c6).
    */
-  var shellArgs: (Any /* string[] | string */)?
+  var shellArgs: Union<Array<String>, String>? /* string[] | string */
 
   /**
    * A path or Uri for the current working directory to be used for the terminal.
    */
-  var cwd: (Any /* string | Uri */)?
+  var cwd: Union<String, Uri>? /* string | Uri */
 
   /**
    * Object with environment variables that will be added to the editor process.
    */
-  var env: (TerminalOptionsEnv)?
+  var env: Record<String, String?>?
 
   /**
    * Whether the terminal process environment should be exactly as provided in
@@ -44,7 +48,7 @@ external interface TerminalOptions {
    * until `Terminal.show` is called. The typical usage for this is when you need to run
    * something that may need interactivity but only want to tell the user about it when
    * interaction is needed. Note that the terminals will still be exposed to all extensions
-   * as normal.
+   * as normal and they will remain hidden when the workspace is reloaded.
    */
   var hideFromUser: Boolean?
 
@@ -58,12 +62,7 @@ external interface TerminalOptions {
   /**
    * The icon path or [ThemeIcon] for the terminal.
    */
-  var iconPath: (
-    Any /* Uri | {
-    light: Uri;
-    dark: Uri;
-} | ThemeIcon */
-  )?
+  var iconPath: Union3<Uri, ThemeUris, ThemeIcon>? /* Uri | { light: Uri; dark: Uri; } | ThemeIcon */
 
   /**
    * The icon [ThemeColor] for the terminal.
@@ -75,7 +74,7 @@ external interface TerminalOptions {
   /**
    * The [TerminalLocation} or {@link TerminalEditorLocationOptions} or {@link TerminalSplitLocationOptions] for the terminal.
    */
-  var location: (Any /* TerminalLocation | TerminalEditorLocationOptions | TerminalSplitLocationOptions */)?
+  var location: Union3<TerminalLocation, TerminalEditorLocationOptions, TerminalSplitLocationOptions>? /* TerminalLocation | TerminalEditorLocationOptions | TerminalSplitLocationOptions */
 
   /**
    * Opt-out of the default terminal persistence on restart and reload.
