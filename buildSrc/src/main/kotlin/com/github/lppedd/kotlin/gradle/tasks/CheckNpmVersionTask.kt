@@ -36,7 +36,7 @@ abstract class CheckNpmVersionTask : DefaultTask() {
     if (versions.isEmpty()) {
       logger.lifecycle("The npm package is up-to-date")
     } else {
-      logger.warn("[Outdated] New versions: ${versions.joinToString()}")
+      logger.warn("\u001b[31m[Outdated] New versions: ${versions.joinToString()}\u001b[0m")
     }
   }
 }
