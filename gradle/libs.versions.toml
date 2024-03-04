@@ -6,7 +6,7 @@ ktlint = "0.8.2"
 seskar = "2.40.0"
 karakum = "1.0.0-alpha.38"
 maven-publish = "0.27.0"
-jnpm = "1.5"
+jnpm = "1.6-SNAPSHOT"
 
 [libraries]
 kotlin-wrappers-js = { group = "org.jetbrains.kotlin-wrappers", name = "kotlin-js", version.ref = "wrappers-kotlin-js" }

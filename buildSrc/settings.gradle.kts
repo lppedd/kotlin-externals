@@ -5,6 +5,9 @@ dependencyResolutionManagement {
   repositories {
     mavenCentral()
     gradlePluginPortal()
+
+    // For JNPM
+    maven(url = "https://oss.sonatype.org/content/repositories/snapshots")
   }
 
   versionCatalogs {
