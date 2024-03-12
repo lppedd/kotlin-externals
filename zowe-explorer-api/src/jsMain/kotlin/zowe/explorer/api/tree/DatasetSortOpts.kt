@@ -13,9 +13,12 @@ sealed external interface DatasetSortOpts {
     val Name: DatasetSortOpts
 
     @JsIntValue(1)
-    val LastModified: DatasetSortOpts
+    val DateCreated: DatasetSortOpts
 
     @JsIntValue(2)
+    val LastModified: DatasetSortOpts
+
+    @JsIntValue(3)
     val UserId: DatasetSortOpts
   }
 }

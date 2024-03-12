@@ -136,6 +136,7 @@ export interface IZoweTreeNode {
 }
 export declare type DatasetStats = {
     user: string;
+    createdDate: Date;
     modifiedDate: Date;
 };
 /**

@@ -10,8 +10,9 @@
  */
 export declare enum DatasetSortOpts {
     Name = 0,
-    LastModified = 1,
-    UserId = 2
+    DateCreated = 1,
+    LastModified = 2,
+    UserId = 3
 }
 export declare enum SortDirection {
     Ascending = 0,
