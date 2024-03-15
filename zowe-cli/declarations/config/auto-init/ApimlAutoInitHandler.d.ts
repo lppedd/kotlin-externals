@@ -87,4 +87,5 @@ export default class ApimlAutoInitHandler extends BaseAutoInitHandler {
      * the base profile. These properties may prevent connecting to the APIML.
      */
     private recordProfileConflictsWithBase;
+    private getOldBaseProfileProps;
 }

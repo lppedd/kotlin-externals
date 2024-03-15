@@ -386,11 +386,11 @@ export declare class ProfileInfo {
      */
     addProfileToConfig(profileType: string, layerPath?: string): boolean;
     /**
-     * Updates the schema to contain the new profile type.
-     * If the type exists in the cache, it will use the matching layer; if not found, it will use the schema at the active layer.
+     * Updates the schema of the provided config layer to contain the new profile type.
      *
      * @param {string} profileType The profile type to add into the schema
      * @param {IProfileSchema} typeSchema The schema for the profile type
+     * @param {IConfigLayer} layer The config layer that matches the schema to update
      * @param [versionChanged] Whether the version has changed for the schema (optional)
      * @returns {boolean} `true` if added to the schema; `false` otherwise
      */
@@ -403,6 +403,7 @@ export declare class ProfileInfo {
      * @returns The properties object, but with all of the command-related properties removed
      */
     private omitCmdPropsFromSchema;
+    private addToGlobalSchema;
     /**
      * Adds a profile type to the schema, and tracks its contribution in extenders.json.
      *
@@ -410,9 +411,10 @@ export declare class ProfileInfo {
      *
      * @param {string} profileType The new profile type to add to the schema
      * @param {IExtenderTypeInfo} typeInfo Type metadata for the profile type (schema, source app., optional version)
-     * @returns {boolean} `true` if added to the schema; `false` otherwise
+     * @param [updateProjectSchema] Automatically update a project-level schema if one exists.
+     * @returns {IAddProfTypeResult} the result of adding the profile type to the schema
      */
-    addProfileTypeToSchema(profileType: string, typeInfo: IExtenderTypeInfo): IAddProfTypeResult;
+    addProfileTypeToSchema(profileType: string, typeInfo: IExtenderTypeInfo, updateProjectSchema?: boolean): IAddProfTypeResult;
     /**
      * Builds the entire schema based on the available profile types and application sources.
      *
