@@ -15,12 +15,14 @@ abstract class NpmService : BuildService<None> {
   }
 
   init {
-    JNPMService.configure(
-      JNPMSettings.builder()
-        .registryUrl(NPM_REGISTRY)
-        .useCache(true)
-        .build()
-    )
+    if (!JNPMService.isConfigured()) {
+      JNPMService.configure(
+        JNPMSettings.builder()
+          .registryUrl(NPM_REGISTRY)
+          .useCache(true)
+          .build()
+      )
+    }
   }
 
   fun retrieveVersions(packageName: String, versionContraint: String): List<String> {
