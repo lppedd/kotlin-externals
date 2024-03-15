@@ -293,11 +293,28 @@ external class ProfileInfo {
    * @param profileType The new profile type to add to the schema
    * @param typeInfo Type metadata for the profile type (schema, source app.,
    *   optional version)
-   * @return `true` if added to the schema; `false` otherwise
+   * @return The result of adding the profile type to the schema
    */
   fun addProfileTypeToSchema(
     profileType: String,
     typeInfo: IExtenderTypeInfo,
+  ): IAddProfTypeResult
+
+  /**
+   * Adds a profile type to the schema, and tracks its contribution in extenders.json.
+   *
+   * NOTE: `readProfilesFromDisk` must be called at least once before adding new profile types.
+   *
+   * @param profileType The new profile type to add to the schema
+   * @param typeInfo Type metadata for the profile type (schema, source app.,
+   *   optional version)
+   * @param updateProjectSchema Automatically update a project-level schema if one exists
+   * @return The result of adding the profile type to the schema
+   */
+  fun addProfileTypeToSchema(
+    profileType: String,
+    typeInfo: IExtenderTypeInfo,
+    updateProjectSchema: Boolean,
   ): IAddProfTypeResult
 
   /**
