@@ -54,12 +54,12 @@ external interface IZoweDatasetTreeNode : IZoweTreeNode {
   /**
    * Retrieves the etag value for the file
    */
-  fun getEtag(): String
+  val getEtag: (() -> String)?
 
   /**
    * Sets the etag value for the file
    */
-  fun setEtag(etag: String): Any?
+  val setEtag: ((etag: String) -> Any?)?
 
   /**
    * Downloads and displays a file in a text editor view
@@ -68,14 +68,22 @@ external interface IZoweDatasetTreeNode : IZoweTreeNode {
    * @param previewFile the file, true or false
    * @param datasetFileProvider the tree provider
    */
-  fun openDs(
-    download: Boolean,
-    previewFile: Boolean,
-    datasetFileProvider: IZoweTree<IZoweDatasetTreeNode>,
-  ): Promise<Unit>
+  val openDs: (
+    (
+      download: Boolean,
+      previewFile: Boolean,
+      datasetFileProvider: IZoweTree<IZoweDatasetTreeNode>,
+    ) -> Promise<Unit>
+  )?
+
+  /**
+   * Returns the local file path for the ZoweDatasetNode
+   *
+   */
+  val getDsDocumentFilePath: (() -> String)?
 
   /**
    * Sets the codepage value for the file
    */
-  fun setEncoding(encoding: ZosEncoding): Any?
+  val setEncoding: ((encoding: ZosEncoding) -> Any?)?
 }
