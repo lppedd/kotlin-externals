@@ -112,4 +112,15 @@ external interface ISession {
    * Decide whether to store a returned cookie. Only applies to certificates for now.
    */
   var storeCookie: Boolean?
+
+  /**
+   * Specifies the order of precedence for using different authentication types in this
+   * session. The order in the array determines which credential type is preferred.
+   * The type in authTypeOrder[0] is used first, authTypeOrder[1] second, etc.
+   * Values are specified using SessConstants.AUTH_TYPE_XXX values.
+   *
+   * The authTypeOrder property is currently controlled (hard-coded) within Zowe SDK functions.
+   * More control for Zowe consumers is anticipated in the future.
+   */
+  var authTypeOrder: Array<String>?
 }

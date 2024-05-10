@@ -2,6 +2,7 @@ package zowe.imperative.rest.session.doc
 
 import js.objects.Record
 import zowe.imperative.cmd.doc.handler.IHandlerParameters
+import zowe.imperative.rest.session.AuthTypeChoices
 import zowe.imperative.rest.session.TokenTypeChoices
 
 /**
@@ -66,4 +67,10 @@ external interface IOptionsForAddConnProps {
    * profiles. Defaults to true when team config exists.
    */
   var autoStore: Boolean?
+
+  /**
+   * Specifies list of authentication types that are supported for your
+   * service. Defaults to allow all authentication types.
+   */
+  var supportedAuthTypes: Array<AuthTypeChoices>?
 }

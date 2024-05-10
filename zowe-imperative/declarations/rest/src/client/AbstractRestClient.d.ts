@@ -222,6 +222,49 @@ export declare abstract class AbstractRestClient {
      */
     private buildOptions;
     /**
+     * Set token auth into our REST request authentication options
+     * if a token value is specified in the session supplied to this class.
+     *
+     * @private
+     * @param {any} restOptionsToSet
+     *      The set of REST request options into which the credentials will be set.
+     * @returns True if this function sets authentication options. False otherwise.
+     * @memberof AbstractRestClient
+     */
+    private setTokenAuth;
+    /**
+     * Set user and password auth (A.K.A basic authentication) into our
+     * REST request authentication options if user and password values
+     * are specified in the session supplied to this class.
+     *
+     * @private
+     * @param {any} restOptionsToSet
+     *      The set of REST request options into which the credentials will be set.
+     * @returns True if this function sets authentication options. False otherwise.
+     * @memberof AbstractRestClient
+     */
+    private setPasswordAuth;
+    /**
+     * Set bearer auth token into our REST request authentication options.
+     *
+     * @private
+     * @param {any} restOptionsToSet
+     *      The set of REST request options into which the credentials will be set.
+     * @returns True if this function sets authentication options. False otherwise.
+     * @memberof AbstractRestClient
+     */
+    private setBearerAuth;
+    /**
+     * Set a PEM certificate auth into our REST request authentication options.
+     *
+     * @private
+     * @param {any} restOptionsToSet
+     *      The set of REST request options into which the credentials will be set.
+     * @returns True if this function sets authentication options. False otherwise.
+     * @memberof AbstractRestClient
+     */
+    private setCertPemAuth;
+    /**
      * Callback from http(s).request
      * @private
      * @param {*} res - https response
