@@ -18,6 +18,7 @@ external class CodeUtil {
     folder: String = definedExternally,
     type: ReleaseQuality = definedExternally,
     extensionsFolder: String = definedExternally,
+    coverage: Boolean = definedExternally,
   )
 
   /**

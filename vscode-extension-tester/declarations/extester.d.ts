@@ -1,10 +1,26 @@
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License", destination); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 /// <reference types="mocha" />
 import { ReleaseQuality, RunOptions } from './util/codeUtil';
 export { ReleaseQuality };
 export { MochaOptions } from 'mocha';
 export * from './browser';
 export * from './suite/mochaHooks';
-export * from 'monaco-page-objects';
+export * from '@redhat-developer/page-objects';
 export interface SetupOptions {
     /** version of VS Code to test against, defaults to latest */
     vscodeVersion?: string;
@@ -18,21 +34,21 @@ export declare const DEFAULT_SETUP_OPTIONS: {
     installDependencies: boolean;
 };
 export declare const DEFAULT_STORAGE_FOLDER: string;
-export declare const VSCODE_VERSION_MIN = "1.84.2";
-export declare const VSCODE_VERSION_MAX = "1.86.2";
+export declare const VSCODE_VERSION_MIN: string;
+export declare const VSCODE_VERSION_MAX: string;
 /**
  * The latest version with automated tests
  */
-export declare const NODEJS_VERSION_MAX = "18";
+export declare const NODEJS_VERSION_MAX: string;
 /**
  * ExTester
  */
 export declare class ExTester {
     private code;
     private chrome;
-    constructor(storageFolder?: string, releaseType?: ReleaseQuality, extensionsDir?: string);
+    constructor(storageFolder?: string, releaseType?: ReleaseQuality, extensionsDir?: string, coverage?: boolean);
     /**
-     * Download VSCode of given version and release quality stream
+     * Download VS Code of given version and release quality stream
      * @param version version to download, default latest
      */
     downloadCode(version?: string): Promise<void>;
@@ -53,16 +69,16 @@ export declare class ExTester {
     installFromMarketplace(id: string): Promise<void>;
     /**
      * Download the matching chromedriver for a given VS Code version
-     * @param vscodeVersion selected versio nof VSCode, default latest
+     * @param vscodeVersion selected version of VS Code, default latest
      */
     downloadChromeDriver(vscodeVersion?: string): Promise<string>;
     /**
-     * Performs all necessary setup: getting VSCode + ChromeDriver
+     * Performs all necessary setup: getting VS Code + ChromeDriver
      * and packaging/installing extension into the test instance
      *
      * @param options Additional options for setting up the tests
      */
-    setupRequirements(options?: SetupOptions, offline?: boolean): Promise<void>;
+    setupRequirements(options?: SetupOptions, offline?: boolean, cleanup?: boolean): Promise<void>;
     /**
      * Performs requirements setup and runs extension tests
      *

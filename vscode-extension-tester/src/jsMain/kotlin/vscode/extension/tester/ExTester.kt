@@ -15,10 +15,11 @@ external class ExTester {
     storageFolder: String = definedExternally,
     releaseType: ReleaseQuality = definedExternally,
     extensionsDir: String = definedExternally,
+    coverage: Boolean = definedExternally,
   )
 
   /**
-   * Download VSCode of given version and release quality stream
+   * Download VS Code of given version and release quality stream
    * @param version version to download, default latest
    */
   fun downloadCode(version: String = definedExternally): Promise<Unit>
@@ -38,12 +39,12 @@ external class ExTester {
 
   /**
    * Download the matching chromedriver for a given VS Code version
-   * @param vscodeVersion selected versio nof VSCode, default latest
+   * @param vscodeVersion selected version of VSCode, default latest
    */
   fun downloadChromeDriver(vscodeVersion: String = definedExternally): Promise<String>
 
   /**
-   * Performs all necessary setup: getting VSCode + ChromeDriver
+   * Performs all necessary setup: getting VS Code + ChromeDriver
    * and packaging/installing extension into the test instance
    *
    * @param options Additional options for setting up the tests
