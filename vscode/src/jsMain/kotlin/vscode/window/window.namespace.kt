@@ -133,7 +133,7 @@ external val onDidChangeTerminalState: Event<Terminal>
 external val state: WindowState
 
 /**
- * An [Event] which fires when the focus state of the current window
+ * An [Event] which fires when the focus or activity state of the current window
  * changes. The value of the event represents whether the window is focused.
  */
 external val onDidChangeWindowState: Event<WindowState>

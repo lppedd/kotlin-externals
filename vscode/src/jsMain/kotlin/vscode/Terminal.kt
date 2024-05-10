@@ -50,7 +50,7 @@ external interface Terminal {
    *
    * @param text The text to send.
    * @param shouldExecute Indicates that the text being sent should be executed rather than just inserted in the terminal.
-   *   The character(s) added are \n or \r\n, depending on the platform. This defaults to `true`.
+   *   The character(s) added are `\n` or `\r\n`, depending on the platform. This defaults to `true`.
    */
   fun sendText(
     text: String,

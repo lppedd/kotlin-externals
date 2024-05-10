@@ -8,7 +8,7 @@ package vscode
 external interface TextEditorEdit {
   /**
    * Replace a certain text region with a new value.
-   * You can use \r\n or \n in `value` and they will be normalized to the current [TextDocument].
+   * You can use `\r\n` or `\n` in `value` and they will be normalized to the current [TextDocument].
    *
    * @param location The range this operation should remove.
    * @param value The new text this operation should insert after removing `location`.

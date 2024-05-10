@@ -50,7 +50,7 @@ external class Uri {
    * ```ts
    * const u = URI.parse('file://server/c$/folder/file.txt')
    * u.authority === 'server'
-   * u.path === '/shares/c$/file.txt'
+   * u.path === '/shares/c$/folder/file.txt'
    * u.fsPath === '\\server\c$\folder\file.txt'
    * ```
    */

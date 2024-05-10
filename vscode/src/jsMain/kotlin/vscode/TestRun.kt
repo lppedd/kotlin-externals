@@ -45,7 +45,7 @@ external interface TestRun {
 
   /**
    * Indicates a test has failed. You should pass one or more
-   * [TestMessage TestMessages] to describe the failure.
+   * [TestMessage]s to describe the failure.
    * @param test Test item to update.
    * @param message Messages associated with the test failure.
    * @param duration How long the test took to execute, in milliseconds.
@@ -64,7 +64,7 @@ external interface TestRun {
 
   /**
    * Indicates a test has errored. You should pass one or more
-   * [TestMessage TestMessages] to describe the failure. This differs
+   * [TestMessage]s to describe the failure. This differs
    * from the "failed" state in that it indicates a test that couldn't be
    * executed at all, from a compilation error for example.
    * @param test Test item to update.
@@ -111,8 +111,19 @@ external interface TestRun {
   )
 
   /**
+   * Adds coverage for a file in the run.
+   */
+  fun addCoverage(fileCoverage: FileCoverage)
+
+  /**
    * Signals the end of the test run. Any tests included in the run whose
    * states have not been updated will have their state reset.
    */
   fun end()
+
+  /**
+   * An event fired when the editor is no longer interested in data
+   * associated with the test run.
+   */
+  val onDidDispose: Event<Unit>
 }

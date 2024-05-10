@@ -5,7 +5,6 @@ package vscode.workspace
 
 import vscode.FileSystemWatcher
 import vscode.GlobPattern
-import vscode.RelativePattern
 
 /**
  * Creates a file system watcher that is notified on file events (create, change, delete)
@@ -14,18 +13,13 @@ import vscode.RelativePattern
  * By default, all opened [vscode.workspace.workspaceFolders] will be watched
  * for file changes recursively.
  *
- * Additional paths can be added for file watching by providing a [RelativePattern] with
- * a `base` path to watch. If the `pattern` is complex (e.g. contains `**` or path segments),
- * the path will be watched recursively and otherwise will be watched non-recursively (i.e. only
- * changes to the first level of the path will be reported).
+ * Additional paths can be added for file watching by providing a {@link RelativePattern} with
+ * a `base` path to watch. If the path is a folder and the `pattern` is complex (e.g. contains
+ * `**` or path segments), it will be watched recursively and otherwise will be watched
+ * non-recursively (i.e. only changes to the first level of the path will be reported).
  *
- * *Note* that requests for recursive file watchers for a `base` path that is inside the opened
- * workspace are ignored given all opened [vscode.workspace.workspaceFolders] are
- * watched for file changes recursively by default. Non-recursive file watchers however are always
- * supported, even inside the opened workspace because they allow to bypass the configured settings
- * for excludes (`files.watcherExclude`). If you need to watch in a location that is typically
- * excluded (for example `node_modules` or `.git` folder), then you can use a non-recursive watcher
- * in the workspace for this purpose.
+ * *Note* that paths must exist in the file system to be watched. File watching may stop when
+ * the watched path is renamed or deleted.
  *
  * If possible, keep the use of recursive watchers to a minimum because recursive file watching
  * is quite resource intense.

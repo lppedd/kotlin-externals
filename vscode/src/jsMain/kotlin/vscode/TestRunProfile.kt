@@ -1,5 +1,7 @@
 package vscode
 
+import kotlin.ts.Union
+
 /**
  * A TestRunProfile describes one way to execute tests in a [TestController].
  */
@@ -66,7 +68,7 @@ external interface TestRunProfile {
    * associated with the request should be created before the function returns
    * or the returned promise is resolved.
    *
-   * If [supportsContinuousRun} is set, then {@link TestRunRequest.continuous]
+   * If [supportsContinuousRun] is set, then [TestRunRequest.continuous]
    * may be `true`. In this case, the profile should observe changes to
    * source code and create new test runs by calling [TestController.createTestRun],
    * until the cancellation is requested on the `token`.
@@ -77,7 +79,22 @@ external interface TestRunProfile {
    * instances associated with the request will be
    * automatically cancelled as well.
    */
-  var runHandler: (request: TestRunRequest, token: CancellationToken) -> Any // Thenable<void> | void
+  var runHandler: (request: TestRunRequest, token: CancellationToken) -> Union<Thenable<Unit>, Unit>
+
+  /**
+   * An extension-provided function that provides detailed statement and
+   * function-level coverage for a file. The editor will call this when more
+   * detail is needed for a file, such as when it's opened in an editor or
+   * expanded in the **Test Coverage** view.
+   *
+   * The [FileCoverage] object passed to this function is the same instance
+   * emitted on [TestRun.addCoverage] calls associated with this profile.
+   */
+  var loadDetailedCoverage: (
+    testRun: TestRun,
+    fileCoverage: FileCoverage,
+    token: CancellationToken,
+  ) -> Thenable<Array<FileCoverageDetail>>
 
   /**
    * Deletes the run profile.
