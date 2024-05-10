@@ -84,14 +84,14 @@ export declare class Upload {
      * @param {string} ussname          - Name of the USS file to write to
      * @param {Buffer} buffer          - Data to be written
      * @param {IUploadOptions}  [options={}] - Uploading options
-     * @returns {Promise<object>}
+     * @returns {Promise<string>}
      */
     static bufferToUssFile(session: AbstractSession, ussname: string, buffer: Buffer, options?: IUploadOptions): Promise<string>;
     /**
      * Upload content to USS file
      * @param {AbstractSession} session - z/OS connection info
      * @param {string} ussname          - Name of the USS file to write to
-     * @param {Buffer} uploadStream          - Data to be written
+     * @param {Stream} uploadStream          - Data to be written
      * @param {IUploadOptions}  [options={}] - Uploading options
      * @returns {Promise<IZosFilesResponse>} - A response indicating the outcome
      */

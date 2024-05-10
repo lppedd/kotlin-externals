@@ -8,7 +8,6 @@ import { IDsmListOptions } from "./doc/IDsmListOptions";
  * This class holds helper functions that are used to list data sets and its members through the z/OS MF APIs
  */
 export declare class List {
-    private static CONTROL_CHAR_REGEX;
     /**
      * Retrieve all members from a PDS
      *
