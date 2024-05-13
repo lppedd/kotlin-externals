@@ -451,13 +451,6 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/selenium-webdriver@4.1.21":
-  version "4.1.21"
-  resolved "https://registry.yarnpkg.com/@types/selenium-webdriver/-/selenium-webdriver-4.1.21.tgz#79fe31faf9953a4143c3e32944d98d5146bbe185"
-  integrity sha512-QGURnImvxYlIQz5DVhvHdqpYNLBjhJ2Vm+cnQI2G9QZzkWlZm0LkLcvDcHp+qE6N2KBz4CeuvXgPO7W3XQ0Tyw==
-  dependencies:
-    "@types/ws" "*"
-
 "@types/selenium-webdriver@^4.1.22":
   version "4.1.22"
   resolved "https://registry.yarnpkg.com/@types/selenium-webdriver/-/selenium-webdriver-4.1.22.tgz#344519b90727eb713e1ce6d2e0198eb0b4f8f316"
