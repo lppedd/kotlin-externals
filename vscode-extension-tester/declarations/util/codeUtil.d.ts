@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { logging } from "selenium-webdriver";
+import { logging } from 'selenium-webdriver';
 export declare enum ReleaseQuality {
     Stable = "stable",
     Insider = "insider"

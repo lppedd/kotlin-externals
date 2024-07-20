@@ -1,6 +1,6 @@
 {
   "name": "vscode-extension-tester",
-  "version": "8.2.0",
+  "version": "8.3.1",
   "description": "ExTester is a package that is designed to help you run UI tests for your Visual Studio Code extensions using selenium-webdriver.",
   "icon": "icons/logo.png",
   "main": "out/extester.js",
@@ -52,31 +52,31 @@
     "ui-test"
   ],
   "supportedVersions": {
-    "vscode-min": "1.87.2",
-    "vscode-max": "1.89.0",
-    "nodejs": "18"
+    "vscode-min": "1.88.1",
+    "vscode-max": "1.90.2",
+    "nodejs": "20"
   },
   "dependencies": {
-    "@redhat-developer/locators": "^1.1.1",
-    "@redhat-developer/page-objects": "^1.1.1",
+    "@redhat-developer/locators": "^1.1.3",
+    "@redhat-developer/page-objects": "^1.1.3",
     "@types/selenium-webdriver": "^4.1.22",
-    "@vscode/vsce": "^2.26.1",
-    "c8": "^9.1.0",
-    "commander": "^12.0.0",
+    "@vscode/vsce": "^2.29.0",
+    "c8": "^10.1.2",
+    "commander": "^12.1.0",
     "compare-versions": "^6.1.0",
     "find-up": "7.0.0",
     "fs-extra": "^11.2.0",
-    "glob": "^10.3.12",
+    "glob": "^10.4.2",
     "got": "^13.0.0",
     "hpagent": "^1.2.0",
     "js-yaml": "^4.1.0",
     "sanitize-filename": "^1.6.3",
-    "selenium-webdriver": "^4.20.0",
+    "selenium-webdriver": "^4.21.0",
     "targz": "^1.0.1"
   },
   "peerDependencies": {
     "mocha": ">=5.2.0",
     "typescript": ">=4.6.2"
   },
-  "gitHead": "09544612fb1a36c75ae7e7aa90f57085b813b83e"
+  "gitHead": "d60b9bb6451e776a9ceefbaee32d9becdee5430d"
 }

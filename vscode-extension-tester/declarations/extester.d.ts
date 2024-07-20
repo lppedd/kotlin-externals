@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/// <reference types="mocha" />
 import { ReleaseQuality, RunOptions } from './util/codeUtil';
 export { ReleaseQuality };
 export { MochaOptions } from 'mocha';
@@ -57,7 +56,7 @@ export declare class ExTester {
      * @param vsixFile path to extension .vsix file. If not set, default vsce path will be used
      * @param useYarn when true run `vsce package` with the `--yarn` flag
      */
-    installVsix({ vsixFile, useYarn, installDependencies }?: {
+    installVsix({ vsixFile, useYarn, installDependencies, }?: {
         vsixFile?: string;
         useYarn?: boolean;
         installDependencies?: boolean;
@@ -89,7 +88,7 @@ export declare class ExTester {
      *
      * @returns Promise resolving to the mocha process exit code - 0 for no failures, 1 otherwise
      */
-    setupAndRunTests(testFilesPattern: string | string[], vscodeVersion?: string, setupOptions?: Omit<SetupOptions, "vscodeVersion">, runOptions?: Omit<RunOptions, "vscodeVersion">): Promise<number>;
+    setupAndRunTests(testFilesPattern: string | string[], vscodeVersion?: string, setupOptions?: Omit<SetupOptions, 'vscodeVersion'>, runOptions?: Omit<RunOptions, 'vscodeVersion'>): Promise<number>;
     /**
      * Runs the selected test files in VS Code using mocha and webdriver
      * @param testFilesPattern glob pattern(s) for selected test files
