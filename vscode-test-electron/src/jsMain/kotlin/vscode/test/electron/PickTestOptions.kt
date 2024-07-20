@@ -1,6 +1,10 @@
 package vscode.test.electron
 
-external interface TestOptionsPartial {
+/**
+ * TODO(Edoardo): equivalent to `Pick<TestOptions, 'reuseMachineInstall' | 'platform'>` in TS.
+ *   Need a compiler plugin.
+ */
+external interface PickTestOptions {
   /**
    * Whether VS Code should be launched using default settings and extensions
    * installed on this machine. If `false`, then separate directories will be

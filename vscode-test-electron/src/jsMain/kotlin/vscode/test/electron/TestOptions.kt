@@ -37,7 +37,7 @@ external interface TestOptions {
    * ```
    *
    * When running the extension test, the Extension Development Host will call this function
-   * that runs the test suite. This function should throws an error if any test fails.
+   * that runs the test suite. This function should throw an error if any test fails.
    *
    * The first argument is the path to the file specified in `extensionTestsPath`.
    *

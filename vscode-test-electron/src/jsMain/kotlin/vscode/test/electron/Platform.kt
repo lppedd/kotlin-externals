@@ -1,5 +1,3 @@
-@file:JsModule("@vscode/test-electron")
-
 package vscode.test.electron
 
 @seskar.js.JsVirtual

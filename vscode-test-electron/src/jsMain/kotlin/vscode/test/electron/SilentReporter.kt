@@ -8,9 +8,9 @@ external class SilentReporter : ProgressReporter {
 
   fun error()
 
-  @Deprecated("Use report()", ReplaceWith("report()"), DeprecationLevel.ERROR)
+  @Deprecated("Use report()", ReplaceWith("report()"), DeprecationLevel.HIDDEN)
   override fun report(report: ProgressReport)
 
-  @Deprecated("Use error()", ReplaceWith("error()"), DeprecationLevel.ERROR)
+  @Deprecated("Use error()", ReplaceWith("error()"), DeprecationLevel.HIDDEN)
   override fun error(err: Any?)
 }

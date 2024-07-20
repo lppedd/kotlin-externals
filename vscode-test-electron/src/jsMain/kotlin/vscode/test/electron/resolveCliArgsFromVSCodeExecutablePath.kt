@@ -23,5 +23,5 @@ package vscode.test.electron
  */
 external fun resolveCliArgsFromVSCodeExecutablePath(
   vscodeExecutablePath: String,
-  options: TestOptionsPartial = definedExternally,
+  options: PickTestOptions = definedExternally,
 ): Array<String>
