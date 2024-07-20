@@ -15,6 +15,7 @@ external class VSBrowser {
 
   /**
    * Starts the vscode browser from a given path
+   *
    * @param codePath path to code binary
    */
   fun start(codePath: String): Promise<VSBrowser>
@@ -41,12 +42,14 @@ external class VSBrowser {
 
   /**
    * Take a screenshot of the browser
+   *
    * @param name file name of the screenshot without extension
    */
   fun takeScreenshot(name: String): Promise<Unit>
 
   /**
    * Get a screenshots folder path
+   *
    * @return string path to the screenshots folder
    */
   fun getScreenshotsDir(): String

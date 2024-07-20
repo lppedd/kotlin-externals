@@ -1,5 +1,3 @@
-@file:JsModule("vscode-extension-tester")
-
 package vscode.extension.tester.util
 
 import seskar.js.JsValue

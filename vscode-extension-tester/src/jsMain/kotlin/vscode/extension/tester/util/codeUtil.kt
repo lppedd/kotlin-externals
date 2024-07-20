@@ -11,6 +11,7 @@ import js.promise.Promise
 external class CodeUtil {
   /**
    * Create an instance of code handler
+   *
    * @param folder Path to folder where all the artifacts will be stored.
    * @param extensionsFolder Path to use as extensions directory by VS Code
    */
@@ -48,18 +49,21 @@ external class CodeUtil {
 
   /**
    * Open files/folders in running vscode
+   *
    * @param paths vararg paths to files or folders to open
    */
   fun open(vararg paths: String)
 
   /**
    * Download a vsix file
+   *
    * @param vsixURL URL of the vsix file
    */
   fun downloadExtension(vsixURL: String): Promise<String>
 
   /**
    * Package extension into a vsix file
+   *
    * @param useYarn false to use npm as packaging system, true to use yarn instead
    */
   fun packageExtension(useYarn: Boolean = definedExternally): Promise<Unit>
@@ -76,7 +80,6 @@ external class CodeUtil {
    *
    * @param testFilesPattern glob pattern of test files to run
    * @param runOptions additional options for customizing the test run
-   *
    * @return The exit code of the mocha process
    */
   fun runTests(
@@ -89,7 +92,6 @@ external class CodeUtil {
    * Works only for versions 1.30+, older versions need to be checked manually
    *
    * @param codeVersion version of VS Code, default latest
-   * @param quality release stream, default stable
    */
   fun getChromiumVersion(codeVersion: String = definedExternally): Promise<String>
 
@@ -100,7 +102,7 @@ external class CodeUtil {
   fun checkOfflineRequirements(): String
 
   /**
-   * Attempt to get chromium version from a downloaded copy of vs code
+   * Attempt to get Chromium version from a downloaded copy of VS Code
    */
   fun getChromiumVersionOffline(): String
 

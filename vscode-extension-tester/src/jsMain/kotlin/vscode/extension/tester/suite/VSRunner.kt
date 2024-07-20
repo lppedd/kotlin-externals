@@ -21,6 +21,7 @@ external class VSRunner {
 
   /**
    * Set up mocha suite, add vscode instance handling, run tests
+   *
    * @param testFilesPattern glob pattern of test files to run
    * @param logLevel The logging level for the Webdriver
    * @return The exit code of the mocha process

@@ -12,6 +12,8 @@ import js.promise.Promise
  */
 external class Coverage {
   val targetDir: String
+
   fun loadConfig(): Promise<Unit>
+
   fun write(): Promise<Unit>
 }

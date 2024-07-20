@@ -2,4 +2,4 @@
 
 package vscode.extension.tester
 
-external fun loadCodeVersion(version: String?): String
+external fun loadCodeVersion(version: String = definedExternally): String
