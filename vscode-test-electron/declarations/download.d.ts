@@ -1,4 +1,5 @@
-import { ProgressReporter } from './progress';
+import { ProgressReporter } from './progress.js';
+import { Version } from './util';
 interface IFetchStableOptions {
     timeout: number;
     cachePath: string;
@@ -7,24 +8,69 @@ interface IFetchStableOptions {
 interface IFetchInferredOptions extends IFetchStableOptions {
     extensionsDevelopmentPath?: string | string[];
 }
-export declare const fetchStableVersions: (timeout: number) => Promise<string[]>;
-export declare const fetchInsiderVersions: (timeout: number) => Promise<string[]>;
-export declare function fetchTargetInferredVersion(options: IFetchInferredOptions): Promise<string>;
+export declare const fetchStableVersions: (released: boolean, timeout: number) => Promise<string[]>;
+export declare const fetchInsiderVersions: (released: boolean, timeout: number) => Promise<string[]>;
+export declare function fetchTargetInferredVersion(options: IFetchInferredOptions): Promise<Version>;
 /**
  * Adapted from https://github.com/microsoft/TypeScript/issues/29729
  * Since `string | 'foo'` doesn't offer auto completion
  */
-declare type StringLiteralUnion<T extends string> = T | (string & {});
-export declare type DownloadVersion = StringLiteralUnion<'insiders' | 'stable'>;
-export declare type DownloadPlatform = StringLiteralUnion<'darwin' | 'darwin-arm64' | 'win32-x64-archive' | 'win32-arm64-archive' | 'linux-x64' | 'linux-arm64' | 'linux-armhf'>;
+type StringLiteralUnion<T extends string> = T | (string & {});
+export type DownloadVersion = StringLiteralUnion<'insiders' | 'stable'>;
+export type DownloadPlatform = StringLiteralUnion<'darwin' | 'darwin-arm64' | 'win32-x64-archive' | 'win32-arm64-archive' | 'linux-x64' | 'linux-arm64' | 'linux-armhf'>;
 export interface DownloadOptions {
-    readonly cachePath: string;
-    readonly version: DownloadVersion;
-    readonly platform: DownloadPlatform;
-    readonly extensionDevelopmentPath?: string | string[];
-    readonly reporter?: ProgressReporter;
-    readonly extractSync?: boolean;
-    readonly timeout?: number;
+    /**
+     * The VS Code version to download. Valid versions are:
+     * - `'stable'`
+     * - `'insiders'`
+     * - `'1.32.0'`, `'1.31.1'`, etc
+     *
+     * Defaults to `stable`, which is latest stable version.
+     *
+     * *If a local copy exists at `.vscode-test/vscode-<VERSION>`, skip download.*
+     */
+    version: DownloadVersion;
+    /**
+     * The VS Code platform to download. If not specified, it defaults to the
+     * current platform.
+     *
+     * Possible values are:
+     * 	- `win32-x64-archive`
+     * 	- `win32-arm64-archive		`
+     * 	- `darwin`
+     * 	- `darwin-arm64`
+     * 	- `linux-x64`
+     * 	- `linux-arm64`
+     * 	- `linux-armhf`
+     */
+    platform: DownloadPlatform;
+    /**
+     * Path where the downloaded VS Code instance is stored.
+     * Defaults to `.vscode-test` within your working directory folder.
+     */
+    cachePath: string;
+    /**
+     * Absolute path to the extension root. Passed to `--extensionDevelopmentPath`.
+     * Must include a `package.json` Extension Manifest.
+     */
+    extensionDevelopmentPath?: string | string[];
+    /**
+     * Progress reporter to use while VS Code is downloaded. Defaults to a
+     * console reporter. A {@link SilentReporter} is also available, and you
+     * may implement your own.
+     */
+    reporter?: ProgressReporter;
+    /**
+     * Whether the downloaded zip should be synchronously extracted. Should be
+     * omitted unless you're experiencing issues installing VS Code versions.
+     */
+    extractSync?: boolean;
+    /**
+     * Number of milliseconds after which to time out if no data is received from
+     * the remote when downloading VS Code. Note that this is an 'idle' timeout
+     * and does not enforce the total time VS Code may take to download.
+     */
+    timeout?: number;
 }
 export declare const defaultCachePath: string;
 /**

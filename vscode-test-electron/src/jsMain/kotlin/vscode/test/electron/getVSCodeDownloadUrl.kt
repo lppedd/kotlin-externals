@@ -3,6 +3,6 @@
 package vscode.test.electron
 
 external fun getVSCodeDownloadUrl(
-  version: String,
-  platform: DownloadPlatform = definedExternally,
+  version: Version,
+  platform: String = definedExternally,
 ): String

@@ -1,11 +1,19 @@
-/// <reference types="node" />
+import { SpawnOptions } from 'child_process';
 import * as https from 'https';
-import { DownloadPlatform } from './download';
+import { DownloadOptions, DownloadPlatform } from './download';
 import { TestOptions } from './runTest';
 export declare let systemDefaultPlatform: DownloadPlatform;
-export declare function isInsiderVersionIdentifier(version: string): boolean;
-export declare function isStableVersionIdentifier(version: string): boolean;
-export declare function getVSCodeDownloadUrl(version: string, platform?: DownloadPlatform): string;
+export declare class Version {
+    readonly id: string;
+    readonly isReleased: boolean;
+    static parse(version: string): Version;
+    constructor(id: string, isReleased?: boolean);
+    get isCommit(): boolean;
+    get isInsiders(): boolean;
+    get isStable(): boolean;
+    toString(): string;
+}
+export declare function getVSCodeDownloadUrl(version: Version, platform: string): string;
 export declare function urlToOptions(url: string): https.RequestOptions;
 export declare function downloadDirToExecutablePath(dir: string, platform: DownloadPlatform): string;
 export declare function insidersDownloadDirToExecutablePath(dir: string, platform: DownloadPlatform): string;
@@ -23,8 +31,8 @@ export interface IUpdateMetadata {
     sha256hash: string;
     supportsFastUpdate: boolean;
 }
-export declare function getInsidersVersionMetadata(platform: string, version: string): Promise<IUpdateMetadata>;
-export declare function getLatestInsidersMetadata(platform: string): Promise<IUpdateMetadata>;
+export declare function getInsidersVersionMetadata(platform: string, version: string, released: boolean): Promise<IUpdateMetadata>;
+export declare function getLatestInsidersMetadata(platform: string, released: boolean): Promise<IUpdateMetadata>;
 /**
  * Resolve the VS Code cli path from executable path returned from `downloadAndUnzipVSCode`.
  * Usually you will want {@link resolveCliArgsFromVSCodeExecutablePath} instead.
@@ -43,12 +51,45 @@ export declare function resolveCliPathFromVSCodeExecutablePath(vscodeExecutableP
  * cp.spawnSync(cli, [...args, '--install-extension', '<EXTENSION-ID-OR-PATH-TO-VSIX>'], {
  *   encoding: 'utf-8',
  *   stdio: 'inherit'
+ *   shell: process.platform === 'win32',
  * });
  * ```
  *
  * @param vscodeExecutablePath The `vscodeExecutablePath` from `downloadAndUnzipVSCode`.
  */
 export declare function resolveCliArgsFromVSCodeExecutablePath(vscodeExecutablePath: string, options?: Pick<TestOptions, 'reuseMachineInstall' | 'platform'>): string[];
+export interface RunVSCodeCommandOptions extends Partial<DownloadOptions> {
+    /**
+     * Additional options to pass to `child_process.spawn`
+     */
+    spawn?: SpawnOptions;
+    /**
+     * Whether VS Code should be launched using default settings and extensions
+     * installed on this machine. If `false`, then separate directories will be
+     * used inside the `.vscode-test` folder within the project.
+     *
+     * Defaults to `false`.
+     */
+    reuseMachineInstall?: boolean;
+}
+/** Adds the extensions and user data dir to the arguments for the VS Code CLI */
+export declare function getProfileArguments(args: readonly string[]): string[];
+export declare function hasArg(argName: string, argList: readonly string[]): boolean;
+export declare class VSCodeCommandError extends Error {
+    readonly exitCode: number | null;
+    readonly stderr: string;
+    stdout: string;
+    constructor(args: string[], exitCode: number | null, stderr: string, stdout: string);
+}
+/**
+ * Runs a VS Code command, and returns its output.
+ *
+ * @throws a {@link VSCodeCommandError} if the command fails
+ */
+export declare function runVSCodeCommand(_args: readonly string[], options?: RunVSCodeCommandOptions): Promise<{
+    stdout: string;
+    stderr: string;
+}>;
 /** Predicates whether arg is undefined or null */
 export declare function isDefined<T>(arg: T | undefined | null): arg is T;
 /**

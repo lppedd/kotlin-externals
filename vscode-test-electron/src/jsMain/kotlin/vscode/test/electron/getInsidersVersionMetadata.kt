@@ -7,4 +7,5 @@ import js.promise.Promise
 external fun getInsidersVersionMetadata(
   platform: String,
   version: String,
+  released: Boolean,
 ): Promise<IUpdateMetadata>

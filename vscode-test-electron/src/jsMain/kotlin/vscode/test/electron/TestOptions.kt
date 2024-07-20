@@ -13,33 +13,6 @@ external interface TestOptions {
   var vscodeExecutablePath: String?
 
   /**
-   * The VS Code version to download. Valid versions are:
-   * - `'stable'`
-   * - `'insiders'`
-   * - `'1.32.0'`, `'1.31.1'`, etc
-   *
-   * Defaults to `stable`, which is latest stable version.
-   *
-   * *If a local copy exists at `.vscode-test/vscode-<VERSION>`, skip download.*
-   */
-  var version: DownloadVersion?
-
-  /**
-   * The VS Code platform to download. If not specified, it defaults to the
-   * current platform.
-   *
-   * Possible values are:
-   * 	- `win32-x64-archive`
-   * 	- `win32-arm64-archive		`
-   * 	- `darwin`
-   * 	- `darwin-arm64`
-   * 	- `linux-x64`
-   * 	- `linux-arm64`
-   * 	- `linux-armhf`
-   */
-  var platform: DownloadPlatform?
-
-  /**
    * Whether VS Code should be launched using default settings and extensions
    * installed on this machine. If `false`, then separate directories will be
    * used inside the `.vscode-test` folder within the project.
@@ -52,7 +25,7 @@ external interface TestOptions {
    * Absolute path to the extension root. Passed to `--extensionDevelopmentPath`.
    * Must include a `package.json` Extension Manifest.
    */
-  var extensionDevelopmentPath: Union<String, Array<String>> // string | string[]
+  var extensionDevelopmentPath: Union<String, Array<String>>
 
   /**
    * Absolute path to the extension tests runner. Passed to `--extensionTestsPath`.
@@ -87,6 +60,39 @@ external interface TestOptions {
    * See `code --help` for possible arguments.
    */
   var launchArgs: Array<String>?
+
+  /**
+   * The VS Code version to download. Valid versions are:
+   * - `'stable'`
+   * - `'insiders'`
+   * - `'1.32.0'`, `'1.31.1'`, etc
+   *
+   * Defaults to `stable`, which is latest stable version.
+   *
+   * *If a local copy exists at `.vscode-test/vscode-<VERSION>`, skip download.*
+   */
+  var version: DownloadVersion?
+
+  /**
+   * The VS Code platform to download. If not specified, it defaults to the
+   * current platform.
+   *
+   * Possible values are:
+   * 	- `win32-x64-archive`
+   * 	- `win32-arm64-archive		`
+   * 	- `darwin`
+   * 	- `darwin-arm64`
+   * 	- `linux-x64`
+   * 	- `linux-arm64`
+   * 	- `linux-armhf`
+   */
+  var platform: DownloadPlatform?
+
+  /**
+   * Path where the downloaded VS Code instance is stored.
+   * Defaults to `.vscode-test` within your working directory folder.
+   */
+  var cachePath: String?
 
   /**
    * Progress reporter to use while VS Code is downloaded. Defaults to a

@@ -4,4 +4,7 @@ package vscode.test.electron
 
 import js.promise.Promise
 
-external fun getLatestInsidersMetadata(platform: String): Promise<IUpdateMetadata>
+external fun getLatestInsidersMetadata(
+  platform: String,
+  released: Boolean,
+): Promise<IUpdateMetadata>

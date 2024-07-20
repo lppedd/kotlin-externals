@@ -21,7 +21,7 @@ export declare enum ProgressReportStage {
     /** Fired after folder is downloaded and unzipped */
     NewInstallComplete = "newInstallComplete"
 }
-export declare type ProgressReport = {
+export type ProgressReport = {
     stage: ProgressReportStage.FetchingVersion;
 } | {
     stage: ProgressReportStage.ResolvedVersion;
@@ -67,13 +67,4 @@ export declare class SilentReporter implements ProgressReporter {
     error(): void;
 }
 /** Default progress reporter that logs VS Code download progress to console */
-export declare class ConsoleReporter implements ProgressReporter {
-    private readonly showDownloadProgress;
-    private version?;
-    private downloadReport?;
-    constructor(showDownloadProgress: boolean);
-    report(report: ProgressReport): void;
-    error(err: unknown): void;
-    private flushDownloadReport;
-    private reportDownload;
-}
+export declare const makeConsoleReporter: () => Promise<ProgressReporter>;

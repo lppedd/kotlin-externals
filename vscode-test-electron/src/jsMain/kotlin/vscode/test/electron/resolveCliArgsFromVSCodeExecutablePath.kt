@@ -14,7 +14,8 @@ package vscode.test.electron
  *
  * cp.spawnSync(cli, [...args, '--install-extension', '<EXTENSION-ID-OR-PATH-TO-VSIX>'], {
  *   encoding: 'utf-8',
- *   stdio: 'inherit'
+ *   stdio: 'inherit',
+ *   shell: process.platform === 'win32',
  * });
  * ```
  *
