@@ -197,6 +197,13 @@ open external class Mocha {
   fun delay(): Boolean
 
   /**
+   * Fails test run if no tests encountered with exit-code 1.
+   *
+   * See https://mochajs.org/api/mocha#failZero
+   */
+  fun failZero(failZero: Boolean = definedExternally) // this
+
+  /**
    * Tests marked only fail the suite
    *
    * See https://mochajs.org/api/mocha#forbidOnly

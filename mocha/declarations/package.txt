@@ -1,6 +1,6 @@
 {
     "name": "@types/mocha",
-    "version": "10.0.6",
+    "version": "10.0.7",
     "description": "TypeScript definitions for mocha",
     "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/mocha",
     "license": "MIT",
@@ -50,6 +50,6 @@
     },
     "scripts": {},
     "dependencies": {},
-    "typesPublisherContentHash": "de34ee99a18094486419f8e3b6c2a3f81f623ecdcbc5f6f4cfe46236c7df5831",
-    "typeScriptVersion": "4.5"
+    "typesPublisherContentHash": "ea166b5d18b6bdbe9f8b4f5e717c90acfceece687f59ff6d753ca478d22b709f",
+    "typeScriptVersion": "4.7"
 }

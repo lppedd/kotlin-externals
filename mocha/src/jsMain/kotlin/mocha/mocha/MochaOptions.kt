@@ -31,6 +31,9 @@ external interface MochaOptions<T : Any?> {
   /** Report tests without running them? */
   var dryRun: Boolean?
 
+  /** Fail test run if zero tests encountered. */
+  var failZero: Boolean?
+
   /** Test filter given string. */
   var fgrep: String?
 
