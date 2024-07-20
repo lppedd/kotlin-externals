@@ -5,6 +5,7 @@ package vscode.debug
 
 import js.array.ReadonlyArray
 import vscode.*
+import kotlin.ts.Union
 
 /**
  * The currently active [DebugSession] or `undefined`. The active debug session is the one
@@ -50,3 +51,16 @@ external val onDidTerminateDebugSession: Event<DebugSession>
  * An [Event] that is emitted when the set of breakpoints is added, removed, or changed.
  */
 external val onDidChangeBreakpoints: Event<BreakpointsChangeEvent>
+
+/**
+ * The currently focused thread or stack frame, or `undefined` if no
+ * thread or stack is focused. A thread can be focused any time there is
+ * an active debug session, while a stack frame can only be focused when
+ * a session is paused and the call stack has been retrieved.
+ */
+external val activeStackItem: Union<DebugThread, DebugStackFrame>?
+
+/**
+ * An event which fires when the [activeStackItem] has changed.
+ */
+external val onDidChangeActiveStackItem: Event<Union<DebugThread, DebugStackFrame>?>

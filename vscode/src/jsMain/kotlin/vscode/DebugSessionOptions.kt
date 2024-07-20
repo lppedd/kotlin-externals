@@ -12,7 +12,7 @@ external interface DebugSessionOptions {
 
   /**
    * Controls whether lifecycle requests like 'restart' are sent to the newly created session or its parent session.
-   * By default (if the property is false or missing), lifecycle requests are sent to the new session.
+   * By default, (if the property is false or missing), lifecycle requests are sent to the new session.
    * This property is ignored if the session has no parent session.
    */
   var lifecycleManagedByParent: Boolean?
@@ -56,4 +56,11 @@ external interface DebugSessionOptions {
    * When true, the debug viewlet will not be automatically revealed for this session.
    */
   var suppressDebugView: Boolean?
+
+  /**
+   * Signals to the editor that the debug session was started from a test run
+   * request. This is used to link the lifecycle of the debug session and
+   * test run in UI actions.
+   */
+  var testRun: TestRun?
 }

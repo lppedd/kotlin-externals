@@ -132,4 +132,11 @@ external interface ExtensionContext {
    * The current `Extension` instance.
    */
   val extension: Extension<Any?>
+
+  /**
+   * An object that keeps information about how this extension can use language models.
+   *
+   * @see LanguageModelChat.sendRequest
+   */
+  val languageModelAccessInformation: LanguageModelAccessInformation
 }
