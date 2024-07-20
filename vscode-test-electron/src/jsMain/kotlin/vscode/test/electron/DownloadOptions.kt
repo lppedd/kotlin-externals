@@ -21,7 +21,7 @@ external interface DownloadOptions {
    *
    * Possible values are:
    * 	- `win32-x64-archive`
-   * 	- `win32-arm64-archive		`
+   * 	- `win32-arm64-archive`
    * 	- `darwin`
    * 	- `darwin-arm64`
    * 	- `linux-x64`
