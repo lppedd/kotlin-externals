@@ -5,7 +5,7 @@ package vscode
 import kotlin.ts.Union
 
 /**
- * A tree item is an UI element of the tree. Tree items are created by the [TreeDataProvider].
+ * A tree item is a UI element of the tree. Tree items are created by the [TreeDataProvider].
  */
 open external class TreeItem {
   /**

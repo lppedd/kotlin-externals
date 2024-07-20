@@ -13,7 +13,7 @@ import vscode.Extension
 external val all: ReadonlyArray<Extension<Any?>>
 
 /**
- * An event which fires when `extensions.all` changes. This can happen when extensions are
- * installed, uninstalled, enabled or disabled.
+ * An event which fires when `extensions.all` changes.
+ * This can happen when extensions are installed, uninstalled, enabled or disabled.
  */
 external val onDidChange: Event<Unit>

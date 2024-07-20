@@ -16,6 +16,7 @@ import vscode.Thenable
  *
  * Currently, there are only two authentication providers that are contributed from built in extensions
  * to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
+ *
  * @param providerId The id of the provider to use
  * @param scopes A list of scopes representing the permissions requested. These are dependent on the authentication provider
  * @param options The [AuthenticationGetSessionOptions] to use
@@ -35,6 +36,7 @@ external fun getSession(
  *
  * Currently, there are only two authentication providers that are contributed from built in extensions
  * to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
+ *
  * @param providerId The id of the provider to use
  * @param scopes A list of scopes representing the permissions requested. These are dependent on the authentication provider
  * @param options The [AuthenticationGetSessionOptions] to use
@@ -54,6 +56,7 @@ external fun getSession(
  *
  * Currently, there are only two authentication providers that are contributed from built in extensions
  * to the editor that implement GitHub and Microsoft authentication: their providerId's are 'github' and 'microsoft'.
+ *
  * @param providerId The id of the provider to use
  * @param scopes A list of scopes representing the permissions requested. These are dependent on the authentication provider
  * @param options The [AuthenticationGetSessionOptions] to use

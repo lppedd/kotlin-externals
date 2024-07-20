@@ -14,8 +14,9 @@ external interface AuthenticationProvider {
 
   /**
    * Get a list of sessions.
+   *
    * @param scopes An optional list of scopes. If provided, the sessions returned should match
-   * these permissions, otherwise all sessions should be returned.
+   *   these permissions, otherwise all sessions should be returned.
    * @return A promise that resolves to an array of authentication sessions.
    */
   fun getSessions(scopes: ReadonlyArray<String> = definedExternally): Thenable<ReadonlyArray<AuthenticationSession>>
@@ -30,6 +31,7 @@ external interface AuthenticationProvider {
    * If the provider has specified that it does not support multiple accounts,
    * then this should never be called if there is already an existing session matching these
    * scopes.
+   *
    * @param scopes A list of scopes, permissions, that the new session should be created with.
    * @return A promise that resolves to an authentication session.
    */
@@ -41,6 +43,7 @@ external interface AuthenticationProvider {
    * If the removal is successful, the onDidChangeSessions event should be fired.
    *
    * If a session cannot be removed, the provider should reject with an error message.
+   *
    * @param sessionId The id of the session to remove.
    */
   fun removeSession(sessionId: String): Thenable<Unit>

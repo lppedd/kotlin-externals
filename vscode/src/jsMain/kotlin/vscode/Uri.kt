@@ -40,13 +40,14 @@ external class Uri {
    * Will handle UNC paths and normalize windows drive letters to lower-case. Also
    * uses the platform specific path separator.
    *
-   * * Will *not* validate the path for invalid characters and semantics.
-   * * Will *not* look at the scheme of this Uri.
-   * * The resulting string shall *not* be used for display purposes but
-   * for disk operations, like `readFile` et al.
+   * - Will *not* validate the path for invalid characters and semantics.
+   * - Will *not* look at the scheme of this Uri.
+   * - The resulting string shall *not* be used for display purposes but
+   *   for disk operations, like `readFile` et al.
    *
    * The *difference* to the [Uri.path]-property is the use of the platform specific
    * path separator and the handling of UNC paths. The sample below outlines the difference:
+   *
    * ```ts
    * const u = URI.parse('file://server/c$/folder/file.txt')
    * u.authority === 'server'
@@ -76,8 +77,8 @@ external class Uri {
    * Returns a string representation of this Uri. The representation and normalization
    * of a URI depends on the scheme.
    *
-   * * The resulting string can be safely used with [Uri.parse].
-   * * The resulting string shall *not* be used for display purposes.
+   * - The resulting string can be safely used with [Uri.parse].
+   * - The resulting string shall *not* be used for display purposes.
    *
    * *Note* that the implementation will encode _aggressive_ which often leads to unexpected,
    * but not incorrect, results. For instance, colons are encoded to `%3A` which might be unexpected
@@ -100,7 +101,7 @@ external class Uri {
 
   companion object {
     /**
-     * Create an URI from a string, e.g. `http://www.example.com/some/path`,
+     * Create a URI from a string, e.g. `http://www.example.com/some/path`,
      * `file:///usr/home`, or `scheme:with/path`.
      *
      * *Note* that for a while uris without a `scheme` were accepted. That is not correct
@@ -108,7 +109,7 @@ external class Uri {
      * `strict`-argument has been added. We *strongly* advise to use it, e.g. `Uri.parse('my:uri', true)`
      *
      * @see [Uri.toString]
-     * @param value The string value of an Uri.
+     * @param value The string value of a Uri.
      * @param strict Throw an error when `value` is empty or when no `scheme` can be parsed.
      * @return A new Uri instance.
      */
@@ -118,7 +119,7 @@ external class Uri {
     ): Uri
 
     /**
-     * Create an URI from a file system path. The [Uri.scheme]
+     * Create a URI from a file system path. The [Uri.scheme]
      * will be `file`.
      *
      * The *difference* between [Uri.parse] and [Uri.file] is that the latter treats the argument
@@ -159,7 +160,7 @@ external class Uri {
      *   so that is true: `joinPath(Uri.file('file:///c:/root'), '../../other').fsPath === 'c:/other'`
      *
      * @param base An uri. Must have a path.
-     * @param pathSegments One more more path fragments
+     * @param pathSegments One more path fragments
      * @return A new uri which path is joined with the given fragments
      */
     fun joinPath(
@@ -168,10 +169,10 @@ external class Uri {
     ): Uri
 
     /**
-     * Create an URI from its component parts
+     * Create a URI from its component parts
      *
      * @see [Uri.toString]
-     * @param components The component parts of an Uri.
+     * @param components The component parts of a Uri.
      * @return A new Uri instance.
      */
     fun from(components: UriFromComponents): Uri

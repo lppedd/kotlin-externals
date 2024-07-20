@@ -15,7 +15,7 @@ external class ChatResponseReferencePart {
    * @param value A uri or location
    * @param iconPath Icon for the reference shown in UI
    */
-  constructor(value: Union<Uri, Location>, iconPath: Union3<Uri, ThemeIcon, ThemeUris>? = definedExternally)
+  constructor(value: Union<Uri, Location>, iconPath: Union3<Uri, ThemeIcon, ThemeUris> = definedExternally)
 
   /**
    * The reference target.

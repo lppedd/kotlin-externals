@@ -13,7 +13,7 @@ external class LanguageModelChatMessage {
    * @param content The content of the message.
    * @param name The optional name of a user for the message.
    */
-  constructor(role: LanguageModelChatMessageRole, content: String, name: String? = definedExternally)
+  constructor(role: LanguageModelChatMessageRole, content: String, name: String = definedExternally)
 
   /**
    * The role of this message.
@@ -39,7 +39,7 @@ external class LanguageModelChatMessage {
      */
     fun User(
       content: String,
-      name: String? = definedExternally,
+      name: String = definedExternally,
     ): LanguageModelChatMessage
 
     /**
@@ -50,7 +50,7 @@ external class LanguageModelChatMessage {
      */
     fun Assistant(
       content: String,
-      name: String? = definedExternally,
+      name: String = definedExternally,
     ): LanguageModelChatMessage
   }
 }

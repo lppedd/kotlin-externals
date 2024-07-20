@@ -15,7 +15,7 @@ import vscode.IDisposable
  *
  * @param id The unique identifier of the provider.
  * @param label The human-readable name of the provider.
- * @param provider The authentication provider provider.
+ * @param provider The authentication provider.
  * @param options Additional options for the provider.
  * @return A [IDisposable] that unregisters this provider when being disposed.
  */

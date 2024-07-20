@@ -1,7 +1,5 @@
 package vscode
 
-import kotlin.ts.Union
-
 /**
  * Represents a language model for making chat requests.
  *
@@ -64,8 +62,8 @@ external interface LanguageModelChat {
    */
   fun sendRequest(
     messages: Array<LanguageModelChatMessage>,
-    options: LanguageModelChatRequestOptions? = definedExternally,
-    token: CancellationToken? = definedExternally,
+    options: LanguageModelChatRequestOptions = definedExternally,
+    token: CancellationToken = definedExternally,
   ): Thenable<LanguageModelChatResponse>
 
   /**
@@ -76,7 +74,19 @@ external interface LanguageModelChat {
    * @return A thenable that resolves to the number of tokens.
    */
   fun countTokens(
-    text: Union<String, LanguageModelChatMessage>,
-    token: CancellationToken? = definedExternally,
+    text: String,
+    token: CancellationToken = definedExternally,
+  ): Thenable<Int>
+
+  /**
+   * Count the number of tokens in a message using the model specific tokenizer-logic.
+   *
+   * @param text A string or a message instance.
+   * @param token Optional cancellation token.  See [CancellationTokenSource] for how to create one.
+   * @return A thenable that resolves to the number of tokens.
+   */
+  fun countTokens(
+    text: LanguageModelChatMessage,
+    token: CancellationToken = definedExternally,
   ): Thenable<Int>
 }

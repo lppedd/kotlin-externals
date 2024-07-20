@@ -39,5 +39,5 @@ external val onDidChangeChatModels: Event<Unit>
  * @return An array of chat models, can be empty!
  */
 external fun selectChatModels(
-  selector: LanguageModelChatSelector? = definedExternally,
+  selector: LanguageModelChatSelector = definedExternally,
 ): Thenable<Array<LanguageModelChat>>

@@ -9,7 +9,7 @@ import vscode.*
  * Find files across all [vscode.workspace.workspaceFolders] in the workspace.
  *
  * Example:
- * ```
+ * ```ts
  * findFiles('**&#47;*.js', '**\/node_modules&#47;**', 10)
  * ```
  *

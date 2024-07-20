@@ -9,12 +9,12 @@ import kotlin.ts.Union
  */
 external class ChatResponseAnchorPart {
   /**
-   * Create a new ChatResponseAnchorPart.
+   * Create a new [ChatResponseAnchorPart].
    *
    * @param value A uri or location.
    * @param title An optional title that is rendered with value.
    */
-  constructor(value: Union<Uri, Location>, title: String? = definedExternally)
+  constructor(value: Union<Uri, Location>, title: String = definedExternally)
 
   /**
    * The target of this anchor.

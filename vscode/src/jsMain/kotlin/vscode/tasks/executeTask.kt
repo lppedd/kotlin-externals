@@ -13,8 +13,8 @@ import vscode.Thenable
  * task execution can be used to terminate the task.
  *
  * @throws [JsError] When running a ShellExecution or a ProcessExecution
- * task in an environment where a new process cannot be started.
- * In such an environment, only CustomExecution tasks can be run.
+ *   task in an environment where a new process cannot be started.
+ *   In such an environment, only CustomExecution tasks can be run.
  *
  * @param task the task to execute
  * @return A thenable that resolves to a task execution.

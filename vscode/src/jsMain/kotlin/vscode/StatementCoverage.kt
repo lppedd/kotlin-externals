@@ -29,14 +29,14 @@ external class StatementCoverage {
   /**
    * @param location The statement position.
    * @param executed The number of times this statement was executed, or a
-   * boolean indicating  whether it was executed if the exact count is
-   * unknown. If zero or false, the statement will be marked as un-covered.
+   *   boolean indicating  whether it was executed if the exact count is
+   *   unknown. If zero or false, the statement will be marked as un-covered.
    * @param branches Coverage from branches of this line.  If it's not a
-   * conditional, this should be omitted.
+   *   conditional, this should be omitted.
    */
   constructor(
     executed: Union<Int, Boolean>,
     location: Union<Position, Range>,
-    branches: Array<BranchCoverage>? = definedExternally,
+    branches: Array<BranchCoverage> = definedExternally,
   )
 }

@@ -27,16 +27,16 @@ external class LanguageModelError : JsError {
      * The requestor does not have permissions to use this
      * language model
      */
-    fun NoPermissions(message: String? = definedExternally): LanguageModelError
+    fun NoPermissions(message: String = definedExternally): LanguageModelError
 
     /**
      * The requestor is blocked from using this language model.
      */
-    fun Blocked(message: String? = definedExternally): LanguageModelError
+    fun Blocked(message: String = definedExternally): LanguageModelError
 
     /**
      * The language model does not exist.
      */
-    fun NotFound(message: String? = definedExternally): LanguageModelError
+    fun NotFound(message: String = definedExternally): LanguageModelError
   }
 }

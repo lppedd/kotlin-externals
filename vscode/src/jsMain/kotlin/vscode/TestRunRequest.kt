@@ -23,11 +23,11 @@ external class TestRunRequest {
    * @param preserveFocus Whether to preserve the user's focus when the run is started
    */
   constructor(
-    include: ReadonlyArray<TestItem>? = definedExternally,
-    exclude: ReadonlyArray<TestItem>? = definedExternally,
-    profile: TestRunProfile? = definedExternally,
-    continuous: Boolean? = definedExternally,
-    preserveFocus: Boolean? = definedExternally,
+    include: ReadonlyArray<TestItem> = definedExternally,
+    exclude: ReadonlyArray<TestItem> = definedExternally,
+    profile: TestRunProfile = definedExternally,
+    continuous: Boolean = definedExternally,
+    preserveFocus: Boolean = definedExternally,
   )
 
   /**

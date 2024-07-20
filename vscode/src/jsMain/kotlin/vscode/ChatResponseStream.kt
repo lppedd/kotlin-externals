@@ -33,7 +33,7 @@ external interface ChatResponseStream {
    */
   fun anchor(
     value: Union<Uri, Location>,
-    title: String? = definedExternally,
+    title: String = definedExternally,
   )
 
   /**
@@ -75,7 +75,7 @@ external interface ChatResponseStream {
    */
   fun reference(
     value: Union<Uri, Location>,
-    iconPath: Union3<Uri, ThemeIcon, ThemeUris>? = definedExternally,
+    iconPath: Union3<Uri, ThemeIcon, ThemeUris> = definedExternally,
   )
 
   /**

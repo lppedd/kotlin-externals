@@ -57,8 +57,8 @@ external interface StatusBarItem {
    * The background color for this entry.
    *
    * *Note*: only the following colors are supported:
-   * * `new ThemeColor('statusBarItem.errorBackground')`
-   * * `new ThemeColor('statusBarItem.warningBackground')`
+   * - `new ThemeColor('statusBarItem.errorBackground')`
+   * - `new ThemeColor('statusBarItem.warningBackground')`
    *
    * More background colors may be supported in the future.
    *

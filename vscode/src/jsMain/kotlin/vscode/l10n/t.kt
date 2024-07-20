@@ -11,14 +11,16 @@ import kotlin.ts.Union3
  * [vscode.env.language] and the bundle has a localized value for this message, then that localized
  * value will be returned (with injected [args] values for any templated values).
  *
+ * Example:
+ * ```ts
+ * l10n.t('Hello {0}!', 'World');
+ * ```
+ *
  * @param message The message to localize. Supports index templating where strings like `{0}` and `{1}` are
  *   replaced by the item at that index in the [args] array.
  * @param args The arguments to be used in the localized string. The index of the argument is used to
  *   match the template placeholder in the localized string.
  * @return localized string with injected arguments.
- *
- * @example
- * l10n.t('Hello {0}!', 'World');
  */
 external fun t(message: String, vararg args: Union3<String, Number, Boolean> /* string | number | boolean */): String
 
@@ -27,14 +29,16 @@ external fun t(message: String, vararg args: Union3<String, Number, Boolean> /* 
  * [vscode.env.language] and the bundle has a localized value for this message, then that localized
  * value will be returned (with injected [args] values for any templated values).
  *
+ * Example:
+ * ```ts
+ * l10n.t('Hello {name}', { name: 'Erich' });
+ * ```
+ *
  * @param message The message to localize. Supports named templating where strings like `{foo}` and `{bar}` are
- *   replaced by the value in the Record for that key (foo, bar, etc).
+ *   replaced by the value in the Record for that key (foo, bar, etc.).
  * @param args The arguments to be used in the localized string. The name of the key in the record is used to
  *   match the template placeholder in the localized string.
  * @return localized string with injected arguments.
- *
- * @example
- * l10n.t('Hello {name}', { name: 'Erich' });
  */
 external fun t(
   message: String,

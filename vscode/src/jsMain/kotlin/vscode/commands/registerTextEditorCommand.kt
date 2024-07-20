@@ -11,10 +11,10 @@ import vscode.TextEditorEdit
  * Registers a text editor command that can be invoked via a keyboard shortcut,
  * a menu item, an action, or directly.
  *
- * Text editor commands are different from ordinary [commands.registerCommand commands] as
+ * Text editor commands are different from ordinary [commands][vscode.commands.registerCommand] as
  * they only execute when there is an active editor when the command is called. Also, the
  * command handler of an editor command has access to the active editor and to an
- * [TextEditorEdit edit]-builder. Note that the edit-builder is only valid while the
+ * [edit][TextEditorEdit]-builder. Note that the edit-builder is only valid while the
  * callback executes.
  *
  * @param command A unique identifier for the command.

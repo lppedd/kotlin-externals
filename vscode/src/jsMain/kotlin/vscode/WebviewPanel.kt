@@ -19,8 +19,7 @@ external interface WebviewPanel {
   /**
    * Icon for the panel shown in UI.
    */
-  // TODO: should be ReadonlyThemeUris
-  var iconPath: Union<Uri, ThemeUris>?
+  var iconPath: Union<Uri, ReadonlyThemeUris>?
 
   /**
    * [Webview] belonging to the panel.

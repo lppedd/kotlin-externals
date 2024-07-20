@@ -89,8 +89,8 @@ external val remoteName: String?
 
 /**
  * The detected default shell for the extension host, this is overridden by the
- * `terminal.integrated.defaultProfile` setting for the extension host's platform. Note that in
- * environments that do not support a shell the value is the empty string.
+ * `terminal.integrated.defaultProfile` setting for the extension host's platform.
+ * Note that in environments that do not support a shell the value is the empty string.
  */
 external val shell: String
 

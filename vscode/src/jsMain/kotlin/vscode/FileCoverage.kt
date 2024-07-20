@@ -33,22 +33,23 @@ external class FileCoverage {
   /**
    * @param uri Covered file URI
    * @param statementCoverage Statement coverage information. If the reporter
-   * does not provide statement coverage information, this can instead be
-   * used to represent line coverage.
+   *   does not provide statement coverage information, this can instead be
+   *   used to represent line coverage.
    * @param branchCoverage Branch coverage information
    * @param declarationCoverage Declaration coverage information
    */
   constructor(
     uri: Uri,
     statementCoverage: TestCoverageCount,
-    branchCoverage: TestCoverageCount? = definedExternally,
-    declarationCoverage: TestCoverageCount? = definedExternally,
+    branchCoverage: TestCoverageCount = definedExternally,
+    declarationCoverage: TestCoverageCount = definedExternally,
   )
 
   companion object {
     /**
      * Creates a [FileCoverage] instance with counts filled in from
      * the coverage details.
+     *
      * @param uri Covered file URI
      * @param details Detailed coverage information
      */
@@ -60,6 +61,7 @@ external class FileCoverage {
     /**
      * Creates a [FileCoverage] instance with counts filled in from
      * the coverage details.
+     *
      * @param uri Covered file URI
      * @param details Detailed coverage information
      */

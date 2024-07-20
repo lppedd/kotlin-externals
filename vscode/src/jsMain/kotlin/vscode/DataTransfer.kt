@@ -9,11 +9,10 @@ import js.iterable.JsIterable
  * A map containing a mapping of the mime type of the corresponding transferred data.
  *
  * Drag and drop controllers that implement [TreeDragAndDropController.handleDrag] can add additional mime types to the
- * data transfer. These additional mime types will only be included in the `handleDrop` when the the drag was initiated from
+ * data transfer. These additional mime types will only be included in the `handleDrop` when the drag was initiated from
  * an element in the same drag and drop controller.
  */
-external class DataTransfer :
-  JsIterable<JsTuple2<String, DataTransferItem>/* [ mimeType: string, item: DataTransferItem ] */> {
+external class DataTransfer : JsIterable<JsTuple2<String, DataTransferItem>> {
   /**
    * Retrieves the data transfer item for a given mime type.
    *

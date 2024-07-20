@@ -18,7 +18,8 @@ import vscode.IDisposable
  *
  * @param debugType The debug type for which the provider is registered.
  * @param provider The [DebugConfigurationProvider] to register.
- * @param triggerKind The [DebugConfigurationProviderTriggerKind] for which the 'provideDebugConfiguration' method of the provider is registered. If `triggerKind` is missing, the value `DebugConfigurationProviderTriggerKind.Initial` is assumed.
+ * @param triggerKind The [DebugConfigurationProviderTriggerKind] for which the 'provideDebugConfiguration' method of the provider is registered.
+ *   If `triggerKind` is missing, the value `DebugConfigurationProviderTriggerKind.Initial` is assumed.
  * @return A [IDisposable] that unregisters this provider when being disposed.
  */
 external fun registerDebugConfigurationProvider(

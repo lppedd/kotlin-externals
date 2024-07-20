@@ -45,22 +45,22 @@ import vscode.GlobPattern
  * changes. For example, when watching a path `/Users/somename/Desktop` and the path itself is
  * being deleted, the watcher may not report an event and may not work anymore from that moment on.
  * The underlying behaviour depends on the path that is provided for watching:
- * * if the path is within any of the workspace folders, deletions are tracked and reported unless
+ * - if the path is within any of the workspace folders, deletions are tracked and reported unless
  *   excluded via `files.watcherExclude` setting
- * * if the path is equal to any of the workspace folders, deletions are not tracked
- * * if the path is outside of any of the workspace folders, deletions are not tracked
+ * - if the path is equal to any of the workspace folders, deletions are not tracked
+ * - if the path is outside of any of the workspace folders, deletions are not tracked
  *
  * If you are interested in being notified when the watched path itself is being deleted, you have
- * to watch it's parent folder. Make sure to use a simple `pattern` (such as putting the name of the
+ * to watch its parent folder. Make sure to use a simple `pattern` (such as putting the name of the
  * folder) to not accidentally watch all sibling folders recursively.
  *
  * *Note* that the file paths that are reported for having changed may have a different path casing
  * compared to the actual casing on disk on case-insensitive platforms (typically macOS and Windows
  * but not Linux). We allow a user to open a workspace folder with any desired path casing and try
  * to preserve that. This means:
- * * if the path is within any of the workspace folders, the path will match the casing of the
+ * - if the path is within any of the workspace folders, the path will match the casing of the
  *   workspace folder up to that portion of the path and match the casing on disk for children
- * * if the path is outside of any of the workspace folders, the casing will match the case of the
+ * - if the path is outside of any of the workspace folders, the casing will match the case of the
  *   path that was provided for watching
  * In the same way, symbolic links are preserved, i.e. the file event will report the path of the
  * symbolic link as it was provided for watching and not the target.

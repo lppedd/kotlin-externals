@@ -28,13 +28,14 @@ external class BranchCoverage {
 
   /**
    * @param executed The number of times this branch was executed, or a
-   * boolean indicating  whether it was executed if the exact count is
-   * unknown. If zero or false, the branch will be marked as un-covered.
+   *   boolean indicating  whether it was executed if the exact count is
+   *   unknown. If zero or false, the branch will be marked as un-covered.
    * @param location The branch position.
+   * @param label TODO
    */
   constructor(
     executed: Union<Int, Boolean>,
-    location: Union<Position, Range>? = definedExternally,
-    label: String? = definedExternally,
+    location: Union<Position, Range> = definedExternally,
+    label: String = definedExternally,
   )
 }
