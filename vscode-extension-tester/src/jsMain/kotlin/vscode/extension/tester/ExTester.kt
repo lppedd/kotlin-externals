@@ -3,9 +3,9 @@
 package vscode.extension.tester
 
 import js.promise.Promise
+import vscode.extension.tester.util.OmitRunOptions
 import vscode.extension.tester.util.ReleaseQuality
 import vscode.extension.tester.util.RunOptions
-import vscode.extension.tester.util.RunOptionsTests
 
 /**
  * ExTester
@@ -67,8 +67,8 @@ external class ExTester {
   fun setupAndRunTests(
     testFilesPattern: String,
     vscodeVersion: String = definedExternally,
-    setupOptions: RunOptionsTests = definedExternally,
-    runOptions: RunOptionsTests = definedExternally,
+    setupOptions: OmitSetupOptions = definedExternally,
+    runOptions: OmitRunOptions = definedExternally,
   ): Promise<Int>
 
   /**
@@ -83,8 +83,8 @@ external class ExTester {
   fun setupAndRunTests(
     testFilesPattern: Array<String>,
     vscodeVersion: String = definedExternally,
-    setupOptions: SetupOptionsTests = definedExternally,
-    runOptions: SetupOptionsTests = definedExternally,
+    setupOptions: OmitSetupOptions = definedExternally,
+    runOptions: OmitRunOptions = definedExternally,
   ): Promise<Int>
 
   /**

@@ -1,6 +1,10 @@
 package vscode.extension.tester.util
 
-external interface RunOptionsTests {
+/**
+ * TODO(Edoardo): equivalent to `Omit<RunOptions, 'vscodeVersion'>` in TS.
+ *   Need a compiler plugin.
+ */
+external interface OmitRunOptions {
   /**
    * Path to custom settings json file
    */

@@ -1,6 +1,10 @@
 package vscode.extension.tester
 
-external interface SetupOptionsTests {
+/**
+ * TODO(Edoardo): equivalent to `Omit<SetupOptions, 'vscodeVersion'>` in TS.
+ *   Need a compiler plugin.
+ */
+external interface OmitSetupOptions {
   /**
    * Ihen true run `vsce package` with the `--yarn` flag
    */

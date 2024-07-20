@@ -24,7 +24,7 @@ external interface RunOptions {
   /**
    * Logging level of the Webdriver
    */
-  var logLevel: Any /* logging.Level? */ // TODO(Edoardo): need selenium externals
+  var logLevel: Any? /* logging.Level? */ // TODO(Edoardo): need selenium externals
 
   /**
    * Try to perform all setup without internet connection, needs all requirements pre-downloaded manually
