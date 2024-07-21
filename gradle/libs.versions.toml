@@ -1,7 +1,7 @@
 [versions]
 kotlin = "2.0.0-Beta2"
-wrappers-kotlin-js = "1.0.0-pre.744"
-wrappers-kotlin-node = "20.11.30-pre.744"
+wrappers-kotlin-js = "1.0.0-pre.780"
+wrappers-kotlin-node = "20.14.10-pre.780"
 ktlint = "0.9.0"
 seskar = "3.6.0"
 karakum = "1.0.0-alpha.46"
