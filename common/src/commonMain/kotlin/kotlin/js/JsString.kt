@@ -5,6 +5,6 @@ package kotlin.js
  *
  * That can be expressed in TypeScript, but not in Kotlin.
  */
-@Target(AnnotationTarget.PROPERTY)
+@Target(AnnotationTarget.PROPERTY, AnnotationTarget.TYPE)
 @Retention(AnnotationRetention.BINARY)
 annotation class JsString(val value: String)

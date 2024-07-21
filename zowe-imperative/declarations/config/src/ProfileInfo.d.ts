@@ -321,6 +321,11 @@ export declare class ProfileInfo {
      */
     readProfilesFromDisk(teamCfgOpts?: IConfigOpts): Promise<void>;
     /**
+     * Function to ensure the credential manager will load successfully
+     * Returns true if it will load, or the credentials are not secured. Returns false if it will not load.
+     */
+    profileManagerWillLoad(): Promise<boolean>;
+    /**
      * Returns an indicator of whether we are using a team configuration or
      * old-school profiles.
      *
