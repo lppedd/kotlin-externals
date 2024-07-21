@@ -4,12 +4,10 @@ package vscode
  * A task provider allows to add tasks to the task service.
  * A task provider is registered via [vscode.tasks.registerTaskProvider].
  */
-external interface TaskProvider<
-  @Suppress("FINAL_UPPER_BOUND")
-  T : Task, // default is Task
-> {
+external interface TaskProvider<T : Task /* default is Task */> {
   /**
    * Provides tasks.
+   *
    * @param token A cancellation token.
    * @return an array of tasks
    */

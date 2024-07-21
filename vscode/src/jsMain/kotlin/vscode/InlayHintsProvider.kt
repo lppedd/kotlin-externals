@@ -4,10 +4,7 @@ package vscode
  * The inlay hints provider interface defines the contract between extensions and
  * the inlay hints feature.
  */
-external interface InlayHintsProvider<
-  @Suppress("FINAL_UPPER_BOUND")
-  T : InlayHint, // default is InlayHint
-> {
+external interface InlayHintsProvider<T : InlayHint /* default is InlayHint */> {
   /**
    * An optional event to signal that inlay hints from this provider have changed.
    */
@@ -16,7 +13,7 @@ external interface InlayHintsProvider<
   /**
    * Provide inlay hints for the given range and document.
    *
-   * *Note* that inlay hints that are not [Range.contains contained] by the given range are ignored.
+   * *Note* that inlay hints that are not [contained][Range.contains] by the given range are ignored.
    *
    * @param document The document in which the command was invoked.
    * @param range The range for which inlay hints should be computed.
@@ -30,14 +27,15 @@ external interface InlayHintsProvider<
   ): ProviderResult<Array<T>>
 
   /**
-   * Given an inlay hint fill in [InlayHint.tooltip tooltip}, {@link InlayHint.textEdits text edits],
-   * or complete label [InlayHintLabelPart parts].
+   * Given an inlay hint fill in [tooltip][InlayHint.tooltip], [text edits][InlayHint.textEdits],
+   * or complete label [parts][InlayHintLabelPart].
    *
    * *Note* that the editor will resolve an inlay hint at most once.
    *
    * @param hint An inlay hint.
    * @param token A cancellation token.
-   * @return The resolved inlay hint or a thenable that resolves to such. It is OK to return the given `item`. When no result is returned, the given `item` will be used.
+   * @return The resolved inlay hint or a thenable that resolves to such. It is OK to return the given `item`.
+   *   When no result is returned, the given `item` will be used.
    */
   fun resolveInlayHint(
     hint: T,

@@ -8,7 +8,7 @@ import kotlin.ts.Union3
 /**
  * A task to execute
  */
-external class Task {
+open external class Task {
   /**
    * Creates a new task.
    *
