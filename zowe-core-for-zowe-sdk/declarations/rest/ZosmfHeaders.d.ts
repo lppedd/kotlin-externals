@@ -6,6 +6,11 @@ import { IHeaderContent } from "./doc/IHeaderContent";
  */
 export declare class ZosmfHeaders {
     /**
+     * file encoding header
+     * @memberof ZosmfHeaders
+     */
+    static readonly X_IBM_INTRDR_FILE_ENCODING = "X-IBM-Intrdr-File-Encoding";
+    /**
      * lrecl header
      * @static
      * @memberof ZosmfHeaders

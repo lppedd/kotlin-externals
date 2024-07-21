@@ -10,6 +10,12 @@ import zowe.sdk.core.rest.doc.IHeaderContent
 external class ZosmfHeaders {
   companion object {
     /**
+     * file encoding header
+     */
+    @JsString("X-IBM-Intrdr-File-Encoding")
+    val X_IBM_INTRDR_FILE_ENCODING: String
+
+    /**
      * lrecl header
      */
     @JsString("X-IBM-Intrdr-Lrecl")
