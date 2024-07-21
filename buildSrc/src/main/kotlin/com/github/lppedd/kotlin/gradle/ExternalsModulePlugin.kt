@@ -48,8 +48,8 @@ class ExternalsModulePlugin : Plugin<Project> {
     // General Kotlin multiplatform configuration
     val kmp = project.kmpExtension
     kmp.compilerOptions {
-      apiVersion.set(KotlinVersion.KOTLIN_1_9)
-      languageVersion.set(KotlinVersion.KOTLIN_1_9)
+      apiVersion.set(KotlinVersion.KOTLIN_2_0)
+      languageVersion.set(KotlinVersion.KOTLIN_2_0)
       freeCompilerArgs.add("-XXLanguage:+JsAllowInvalidCharsIdentifiersEscaping")
     }
 
