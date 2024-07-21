@@ -82,7 +82,7 @@ class ExternalsModulePlugin : Plugin<Project> {
 
     val jsMain = kmp.sourceSets.findByName("jsMain")
     jsMain?.dependencies {
-      implementation("io.github.turansky.seskar:seskar-core:2.40.0")
+      implementation("io.github.turansky.seskar:seskar-core:3.6.0")
       api(project(":common"))
     }
 
