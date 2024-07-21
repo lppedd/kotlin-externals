@@ -109,6 +109,9 @@ declare const _default: {
                 DIRECTORY: string;
                 EXTENSION: string;
                 JCL_SYMBOLS: string;
+                JOB_ENCODING: string;
+                JOB_RECORD_LENGTH: string;
+                JOB_RECORD_FORMAT: string;
             };
             DATA_SET: {
                 SUMMARY: string;

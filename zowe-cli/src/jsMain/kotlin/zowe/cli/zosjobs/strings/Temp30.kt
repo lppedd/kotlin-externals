@@ -7,4 +7,7 @@ external interface Temp30 {
   var DIRECTORY: String
   var EXTENSION: String
   var JCL_SYMBOLS: String
+  var JOB_ENCODING: String
+  var JOB_RECORD_LENGTH: String
+  var JOB_RECORD_FORMAT: String
 }
