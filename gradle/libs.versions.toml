@@ -5,7 +5,7 @@ wrappers-kotlin-node = "20.14.10-pre.780"
 ktlint = "0.9.0"
 seskar = "3.6.0"
 karakum = "1.0.0-alpha.46"
-maven-publish = "0.27.0"
+maven-publish = "0.29.0"
 jnpm = "1.6-SNAPSHOT"
 
 [libraries]
