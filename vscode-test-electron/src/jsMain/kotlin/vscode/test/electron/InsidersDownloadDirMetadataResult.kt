@@ -1,6 +1,6 @@
 package vscode.test.electron
 
-import kotlin.js.Date
+import js.date.Date
 
 external interface InsidersDownloadDirMetadataResult {
   var version: Any?

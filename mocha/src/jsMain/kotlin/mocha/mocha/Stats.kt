@@ -1,6 +1,6 @@
 package mocha.mocha
 
-import kotlin.js.Date
+import js.date.Date
 
 /**
  * Test statistics

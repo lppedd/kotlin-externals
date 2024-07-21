@@ -1,7 +1,7 @@
 package mocha
 
+import js.promise.Promise
 import mocha.mocha.*
-import kotlin.js.Promise
 import kotlin.js.RegExp
 
 /**

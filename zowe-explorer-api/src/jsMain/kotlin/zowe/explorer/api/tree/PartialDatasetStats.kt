@@ -1,6 +1,6 @@
 package zowe.explorer.api.tree
 
-import kotlin.js.Date
+import js.date.Date
 
 external interface PartialDatasetStats {
   var user: String?

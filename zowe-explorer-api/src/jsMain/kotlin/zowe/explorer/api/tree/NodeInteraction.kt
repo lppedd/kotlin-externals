@@ -2,7 +2,7 @@
 
 package zowe.explorer.api.tree
 
-import kotlin.js.Date
+import js.date.Date
 
 /**
  * Contains a node that was recently interacted with,

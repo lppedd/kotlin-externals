@@ -1,6 +1,6 @@
 package vscode
 
-import kotlin.js.Date
+import js.date.Date
 import kotlin.ts.Union
 
 /**
