@@ -33,6 +33,7 @@ export declare type NodeSort = {
 export declare enum JobSortOpts {
     Id = 0,
     DateSubmitted = 1,
-    Name = 2,
-    ReturnCode = 3
+    DateCompleted = 2,
+    Name = 3,
+    ReturnCode = 4
 }

@@ -466,7 +466,7 @@ export declare namespace ZoweExplorerApi {
          * @returns {zowe.IConsoleResponse>}
          * @memberof ICommand
          */
-        issueMvsCommand?(command: string): Promise<zowe.IConsoleResponse>;
+        issueMvsCommand?(command: string, consoleName?: string): Promise<zowe.IConsoleResponse>;
     }
     /**
      * This interface can be used by other VS Code Extensions to access an alternative

@@ -12,9 +12,12 @@ sealed external interface JobSortOpts {
     val DateSubmitted: JobSortOpts
 
     @JsIntValue(2)
-    val Name: JobSortOpts
+    val DateCompleted: JobSortOpts
 
     @JsIntValue(3)
+    val Name: JobSortOpts
+
+    @JsIntValue(4)
     val ReturnCode: JobSortOpts
   }
 }

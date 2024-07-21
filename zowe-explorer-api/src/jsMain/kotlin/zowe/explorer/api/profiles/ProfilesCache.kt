@@ -81,7 +81,7 @@ external class ProfilesCache {
    *
    * @param type Type of Profile, defaults to "zosmf" if nothing passed.
    */
-  fun getProfiles(type: String = definedExternally): Array<IProfileLoaded>
+  fun getProfiles(type: String = definedExternally): Array<IProfileLoaded>?
 
   /**
    * Used for extenders to register with Zowe Explorer that do not need their

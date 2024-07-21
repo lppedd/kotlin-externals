@@ -94,4 +94,5 @@ export declare class ZoweVsCodeExtension {
     private static getServiceProfileForAuthPurposes;
     private static saveCredentials;
     private static promptUserPass;
+    private static promptCertificate;
 }

@@ -97,7 +97,7 @@ export declare class ProfilesCache {
      *
      * @returns {IProfileLoaded[]}
      */
-    getProfiles(type?: string): zowe.imperative.IProfileLoaded[];
+    getProfiles(type?: string): zowe.imperative.IProfileLoaded[] | undefined;
     /**
      * Used for extenders to register with Zowe Explorer that do not need their
      * profile type in the existing MVS, USS, and JES

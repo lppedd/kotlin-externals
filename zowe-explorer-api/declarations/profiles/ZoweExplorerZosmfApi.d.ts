@@ -94,6 +94,6 @@ export declare class ZosmfJesApi extends ZosmfApiCommon implements ZoweExplorerA
 export declare class ZosmfCommandApi extends ZosmfApiCommon implements ZoweExplorerApi.ICommand {
     issueTsoCommand(command: string, acctNum: string): Promise<zowe.IIssueResponse>;
     issueTsoCommandWithParms(command: string, parms: zowe.IStartTsoParms): Promise<zowe.IIssueResponse>;
-    issueMvsCommand(command: string): Promise<zowe.IConsoleResponse>;
+    issueMvsCommand(command: string, consoleName?: string): Promise<zowe.IConsoleResponse>;
 }
 export {};
