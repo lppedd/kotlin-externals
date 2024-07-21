@@ -25,7 +25,10 @@ external class ZosmfCommandApi : ZosmfApiCommon, ZoweExplorerApi.ICommand {
     parms: IStartTsoParms,
   ): Promise<IIssueResponse>
 
-  override fun issueMvsCommand(command: String, consoleName: String): Promise<IConsoleResponse>
+  override fun issueMvsCommand(
+    command: String,
+    consoleName: String,
+  ): Promise<IConsoleResponse>
 
   override fun getStatus(
     profile: IProfileLoaded,

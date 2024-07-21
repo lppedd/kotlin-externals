@@ -581,7 +581,10 @@ external object ZoweExplorerApi {
      * @param command
      * @param consoleName
      */
-    fun issueMvsCommand(command: String, consoleName: String = definedExternally): Promise<IConsoleResponse>
+    fun issueMvsCommand(
+      command: String,
+      consoleName: String = definedExternally,
+    ): Promise<IConsoleResponse>
   }
 
   /**

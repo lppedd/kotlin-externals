@@ -10,7 +10,14 @@ external class Headers {
     val CONTENT_TYPE: String
     val CONTENT_LENGTH: String
     val CONTENT_ENCODING: String
-    val CONTENT_ENCODING_TYPES: JsTuple3<@JsString("br") String, @JsString("deflate") String, @JsString("gzip") String>
+    val CONTENT_ENCODING_TYPES: JsTuple3<
+      @JsString("br")
+      String,
+      @JsString("deflate")
+      String,
+      @JsString("gzip")
+      String,
+    >
     val APPLICATION_JSON: IHeaderContent
     val TEXT_PLAIN: IHeaderContent
     val TEXT_PLAIN_UTF8: Any
