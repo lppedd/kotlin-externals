@@ -1,6 +1,7 @@
 package com.github.lppedd.kotlin.gradle
 
 import com.github.lppedd.kotlin.gradle.ext.kmpExtension
+import com.github.lppedd.kotlin.gradle.ext.stringProperty
 import com.github.lppedd.kotlin.gradle.services.NpmService
 import com.github.lppedd.kotlin.gradle.tasks.CheckNpmVersionTask
 import com.github.lppedd.kotlin.gradle.tasks.CopyTsDeclarationsTask
@@ -16,6 +17,7 @@ import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.plugin.KotlinMultiplatformPluginWrapper
 import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsSubTargetDsl
+import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin.Companion.kotlinNodeJsExtension
 import org.jetbrains.kotlin.gradle.targets.js.yarn.yarn
 import org.jetbrains.kotlin.gradle.tasks.Kotlin2JsCompile
 import seskar.gradle.plugin.SeskarGradleSubplugin
@@ -36,6 +38,11 @@ class ExternalsModulePlugin : Plugin<Project> {
     project.apply<KtlintGradlePlugin>()
     project.extensions.configure<KtlintGradleExtension> {
       ignoreFailures.set(true)
+    }
+
+    // Set the global Node.js version
+    project.rootProject.kotlinNodeJsExtension.also {
+      it.version = project.rootProject.stringProperty("kotlin.nodejs.version")
     }
 
     val tsDeclarations = project.extensions.create<TsDeclarations>("declarations")
