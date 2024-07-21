@@ -5,7 +5,7 @@ import zowe.imperative.operations.doc.ITaskWithStatus
 /**
  * Interface for submit job API
  */
-external interface ISubmitParms {
+external interface ISubmitParms : ISubmitParmsCommon {
   /**
    * USS file which should contain syntactically correct JCL
    * Example value: IBMUSER.PUBLIC.CNTL(IEFBR14)
@@ -54,9 +54,4 @@ external interface ISubmitParms {
    * Optional
    */
   var task: ITaskWithStatus?
-
-  /**
-   * A string for JCL symbolic substitution
-   */
-  var jclSymbols: String?
 }

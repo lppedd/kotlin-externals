@@ -52,4 +52,10 @@ export interface IDownloadAllSpoolContentParms {
      * @memberof IDownloadSpoolContentParms
      */
     record?: boolean;
+    /**
+     * The codepage to use for translation from EBCDIC
+     * @type {string}
+     * @memberof IDownloadSpoolContentParms
+     */
+    encoding?: string;
 }

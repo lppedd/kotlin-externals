@@ -55,9 +55,10 @@ external class SubmitJobs {
     /**
      * Submit a string of JCL to run
      * @param session z/OSMF connection info
-     * @param jcl string of JCL that you want to be submit
+     * @param jcl string of JCL that you want to be submitted
      * @param internalReaderRecfm record format of the jcl you want to submit. "F" (fixed) or "V" (variable)
      * @param internalReaderLrecl logical record length of the jcl you want to submit
+     * @param internalReaderFileEncoding
      * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJcl(
@@ -65,6 +66,7 @@ external class SubmitJobs {
       jcl: String,
       internalReaderRecfm: String = definedExternally,
       internalReaderLrecl: String = definedExternally,
+      internalReaderFileEncoding: String = definedExternally,
     ): Promise<IJob>
 
     fun submitJclString(
@@ -87,9 +89,10 @@ external class SubmitJobs {
     /**
      * Submit a JCL string  to run
      * @param session z/OSMF connection info
-     * @param jcl string of JCL that you want to be submit
+     * @param jcl string of JCL that you want to be submitted
      * @param internalReaderRecfm record format of the jcl you want to submit. "F" (fixed) or "V" (variable).
      * @param internalReaderLrecl logical record length of the jcl you want to submit
+     * @param internalReaderFileEncoding
      * @return Promise that resolves to an IJob document with details about the submitted job
      */
     fun submitJclNotify(
@@ -97,6 +100,7 @@ external class SubmitJobs {
       jcl: String,
       internalReaderRecfm: String = definedExternally,
       internalReaderLrecl: String = definedExternally,
+      internalReaderFileEncoding: String = definedExternally,
     ): Promise<IJob>
 
     /**

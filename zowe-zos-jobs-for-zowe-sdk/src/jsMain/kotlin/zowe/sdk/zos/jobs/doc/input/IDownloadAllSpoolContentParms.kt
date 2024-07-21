@@ -15,4 +15,9 @@ external interface IDownloadAllSpoolContentParms : IDownloadAllSpoolContentParms
    * e.g. JOB00001
    */
   var jobid: String
+
+  /**
+   * The codepage to use for translation from EBCDIC
+   */
+  var encoding: String?
 }

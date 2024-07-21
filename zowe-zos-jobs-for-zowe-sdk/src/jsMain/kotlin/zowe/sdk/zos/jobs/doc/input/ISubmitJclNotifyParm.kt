@@ -6,29 +6,7 @@ import zowe.sdk.zos.jobs.types.JobStatus
 /**
  * Interface for submiting jobs API
  */
-external interface ISubmitJclNotifyParm {
-  /**
-   * JCL to submit, for example:
-   * ```
-   * "//IEFBR14 JOB ()\n" +
-   * "//RUN     EXEC PGM=IEFBR14"
-   * ```
-   */
-  var jcl: String
-
-  /**
-   * Specify internal reader RECFM and corresponding http(s) headers
-   * will be appended to the request accordingly
-   * "F" (fixed) or "V" (variable)
-   */
-  var internalReaderRecfm: String?
-
-  /**
-   * Specify internal reader LRECL and corresponding http(s) headers
-   * will be appended to the request accordingly
-   */
-  var internalReaderLrecl: String?
-
+external interface ISubmitJclNotifyParm : ISubmitJclParms {
   /**
    * Watch delay (polling delay) that the underlying services will use
    * to report whenever a job is complete in milliseconds.
@@ -50,9 +28,4 @@ external interface ISubmitJclNotifyParm {
    * Default: [MonitorJobs.DEFAULT_ATTEMPTS].
    */
   var attempts: Int?
-
-  /**
-   * A string for JCL symbolic substitution
-   */
-  var jclSymbols: String?
 }

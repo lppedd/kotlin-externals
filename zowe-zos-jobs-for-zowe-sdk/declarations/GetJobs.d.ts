@@ -171,10 +171,11 @@ export declare class GetJobs {
      * @static
      * @param {AbstractSession} session - z/OSMF connection info
      * @param jobFile - the spool file for which you want to retrieve the content
+     * @param encoding - the code page to use for EBCDIC translation
      * @returns {Promise<string>} - promise that resolves to the spool content
      * @memberof GetJobs
      */
-    static getSpoolContent(session: AbstractSession, jobFile: IJobFile): Promise<string>;
+    static getSpoolContent(session: AbstractSession, jobFile: IJobFile, encoding?: string): Promise<string>;
     /**
      * Get spool content from a job using the job name, job ID, and spool ID number from z/OSMF
      * @static
@@ -185,15 +186,16 @@ export declare class GetJobs {
      * @returns {Promise<string>} - promise that resolves to the spool content
      * @memberof GetJobs
      */
-    static getSpoolContentById(session: AbstractSession, jobname: string, jobid: string, spoolId: number): Promise<string>;
+    static getSpoolContentById(session: AbstractSession, jobname: string, jobid: string, spoolId: number, encoding?: string): Promise<string>;
     /**
      * Get spool content from a job.
      * @static
      * @param {AbstractSession} session - z/OSMF connection info
      * @param jobFile - the spool file for which you want to retrieve the content
+     * @param encoding - the code page to use for EBCDIC translation
      * @returns {Promise<string>} - promise that resolves to the spool content
      * @memberof GetJobs
      */
-    static getSpoolContentCommon(session: AbstractSession, jobFile: IJobFile): Promise<string>;
+    static getSpoolContentCommon(session: AbstractSession, jobFile: IJobFile, encoding?: string): Promise<string>;
     private static filterResultsByStatuses;
 }

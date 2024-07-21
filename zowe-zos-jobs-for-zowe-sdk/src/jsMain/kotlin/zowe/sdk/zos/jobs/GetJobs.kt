@@ -215,11 +215,13 @@ external class GetJobs {
      * Get spool content from a job (keeping naming convention patter with this duplication function).
      * @param session z/OSMF connection info
      * @param jobFile the spool file for which you want to retrieve the content
+     * @param encoding the code page to use for EBCDIC translation
      * @return promise that resolves to the spool content
      */
     fun getSpoolContent(
       session: AbstractSession,
       jobFile: IJobFile,
+      encoding: String = definedExternally,
     ): Promise<String>
 
     /**
@@ -228,6 +230,7 @@ external class GetJobs {
      * @param jobname the job name for the job containing the spool content
      * @param jobid the job id for the job containing the spool content
      * @param spoolId id number assigned by zosmf that identifies the particular job spool file (DD)
+     * @param encoding the code page to use for EBCDIC translation
      * @return promise that resolves to the spool content
      */
     fun getSpoolContentById(
@@ -235,17 +238,20 @@ external class GetJobs {
       jobname: String,
       jobid: String,
       spoolId: Int,
+      encoding: String = definedExternally,
     ): Promise<String>
 
     /**
      * Get spool content from a job.
      * @param session z/OSMF connection info
      * @param jobFile the spool file for which you want to retrieve the content
+     * @param encoding the code page to use for EBCDIC translation
      * @return promise that resolves to the spool content
      */
     fun getSpoolContentCommon(
       session: AbstractSession,
       jobFile: IJobFile,
+      encoding: String = definedExternally,
     ): Promise<String>
   }
 }

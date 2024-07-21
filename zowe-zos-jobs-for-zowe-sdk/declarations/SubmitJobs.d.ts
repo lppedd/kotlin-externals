@@ -46,7 +46,7 @@ export declare class SubmitJobs {
      * @returns {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
      * @memberof SubmitJobs
      */
-    static submitJcl(session: AbstractSession, jcl: string, internalReaderRecfm?: string, internalReaderLrecl?: string): Promise<IJob>;
+    static submitJcl(session: AbstractSession, jcl: string, internalReaderRecfm?: string, internalReaderLrecl?: string, internalReaderFileEncoding?: string): Promise<IJob>;
     static submitJclString(session: AbstractSession, jcl: string, parms: ISubmitParms): Promise<IJob | ISpoolFile[]>;
     /**
      * Submit a JCL string to run
@@ -67,7 +67,7 @@ export declare class SubmitJobs {
      * @returns {Promise<IJob>} - Promise that resolves to an IJob document with details about the submitted job
      * @memberof SubmitJobs
      */
-    static submitJclNotify(session: AbstractSession, jcl: string, internalReaderRecfm?: string, internalReaderLrecl?: string): Promise<IJob>;
+    static submitJclNotify(session: AbstractSession, jcl: string, internalReaderRecfm?: string, internalReaderLrecl?: string, internalReaderFileEncoding?: string): Promise<IJob>;
     /**
      * Submit a job from a string of JCL and be notified whenever it reaches the default status on a default polling interval.
      * @static
