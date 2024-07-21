@@ -1,14 +1,10 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * Describes the behavior of decorations when typing/editing at their edges.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface DecorationRangeBehavior {
   companion object {

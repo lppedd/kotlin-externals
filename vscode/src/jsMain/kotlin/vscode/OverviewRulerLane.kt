@@ -1,15 +1,11 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * Represents different positions for rendering a decoration in an overview ruler ([DecorationRenderOptions.overviewRulerLane]).
  * The overview ruler supports three lanes.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface OverviewRulerLane {
   companion object {

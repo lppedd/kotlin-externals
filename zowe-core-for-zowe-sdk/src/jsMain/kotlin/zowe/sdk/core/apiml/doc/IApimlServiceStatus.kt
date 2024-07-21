@@ -1,6 +1,5 @@
 package zowe.sdk.core.apiml.doc
 
-@seskar.js.JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface IApimlServiceStatus {
   companion object {

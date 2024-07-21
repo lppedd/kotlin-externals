@@ -1,11 +1,8 @@
-@file:JsModule("@zowe/imperative")
-
 package zowe.imperative.cmd.yargs.doc
 
 /**
  * Indicates the action performed.
  */
-@seskar.js.JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface ImperativeYargsCommandAction {
   companion object {

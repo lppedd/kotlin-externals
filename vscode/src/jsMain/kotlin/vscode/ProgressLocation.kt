@@ -1,15 +1,11 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * A location in the editor at which progress information can be shown. It depends on the
  * location how progress is visually represented.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface ProgressLocation {
   companion object {

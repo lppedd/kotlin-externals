@@ -1,11 +1,7 @@
-@file:JsModule("@zowe/zos-files-for-zowe-sdk")
-
 package zowe.sdk.zos.files.methods.utilities.doc
 
 import seskar.js.JsValue
-import seskar.js.JsVirtual
 
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface Tag {
   companion object {

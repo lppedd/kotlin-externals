@@ -1,5 +1,3 @@
-@file:JsModule("@zowe/imperative")
-
 package zowe.imperative.cmd.doc.option
 
 /**
@@ -13,7 +11,6 @@ package zowe.imperative.cmd.doc.option
  * - "string" : string input that does not allow "" as a valid input value
  * - "stringOrEmpty" : allow string to be empty when defined
  */
-@seskar.js.JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface CommandOptionType {
   companion object {

@@ -1,6 +1,5 @@
 package mocha.mocha
 
-@seskar.js.JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface TestSpeed {
   companion object {

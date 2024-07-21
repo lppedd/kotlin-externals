@@ -1,14 +1,10 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * The location of the terminal.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface TerminalLocation {
   companion object {

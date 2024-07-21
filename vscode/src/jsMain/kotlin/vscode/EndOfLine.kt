@@ -1,14 +1,10 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * Represents an end of line character sequence in a [TextDocument].
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface EndOfLine {
   companion object {

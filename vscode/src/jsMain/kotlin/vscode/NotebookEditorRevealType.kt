@@ -1,14 +1,10 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * Represents a notebook editor that is attached to a [NotebookDocument].
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface NotebookEditorRevealType {
   companion object {

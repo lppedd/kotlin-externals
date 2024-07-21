@@ -1,9 +1,6 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * An enumeration of specific folding range kinds. The kind is an optional field of a [FoldingRange]
@@ -11,7 +8,6 @@ import seskar.js.JsVirtual
  * `Fold all comments` or `Fold all regions`.
  * If the kind is not set on the range, the range originated from a syntax element other than comments, imports or region markers.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface FoldingRangeKind {
   companion object {

@@ -1,7 +1,6 @@
 package mocha.mocha
 
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
-@seskar.js.JsVirtual
 sealed external interface RunnableState {
   companion object {
     @seskar.js.JsValue("failed")

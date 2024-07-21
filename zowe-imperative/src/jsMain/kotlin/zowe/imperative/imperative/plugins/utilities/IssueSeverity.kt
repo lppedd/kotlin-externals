@@ -1,14 +1,10 @@
-@file:JsModule("@zowe/imperative")
-
 package zowe.imperative.imperative.plugins.utilities
 
 import seskar.js.JsValue
-import seskar.js.JsVirtual
 
 /**
  * This enum represents the possible severity types of a plugin issue.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface IssueSeverity {
   companion object {

@@ -1,16 +1,12 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * Enumeration of file types. The types `File` and `Directory` can also be
  * a symbolic links, in that case use `FileType.File | FileType.SymbolicLink` and
  * `FileType.Directory | FileType.SymbolicLink`.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface FileType {
   companion object {

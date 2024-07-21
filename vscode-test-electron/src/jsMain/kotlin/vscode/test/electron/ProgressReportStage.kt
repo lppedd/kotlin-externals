@@ -1,10 +1,8 @@
 package vscode.test.electron
 
 import seskar.js.JsValue
-import seskar.js.JsVirtual
 
 /** Stages of progress while downloading VS Code */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface ProgressReportStage {
   companion object {

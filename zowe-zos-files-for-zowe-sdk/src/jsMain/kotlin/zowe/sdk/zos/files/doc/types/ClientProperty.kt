@@ -1,12 +1,9 @@
-@file:JsModule("@zowe/zos-files-for-zowe-sdk")
-
 package zowe.sdk.zos.files.doc.types
 
 /**
  * String type definition for properties of abstractRestClient that have a getter set.
  * This can be safely used in a getter call as a variable for the abstractRestClient object.
  */
-@seskar.js.JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface ClientProperty {
   companion object {

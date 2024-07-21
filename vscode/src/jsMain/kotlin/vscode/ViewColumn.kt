@@ -1,16 +1,12 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * Denotes a location of an editor in the window. Editors can be arranged in a grid
  * and each column represents one editor location in that grid by counting the editors
  * in order of their appearance.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface ViewColumn {
   companion object {

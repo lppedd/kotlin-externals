@@ -1,5 +1,3 @@
-@file:JsModule("@zowe/imperative")
-
 package zowe.imperative.cmd.doc
 
 /**
@@ -8,7 +6,6 @@ package zowe.imperative.cmd.doc
  * "group" implies no handler and should have children. Use groups to logically arrange portions of
  * your CLI. "command" implies there is a handler and may or may not have children.
  */
-@seskar.js.JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface ICommandNodeType {
   companion object {

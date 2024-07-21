@@ -1,9 +1,6 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * Inlay hint kinds.
@@ -11,7 +8,6 @@ import seskar.js.JsVirtual
  * The kind of an inline hint defines its appearance, e.g the corresponding foreground and background colors are being
  * used.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface InlayHintKind {
   companion object {

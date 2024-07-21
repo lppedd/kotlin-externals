@@ -1,11 +1,7 @@
-@file:JsModule("@zowe/zowe-explorer-api")
-
 package zowe.explorer.api.logger
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface MessageSeverity {
   companion object {

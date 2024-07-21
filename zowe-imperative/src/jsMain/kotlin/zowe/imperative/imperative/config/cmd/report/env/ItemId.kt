@@ -1,16 +1,12 @@
-@file:JsModule("@zowe/imperative")
-
 package zowe.imperative.imperative.config.cmd.report.env
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * This enum represents the runtime environment items of interest. These are more than just
  * environment variables. We will report on these items (and report on any detected problems) in the
  * order that the items are listed below.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface ItemId {
   companion object {

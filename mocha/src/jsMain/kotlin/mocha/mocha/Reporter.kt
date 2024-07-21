@@ -1,9 +1,7 @@
 package mocha.mocha
 
 import seskar.js.JsValue
-import seskar.js.JsVirtual
 
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface Reporter {
   companion object {

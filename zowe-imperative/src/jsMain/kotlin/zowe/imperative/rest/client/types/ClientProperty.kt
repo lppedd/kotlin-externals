@@ -1,12 +1,9 @@
-@file:JsModule("@zowe/imperative")
-
 package zowe.imperative.rest.client.types
 
 /**
  * String type definition for properties of abstractRestClient that has a getter set. This can be
  * safely used in a getter call as a variable for the abstractRestClient object.
  */
-@seskar.js.JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface ClientProperty {
   companion object {
@@ -32,5 +29,3 @@ sealed external interface ClientProperty {
     val log: ClientProperty
   }
 }
-
-external val CLIENT_PROPERTY: ClientProperty

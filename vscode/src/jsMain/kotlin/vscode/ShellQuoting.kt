@@ -1,15 +1,11 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * Defines how an argument should be quoted if it contains
  * spaces or unsupported characters.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface ShellQuoting {
   companion object {

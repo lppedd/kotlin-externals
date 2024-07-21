@@ -1,13 +1,8 @@
-@file:JsModule("@zowe/imperative")
-
 package zowe.imperative.utilities
-
-import seskar.js.JsVirtual
 
 /**
  * This enum represents the possible results from isGuiAvailable.
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface GuiResult {
   companion object {

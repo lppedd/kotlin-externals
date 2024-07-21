@@ -1,9 +1,6 @@
-@file:JsModule("vscode")
-
 package vscode
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * A DebugConfigurationProviderTriggerKind specifies when the `provideDebugConfigurations` method of a `DebugConfigurationProvider` is triggered.
@@ -11,7 +8,6 @@ import seskar.js.JsVirtual
  * to provide dynamically generated debug configurations when the user asks for them through the UI (e.g. via the "Select and Start Debugging" command).
  * A trigger kind is used when registering a `DebugConfigurationProvider` with [vscode.debug.registerDebugConfigurationProvider].
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface DebugConfigurationProviderTriggerKind {
   companion object {

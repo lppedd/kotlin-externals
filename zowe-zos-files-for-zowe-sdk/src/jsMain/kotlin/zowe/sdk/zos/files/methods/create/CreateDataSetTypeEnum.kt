@@ -1,14 +1,10 @@
-@file:JsModule("@zowe/zos-files-for-zowe-sdk")
-
 package zowe.sdk.zos.files.methods.create
 
 import seskar.js.JsIntValue
-import seskar.js.JsVirtual
 
 /**
  * Enumerated type that describes the different kinds of data sets that can be created
  */
-@JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface CreateDataSetTypeEnum {
   companion object {

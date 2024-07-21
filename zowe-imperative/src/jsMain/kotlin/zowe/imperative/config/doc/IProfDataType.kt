@@ -1,11 +1,8 @@
-@file:JsModule("@zowe/imperative")
-
 package zowe.imperative.config.doc
 
 /**
  * The type of data for this property
  */
-@seskar.js.JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface IProfDataType {
   companion object {

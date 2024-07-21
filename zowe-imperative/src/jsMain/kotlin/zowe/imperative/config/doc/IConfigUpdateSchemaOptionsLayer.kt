@@ -1,8 +1,5 @@
-@file:JsModule("@zowe/imperative")
-
 package zowe.imperative.config.doc
 
-@seskar.js.JsVirtual
 @Suppress("NESTED_CLASS_IN_EXTERNAL_INTERFACE")
 sealed external interface IConfigUpdateSchemaOptionsLayer {
   companion object {
