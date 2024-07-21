@@ -1,12 +1,12 @@
-@file:Suppress("UnsafeCastFromDynamic", "unused")
-
 package kotlin.js
 
 /**
  * Adds the specified [element] to the end of the array and returns the new length of the array.
  */
-fun <T> Array<T>.add(element: T): Int =
-  asDynamic().push(element)
+fun <T> Array<T>.add(element: T): Int {
+  @Suppress("UnsafeCastFromDynamic")
+  return asDynamic().push(element)
+}
 
 /**
  * Adds the specified [element] to the end of the array and returns the new length of the array.
@@ -31,6 +31,7 @@ fun <T> Array<T>.removeAt(index: Int): T {
     throw IndexOutOfBoundsException("index: $index, size: $size")
   }
 
+  @Suppress("UnsafeCastFromDynamic")
   return asDynamic().splice(index, 1)[0]
 }
 
@@ -44,11 +45,14 @@ fun <T> Array<T>.removeLast(): T {
     throw NoSuchElementException("Array is empty")
   }
 
+  @Suppress("UnsafeCastFromDynamic")
   return asDynamic().pop()
 }
 
 /**
  * Removes the last element from the array and returns that element, if any.
  */
-fun <T> Array<T>.removeLastOrNull(): T? =
-  asDynamic().pop()
+fun <T> Array<T>.removeLastOrNull(): T? {
+  @Suppress("UnsafeCastFromDynamic")
+  return asDynamic().pop()
+}
