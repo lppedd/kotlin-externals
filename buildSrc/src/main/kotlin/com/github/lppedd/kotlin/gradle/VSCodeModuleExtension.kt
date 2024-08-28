@@ -25,7 +25,7 @@ abstract class VSCodeModuleExtension(private val project: Project) {
         if (webViewsDir.isPresent) {
           val copyWebviewsTask = project.tasks.register<Copy>("copyWebviews") {
             from(webViewsDir)
-            into(npmProject.dir.get().dir("dist-webviews"))
+            into(npmProject.dir.resolve("dist-webviews"))
           }
 
           project.tasks.named("jsNodeDevelopmentLibraryDistribution").configure {

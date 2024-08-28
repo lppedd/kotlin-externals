@@ -13,7 +13,6 @@ import org.gradle.api.Project
 import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.kotlin.dsl.*
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
-import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.plugin.KotlinMultiplatformPluginWrapper
 import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsSubTargetDsl
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin.Companion.kotlinNodeJsExtension
@@ -41,7 +40,7 @@ class ExternalsModulePlugin : Plugin<Project> {
 
     // Set the global Node.js version
     project.rootProject.kotlinNodeJsExtension.also {
-      it.version = project.rootProject.stringProperty("kotlin.nodejs.version")
+      it.nodeVersion = project.rootProject.stringProperty("kotlin.nodejs.version")
     }
 
     val tsDeclarations = project.extensions.create<TsDeclarations>("declarations")
@@ -54,8 +53,6 @@ class ExternalsModulePlugin : Plugin<Project> {
     // General Kotlin multiplatform configuration
     val kmp = project.kmpExtension
     kmp.compilerOptions {
-      apiVersion.set(KotlinVersion.KOTLIN_2_0)
-      languageVersion.set(KotlinVersion.KOTLIN_2_0)
       freeCompilerArgs.add("-XXLanguage:+JsAllowInvalidCharsIdentifiersEscaping")
     }
 
@@ -88,7 +85,7 @@ class ExternalsModulePlugin : Plugin<Project> {
 
     val jsMain = kmp.sourceSets.findByName("jsMain")
     jsMain?.dependencies {
-      implementation("io.github.turansky.seskar:seskar-core:3.6.0")
+      implementation("io.github.turansky.seskar:seskar-core:2.62.0")
       api(project(":common"))
     }
 

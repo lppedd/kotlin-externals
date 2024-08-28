@@ -48,7 +48,7 @@ class VSCodeModulePlugin : Plugin<Project> {
               dependsOn("copyWebviews")
             }
 
-            val basePath = npmProject.dir.get()
+            val basePath = npmProject.dir
             val hostOs = OperatingSystem.current()
 
             executable = if (hostOs.isWindows) "code.cmd" else "code"
