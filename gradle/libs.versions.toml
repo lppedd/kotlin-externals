@@ -1,14 +1,16 @@
 [versions]
-kotlin = "2.0.0-Beta2"
-wrappers-kotlin-js = "1.0.0-pre.780"
-wrappers-kotlin-node = "20.14.10-pre.780"
+kotlin = "2.0.20"
+kotlinx-coroutines = "1.9.0-RC.2"
+wrappers-kotlin-js = "1.0.0-pre.793"
+wrappers-kotlin-node = "20.14.10-pre.793"
 ktlint = "0.9.0"
-seskar = "3.6.0"
+seskar = "3.20.0"
 karakum = "1.0.0-alpha.46"
 maven-publish = "0.29.0"
 jnpm = "1.6-SNAPSHOT"
 
 [libraries]
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlin-wrappers-js = { group = "org.jetbrains.kotlin-wrappers", name = "kotlin-js", version.ref = "wrappers-kotlin-js" }
 kotlin-wrappers-node = { group = "org.jetbrains.kotlin-wrappers", name = "kotlin-node", version.ref = "wrappers-kotlin-node" }
 jnpm = { group = "org.orienteer.jnpm", name = "jnpm", version.ref = "jnpm" }

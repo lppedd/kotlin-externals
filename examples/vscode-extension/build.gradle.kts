@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-  jsMainImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
+  jsMainImplementation(libs.kotlinx.coroutines.core)
   jsMainImplementation(projects.shared)
 }
 

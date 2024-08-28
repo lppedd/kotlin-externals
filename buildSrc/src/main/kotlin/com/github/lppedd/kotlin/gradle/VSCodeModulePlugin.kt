@@ -9,6 +9,7 @@ import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.create
 import org.gradle.kotlin.dsl.register
 import org.gradle.kotlin.dsl.withType
+import org.jetbrains.kotlin.gradle.dsl.JsSourceMapEmbedMode
 import org.jetbrains.kotlin.gradle.plugin.KotlinMultiplatformPluginWrapper
 import org.jetbrains.kotlin.gradle.targets.js.npm.npmProject
 import org.jetbrains.kotlin.gradle.targets.js.yarn.yarn
@@ -75,12 +76,9 @@ class VSCodeModulePlugin : Plugin<Project> {
     project.tasks.withType<Kotlin2JsCompile>().configureEach {
       compilerOptions {
         freeCompilerArgs.add("-XXLanguage:+JsAllowInvalidCharsIdentifiersEscaping")
-      }
-
-      kotlinOptions {
-        useEsClasses = true
-        sourceMap = true
-        sourceMapEmbedSources = "always"
+        useEsClasses.set(true)
+        sourceMap.set(true)
+        sourceMapEmbedSources.set(JsSourceMapEmbedMode.SOURCE_MAP_SOURCE_CONTENT_ALWAYS)
       }
     }
   }
